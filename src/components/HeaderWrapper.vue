@@ -17,9 +17,9 @@
     <aside
       v-if="isNavBarOpen"
       v-motion="`navBarAnimation`"
-      :initial="{ translateX: 640, transition: { duration: 600 } }"
+      :initial="{ translateX: 290, transition: { duration: 600 } }"
       :enter="{ translateX: 0, transition: { duration: 600 } }"
-      :leave="{ translateX: 640, transition: { duration: 600 }}"
+      :leave="{ translateX: 290, transition: { duration: 600 }}"
       class="w-full bg-grey-700/50 backdrop-blur absolute h-[calc(100vh_-_96px)] top-24 right-0 md:hidden text-white flex justify-around flex-col sm:w-72"
     >
       <ul className="flex flex-col justify-between items-center h-3/5">
