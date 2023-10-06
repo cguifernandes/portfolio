@@ -24,7 +24,7 @@
         <div
           :class="[
             'text-white py-2 px-3 cursor-pointer rounded-lg duration-200 hover:bg-grey-500 flex items-center justify-between border-0',
-            'md:hover:text-blue-500 lg:hover:text-white lg:text-white lg:px-4 lg:py-3 lg:w-48 lg:border lg:border-grey-300 md:text-grey-100'
+            'md:hover:text-blue-500 lg:hover:text-blue-500 md:text-grey-100 lg:px-4 lg:py-3 lg:w-48 lg:border lg:border-grey-300 lg:text-grey-100'
           ]"
         >
           <span class="hidden lg:inline">Inglês</span>
