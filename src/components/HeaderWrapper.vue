@@ -17,9 +17,9 @@
     <aside
       v-if="isNavBarOpen"
       v-motion="`navBarAnimation`"
-      :initial="{ x: 290, transition: {type: 'keyframes'} }"
-      :enter="{ x: 0, transition: {type: 'keyframes'} }"
-      :leave="{ x: 290, transition: {type: 'keyframes'} }"
+      :initial="{ x: 640, transition: { type: 'keyframes', duration: 500 } }"
+      :enter="{ x: 0, transition: { type: 'keyframes', duration: 500 } }"
+      :leave="{ x: 640, transition: { type: 'keyframes', duration: 500 } }"
       class="w-full bg-grey-700/50 backdrop-blur absolute h-[calc(100vh_-_96px)] top-24 right-0 md:hidden text-white flex justify-around flex-col sm:w-72"
     >
       <ul className="flex flex-col justify-between items-center h-3/5">
