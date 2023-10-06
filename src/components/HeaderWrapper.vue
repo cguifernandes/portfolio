@@ -1,30 +1,78 @@
 <template>
   <button 
     @click="toggleNavBar"
-    :class="['items-center justify-center flex flex-col w-[45px] h-[41px] gap-y-[5px] cursor-pointer py-2 px-3 hover:bg-grey-500 duration-200 rounded-lg group', props.className]"
+    :class="[
+      'items-center justify-center flex flex-col w-[45px] h-[41px] gap-y-[5px]', 
+      'cursor-pointer py-2 px-3 hover:bg-grey-500 duration-200 rounded-lg group', 
+      className
+    ]"
   >
     <div class="w-5 h-[2px] bg-grey-100 duration-200 group-hover:bg-blue-500"></div>
     <div class="w-5 h-[2px] bg-grey-100 duration-200 group-hover:bg-blue-500"></div>
     <div class="w-5 h-[2px] bg-grey-100 duration-200 group-hover:bg-blue-500"></div>
   </button>
-  <aside 
-    v-if="isNavBarOpen"
-    v-motion
-    :initial="{translateX: 220, transition: { type: 'keyframes' } }"
-    :enter="{ translateX: 0, transition: { type: 'keyframes' } }"
-    class="w-72 absolute h-[calc(100vh_-_96px)] bg-grey-700 top-24 right-0 flex md:hidden text-white"
+  <transition
+    @leave="(_el, done) => motions['navBarAnimation'].leave(done)"
   >
-    {{ isNavBarOpen }}
-  </aside>
+    <aside
+      v-if="isNavBarOpen"
+      v-motion="`navBarAnimation`"
+      :initial="{ translateX: 640, transition: { duration: 600 } }"
+      :enter="{ translateX: 0, transition: { duration: 600 } }"
+      :leave="{ translateX: 640, transition: { duration: 600 }}"
+      class="w-full bg-grey-700/50 backdrop-blur absolute h-[calc(100vh_-_96px)] top-24 right-0 md:hidden text-white flex justify-around flex-col sm:w-72"
+    >
+      <ul className="flex flex-col justify-between items-center h-3/5">
+        <li>
+          <a 
+            :class="['navBar-text', 'text-lg']" 
+            href="#about"
+          >
+            Sobre
+          </a>
+        </li>
+        <li>
+          <a
+            :class="['navBar-text', 'text-lg']" 
+            href="#history"
+          >
+            História
+          </a>
+        </li>
+        <li>
+          <a 
+            :class="['navBar-text', 'text-lg']" 
+            href="#skills"
+          >
+            Habilidades
+          </a>
+        </li>
+        <li>
+          <a 
+            :class="['navBar-text', 'text-lg']" 
+            href="#projects"
+          >
+            Projetos
+          </a>
+        </li>
+      </ul>
+      <div class="flex items-center w-full justify-center gap-x-4">
+        <Links size="xl" />
+      </div>
+    </aside>
+  </transition>
 </template>
 
 <script setup lang="ts">
   import { ref } from "vue";
-  const props = defineProps({ className: String });
+  import { useMotions } from "@vueuse/motion";
+  import Links from "./Links.vue";
+
+  const { className } = defineProps({ className: String });
   const isNavBarOpen = ref<boolean>(false);
+  const motions = useMotions();
 
   const toggleNavBar = async () => {
     isNavBarOpen.value = !isNavBarOpen.value;
   };
-
 </script>
