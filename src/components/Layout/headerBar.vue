@@ -1,5 +1,5 @@
 <template>
-  <header class="flex justify-center h-24 bg-grey-700 backdrop-blur fixed w-full z-50">
+  <header class="flex justify-center h-24 bg-grey-700 backdrop-blur fixed w-full z-50 top-0">
     <div class="flex items-center max-w-[1540px] w-full justify-between mx-8 md:mx-6 lg:mx-10">
       <img
         alt="Logo"
