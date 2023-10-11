@@ -1,7 +1,7 @@
 <template>
   <a
     href="https://www.linkedin.com/in/guilherme-fernandes-6b1353243/"
-    class="py-2 px-3 hover:bg-grey-500 duration-200 rounded-lg cursor-pointer text-grey-100 hover:text-blue-500"
+    class="py-2 px-3 hover:bg-grey-700 duration-200 rounded-lg cursor-pointer text-grey-100 hover:text-blue-500"
   >
     <font-awesome-icon
       icon="fa-brands fa-linkedin"
@@ -10,7 +10,7 @@
   </a>
   <a
     href="https://github.com/cguifernandes"
-    class="py-2 px-3 hover:bg-grey-500 duration-200 rounded-lg cursor-pointer text-grey-100 hover:text-blue-500"
+    class="py-2 px-3 hover:bg-grey-700 duration-200 rounded-lg cursor-pointer text-grey-100 hover:text-blue-500"
   >
     <font-awesome-icon
       icon="fa-brands fa-github"
@@ -19,7 +19,7 @@
   </a>
   <a
     href="https://www.instagram.com/_.guiii/"
-    class="py-2 px-3 hover:bg-grey-500 duration-200 rounded-lg cursor-pointer text-grey-100 hover:text-blue-500"
+    class="py-2 px-3 hover:bg-grey-700 duration-200 rounded-lg cursor-pointer text-grey-100 hover:text-blue-500"
   >
     <font-awesome-icon
       icon="fa-brands fa-instagram"
@@ -28,7 +28,7 @@
   </a>
   <a
     href="mailto:gui.adfer@gmail.com"
-    class="py-2 px-3 hover:bg-grey-500 duration-200 rounded-lg cursor-pointer text-grey-100 hover:text-blue-500"
+    class="py-2 px-3 hover:bg-grey-700 duration-200 rounded-lg cursor-pointer text-grey-100 hover:text-blue-500"
   >
     <font-awesome-icon
       icon="fa-solid fa-envelope"

@@ -5,7 +5,7 @@ import AboutSection from './components/Section/aboutSection.vue'
 
 <template>
   <HeaderBar />
-  <main class="pt-24">
+  <main class="pt-20">
     <AboutSection />
   </main>
 </template>

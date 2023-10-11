@@ -12,7 +12,7 @@ button {
 }
 
 html {
-  background-color: #333333;
+  background-color: rgba(21, 21, 21, 1);
 }
 
 a {
@@ -28,5 +28,5 @@ a {
 }
 
 .navBar-text {
-  @apply py-2 px-3 duration-200 hover:bg-grey-500 rounded-lg text-grey-100 hover:text-blue-500
+  @apply py-2 px-3 duration-200 hover:bg-grey-700 rounded-lg text-grey-100 hover:text-blue-500
 }
