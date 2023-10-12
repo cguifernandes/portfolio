@@ -27,6 +27,16 @@ a {
   font-family: 'Poppins', sans-serif;
 }
 
-.navBar-text {
-  @apply py-2 px-3 duration-200 hover:bg-grey-700 rounded-lg text-grey-100 hover:text-blue-500
+@-moz-document url-prefix() {
+  .blur-top, .blur-bottom {
+    display: none !important;
+  }
+}
+
+.blur-top {
+  @apply absolute top-12 w-[900px] right-24 h-12 bg-gradient-to-l hidden from-blue-600 to-blue-300 blur-[150px] z-20 md:inline
+}
+
+.blur-bottom {
+  @apply absolute md:bottom-6 min-w-[200px] max-w-[700px] w-full left-2/4 -translate-y-2/4 blur-[150px] right-2/4 -translate-x-2/4 h-12 bg-gradient-to-l from-blue-600 to-blue-300 md:left-12
 }

@@ -2,7 +2,7 @@
   <button
     :class="[
       'items-center justify-center flex flex-col w-[45px] h-[41px] gap-y-[5px]',
-      'cursor-pointer py-2 px-3 hover:bg-grey-500 duration-200 rounded-lg group',
+      'cursor-pointer py-2 px-3 hover:bg-grey-700 duration-200 rounded-lg group',
       className
     ]"
     @click="toggleNavBar"
@@ -20,12 +20,15 @@
       :initial="{ x: 640, transition: { type: 'keyframes', duration: 500 } }"
       :enter="{ x: 0, transition: { type: 'keyframes', duration: 500 } }"
       :leave="{ x: 640, transition: { type: 'keyframes', duration: 500 } }"
-      class="w-full bg-grey-700/50 backdrop-blur absolute h-[calc(100vh_-_96px)] top-24 right-0 md:hidden text-white flex justify-around flex-col sm:w-72"
+      :class="[
+        'w-full bg-grey-900/60 backdrop-blur-md absolute h-[calc(100vh_-_96px)] z-50',
+        'top-24 right-0 md:hidden text-white flex justify-around flex-col sm:w-72'
+      ]"
     >
       <ul className="flex flex-col justify-between items-center h-3/5">
         <li>
           <a
-            :class="['navBar-text', 'text-lg']"
+            :class="['py-2 px-3 duration-200 hover:bg-grey-700 rounded-lg text-grey-100 hover:text-blue-500', 'text-lg']"
             href="#about"
           >
             Sobre
@@ -33,7 +36,7 @@
         </li>
         <li>
           <a
-            :class="['navBar-text', 'text-lg']"
+            :class="['py-2 px-3 duration-200 hover:bg-grey-700 rounded-lg text-grey-100 hover:text-blue-500', 'text-lg']"
             href="#history"
           >
             História
@@ -41,7 +44,7 @@
         </li>
         <li>
           <a
-            :class="['navBar-text', 'text-lg']"
+            :class="['py-2 px-3 duration-200 hover:bg-grey-700 rounded-lg text-grey-100 hover:text-blue-500', 'text-lg']"
             href="#skills"
           >
             Habilidades
@@ -49,21 +52,25 @@
         </li>
         <li>
           <a
-            :class="['navBar-text', 'text-lg']"
+            :class="['py-2 px-3 duration-200 hover:bg-grey-700 rounded-lg text-grey-100 hover:text-blue-500', 'text-lg']"
             href="#projects"
           >
             Projetos
           </a>
         </li>
       </ul>
-      <div class="flex items-center w-full justify-center gap-x-4">
+      <div class="flex items-center w-full justify-center gap-x-2">
         <navLinks size="xl" />
+        <button class="py-2 px-3 duration-200 hover:bg-grey-700 rounded-lg text-grey-100 hover:text-blue-500">
+          <Languages :size="22" />
+        </button>
       </div>
     </aside>
   </transition>
 </template>
 
 <script setup lang="ts">
+import { Languages } from 'lucide-vue-next'
 import { ref } from 'vue'
 import { useMotions } from '@vueuse/motion'
 import navLinks from './navLinks.vue'
