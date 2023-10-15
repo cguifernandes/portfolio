@@ -34,9 +34,9 @@ a {
 }
 
 .blur-top {
-  @apply absolute top-12 w-[900px] right-24 h-12 bg-gradient-to-l hidden from-blue-600 to-blue-300 blur-[150px] z-20 md:inline
+  @apply absolute top-12 w-[900px] right-24 h-12 bg-gradient-to-l hidden from-blue-500 to-blue-300 blur-[150px] z-20 md:inline
 }
 
 .blur-bottom {
-  @apply absolute md:bottom-6 min-w-[200px] max-w-[700px] w-full left-2/4 blur-[150px] -translate-x-2/4 h-12 bg-gradient-to-l from-blue-600 to-blue-300 md:left-12
+  @apply absolute md:bottom-6 min-w-[200px] max-w-[700px] w-full left-2/4 blur-[150px] -translate-x-2/4 h-12 bg-gradient-to-l from-blue-500 to-blue-300 md:left-12
 }
