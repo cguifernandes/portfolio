@@ -1,14 +1,17 @@
 <template>
-  <section class="h-[calc(100vh_-_80px)] relative flex items-center justify-between bg-grey-900">
+  <section
+    id="about"
+    class="h-[calc(100vh_-_80px)] relative flex items-center justify-between bg-grey-900"
+  >
     <div class="blur-top" />
     <div class="flex items-center justify-center w-full px-10 z-[5] lg:px-24 lg:justify-between">
-      <div class="text-white text-center text-xl w-full space-y-4 lg:text-left lg:w-[700px]">
+      <div class="text-white flex flex-col text-center text-xl w-full gap-y-4 lg:text-left lg:w-[700px]">
         <p>
           Olá, eu sou <span class="text-blue-500">Guilherme Fernandes</span>, e tenho uma paixão por criar sites
           e explorar novas tecnologias. Quando não estou codando, aproveito o tempo para ler livros, assistir séries e estudar um pouco mais.
         </p>
-        <button class="bg-blue-600 flex justify-between items-center px-4 py-3 w-72 rounded-md duration-200 hover:bg-blue-700">
-          <span class="hidden lg:inline text-lg">Inglês</span>
+        <button class="bg-gradient-to-l from-blue-500 !m-auto lg:m-0 to-blue-800 flex justify-between items-center px-4 py-3 w-72 rounded-md duration-200">
+          <span class="text-lg">Inglês</span>
           <Languages :size="22" />
         </button>
       </div>
@@ -22,7 +25,10 @@
     </div>
     <div class="blur-bottom" />
     <div class="w-full flex items-center justify-center absolute bottom-6">
-      <a class="bg-blue-600 p-3 rounded-full animate-bounce cursor-pointer duration-200 hover:bg-blue-700">
+      <a
+        href="#history"
+        class="bg-gradient-to-l from-blue-500 to-blue-800 p-3 rounded-full animate-bounce cursor-pointer duration-200"
+      >
         <ChevronDown
           color="#fff"
           :size="28"

@@ -61,16 +61,12 @@
       </ul>
       <div class="flex items-center w-full justify-center gap-x-2">
         <navLinks size="xl" />
-        <button class="py-2 px-3 duration-200 hover:bg-grey-700 rounded-lg text-grey-100 hover:text-blue-500">
-          <Languages :size="22" />
-        </button>
       </div>
     </aside>
   </transition>
 </template>
 
 <script setup lang="ts">
-import { Languages } from 'lucide-vue-next'
 import { ref } from 'vue'
 import { useMotions } from '@vueuse/motion'
 import navLinks from './navLinks.vue'
