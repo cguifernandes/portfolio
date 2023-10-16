@@ -25,6 +25,8 @@ a {
   padding: 0px;
   margin: 0px;
   font-family: 'Poppins', sans-serif;
+  scroll-padding-top: 80px;
+  scroll-behavior: smooth;
 }
 
 @-moz-document url-prefix() {
