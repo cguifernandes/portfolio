@@ -20,12 +20,18 @@ a {
   color: inherit;
 }
 
+.gradient-text {
+  background-image: linear-gradient(to right, #07505f, #0c91ac); 
+  -webkit-background-clip: text; 
+  background-clip: text;
+  color: transparent; 
+}
+
 * {
   box-sizing: border-box;
   padding: 0px;
   margin: 0px;
   font-family: 'Poppins', sans-serif;
-  scroll-padding-top: 80px;
   scroll-behavior: smooth;
 }
 

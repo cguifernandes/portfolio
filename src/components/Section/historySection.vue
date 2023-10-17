@@ -1,9 +1,9 @@
 <template>
-  <section class="flex flex-col gap-y-6 sm:h-screen justify-center items-center">
-    <div
-      id="history"
-      className="flex flex-col items-center justify-center"
-    >
+  <section
+    id="history"
+    class="flex flex-col gap-y-6 min-h-screen justify-center items-center"
+  >
+    <div className="flex flex-col items-center justify-center">
       <h1 className="font-montserrat text-2xl text-white">
         História
       </h1>
@@ -11,7 +11,7 @@
         História na área de programação
       </p>
     </div>
-    <div class="bg-gradient-to-tl from-grey-900 shadow-lg to-grey-700 max-w-[590px] mx-6 lg:max-w-[1100px] flex flex-col-reverse justify-between items-center rounded-md lg:flex-row">
+    <div class="bg-gradient-to-tl from-grey-800 shadow-lg to-grey-700 max-w-[590px] mx-6 lg:max-w-[1100px] flex flex-col-reverse justify-between items-center rounded-md lg:flex-row">
       <div class="space-y-6 m-auto lg:w-[520px] p-8">
         <p class="text-white">
           Tive minha primeira experiência com programação em 2020, durante o meu ensino médio.

@@ -7,7 +7,7 @@
     <div class="flex items-center justify-center w-full px-10 z-[5] lg:px-24 lg:justify-between">
       <div class="text-white flex flex-col text-center text-xl w-full gap-y-4 lg:text-left lg:w-[700px]">
         <p>
-          Olá, eu sou <span class="text-blue-500">Guilherme Fernandes</span>, e tenho uma paixão por criar sites
+          Olá, eu sou <span class="gradient-text">Guilherme Fernandes</span>, e tenho uma paixão por criar sites
           e explorar novas tecnologias. Quando não estou codando, aproveito o tempo para ler livros, assistir séries e estudar um pouco mais.
         </p>
         <button class="bg-gradient-to-l from-blue-500 m-auto lg:m-0 to-blue-800 flex justify-between items-center px-4 py-3 w-72 rounded-md duration-200">
