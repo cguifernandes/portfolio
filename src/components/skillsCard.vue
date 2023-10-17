@@ -9,10 +9,10 @@
     <slot />
     <div class="h-32 w-[3px] bg-grey-500 mx-4 hidden sm:inline" />
     <div class="w-fit space-y-1">
-      <h1 class="font-montserrat font-bold sm:text-xl">
+      <h1 class="font-bold font-montserrat text-lg">
         {{ name }}
       </h1>
-      <p class="text-white/50">
+      <p class="text-white/40">
         {{ descripion }}
       </p>
     </div>
