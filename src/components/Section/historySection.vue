@@ -18,7 +18,7 @@
           Desde então, mergulhei de cabeça nesse mundo fascinante e me tornei um entusiasta incansável da arte de programar.
           Atualmente, atuo como freelancer e me dedico à criação de projetos pessoais com o intuito de aprimorar minha expertise na área.
         </p>
-        <button class="bg-gradient-to-l from-blue-500 to-blue-800 text-white w-full px-4 py-3 rounded-md duration-200">
+        <button class="bg-gradient-to-l from-blue-500 to-blue-800 text-white px-4 py-3 w-72 rounded-md duration-200 hover:w-80">
           Currículo
         </button>
       </div>

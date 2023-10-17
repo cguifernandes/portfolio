@@ -9,15 +9,20 @@
         Habilidades desenvolvidas
       </p>
     </div>
-    <div class="flex flex-wrap gap-8 justify-center max-w-[1200px] w-11/12">
+    <div
+      class="flex flex-wrap gap-8 justify-center max-w-[1200px] w-11/12"
+      @mouseenter="hoveredCard = true"
+      @mouseleave="hoveredCard = false"
+    >
       <SkillsCard
         v-for="(skill, index) in skills"
         :key="index"
         :name="skill.name"
         :descripion="skill.description"
+        :hovered-card="hoveredCard"
       >
         <img
-          class="w-28"
+          class="w-28 hidden sm:inline"
           :src="skill.icon"
         >
       </SkillsCard>
@@ -28,4 +33,7 @@
 <script setup lang="ts">
 import SkillsCard from '../skillsCard.vue'
 import { skills } from '../utils/constants'
+import { ref } from 'vue'
+
+const hoveredCard = ref<boolean>(false)
 </script>
