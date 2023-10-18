@@ -1,7 +1,7 @@
 <template>
   <section
     id="about"
-    class="h-[calc(100vh_-_80px)] relative flex items-center justify-between bg-grey-900"
+    class="h-screen pt-20 relative flex items-center justify-between bg-grey-900"
   >
     <div class="blur-top" />
     <div class="flex items-center justify-center w-full px-10 z-[5] lg:px-24 lg:justify-between">
@@ -10,10 +10,10 @@
           Olá, eu sou <span class="gradient-text">Guilherme Fernandes</span>, e tenho uma paixão por criar sites
           e explorar novas tecnologias. Quando não estou codando, aproveito o tempo para ler livros, assistir séries e estudar um pouco mais.
         </p>
-        <button class="bg-gradient-to-l from-blue-500 m-auto lg:m-0 to-blue-800 flex justify-between items-center px-4 py-3 w-72 rounded-md duration-200 hover:w-80">
+        <ButtonComponent class-name="w-72 m-auto lg:m-0 flex justify-between items-center hover:w-80">
           <span class="text-lg">Inglês</span>
           <Languages :size="22" />
-        </button>
+        </ButtonComponent>
       </div>
       <div class="hidden lg:inline">
         <Vue3Lottie
@@ -42,5 +42,5 @@
 import { Vue3Lottie } from 'vue3-lottie'
 import { Languages, ChevronDown } from 'lucide-vue-next'
 import MainAnimation from '../../assets/animation.json'
-
+import ButtonComponent from '../buttonComponent.vue'
 </script>

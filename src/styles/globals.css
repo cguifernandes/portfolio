@@ -41,6 +41,14 @@ a {
   }
 }
 
+.swiper-scrollbar {
+  background-color: #2e2e2e !important;
+}
+
+.swiper-scrollbar-drag {
+  background-color: #fff !important;
+}
+
 .blur-top {
   @apply absolute top-12 w-[900px] right-24 h-12 bg-gradient-to-l hidden from-blue-500 to-blue-300 blur-[150px] z-20 md:inline
 }

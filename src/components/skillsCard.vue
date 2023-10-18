@@ -2,7 +2,7 @@
   <div
     :style="hoveredCard ? { opacity: 0.45 } : { opacity: 1.0 }"
     :class="[
-      'text-white bg-gradient-to-tl from-grey-800 shadow-lg to-grey-700 duration-200 cursor-default',
+      'text-white bg-gradient-to-tl from-grey-800 shadow-lg to-grey-600 duration-200 cursor-default',
       'flex items-center flex-1 min-w-[320px] sm:min-w-[420px] px-6 py-8 rounded-md hover:scale-105 hover:!opacity-100'
     ]"
   >

@@ -7,6 +7,7 @@ import { fas } from '@fortawesome/free-solid-svg-icons'
 import { MotionPlugin } from '@vueuse/motion'
 import Vue3Lottie from 'vue3-lottie'
 import './styles/globals.css'
+import { register } from 'swiper/element/bundle'
 
 const app = createApp(App)
 library.add(fab, fas)
@@ -14,3 +15,4 @@ library.add(fab, fas)
 app.use(MotionPlugin)
 app.use(Vue3Lottie)
 app.component('FontAwesomeIcon', FontAwesomeIcon).mount('#app')
+register()

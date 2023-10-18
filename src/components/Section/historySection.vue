@@ -4,14 +4,14 @@
     class="flex flex-col gap-y-6 min-h-screen justify-center items-center"
   >
     <div className="flex flex-col items-center justify-center">
-      <h1 className="font-roboto text-2xl text-white">
+      <h1 className="font-montserrat text-2xl text-white">
         História
       </h1>
       <p className="text-white/50">
         História na área de programação
       </p>
     </div>
-    <div class="bg-gradient-to-tl from-grey-800 shadow-lg to-grey-700 max-w-[590px] mx-6 lg:max-w-[1100px] flex flex-col-reverse justify-between items-center rounded-md lg:flex-row">
+    <div class="bg-gradient-to-tl from-grey-800 shadow-lg to-grey-600 max-w-[590px] mx-6 lg:max-w-[1100px] flex flex-col-reverse justify-between items-center rounded-md lg:flex-row">
       <div class="gap-y-6 m-auto lg:w-[520px] p-8 flex flex-col items-center lg:items-start">
         <p class="text-center text-white lg:text-left">
           No ano de 2020, quando estava no ensino médio, tive a oportunidade de dar os primeiros passos na minha jornada de programação, fazendo um curso técnico em informática.
@@ -19,9 +19,9 @@
           No meu emprego atual, trabalho no desenvolvimento de software utilizando as tecnologias Node.js e Vue.js.
           Tenho um grande interesse em aprender programação por conta própria e sou apaixonado por criar coisas novas. Pretendo continuar evoluindo a partir deste ponto em diante.
         </p>
-        <button class="bg-gradient-to-l from-blue-500 to-blue-800 text-white px-4 py-3 w-72 rounded-md duration-200 hover:w-80">
+        <ButtonComponent class-name="w-72 hover:w-80">
           Currículo
-        </button>
+        </ButtonComponent>
       </div>
       <img
         :class="[
@@ -36,4 +36,5 @@
 
 <script setup lang="ts">
 import MyImage from '../../assets/image.png'
+import ButtonComponent from '../buttonComponent.vue'
 </script>

@@ -61,3 +61,66 @@ export const skills = [
     icon: Vue
   }
 ]
+
+export const projects = [
+  {
+    description:
+      'O Paquetá é um projeto de front-end que busca apresentar uma interface elegante e intuitiva para uma loja virtual de calçados.',
+    name: 'Paquetá',
+    image:
+      'https://github.com/cguifernandes/Paqueta/assets/88489337/35b893bd-218b-41f6-ba92-f8fd3174761d',
+    repo: 'https://github.com/cguifernandes/Paqueta',
+    skills: ['Next.js', 'Tailwind CSS', 'Typescript'],
+    website: 'https://paqueta-three.vercel.app/'
+  },
+  {
+    description:
+      'All Nade é um site projetado para ajudar você a descobrir filmes e facilitar a organização dos seus favoritos.',
+    name: 'All Nade',
+    image:
+      'https://github.com/cguifernandes/All-Nade/assets/88489337/7fbf0e5c-35c6-44dc-bdc7-197ec4c90667',
+    repo: 'https://github.com/cguifernandes/All-Nade',
+    skills: ['Next.js', 'Styled Components', 'Typescript'],
+    website: 'https://all-nade.vercel.app/'
+  },
+  {
+    description:
+      'Minha primeira experiência como freelancer. Neste site, você pode acessar produtos de limpeza de pele, verificar o valor e entrar em contato com a vendedora.',
+    name: 'Bylou',
+    image:
+      'https://github.com/cguifernandes/Bylou/assets/88489337/80e2960a-c29b-4caa-b89c-94f2c5556f8d',
+    skills: ['React.js', 'Styled Components', 'Typescript'],
+    repo: 'https://github.com/cguifernandes/Bylou',
+    website: 'https://bylou.vercel.app/'
+  },
+  {
+    description:
+      "Este projeto foi desenvolvido com o objetivo de praticar a criação de API'S juntamente com o consumo da API em um site em React.js.",
+    name: 'Wiki Demon Slayer',
+    image:
+      'https://github.com/cguifernandes/Wiki-Kimetsu-No-Yaiba/assets/88489337/ca10dbd4-ab79-4d86-a463-6e1a1e78ecb7',
+    repo: 'https://github.com/cguifernandes/Wiki-Kimetsu-No-Yaiba',
+    skills: ['React.js', 'CSS', 'Javascript'],
+    website: 'https://wiki-kimetsu-no-yaiba.vercel.app/'
+  },
+  {
+    description:
+      'Este aplicativo surgiu da necessidade de oferecer maior dinamismo e interatividade para as aulas de Química, no formato on-line durante o período de pandemia. Neste contexto surgiu TITULOMED.',
+    name: 'TituloMED',
+    image:
+      'https://github.com/cguifernandes/TituloMED/assets/88489337/fd369ea3-b705-43e7-8ee1-7053fe39d883',
+    repo: 'https://github.com/cguifernandes/TituloMED',
+    skills: ['HTML', 'CSS', 'Javascript'],
+    website: 'https://cguifernandes.github.io/TituloMED/'
+  },
+  {
+    description:
+      'Este projeto busca conectar pessoas a Desks, espaços para discussões em diferentes áreas. Por exemplo, se você é um desenvolvedor iniciante que deseja obter feedback sobre seu projeto, o Hub Desk está aqui para ajudar!',
+    name: 'Hub Desk',
+    image:
+      'https://user-images.githubusercontent.com/88489337/269369577-cbbd292a-6b95-488b-b6ae-f55e6566ae15.png',
+    repo: 'https://github.com/cguifernandes/hub-desk',
+    skills: ['Next.js', 'Tailwind CSS', 'Typescript'],
+    website: 'https://hub-desk.vercel.app'
+  }
+]
