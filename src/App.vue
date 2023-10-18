@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import FooterBar from './components/Layout/footerBar.vue'
 import HeaderBar from './components/Layout/headerBar.vue'
 import AboutSection from './components/Section/aboutSection.vue'
 import HistorySection from './components/Section/historySection.vue'
@@ -14,4 +15,5 @@ import SkillsSection from './components/Section/skillsSection.vue'
     <SkillsSection />
     <ProjectsSection />
   </main>
+  <FooterBar />
 </template>

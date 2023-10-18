@@ -16,7 +16,7 @@
         :space-between="20"
         :scrollbar="true"
         :breakpoints="{
-          928: {
+          768: {
             slidesPerView: 2,
             spaceBetween: 10,
           },

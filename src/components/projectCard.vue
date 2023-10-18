@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-gradient-to-tl from-grey-800 shadow-lg to-grey-600 min-h-[730px] rounded-md flex flex-col">
+  <div class="bg-gradient-to-tl from-grey-800 shadow-lg to-grey-700 min-h-[720px] md:min-h-[830px] rounded-md flex flex-col">
     <a
       :href="website"
       target="_blank"
@@ -31,13 +31,13 @@
       <div class="flex flex-col justify-around items-center gap-y-6 px-6">
         <ButtonComponent
           title="Link para redirecionar ao repositório no GitHub"
-          class-name="w-4/5"
+          class-name="w-full md:w-4/5"
           :href="repo"
         >
           Repositório
         </ButtonComponent>
         <ButtonComponent
-          class-name="w-4/5"
+          class-name="w-full md:w-4/5"
           :href="website"
         >
           Site
