@@ -1,5 +1,8 @@
 <template>
-  <section class="flex flex-col gap-y-6 min-h-screen justify-center items-center">
+  <section
+    id="projects"
+    class="flex flex-col gap-y-6 min-h-screen justify-center items-center mb-20 scroll-pt-20"
+  >
     <div className="flex flex-col items-center justify-center">
       <h1 className="font-montserrat text-2xl text-white">
         Projetos
@@ -25,7 +28,7 @@
             spaceBetween: 20,
           },
         }"
-        class="!px-2 !pb-8"
+        class="!pb-12"
       >
         <SwiperSlide
           v-for="(project, index) in projects"

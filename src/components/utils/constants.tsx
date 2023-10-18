@@ -8,6 +8,7 @@ import CSharp from '../../assets/icons/csharp.svg'
 import Java from '../../assets/icons/java.svg'
 import StyledComponents from '../../assets/icons/styledcomponents.svg'
 import Vue from '../../assets/icons/vue.svg'
+import PHP from '../../assets/icons/php.svg'
 
 export const skills = [
   {
@@ -59,6 +60,11 @@ export const skills = [
     name: 'Vue.js',
     description: 'Vue.js é um framework JavaScript de código-aberto, focado no desenvolvimento de interfaces de usuário e aplicativos de página única.',
     icon: Vue
+  },
+  {
+    name: 'PHP',
+    description: 'PHP é uma linguagem interpretada livre, usada originalmente apenas para o desenvolvimento de aplicações presentes e atuantes no lado do servidor. ',
+    icon: PHP
   }
 ]
 

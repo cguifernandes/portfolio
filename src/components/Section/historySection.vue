@@ -1,7 +1,7 @@
 <template>
   <section
     id="history"
-    class="flex flex-col gap-y-6 min-h-screen justify-center items-center"
+    class="flex flex-col gap-y-6 min-h-screen justify-center items-center mb-20"
   >
     <div className="flex flex-col items-center justify-center">
       <h1 className="font-montserrat text-2xl text-white">

@@ -28,7 +28,7 @@
       <ul className="flex flex-col justify-between items-center h-3/5">
         <li>
           <a
-            :class="['py-2 px-3 duration-200 hover:bg-grey-700 rounded-lg text-grey-100 hover:text-blue-500', 'text-lg']"
+            class="py-2 px-3 duration-200 hover:bg-grey-700 rounded-lg text-grey-100 hover:text-blue-500 text-lg"
             href="#about"
           >
             Sobre
@@ -36,7 +36,7 @@
         </li>
         <li>
           <a
-            :class="['py-2 px-3 duration-200 hover:bg-grey-700 rounded-lg text-grey-100 hover:text-blue-500', 'text-lg']"
+            class="py-2 px-3 duration-200 hover:bg-grey-700 rounded-lg text-grey-100 hover:text-blue-500 text-lg"
             href="#history"
           >
             História
@@ -44,7 +44,7 @@
         </li>
         <li>
           <a
-            :class="['py-2 px-3 duration-200 hover:bg-grey-700 rounded-lg text-grey-100 hover:text-blue-500', 'text-lg']"
+            class="py-2 px-3 duration-200 hover:bg-grey-700 rounded-lg text-grey-100 hover:text-blue-500 text-lg"
             href="#skills"
           >
             Habilidades
@@ -52,7 +52,7 @@
         </li>
         <li>
           <a
-            :class="['py-2 px-3 duration-200 hover:bg-grey-700 rounded-lg text-grey-100 hover:text-blue-500', 'text-lg']"
+            class="py-2 px-3 duration-200 hover:bg-grey-700 rounded-lg text-grey-100 hover:text-blue-500 text-lg"
             href="#projects"
           >
             Projetos

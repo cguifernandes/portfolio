@@ -1,6 +1,9 @@
 
 <template>
-  <section class="flex flex-col gap-y-6 min-h-screen justify-center items-center">
+  <section
+    id="skills"
+    class="flex flex-col gap-y-6 min-h-screen justify-center items-center mb-20 scroll-pt-20"
+  >
     <div className="flex flex-col items-center justify-center">
       <h1 className="font-montserrat text-2xl text-white">
         Habilidades
@@ -10,7 +13,7 @@
       </p>
     </div>
     <div
-      class="flex flex-wrap gap-8 justify-center max-w-[1200px] w-11/12"
+      class="flex flex-wrap gap-8 justify-center w-11/12"
       @mouseenter="hoveredCard = true"
       @mouseleave="hoveredCard = false"
     >
