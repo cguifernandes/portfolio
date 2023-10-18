@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-gradient-to-tl from-grey-800 shadow-lg to-grey-700 min-h-[720px] md:min-h-[830px] rounded-md flex flex-col">
+  <div class="bg-gradient-to-tl from-grey-800 shadow-lg to-grey-700 min-h-[720px] md:min-h-[760px] rounded-md flex flex-col">
     <a
       :href="website"
       target="_blank"
