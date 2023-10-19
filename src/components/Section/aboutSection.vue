@@ -17,11 +17,11 @@
           <Languages :size="22" />
         </ButtonComponent>
       </div>
-      <div class="hidden lg:inline">
+      <div class="hidden lg:inline lg:w-[460px] xl:w-[520px] 2xl:w-[580px]">
         <Vue3Lottie
           :animation-data="MainAnimation"
           :loop="false"
-          class="lg:w-[460px] xl:w-[520px] 2xl:w-[580px] !m-0"
+          class="!m-0"
         />
       </div>
     </div>
