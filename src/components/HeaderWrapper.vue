@@ -45,8 +45,8 @@
       :enter="{ x: 0, transition: { type: 'keyframes', duration: 500 } }"
       :leave="{ x: 640, transition: { type: 'keyframes', duration: 500 } }"
       :class="[
-        'w-full bg-grey-900/60 backdrop-blur-md absolute h-[calc(100vh_-_96px)] z-50',
-        'top-24 right-0 md:hidden text-white flex justify-around flex-col sm:w-72'
+        'w-full bg-grey-900/60 backdrop-blur-md absolute h-[calc(100vh_-_80px)] z-50',
+        'top-20 right-0 md:hidden text-white flex justify-around flex-col sm:w-72'
       ]"
     >
       <ul className="flex flex-col justify-between items-center h-3/5">

@@ -25,7 +25,10 @@
         <p class="text-center text-white lg:text-left">
           {{ $t('text') }}
         </p>
-        <ButtonComponent class-name="w-72 hover:w-80">
+        <ButtonComponent
+          href="/curriculo.pdf"
+          class-name="w-72 hover:w-80"
+        >
           {{ $t('Currículo') }}
         </ButtonComponent>
       </div>
