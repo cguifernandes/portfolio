@@ -1,5 +1,6 @@
 <template>
   <button
+    v-if="!isNavBarOpen"
     :class="[
       'items-center justify-center flex flex-col w-[45px] h-[41px] gap-y-[5px]',
       'cursor-pointer py-2 px-3 hover:bg-grey-700 duration-200 rounded-lg group',
@@ -7,9 +8,32 @@
     ]"
     @click="toggleNavBar"
   >
-    <div class="w-5 h-[2px] bg-grey-100 duration-200 group-hover:bg-blue-500" />
-    <div class="w-5 h-[2px] bg-grey-100 duration-200 group-hover:bg-blue-500" />
-    <div class="w-5 h-[2px] bg-grey-100 duration-200 group-hover:bg-blue-500" />
+    <div
+      v-motion="iconAnimation"
+      class="w-5 h-[2px] bg-grey-100 duration-200 group-hover:bg-blue-500"
+    />
+    <div
+      v-motion="iconAnimation"
+      class="w-5 h-[2px] bg-grey-100 duration-200 group-hover:bg-blue-500"
+    />
+    <div
+      v-motion="iconAnimation"
+      class="w-5 h-[2px] bg-grey-100 duration-200 group-hover:bg-blue-500"
+    />
+  </button>
+  <button
+    v-else
+    :class="[
+      'items-center justify-center flex flex-col w-[45px] h-[41px] gap-y-[5px]',
+      'cursor-pointer py-2 px-3 hover:bg-grey-700 duration-200 rounded-lg group',
+      className
+    ]"
+    @click="toggleNavBar"
+  >
+    <span
+      v-motion="iconAnimation"
+      class="text-grey-100 text-xl duration-200 group-hover:text-blue-500"
+    >X</span>
   </button>
   <transition
     @leave="(_el, done) => motions['navBarAnimation'].leave(done)"
@@ -68,7 +92,7 @@
 
 <script setup lang="ts">
 import { ref } from 'vue'
-import { useMotions } from '@vueuse/motion'
+import { MotionVariants, useMotions } from '@vueuse/motion'
 import navLinks from './navLinks.vue'
 
 const { className } = defineProps({ className: { type: String, default: null } })
@@ -78,4 +102,20 @@ const motions = useMotions()
 const toggleNavBar = (): void => {
   isNavBarOpen.value = !isNavBarOpen.value
 }
+
+const iconAnimation: MotionVariants = {
+  initial: {
+    opacity: 0,
+    transition: {
+      duration: 200
+    }
+  },
+  enter: {
+    opacity: 1,
+    transition: {
+      duration: 200
+    }
+  }
+}
+
 </script>

@@ -15,7 +15,7 @@
         <h1 class="text-white text-2xl font-montserrat">
           {{ name }}
         </h1>
-        <p class="text-white text-center">
+        <p class="text-white/50 text-center">
           {{ $t(description) }}
         </p>
       </div>
