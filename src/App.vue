@@ -9,7 +9,7 @@ import SkillsSection from './components/Section/skillsSection.vue'
 
 <template>
   <HeaderBar />
-  <main>
+  <main class="flex flex-col gap-y-36">
     <AboutSection />
     <HistorySection />
     <SkillsSection />

@@ -2,7 +2,7 @@
 <template>
   <section
     id="skills"
-    class="flex flex-col gap-y-6 min-h-screen justify-center items-center mb-20 scroll-pt-20"
+    class="flex flex-col gap-y-6 min-h-screen justify-center items-center"
   >
     <div className="flex flex-col items-center justify-center">
       <h1 className="font-montserrat text-2xl text-white">

@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-gradient-to-tl from-grey-800 shadow-lg to-grey-700 min-h-[720px] md:min-h-[760px] rounded-md flex flex-col">
+  <div class="bg-gradient-to-tl from-grey-800 shadow-lg to-grey-700 min-h-[680px] md:min-h-[620px] rounded-md flex flex-col">
     <a
       :href="website"
       target="_blank"
@@ -7,7 +7,7 @@
       <img
         :src="image"
         :alt="description"
-        class="w-full h-80 rounded-t-md object-cover duration-200 hover:opacity-50"
+        class="w-full h-60 md:h-52 rounded-t-md object-cover duration-200 hover:opacity-50"
       >
     </a>
     <div class="flex flex-col flex-1 gap-y-6 px-6 py-8 justify-center">
@@ -19,11 +19,11 @@
           {{ $t(description) }}
         </p>
       </div>
-      <div class="flex items-center gap-6 flex-wrap">
+      <div class="flex items-center gap-2 justify-center flex-wrap">
         <span
           v-for="(skill, index) in skills"
           :key="index"
-          class="py-2 px-4 bg-grey-500 text-white rounded-md duration-200 cursor-default hover:bg-grey-400"
+          class="py-2 px-4 bg-grey-500 text-white rounded-md text-xs duration-200 cursor-default hover:bg-grey-400"
         >
           {{ skill }}
         </span>

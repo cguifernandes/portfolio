@@ -1,7 +1,7 @@
 <template>
   <section
     id="projects"
-    class="flex flex-col gap-y-6 min-h-screen justify-center items-center mb-20 scroll-pt-20"
+    class="flex flex-col gap-y-6 h-screen justify-center items-center"
   >
     <div className="flex flex-col items-center justify-center">
       <h1 className="font-montserrat text-2xl text-white">
@@ -21,11 +21,9 @@
         :breakpoints="{
           768: {
             slidesPerView: 2,
-            spaceBetween: 10,
           },
           1280: {
             slidesPerView: 3,
-            spaceBetween: 20,
           },
         }"
         class="!pb-12"
