@@ -5,7 +5,10 @@
   >
     <div class="blur-top" />
     <div class="flex items-center justify-center w-full px-10 z-[5] lg:px-24 lg:justify-between">
-      <div class="text-white flex flex-col text-center text-xl w-full gap-y-4 lg:text-left lg:w-[700px]">
+      <div
+        v-motion-slide-left
+        class="text-white flex flex-col text-center text-xl w-full gap-y-4 lg:text-left lg:w-[700px]"
+      >
         <p>
           {{ $t('Olá, eu sou,') }} <span class="gradient-text">Guilherme Fernandes</span> {{ $t(', e tenho uma paixão por criar sites e explorar novas tecnologias. Quando não estou codando, aproveito o tempo para ler livros, assistir séries e estudar um pouco mais.') }}
         </p>
@@ -17,7 +20,10 @@
           <Languages :size="22" />
         </ButtonComponent>
       </div>
-      <div class="hidden lg:inline lg:w-[460px] xl:w-[520px] 2xl:w-[580px]">
+      <div
+        v-motion-slide-right
+        class="hidden lg:inline lg:w-[460px] xl:w-[520px] 2xl:w-[580px]"
+      >
         <Vue3Lottie
           :animation-data="MainAnimation"
           :loop="false"

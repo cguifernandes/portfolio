@@ -1,6 +1,15 @@
 <template>
   <section
     id="history"
+    v-motion
+    :initial="{
+      opacity: 0,
+      y: 100,
+    }"
+    :visibleOnce="{
+      opacity: 1,
+      y: 0,
+    }"
     class="flex flex-col gap-y-6 min-h-screen justify-center items-center"
   >
     <div className="flex flex-col items-center justify-center">
