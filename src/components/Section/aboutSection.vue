@@ -7,11 +7,13 @@
     <div class="flex items-center justify-center w-full px-10 z-[5] lg:px-24 lg:justify-between">
       <div class="text-white flex flex-col text-center text-xl w-full gap-y-4 lg:text-left lg:w-[700px]">
         <p>
-          Olá, eu sou <span class="gradient-text">Guilherme Fernandes</span>, e tenho uma paixão por criar sites
-          e explorar novas tecnologias. Quando não estou codando, aproveito o tempo para ler livros, assistir séries e estudar um pouco mais.
+          {{ $t('Olá, eu sou,') }} <span class="gradient-text">Guilherme Fernandes</span> {{ $t(', e tenho uma paixão por criar sites e explorar novas tecnologias. Quando não estou codando, aproveito o tempo para ler livros, assistir séries e estudar um pouco mais.') }}
         </p>
-        <ButtonComponent class-name="w-72 m-auto lg:m-0 flex justify-between items-center hover:w-80">
-          <span class="text-lg">Inglês</span>
+        <ButtonComponent
+          :click="handlerClick"
+          class-name="w-72 m-auto lg:m-0 flex justify-between items-center hover:w-80"
+        >
+          <span class="text-lg">{{ $t('Inglês') }}</span>
           <Languages :size="22" />
         </ButtonComponent>
       </div>
@@ -43,4 +45,13 @@ import { Vue3Lottie } from 'vue3-lottie'
 import { Languages, ChevronDown } from 'lucide-vue-next'
 import MainAnimation from '../../assets/animation.json'
 import ButtonComponent from '../buttonComponent.vue'
+import { i18n } from '../utils/i18n'
+
+const handlerClick = (): void => {
+  if (i18n.global.locale === 'pt') {
+    i18n.global.locale = 'en'
+  } else {
+    i18n.global.locale = 'pt'
+  }
+}
 </script>

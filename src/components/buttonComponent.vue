@@ -3,6 +3,7 @@
     v-if="href"
     :href="href"
     :class="['bg-gradient-to-l from-blue-500 to-blue-800 text-white relative h-12 px-4 py-3 rounded-md duration-200', className]"
+    @click="click"
   >
     <a
       target="_blank"
@@ -15,6 +16,7 @@
   <button
     v-else
     :class="['bg-gradient-to-l from-blue-500 to-blue-800 text-white relative h-12 px-4 py-3 rounded-md duration-200', className]"
+    @click="click"
   >
     <slot />
   </button>
@@ -24,7 +26,8 @@
 interface ButtonProps {
   className?: string
   href?: string
+  click?: (event: MouseEvent) => void
 }
 
-const { className, href } = defineProps<ButtonProps>()
+const { className, href, click } = defineProps<ButtonProps>()
 </script>

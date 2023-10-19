@@ -6,10 +6,10 @@
   >
     <div className="flex flex-col items-center justify-center">
       <h1 className="font-montserrat text-2xl text-white">
-        Habilidades
+        {{ $t('Habilidades') }}
       </h1>
       <p className="text-white/50">
-        Habilidades desenvolvidas
+        {{ $t('Habilidades desenvolvidas') }}
       </p>
     </div>
     <div

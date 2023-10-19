@@ -16,7 +16,7 @@
           {{ name }}
         </h1>
         <p class="text-white text-center">
-          {{ description }}
+          {{ $t(description) }}
         </p>
       </div>
       <div class="flex items-center gap-6 flex-wrap">
@@ -34,13 +34,13 @@
           class-name="w-full md:w-4/5"
           :href="repo"
         >
-          Repositório
+          {{ $t('Repositório') }}
         </ButtonComponent>
         <ButtonComponent
           class-name="w-full md:w-4/5"
           :href="website"
         >
-          Site
+          {{ $t('Site') }}
         </ButtonComponent>
       </div>
     </div>

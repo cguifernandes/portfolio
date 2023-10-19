@@ -13,7 +13,7 @@
         {{ name }}
       </h1>
       <p class="text-white/40">
-        {{ descripion }}
+        {{ $t(descripion) }}
       </p>
     </div>
   </div>
@@ -26,5 +26,5 @@ interface SkillsProps {
   hoveredCard: boolean
 }
 
-const { descripion, name, hoveredCard } = defineProps<SkillsProps>()
+const { name, hoveredCard } = defineProps<SkillsProps>()
 </script>

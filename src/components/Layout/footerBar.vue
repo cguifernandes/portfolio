@@ -5,7 +5,7 @@
       <NavLinks size="xl" />
     </div>
     <p class="text-white">
-      Feito por
+      {{ $t('Feito por') }}
       <a
         class="gradient-text"
         href="https://www.linkedin.com/in/guilherme-fernandes-6b1353243/"

@@ -5,10 +5,10 @@
   >
     <div className="flex flex-col items-center justify-center">
       <h1 className="font-montserrat text-2xl text-white">
-        Projetos
+        {{ $t('Projetos') }}
       </h1>
       <p className="text-white/50">
-        Projetos pessoais
+        {{ $t('Projetos pessoais') }}
       </p>
     </div>
     <div class="w-11/12">

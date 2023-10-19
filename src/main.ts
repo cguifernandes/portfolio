@@ -8,11 +8,13 @@ import { MotionPlugin } from '@vueuse/motion'
 import Vue3Lottie from 'vue3-lottie'
 import './styles/globals.css'
 import { register } from 'swiper/element/bundle'
+import { i18n } from './components/utils/i18n'
 
 const app = createApp(App)
 library.add(fab, fas)
 
 app.use(MotionPlugin)
+app.use(i18n)
 app.use(Vue3Lottie)
 app.component('FontAwesomeIcon', FontAwesomeIcon).mount('#app')
 register()

@@ -11,25 +11,25 @@
           class="py-2 px-3 relative duration-200 hover:bg-grey-700 rounded-lg text-grey-100 hover:text-blue-500"
           href="#about"
         >
-          Sobre
+          {{ $t('Sobre') }}
         </a>
         <a
           class="py-2 px-3 relative duration-200 hover:bg-grey-700 rounded-lg text-grey-100 hover:text-blue-500"
           href="#history"
         >
-          História
+          {{ $t('História') }}
         </a>
         <a
           class="py-2 px-3 relative duration-200 hover:bg-grey-700 rounded-lg text-grey-100 hover:text-blue-500"
           href="#skills"
         >
-          Habilidades
+          {{ $t('Habilidades') }}
         </a>
         <a
           class="py-2 px-3 relative duration-200 hover:bg-grey-700 rounded-lg text-grey-100 hover:text-blue-500"
           href="#projects"
         >
-          Projetos
+          {{ $t('Projetos') }}
         </a>
       </ul>
       <div class="gap-x-2 md:flex gap-y-2 hidden lg:px-0 items-center justify-between flex-row xl:gap-x-8 lg:gap-x-4">

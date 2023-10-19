@@ -31,7 +31,7 @@
             class="py-2 px-3 duration-200 hover:bg-grey-700 rounded-lg text-grey-100 hover:text-blue-500 text-lg"
             href="#about"
           >
-            Sobre
+            {{ $t('Sobre') }}
           </a>
         </li>
         <li>
@@ -39,7 +39,7 @@
             class="py-2 px-3 duration-200 hover:bg-grey-700 rounded-lg text-grey-100 hover:text-blue-500 text-lg"
             href="#history"
           >
-            História
+            {{ $t('História') }}
           </a>
         </li>
         <li>
@@ -47,7 +47,7 @@
             class="py-2 px-3 duration-200 hover:bg-grey-700 rounded-lg text-grey-100 hover:text-blue-500 text-lg"
             href="#skills"
           >
-            Habilidades
+            {{ $t('Habilidades') }}
           </a>
         </li>
         <li>
@@ -55,7 +55,7 @@
             class="py-2 px-3 duration-200 hover:bg-grey-700 rounded-lg text-grey-100 hover:text-blue-500 text-lg"
             href="#projects"
           >
-            Projetos
+            {{ $t('Projetos') }}
           </a>
         </li>
       </ul>
