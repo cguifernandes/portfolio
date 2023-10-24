@@ -16,13 +16,16 @@
     "@fortawesome/free-regular-svg-icons": "^6.4.2",
     "@fortawesome/free-solid-svg-icons": "^6.4.2",
     "@fortawesome/vue-fontawesome": "^3.0.3",
+    "@vee-validate/zod": "^4.11.8",
     "@vueuse/motion": "^2.0.0",
     "i18n": "^0.15.1",
     "lucide-vue-next": "^0.282.0",
     "swiper": "^10.3.1",
+    "vee-validate": "^4.11.8",
     "vue": "^3.3.4",
     "vue-i18n": "^9.5.0",
-    "vue3-lottie": "^3.1.0"
+    "vue3-lottie": "^3.1.0",
+    "zod": "^3.22.4"
   },
   "devDependencies": {
     "@rushstack/eslint-patch": "^1.5.1",

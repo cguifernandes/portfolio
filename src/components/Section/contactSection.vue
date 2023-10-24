@@ -1,6 +1,6 @@
 <template>
   <section
-    id="projects"
+    id="contact"
     v-motion
     :initial="{
       opacity: 0,

@@ -12,7 +12,6 @@ button {
 }
 
 input, textarea {
-  border: 0;
   outline: 0;
   resize: none;
 }

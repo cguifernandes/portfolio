@@ -1,6 +1,7 @@
 <template>
   <button
     v-if="!isNavBarOpen"
+    v-motion="iconAnimation"
     :class="[
       'items-center justify-center flex flex-col w-[45px] h-[41px] gap-y-[5px]',
       'cursor-pointer py-2 px-3 hover:bg-grey-700 duration-200 rounded-lg group',
@@ -9,20 +10,18 @@
     @click="toggleNavBar"
   >
     <div
-      v-motion="iconAnimation"
       class="w-5 h-[2px] bg-grey-100 duration-200 group-hover:bg-blue-500"
     />
     <div
-      v-motion="iconAnimation"
       class="w-5 h-[2px] bg-grey-100 duration-200 group-hover:bg-blue-500"
     />
     <div
-      v-motion="iconAnimation"
       class="w-5 h-[2px] bg-grey-100 duration-200 group-hover:bg-blue-500"
     />
   </button>
   <button
     v-else
+    v-motion="iconAnimation"
     :class="[
       'items-center justify-center flex flex-col w-[45px] h-[41px] gap-y-[5px]',
       'cursor-pointer py-2 px-3 hover:bg-grey-700 duration-200 rounded-lg group',
@@ -31,7 +30,6 @@
     @click="toggleNavBar"
   >
     <span
-      v-motion="iconAnimation"
       class="text-grey-100 text-xl duration-200 group-hover:text-blue-500"
     >X</span>
   </button>
@@ -80,6 +78,14 @@
             href="#projects"
           >
             {{ $t('Projetos') }}
+          </a>
+        </li>
+        <li>
+          <a
+            class="py-2 px-3 duration-200 hover:bg-grey-700 rounded-lg text-grey-100 hover:text-blue-500 text-lg"
+            href="#contact"
+          >
+            {{ $t('Contato') }}
           </a>
         </li>
       </ul>
