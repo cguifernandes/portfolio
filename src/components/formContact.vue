@@ -26,7 +26,7 @@
         type="text"
       >
       <span class="text-red-600">
-        {{ errors.email !== 'Required' ? errors.email : '' }}
+        {{ errors.email !== 'Required' ? errors.email : 'Campo obrigatório' }}
       </span>
     </div>
     <div class="text-white space-y-2">
@@ -38,21 +38,37 @@
         placeholder="Mensagem*"
       />
       <span class="text-red-600">
-        {{ errors.message !== 'Required' ? errors.message : '' }}
+        {{ errors.message !== 'Required' ? errors.message : 'Campo obrigatório' }}
       </span>
     </div>
-
-    <ButtonComponent class-name="w-8/12 m-auto hover:w-9/12">
-      Enviar
+    <span
+      v-if="errorMessage !== ''"
+      class="text-red-600 text-center"
+    >{{ errorMessage }}</span>
+    <ButtonComponent
+      class-name="w-8/12 m-auto hover:w-9/12"
+    >
+      <template v-if="loading">
+        <loadingComponent class-name="w-7 h-7 m-auto" />
+      </template>
+      <template v-else>
+        Enviar
+      </template>
     </ButtonComponent>
   </form>
 </template>
 
 <script setup lang="ts">
 import ButtonComponent from './buttonComponent.vue'
+import loadingComponent from './loadingComponent.vue'
 import { useField, useForm } from 'vee-validate'
 import { toTypedSchema } from '@vee-validate/zod'
 import * as z from 'zod'
+import emailjs from '@emailjs/browser'
+import { ref } from 'vue'
+
+const errorMessage = ref<string>('')
+const loading = ref<boolean>(false)
 
 const schema = toTypedSchema(
   z.object({
@@ -70,14 +86,23 @@ const schema = toTypedSchema(
   })
 )
 
-const { handleSubmit, errors } = useForm({ validationSchema: schema })
+const { handleSubmit, errors, resetForm } = useForm({ validationSchema: schema })
 
 const { value: name } = useField('name')
 const { value: email } = useField('email')
 const { value: message } = useField<string>('message')
 
 const handlerSubmitForm = handleSubmit((props) => {
-  console.log(props)
+  loading.value = true
+  emailjs.send('service_0nqll4p', 'template_7i63fdf', props, '6H4tRi_ZPt2FimCS5')
+    .then(() => {
+      resetForm()
+    }).catch((error) => {
+      console.log(error)
+      errorMessage.value = error
+    }).finally(() => {
+      loading.value = false
+    })
 })
 
 </script>
