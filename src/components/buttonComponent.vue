@@ -15,6 +15,7 @@
   </button>
   <button
     v-else
+    :disabled="disabled"
     :class="['bg-gradient-to-l from-blue-500 to-blue-800 text-white relative h-12 px-4 py-3 rounded-md duration-200', className]"
     @click="click"
   >
@@ -27,7 +28,8 @@ interface ButtonProps {
   className?: string
   href?: string
   click?: (event: MouseEvent) => void
+  disabled?: boolean
 }
 
-const { className, href, click } = defineProps<ButtonProps>()
+const { className, href, click, disabled } = defineProps<ButtonProps>()
 </script>

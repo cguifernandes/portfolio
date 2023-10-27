@@ -28,6 +28,16 @@
   "Este aplicativo surgiu da necessidade de oferecer maior dinamismo e interatividade para as aulas de Química, no formato on-line durante o período de pandemia. Neste contexto surgiu TITULOMED.": "This application arose from the need to offer greater dynamism and interactivity for Chemistry classes, in the online format during the pandemic period. In this context, TITULOMED emerged.",
   "Este projeto busca conectar pessoas a Desks, espaços para discussões em diferentes áreas. Por exemplo, se você é um desenvolvedor iniciante que deseja obter feedback sobre seu projeto, o Hub Desk está aqui para ajudar!": "This project aims to connect people to Desks, spaces for discussions in various fields. For example, if you are a beginner developer looking to get feedback on your project, Hub Desk is here to help!",
   "Repositório": "Repository",
+  "Entre em contato comigo": "Get in touch with me",
+  "Nome": "Name",
+  "Mensagem para contato": "Message for contact",
+  "Mensagem*": "Message*",
+  "Por favor preencha o campo 'E-mail'": "Please fill in the 'E-mail' field.",
+  "Por favor preencha o campo 'Mensagem'": "Please fill in the 'Message' field.",
+  "Enviar": "Submit",
+  "Campo obrigatório": "Required field",
+  "O e-mail precisa ser válido.": "The email must be valid.",
+  "O campo descrição deve conter 32 caracteres.": "The description field must contain 32 characters.",
   "Site": "Website",
   "Feito por": "Made by"
 }

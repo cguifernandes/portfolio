@@ -14,10 +14,10 @@
   >
     <div className="flex flex-col items-center justify-center">
       <h1 className="font-montserrat text-2xl text-white">
-        Contato
+        {{ $t("Contato") }}
       </h1>
       <p className="text-white/50">
-        Entre em contato comigo
+        {{ $t("Entre em contato comigo") }}
       </p>
     </div>
     <div class="flex items-center justify-around w-full">

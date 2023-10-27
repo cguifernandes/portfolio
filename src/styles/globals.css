@@ -61,3 +61,7 @@ a {
 .blur-bottom {
   @apply absolute md:bottom-6 min-w-[200px] max-w-[700px] w-full left-2/4 blur-[150px] -translate-x-2/4 h-12 bg-gradient-to-l from-blue-500 to-blue-300 md:left-12
 }
+
+.v-toast__item--default {
+  background-image: linear-gradient(to left, #0c91ac, #07505f) !important;
+}
