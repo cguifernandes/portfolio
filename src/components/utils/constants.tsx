@@ -112,7 +112,7 @@ export const projects = [
       'Este projeto busca conectar pessoas a Desks, espaços para discussões em diferentes áreas. Por exemplo, se você é um desenvolvedor iniciante que deseja obter feedback sobre seu projeto, o Hub Desk está aqui para ajudar!',
     name: 'Hub Desk',
     image:
-      'https://user-images.githubusercontent.com/88489337/269369577-cbbd292a-6b95-488b-b6ae-f55e6566ae15.png',
+      'https://github.com/cguifernandes/portfolio/assets/88489337/7a23c734-983d-4ffc-a9f6-c48bf7d3bdf1',
     repo: 'https://github.com/cguifernandes/hub-desk',
     skills: ['Next.js', 'Tailwind CSS', 'Typescript'],
     website: 'https://hub-desk.vercel.app'
