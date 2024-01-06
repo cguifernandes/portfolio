@@ -1,18 +1,43 @@
-# Vue 3 + TypeScript + Vite
+<h1 align="center">Portfólio</h1>
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+<div align="center">
+    <img src="https://github.com/cguifernandes/portfolio/assets/88489337/9f6cf16e-02fe-4cc5-b216-a31ea78558df" width="850px"/>
+</div>
 
-## Recommended IDE Setup
+## Sobre o Projeto
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+Este é meu portfólio pessoal que apresenta alguns dos meus projetos, bem como meu currículo e habilidades técnicas.
 
-## Type Support For `.vue` Imports in TS
+## Tecnologias Utilizadas
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin) to make the TypeScript language service aware of `.vue` types.
+-  [TailwindCSS](https://tailwindcss.com/)
 
-If the standalone TypeScript plugin doesn't feel fast enough to you, Volar has also implemented a [Take Over Mode](https://github.com/johnsoncodehk/volar/discussions/471#discussioncomment-1361669) that is more performant. You can enable it by the following steps:
+-  [Vue.JS](https://vuejs.org/)
 
-1. Disable the built-in TypeScript Extension
-   1. Run `Extensions: Show Built-in Extensions` from VSCode's command palette
-   2. Find `TypeScript and JavaScript Language Features`, right click and select `Disable (Workspace)`
-2. Reload the VSCode window by running `Developer: Reload Window` from the command palette.
+-  [TypeScript](https://www.typescriptlang.org/)
+
+-  [Framer Motion](https://www.framer.com/motion/)
+
+-  [Swiper](https://swiperjs.com/)
+
+## Instruções de Uso
+
+1. Comece clonando o repositório do projeto para sua máquina local. Você pode fazer isso usando o comando git clone seguido pelo URL do repositório.
+
+2. Acesse o diretório do projeto clonado e execute o comando <strong>npm install</strong> ou <strong>yarn install</strong> para instalar todas as dependências necessárias do projeto. Certifique-se de ter o Node.js e o npm (ou yarn) instalados em seu sistema.
+
+3. Após a instalação das dependências, execute o comando <strong>npm run dev</strong> ou <strong>yarn dev</strong> no terminal dentro do diretório do projeto. Isso iniciará o servidor de desenvolvimento do Next.js e você poderá acessar o projeto no navegador através do endereço http://localhost:3000 (a menos que especificado de outra forma).
+
+## Autor
+<table>
+  <tr>
+    <td align="center">
+      <a href="https://github.com/cguifernandes">
+        <img src="https://avatars.githubusercontent.com/u/88489337?s=400&u=a2bec996eaf90a1f34fc0ab909f54df0ab065659&v=4" width="100px;" alt="Minha foto no GitHub"/><br>
+        <sub>
+          <b>Guilherme Fernandes</b>
+        </sub>
+      </a>
+    </td>
+  </tr>
+</table>
