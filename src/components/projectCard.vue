@@ -48,16 +48,17 @@
 </template>
 
 <script setup lang="ts">
-import ButtonComponent from './buttonComponent.vue'
+import ButtonComponent from "./buttonComponent.vue";
 
 interface ProjectProps {
-  website: string
-  description: string
-  image: string
-  name: string
-  skills: string[]
-  repo: string | undefined
+	website: string;
+	description: string;
+	image: string;
+	name: string;
+	skills: string[];
+	repo: string | undefined;
 }
 
-const { description, image, name, repo, skills, website } = defineProps<ProjectProps>()
+const { description, image, name, repo, skills, website } =
+	defineProps<ProjectProps>();
 </script>

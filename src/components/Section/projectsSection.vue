@@ -56,9 +56,9 @@
 </template>
 
 <script setup lang="ts">
-import { Swiper, SwiperSlide } from 'swiper/vue'
-import { projects } from '../utils/constants'
-import 'swiper/css'
-import 'swiper/css/scrollbar'
-import ProjectCard from '../projectCard.vue'
+import { Swiper, SwiperSlide } from "swiper/vue";
+import { projects } from "../utils/constants";
+import "swiper/css";
+import "swiper/css/scrollbar";
+import ProjectCard from "../projectCard.vue";
 </script>

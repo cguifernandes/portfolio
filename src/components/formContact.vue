@@ -1,8 +1,9 @@
 <template>
   <form
-    class="flex flex-col gap-y-6 w-11/12 md:w-9/12 lg:w-4/12"
+    class="flex flex-col relative gap-y-6 w-11/12 md:w-9/12 lg:w-4/12"
     @submit.prevent="handlerSubmitForm"
   >
+    <div class="blur-top-form" />
     <div class="text-white space-y-2">
       <label for="name">{{ $t("Nome") }}</label>
       <input
@@ -46,55 +47,58 @@
         {{ $t("Enviar") }}
       </template>
     </ButtonComponent>
+    <div class="blur-bottom-form" />
   </form>
 </template>
 
 <script setup lang="ts">
-import ButtonComponent from './buttonComponent.vue'
-import loadingComponent from './loadingComponent.vue'
-import emailjs from '@emailjs/browser'
-import { ref } from 'vue'
-import { useToast } from 'vue-toast-notification'
-import 'vue-toast-notification/dist/theme-default.css'
-const $toast = useToast()
+import ButtonComponent from "./buttonComponent.vue";
+import loadingComponent from "./loadingComponent.vue";
+import emailjs from "@emailjs/browser";
+import { ref } from "vue";
+import { useToast } from "vue-toast-notification";
+import "vue-toast-notification/dist/theme-default.css";
+const $toast = useToast();
 
-const errorMessage = ref<string>('')
-const name = ref<string>('')
-const email = ref<string>('')
-const message = ref<string>('')
-const loading = ref<boolean>(false)
+const errorMessage = ref<string>("");
+const name = ref<string>("");
+const email = ref<string>("");
+const message = ref<string>("");
+const loading = ref<boolean>(false);
 
 const handlerSubmitForm = (): void => {
-  if (email.value === '') {
-    errorMessage.value = "Por favor preencha o campo 'E-mail'"
-  } else if (message.value === '') {
-    errorMessage.value = "Por favor preencha o campo 'Mensagem'"
-  } else {
-    loading.value = true
-    errorMessage.value = ''
+	if (email.value === "") {
+		errorMessage.value = "Por favor preencha o campo 'E-mail'";
+	} else if (message.value === "") {
+		errorMessage.value = "Por favor preencha o campo 'Mensagem'";
+	} else {
+		loading.value = true;
+		errorMessage.value = "";
 
-    const props = {
-      name: name.value === '' ? 'Sem nome' : name.value,
-      email: email.value,
-      message: message.value
-    }
+		const props = {
+			name: name.value === "" ? "Sem nome" : name.value,
+			email: email.value,
+			message: message.value,
+		};
 
-    emailjs.send('service_0nqll4p', 'template_7i63fdf', props, '6H4tRi_ZPt2FimCS5')
-      .then(() => {
-        name.value = ''
-        email.value = ''
-        message.value = ''
+		emailjs
+			.send("service_0nqll4p", "template_7i63fdf", props, "6H4tRi_ZPt2FimCS5")
+			.then(() => {
+				name.value = "";
+				email.value = "";
+				message.value = "";
 
-        $toast.default('O e-mail foi enviado com sucesso!', {
-          position: 'top'
-        })
-      }).catch((error) => {
-        console.log(error)
-        errorMessage.value = error
-      }).finally(() => {
-        loading.value = false
-      })
-  }
-}
-
+				$toast.default("O e-mail foi enviado com sucesso!", {
+					position: "top",
+				});
+			})
+			.catch((error) => {
+				console.log(error);
+				errorMessage.value = error;
+			})
+			.finally(() => {
+				loading.value = false;
+			});
+	}
+};
 </script>

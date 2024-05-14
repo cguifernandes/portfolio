@@ -35,7 +35,7 @@
 </template>
 
 <script setup lang="ts">
-import { Vue3Lottie } from 'vue3-lottie'
-import SendAnimation from '../../assets/send.json'
-import FormContact from '../formContact.vue'
+import { Vue3Lottie } from "vue3-lottie";
+import SendAnimation from "../../assets/send.json";
+import FormContact from "../formContact.vue";
 </script>

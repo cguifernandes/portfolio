@@ -97,31 +97,32 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
-import { MotionVariants, useMotions } from '@vueuse/motion'
-import navLinks from './navLinks.vue'
+import { ref } from "vue";
+import { type MotionVariants, useMotions } from "@vueuse/motion";
+import navLinks from "./navLinks.vue";
 
-const { className } = defineProps({ className: { type: String, default: null } })
-const isNavBarOpen = ref<boolean>(false)
-const motions = useMotions()
+const { className } = defineProps({
+	className: { type: String, default: null },
+});
+const isNavBarOpen = ref<boolean>(false);
+const motions = useMotions();
 
 const toggleNavBar = (): void => {
-  isNavBarOpen.value = !isNavBarOpen.value
-}
+	isNavBarOpen.value = !isNavBarOpen.value;
+};
 
 const iconAnimation: MotionVariants = {
-  initial: {
-    opacity: 0,
-    transition: {
-      duration: 200
-    }
-  },
-  enter: {
-    opacity: 1,
-    transition: {
-      duration: 200
-    }
-  }
-}
-
+	initial: {
+		opacity: 0,
+		transition: {
+			duration: 200,
+		},
+	},
+	enter: {
+		opacity: 1,
+		transition: {
+			duration: 200,
+		},
+	},
+};
 </script>

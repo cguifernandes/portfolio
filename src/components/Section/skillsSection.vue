@@ -22,30 +22,27 @@
       </p>
     </div>
     <div
-      class="flex flex-wrap gap-8 justify-center w-11/12"
-      @mouseenter="hoveredCard = true"
-      @mouseleave="hoveredCard = false"
+      class="flex flex-wrap gap-8 justify-center w-11/12 relative"
     >
+      <div class="blur-top-skills" />
       <SkillsCard
         v-for="(skill, index) in skills"
         :key="index"
         :name="skill.name"
         :descripion="skill.description"
-        :hovered-card="hoveredCard"
       >
         <img
           class="w-28 hidden sm:inline"
           :src="skill.icon"
         >
       </SkillsCard>
+      <div class="blur-bottom-skills" />
     </div>
   </section>
 </template>
 
 <script setup lang="ts">
-import SkillsCard from '../skillsCard.vue'
-import { skills } from '../utils/constants'
-import { ref } from 'vue'
-
-const hoveredCard = ref<boolean>(false)
+import SkillsCard from "../skillsCard.vue";
+import { skills } from "../utils/constants";
+import { ref } from "vue";
 </script>

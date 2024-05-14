@@ -3,7 +3,7 @@
     id="about"
     class="h-screen pt-20 relative flex items-center justify-between bg-grey-900"
   >
-    <div class="blur-top" />
+    <div class="blur-top-about" />
     <div class="flex items-center justify-center w-full px-10 z-[5] lg:px-24 lg:justify-between">
       <div
         v-motion
@@ -39,7 +39,7 @@
         />
       </div>
     </div>
-    <div class="blur-bottom" />
+    <div class="blur-bottom-about" />
     <div class="w-full flex items-center justify-center absolute bottom-6">
       <a
         href="#history"
@@ -55,17 +55,17 @@
 </template>
 
 <script setup lang="ts">
-import { Vue3Lottie } from 'vue3-lottie'
-import { Languages, ChevronDown } from 'lucide-vue-next'
-import MainAnimation from '../../assets/animation.json'
-import ButtonComponent from '../buttonComponent.vue'
-import { i18n } from '../utils/i18n'
+import { Vue3Lottie } from "vue3-lottie";
+import { Languages, ChevronDown } from "lucide-vue-next";
+import MainAnimation from "../../assets/animation.json";
+import ButtonComponent from "../buttonComponent.vue";
+import { i18n } from "../utils/i18n";
 
 const handlerClick = (): void => {
-  if (i18n.global.locale === 'pt') {
-    i18n.global.locale = 'en'
-  } else {
-    i18n.global.locale = 'pt'
-  }
-}
+	if (i18n.global.locale === "pt") {
+		i18n.global.locale = "en";
+	} else {
+		i18n.global.locale = "pt";
+	}
+};
 </script>

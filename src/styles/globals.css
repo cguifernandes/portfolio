@@ -54,12 +54,37 @@ a {
   background-color: #fff !important;
 }
 
-.blur-top {
+.blur-top-about {
   @apply absolute top-12 w-[900px] right-24 h-12 bg-gradient-to-l hidden from-blue-500 to-blue-300 blur-[150px] z-20 md:inline
 }
 
-.blur-bottom {
+.blur-bottom-about {
   @apply absolute md:bottom-6 min-w-[200px] max-w-[700px] w-full left-2/4 blur-[150px] -translate-x-2/4 h-12 bg-gradient-to-l from-blue-500 to-blue-300 md:left-12
+}
+
+.blur-bottom-skills {
+  @apply absolute min-w-[300px] bottom-4 max-w-[800px] w-full blur-[150px] right-4 h-24 bg-gradient-to-l from-blue-500 to-blue-300 -z-10
+}
+
+.blur-top-skills {
+  @apply absolute min-w-[200px] top-4 max-w-[600px] w-full blur-[150px] left-4 h-20 bg-gradient-to-l from-blue-500 to-blue-300 -z-10
+}
+
+.blur-top-form {
+  @apply absolute min-w-[200px] max-w-[200px] w-full blur-[100px] h-10 bg-gradient-to-l from-blue-500 to-blue-300 right-0 -z-10
+}
+
+.blur-bottom-form {
+  @apply absolute bottom-0 min-w-[200px] max-w-[200px] w-full blur-[100px] h-10 bg-gradient-to-l from-blue-500 to-blue-300 left-0 -z-10
+}
+
+.glass-effect {
+  background: rgba(36, 36, 36, 0.45);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8.1px);
+  -webkit-backdrop-filter: blur(8.1px);
+  border: 1px solid rgba(36, 36, 36, 1);
 }
 
 .v-toast__item--default {

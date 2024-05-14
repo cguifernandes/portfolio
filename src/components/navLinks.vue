@@ -39,8 +39,8 @@
 
 <script setup lang="ts">
 interface LinksProps {
-  size: '2xs' | 'xs' | 'sm' | 'lg' | 'xl' | '2xl'
+	size: "2xs" | "xs" | "sm" | "lg" | "xl" | "2xl";
 }
 
-const { size } = defineProps<LinksProps>()
+const { size } = defineProps<LinksProps>();
 </script>

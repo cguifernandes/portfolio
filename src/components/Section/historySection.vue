@@ -44,6 +44,6 @@
 </template>
 
 <script setup lang="ts">
-import MyImage from '../../assets/image.png'
-import ButtonComponent from '../buttonComponent.vue'
+import MyImage from "../../assets/image.png";
+import ButtonComponent from "../buttonComponent.vue";
 </script>

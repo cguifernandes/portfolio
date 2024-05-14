@@ -25,11 +25,11 @@
 
 <script setup lang="ts">
 interface ButtonProps {
-  className?: string
-  href?: string
-  click?: (event: MouseEvent) => void
-  disabled?: boolean
+	className?: string;
+	href?: string;
+	click?: (event: MouseEvent) => void;
+	disabled?: boolean;
 }
 
-const { className, href, click, disabled } = defineProps<ButtonProps>()
+const { className, href, click, disabled } = defineProps<ButtonProps>();
 </script>

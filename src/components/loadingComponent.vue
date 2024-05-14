@@ -19,8 +19,8 @@
 
 <script setup lang="ts">
 interface LinksProps {
-  className: string
+	className: string;
 }
 
-const { className } = defineProps<LinksProps>()
+const { className } = defineProps<LinksProps>();
 </script>
