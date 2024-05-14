@@ -44,5 +44,4 @@
 <script setup lang="ts">
 import SkillsCard from "../skillsCard.vue";
 import { skills } from "../utils/constants";
-import { ref } from "vue";
 </script>
