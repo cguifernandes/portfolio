@@ -99,7 +99,7 @@
 <script setup lang="ts">
 import { ref } from "vue";
 import { defineProps } from "vue";
-import { type MotionVariants, useMotions } from "@vueuse/motion";
+import { useMotions } from "@vueuse/motion";
 import navLinks from "./navLinks.vue";
 
 const { className } = defineProps({
@@ -113,7 +113,7 @@ const toggleNavBar = (): void => {
 	isNavBarOpen.value = !isNavBarOpen.value;
 };
 
-const iconAnimation: MotionVariants<{ opacity: number }> = {
+const iconAnimation = {
 	initial: {
 		opacity: 0,
 		transition: {
