@@ -64,12 +64,12 @@
 import ButtonComponent from "./buttonComponent.vue";
 
 interface ProjectProps {
-	website: string;
+	website?: string;
 	description: string;
 	image: string;
 	name: string;
 	skills: string[];
-	repo: string | undefined;
+	repo: string;
 	figmaAuthor?: string;
 	figmaLink?: string;
 }
