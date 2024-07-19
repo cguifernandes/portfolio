@@ -18,6 +18,18 @@
         <p class="text-white/50 text-center">
           {{ $t(description) }}
         </p>
+        <span v-if="figmaAuthor" class="text-white/50 text-sm text-center">
+          Link para o 
+          <a :href="figmaAuthor" class="text-blue-500 underline">
+           autor do Figma
+          </a>
+        </span>
+        <span v-if="figmaLink" class="text-white/50 text-sm text-center">
+          Link para o 
+          <a :href="figmaLink" class="text-blue-500 underline">
+           projeto no Figma
+          </a>
+        </span>
       </div>
       <div class="flex items-center gap-2 justify-center flex-wrap">
         <span
@@ -37,6 +49,7 @@
           {{ $t('Repositório') }}
         </ButtonComponent>
         <ButtonComponent
+          v-if="website" 
           class-name="w-full md:w-4/5"
           :href="website"
         >
@@ -57,8 +70,18 @@ interface ProjectProps {
 	name: string;
 	skills: string[];
 	repo: string | undefined;
+	figmaAuthor?: string;
+	figmaLink?: string;
 }
 
-const { description, image, name, repo, skills, website } =
-	defineProps<ProjectProps>();
+const {
+	description,
+	image,
+	name,
+	repo,
+	skills,
+	website,
+	figmaAuthor,
+	figmaLink,
+} = defineProps<ProjectProps>();
 </script>

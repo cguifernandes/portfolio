@@ -48,6 +48,8 @@
             :name="project.name"
             :skills="project.skills"
             :repo="project.repo"
+            :figmaAuthor="project.figmaAuthor"
+            :figmaLink="project.figmaLink"
           />
         </SwiperSlide>
       </Swiper>
