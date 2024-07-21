@@ -9,7 +9,7 @@
         v-motion
         :initial="{
           opacity: 0,
-          x: -100,
+          x: -40,
         }"
         :enter="{
           opacity: 1,

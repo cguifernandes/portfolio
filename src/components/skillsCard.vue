@@ -1,5 +1,16 @@
 <template>
   <div
+    v-motion
+    :initial="{
+      opacity: 0,
+      y: -40,
+      
+    }"
+    :visibleOnce="{
+      opacity: 1,
+      y: 0,
+      transition: { delay: animationDelay },
+    }"
     :class="[
       'text-white glass-effect duration-200 cursor-default',
       'flex items-center flex-1 min-w-[320px] sm:min-w-[420px] px-6 py-8 rounded-md'
@@ -22,7 +33,8 @@
 interface SkillsProps {
 	name: string;
 	descripion: string;
+	animationDelay: number;
 }
 
-const { name } = defineProps<SkillsProps>();
+const { name, descripion, animationDelay } = defineProps<SkillsProps>();
 </script>

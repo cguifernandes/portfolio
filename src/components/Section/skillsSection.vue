@@ -2,18 +2,20 @@
 <template>
   <section
     id="skills"
-    v-motion
-    :initial="{
-      opacity: 0,
-      y: 100,
-    }"
-    :visibleOnce="{
-      opacity: 1,
-      y: 0,
-    }"
     class="flex flex-col gap-y-6 min-h-screen justify-center items-center"
   >
-    <div className="flex flex-col items-center justify-center">
+    <div 
+      v-motion
+      :initial="{
+        opacity: 0,
+        y: -40,
+      }"
+      :visibleOnce="{
+        opacity: 1,
+        y: 0,
+      }" 
+      className="flex flex-col items-center justify-center"
+      >
       <h1 className="font-montserrat text-2xl text-white">
         {{ $t('Habilidades') }}
       </h1>
@@ -21,14 +23,13 @@
         {{ $t('Habilidades desenvolvidas') }}
       </p>
     </div>
-    <div
-      class="flex flex-wrap gap-8 justify-center w-11/12 relative"
-    >
+    <div class="flex flex-wrap gap-8 justify-center w-11/12 relative">
       <div class="blur-top-skills" />
       <SkillsCard
         v-for="(skill, index) in skills"
         :key="index"
         :name="skill.name"
+        :animation-delay="index * 100"
         :descripion="skill.description"
       >
         <img
