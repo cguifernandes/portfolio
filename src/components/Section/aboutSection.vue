@@ -43,7 +43,7 @@
     <div class="w-full flex items-center justify-center absolute bottom-6">
       <a
         href="#history"
-        class="bg-gradient-to-l from-blue-500 to-blue-800 p-3 rounded-full animate-bounce cursor-pointer duration-200"
+        class="bg-gradient-to-l from-blue-500 to-blue-700 p-3 rounded-full animate-bounce cursor-pointer duration-200"
       >
         <ChevronDown
           color="#fff"

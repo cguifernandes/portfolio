@@ -26,7 +26,7 @@ a {
 }
 
 .gradient-text {
-  background-image: linear-gradient(to right, #07505f, #0c91ac); 
+  @apply bg-gradient-to-l from-blue-500 to-blue-700;
   -webkit-background-clip: text; 
   background-clip: text;
   color: transparent; 
@@ -78,13 +78,24 @@ a {
   @apply absolute bottom-0 min-w-[200px] max-w-[200px] w-full blur-[100px] h-10 bg-gradient-to-l from-blue-500 to-blue-300 left-0 -z-10
 }
 
+.blur-bottom-projects {
+  @apply absolute min-w-[50px] max-w-[300px] md:min-w-[200px] bottom-24 md:max-w-[600px] w-full blur-[150px] left-4 h-24 bg-gradient-to-l from-blue-500 to-blue-300 -z-10
+}
+
 .glass-effect {
   background: rgba(36, 36, 36, 0.45);
-  border-radius: 16px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(8.1px);
-  -webkit-backdrop-filter: blur(8.1px);
-  border: 1px solid rgba(36, 36, 36, 1);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgb(51, 51, 51);
+}
+
+.glass-effect-light {
+  background: rgba(58, 58, 58, 0.45);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgb(51, 51, 51);
 }
 
 .v-toast__item--default {

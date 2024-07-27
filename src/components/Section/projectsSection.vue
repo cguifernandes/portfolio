@@ -31,9 +31,6 @@
           768: {
             slidesPerView: 2,
           },
-          1280: {
-            slidesPerView: 3,
-          },
         }"
         class="!pb-12"
       >
@@ -54,6 +51,7 @@
         </SwiperSlide>
       </Swiper>
     </div>
+    <div class="blur-bottom-projects" />
   </section>
 </template>
 

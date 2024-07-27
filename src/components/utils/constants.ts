@@ -8,6 +8,17 @@ import CSharp from "../../assets/icons/csharp.svg";
 import StyledComponents from "../../assets/icons/styledcomponents.svg";
 import Vue from "../../assets/icons/vue.svg";
 
+export type ProjectsProps = {
+	description: string;
+	name: string;
+	image: string[] | string;
+	repo: string;
+	skills: string[];
+	website?: string;
+	figmaLink?: string;
+	figmaAuthor?: string;
+};
+
 export const skills = [
 	{
 		name: "Next.js",
@@ -65,23 +76,31 @@ export const skills = [
 	},
 ];
 
-export const projects = [
+export const projects: ProjectsProps[] = [
 	{
 		description:
 			"O Paquetá é um projeto de front-end que busca apresentar uma interface elegante e intuitiva para uma loja virtual de calçados.",
 		name: "Paquetá",
-		image:
+		image: [
 			"https://github.com/cguifernandes/Paqueta/assets/88489337/35b893bd-218b-41f6-ba92-f8fd3174761d",
+			"https://github.com/user-attachments/assets/52e57808-6779-4e9f-849e-ba283f2b78ac",
+			"https://github.com/user-attachments/assets/9feae71b-c47f-43f1-8991-4545a5165c48",
+		],
 		repo: "https://github.com/cguifernandes/Paqueta",
 		skills: ["Next.js", "Tailwind CSS", "Typescript"],
 		website: "https://paqueta-three.vercel.app/",
+		figmaLink:
+			"https://www.figma.com/design/df5XIaBPlnvzkMNUxhLFpq/Paqueta---BrChallenges?node-id=0-1&t=8R2K3vIoThD0Hric-0",
 	},
 	{
 		description:
 			"All Nade é um site projetado para ajudar você a descobrir filmes e facilitar a organização dos seus favoritos.",
 		name: "All Nade",
-		image:
+		image: [
 			"https://github.com/cguifernandes/All-Nade/assets/88489337/7fbf0e5c-35c6-44dc-bdc7-197ec4c90667",
+			"https://github.com/user-attachments/assets/c913943c-64b4-4306-a08d-3cf6834ec139",
+			"https://github.com/user-attachments/assets/7701e90c-567e-45d2-aef3-6e862c2d7a86",
+		],
 		repo: "https://github.com/cguifernandes/All-Nade",
 		skills: ["Next.js", "Styled Components", "Typescript"],
 		website: "https://all-nade.vercel.app/",
@@ -90,8 +109,11 @@ export const projects = [
 		description:
 			"Minha primeira experiência como freelancer. Neste site, você pode acessar produtos de limpeza de pele, verificar o valor e entrar em contato com a vendedora.",
 		name: "Bylou",
-		image:
+		image: [
 			"https://github.com/cguifernandes/Bylou/assets/88489337/80e2960a-c29b-4caa-b89c-94f2c5556f8d",
+			"https://github.com/user-attachments/assets/f2f32d23-603f-49e0-93ff-30a6c9537ec7",
+			"https://github.com/user-attachments/assets/f2f32d23-603f-49e0-93ff-30a6c9537ec7",
+		],
 		skills: ["React.js", "Styled Components", "Typescript"],
 		repo: "https://github.com/cguifernandes/Bylou",
 		website: "https://bylou.vercel.app/",
@@ -100,8 +122,10 @@ export const projects = [
 		description:
 			"Este projeto foi desenvolvido com o objetivo de praticar a criação de API'S juntamente com o consumo da API em um site em React.js.",
 		name: "Wiki Demon Slayer",
-		image:
+		image: [
 			"https://github.com/cguifernandes/Wiki-Kimetsu-No-Yaiba/assets/88489337/ca10dbd4-ab79-4d86-a463-6e1a1e78ecb7",
+			"https://github.com/user-attachments/assets/b2ef3089-dd37-404a-b79d-a1fea96b0d36",
+		],
 		repo: "https://github.com/cguifernandes/Wiki-Kimetsu-No-Yaiba",
 		skills: ["React.js", "CSS", "Javascript"],
 		website: "https://wiki-kimetsu-no-yaiba.vercel.app/",
@@ -110,8 +134,9 @@ export const projects = [
 		description:
 			"Este aplicativo surgiu da necessidade de oferecer maior dinamismo e interatividade para as aulas de Química, no formato on-line durante o período de pandemia. Neste contexto surgiu TITULOMED.",
 		name: "TituloMED",
-		image:
+		image: [
 			"https://github.com/cguifernandes/TituloMED/assets/88489337/fd369ea3-b705-43e7-8ee1-7053fe39d883",
+		],
 		repo: "https://github.com/cguifernandes/TituloMED",
 		skills: ["HTML", "CSS", "Javascript"],
 		website: "https://cguifernandes.github.io/TituloMED/",
@@ -120,8 +145,12 @@ export const projects = [
 		description:
 			"Este projeto busca conectar pessoas a Desks, espaços para discussões em diferentes áreas. Por exemplo, se você é um desenvolvedor iniciante que deseja obter feedback sobre seu projeto, o Hub Desk está aqui para ajudar!",
 		name: "Hub Desk",
-		image:
-			"https://github.com/cguifernandes/portfolio/assets/88489337/7a23c734-983d-4ffc-a9f6-c48bf7d3bdf1",
+		image: [
+			"https://github.com/user-attachments/assets/df44c778-f982-48b4-a552-47119dd95bbd",
+			"https://github.com/user-attachments/assets/71cfc0a3-ca6d-418a-9869-706d4553ca4f",
+			"https://github.com/user-attachments/assets/1376fcae-8cf1-4859-95f9-79e0eb0b6c6e",
+			"https://github.com/user-attachments/assets/cc4c9c49-684c-4748-bf52-3dec3abd4697",
+		],
 		repo: "https://github.com/cguifernandes/hub-desk",
 		skills: ["Next.js", "Tailwind CSS", "Typescript"],
 		website: "https://hub-desk.vercel.app",
@@ -129,9 +158,10 @@ export const projects = [
 	{
 		description:
 			"Landing page simplificada inspirada no site da Nike, projetada para testar e aprimorar habilidades com a biblioteca Framer Motion, explorando técnicas avançadas de animação e transições para uma experiência visual dinâmica.",
-		name: "Landing page Nike",
-		image:
+		name: "Nike",
+		image: [
 			"https://github.com/user-attachments/assets/754bd2f3-f854-4c88-a540-b197e2a9cd26",
+		],
 		repo: "https://github.com/cguifernandes/nike",
 		skills: ["React.js", "Tailwind CSS", "Framer motion"],
 		figmaAuthor: "https://www.figma.com/@irawan",

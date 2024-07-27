@@ -2,7 +2,7 @@
   <button
     v-if="href"
     :href="href"
-    :class="['bg-gradient-to-l from-blue-500 to-blue-800 text-white relative h-12 px-4 py-3 rounded-md duration-200', className]"
+    :class="['bg-gradient-to-l from-blue-500 to-blue-700 text-white relative h-12 px-4 py-3 rounded-md duration-200', className]"
     @click="click"
   >
     <a
@@ -16,7 +16,7 @@
   <button
     v-else
     :disabled="disabled"
-    :class="['bg-gradient-to-l from-blue-500 to-blue-800 text-white relative h-12 px-4 py-3 rounded-md duration-200', className]"
+    :class="['bg-gradient-to-l from-blue-500 to-blue-700 text-white relative h-12 px-4 py-3 rounded-md duration-200', className]"
     @click="click"
   >
     <slot />
