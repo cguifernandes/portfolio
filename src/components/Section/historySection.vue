@@ -20,8 +20,8 @@
         {{ $t('Minha carreira no desenvolvimento') }}
       </p>
     </div>
-    <div class="glass-effect lg:max-h-[calc(100vh_-_200px)] w-full flex justify-between flex-col lg:flex-row items-center rounded-md">
-      <div class="flex p-3 lg:pl-5 w-full flex-col gap-y-4 flex-1 lg:mr-5">
+    <div class="glass-effect lg:max-h-[calc(100vh_-_200px)] min-h-[430px] w-full flex justify-between flex-col lg:flex-row items-center rounded-md">
+      <div class="flex max-h-[calc(100vh_-_200px)] min-h-[430px] p-3 lg:pl-5 w-full flex-col gap-y-4 flex-1 lg:mr-5">
         <div class="flex flex-col max-w-2xl mx-auto lg:m-0 xl:max-w-4xl gap-y-4 pr-3">
           <div class="flex gap-x-4 items-center justify-center lg:justify-normal">
             <img :src="MyImage" alt="My Image" class="xl:size-12 size-10 object-cover rounded-full" />
@@ -33,9 +33,9 @@
             {{ $t('Para mais informações:') }} <a class="gradient-text" href="/curriculo.pdf">{{ $t('Currículo') }}</a>
           </p>
         </div>
-        <div class="flex flex-col gap-y-2">
+        <div class="flex flex-col gap-y-2 min-h-full">
           <h1 class="text-lg xl:text-xl font-montserrat text-white">{{ $t('Serviços') }}</h1>
-          <div class="flex flex-wrap gap-3 overflow-x-auto min-h-0 max-h-[290px] sm:max-h-[320px] xl:max-h-[290px] custom-scrollbar">
+          <div class="flex flex-wrap gap-3 overflow-x-auto custom-scrollbar">
             <SkillsCard
               :is-traslate="true"
               name="Desenvolvimento de site"
@@ -60,7 +60,7 @@
           </div>
         </div>
       </div>
-      <div class="lg:gap-y-3 max-h-[calc(100vh_-_200px)] gap-y-2 flex flex-col p-3 border-t-2 lg:border-l-2 border-grey-500 lg:max-w-md xl:max-w-xl w-full">
+      <div class="lg:gap-y-3 max-h-[calc(100vh_-_200px)] gap-y-2 overflow-y-auto flex flex-col p-3 border-t-2 lg:border-t-0 lg:border-l-2 border-grey-500 lg:max-w-md xl:max-w-xl w-full">
         <h1 class="text-lg xl:text-xl font-montserrat text-white">{{ $t('Stacks desenvolvidas') }}</h1>
           <Swiper
           :speed="200"
