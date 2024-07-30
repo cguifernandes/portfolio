@@ -34,12 +34,12 @@
           <NavLinks size="xl" />
         </div>
       </div>
-      <!-- <HeaderWrapper class-name="md:hidden" /> -->
+      <HeaderWrapper class-name="md:hidden" />
     </div>
   </header>
 </template>
 
 <script setup lang="ts">
 import NavLinks from "../navLinks.vue";
-// import HeaderWrapper from "../headerWrapper.vue";
+import HeaderWrapper from "../headerWrapper.vue";
 </script>
