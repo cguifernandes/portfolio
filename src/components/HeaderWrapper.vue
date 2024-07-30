@@ -51,25 +51,9 @@
         <li>
           <a
             class="py-2 px-3 duration-200 hover:bg-grey-700 rounded-lg text-grey-100 hover:text-blue-500 text-lg"
-            href="#about"
-          >
-            {{ $t('Sobre') }}
-          </a>
-        </li>
-        <li>
-          <a
-            class="py-2 px-3 duration-200 hover:bg-grey-700 rounded-lg text-grey-100 hover:text-blue-500 text-lg"
             href="#history"
           >
-            {{ $t('História') }}
-          </a>
-        </li>
-        <li>
-          <a
-            class="py-2 px-3 duration-200 hover:bg-grey-700 rounded-lg text-grey-100 hover:text-blue-500 text-lg"
-            href="#skills"
-          >
-            {{ $t('Habilidades') }}
+            {{ $t('Sobre mim') }}
           </a>
         </li>
         <li>

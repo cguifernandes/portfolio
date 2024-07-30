@@ -10,7 +10,7 @@
       opacity: 1,
       y: 0,
     }"
-    class="flex flex-col gap-y-6 h-screen justify-center items-center"
+    class="flex flex-col gap-y-6 min-h-screen justify-center items-center"
   >
     <div className="flex flex-col items-center justify-center">
       <h1 className="font-montserrat text-xl xl:text-2xl text-white">
@@ -20,7 +20,7 @@
         {{ $t('Projetos pessoais') }}
       </p>
     </div>
-    <div class="w-11/12">
+    <div class="w-full">
       <Swiper
         :speed="200"
         :autoplay="true"

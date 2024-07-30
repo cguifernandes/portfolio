@@ -6,11 +6,11 @@
     ]"
   >
     <div class="flex items-center gap-x-2">
-      <h1 class="font-montserrat text-base xl:text-xl">
+      <h1 class="font-montserrat text-base xl:text-lg">
         {{ name }}
       </h1>
     </div>
-    <p :class="['text-white/50 text-sm xl:text-base', descriptionClass]">
+    <p :title="$t(descripion)" :class="['text-white/50 text-sm xl:text-base', descriptionClass]">
       {{ $t(descripion) }}
     </p>
   </div>

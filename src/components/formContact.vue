@@ -1,6 +1,6 @@
 <template>
   <form
-    class="flex flex-col relative gap-y-6 w-11/12 md:w-9/12 lg:w-4/12"
+    class="flex flex-col relative gap-y-6 w-full lg:w-[400px] 2xl:w-[460px]"
     @submit.prevent="handlerSubmitForm"
   >
     <div class="blur-top-form" />

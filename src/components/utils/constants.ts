@@ -73,7 +73,7 @@ export const projects: ProjectsProps[] = [
 			"https://github.com/user-attachments/assets/9feae71b-c47f-43f1-8991-4545a5165c48",
 		],
 		repo: "https://github.com/cguifernandes/Paqueta",
-		skills: ["Next.js", "Tailwind CSS", "Typescript"],
+		skills: ["Next.js", "Tailwind CSS"],
 		website: "https://paqueta-three.vercel.app/",
 		figmaLink:
 			"https://www.figma.com/design/df5XIaBPlnvzkMNUxhLFpq/Paqueta---BrChallenges?node-id=0-1&t=8R2K3vIoThD0Hric-0",
