@@ -13,10 +13,10 @@
     class="flex flex-col gap-y-6 h-screen justify-center items-center"
   >
     <div className="flex flex-col items-center justify-center">
-      <h1 className="font-montserrat text-2xl text-white">
+      <h1 className="font-montserrat text-xl xl:text-2xl text-white">
         {{ $t('Projetos') }}
       </h1>
-      <p className="text-white/50">
+      <p className="text-white/50 text-sm xl:text-base">
         {{ $t('Projetos pessoais') }}
       </p>
     </div>
@@ -32,7 +32,7 @@
             slidesPerView: 2,
           },
         }"
-        class="!pb-12"
+        class="!pb-6"
       >
         <SwiperSlide
           v-for="(project, index) in projects"

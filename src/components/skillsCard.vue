@@ -1,31 +1,18 @@
 <template>
   <div
-    v-motion
-    :initial="{
-      opacity: 0,
-      y: -40,
-      
-    }"
-    :visibleOnce="{
-      opacity: 1,
-      y: 0,
-      transition: { delay: animationDelay },
-    }"
     :class="[
-      'text-white glass-effect duration-200 cursor-default',
-      'flex items-center flex-1 min-w-[320px] sm:min-w-[420px] px-6 py-8 rounded-md'
+      'text-white glass-effect-light duration-200 cursor-default',
+      'flex flex-col rounded-md w-full lg:w-auto py-2 xl:px-4 px-3 xl:py-3 gap-y-px'
     ]"
   >
-    <slot />
-    <div class="h-32 w-[3px] bg-grey-500 mx-4 hidden sm:inline" />
-    <div class="w-fit space-y-1">
-      <h1 class="font-bold font-montserrat text-lg">
+    <div class="flex items-center gap-x-2">
+      <h1 class="font-montserrat text-base xl:text-xl">
         {{ name }}
       </h1>
-      <p class="text-white/40">
-        {{ $t(descripion) }}
-      </p>
     </div>
+    <p :class="['text-white/50 text-sm xl:text-base', descriptionClass]">
+      {{ $t(descripion) }}
+    </p>
   </div>
 </template>
 
@@ -33,8 +20,8 @@
 interface SkillsProps {
 	name: string;
 	descripion: string;
-	animationDelay: number;
+	descriptionClass?: string;
 }
 
-const { name, descripion, animationDelay } = defineProps<SkillsProps>();
+const { name, descripion, descriptionClass } = defineProps<SkillsProps>();
 </script>

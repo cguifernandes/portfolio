@@ -1,29 +1,20 @@
 <template>
   <header class="flex justify-center h-20 bg-grey-900 md:bg-grey-900/60 md:backdrop-blur fixed w-full z-10 top-0">
-    <div class="flex items-center max-w-[1540px] w-full justify-between mx-8 md:mx-6 lg:mx-10">
-      <img
-        alt="Logo"
-        src="../../assets/reduceLogo.svg"
-        class="w-[60px]"
-      >
-      <ul class="cursor-pointer hidden lg:gap-x-2 md:flex items-center justify-around">
-        <a
-          class="py-2 px-3 relative duration-200 hover:bg-grey-700 rounded-lg text-grey-100 hover:text-blue-500"
-          href="#about"
+    <div class="flex items-center max-w-[1740px] w-full justify-between px-4 md:px-6 lg:px-10">
+      <a href="#about">
+        <img
+          alt="Logo"
+          src="../../assets/reduceLogo.svg"
+          class="w-[60px]"
         >
-          {{ $t('Sobre') }}
-        </a>
+
+      </a>
+      <ul class="cursor-pointer hidden lg:gap-x-2 md:flex items-center justify-around">
         <a
           class="py-2 px-3 relative duration-200 hover:bg-grey-700 rounded-lg text-grey-100 hover:text-blue-500"
           href="#history"
         >
-          {{ $t('História') }}
-        </a>
-        <a
-          class="py-2 px-3 relative duration-200 hover:bg-grey-700 rounded-lg text-grey-100 hover:text-blue-500"
-          href="#skills"
-        >
-          {{ $t('Habilidades') }}
+          {{ $t('Sobre mim') }}
         </a>
         <a
           class="py-2 px-3 relative duration-200 hover:bg-grey-700 rounded-lg text-grey-100 hover:text-blue-500"
@@ -49,6 +40,6 @@
 </template>
 
 <script setup lang="ts">
-import HeaderWrapper from "../HeaderWrapper.vue";
+import HeaderWrapper from "../headerWrapper.vue";
 import NavLinks from "../navLinks.vue";
 </script>

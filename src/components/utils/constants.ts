@@ -1,13 +1,3 @@
-import NextJS from "../../assets/icons/nextjs.svg";
-import ReactJS from "../../assets/icons/react.svg";
-import Typecript from "../../assets/icons/typescript.svg";
-import Tailwind from "../../assets/icons/tailwind.svg";
-import Sass from "../../assets/icons/sass.svg";
-import Python from "../../assets/icons/python.svg";
-import CSharp from "../../assets/icons/csharp.svg";
-import StyledComponents from "../../assets/icons/styledcomponents.svg";
-import Vue from "../../assets/icons/vue.svg";
-
 export type ProjectsProps = {
 	description: string;
 	name: string;
@@ -19,60 +9,56 @@ export type ProjectsProps = {
 	figmaAuthor?: string;
 };
 
-export const skills = [
+export type SkillsProps = {
+	name: string;
+	description: string;
+};
+
+export const skills: SkillsProps[] = [
 	{
 		name: "Next.js",
 		description:
 			"Next.js é uma estrutura da web de desenvolvimento front-end que permite funcionalidades como renderização do lado do servidor e geração de sites estáticos.",
-		icon: NextJS,
 	},
 	{
 		name: "React.js",
 		description:
 			"O React é uma biblioteca front-end JavaScript de código aberto com foco em criar interfaces de usuário em páginas web.",
-		icon: ReactJS,
 	},
 	{
 		name: "Typescript",
 		description:
-			"TypeScript é um superconjunto sintático estrito de JavaScript e adiciona tipagem estática opcional à linguagem.",
-		icon: Typecript,
+			"TypeScript é uma extensão rigorosa de JavaScript que incorpora tipagem estática opcional. Ele oferece uma camada adicional de segurança e previsibilidade ao código, permitindo que os desenvolvedores detectem erros mais cedo no processo de desenvolvimento.",
 	},
 	{
 		name: "Tailwind CSS",
 		description:
 			"Tailwind CSS é uma estrutura CSS de código aberto. Ela não fornece uma série de classes predefinidas para elementos como botões ou tabelas.",
-		icon: Tailwind,
 	},
 	{
-		name: "Sass",
+		name: "TypeORM",
 		description:
-			"Sass é uma linguagem de folhas de estilo concebida inicialmente por Hampton Catlin e desenvolvida por Natalie Weizenbaum.",
-		icon: Sass,
-	},
-	{
-		name: "Python",
-		description:
-			"Python é uma linguagem de programação de alto nível, interpretada de script, imperativa, orientada a objetos, funcional, de tipagem dinâmica e forte.",
-		icon: Python,
-	},
-	{
-		name: "C#",
-		description:
-			"C# é uma linguagem de programação, multiparadigma, de tipagem forte, desenvolvida pela Microsoft como parte da plataforma .NET.",
-		icon: CSharp,
+			"TypeORM é um ORM (Object-Relational Mapper) para TypeScript e JavaScript, que facilita a interação com bancos de dados ao permitir que desenvolvedores trabalhem com objetos em vez de escrever queries SQL diretamente.",
 	},
 	{
 		name: "Styled Components",
 		description:
 			"Styled Components permite que você escreva estilos CSS em seus componentes React usando uma sintaxe semelhante ao CSS.",
-		icon: StyledComponents,
 	},
 	{
-		name: "Vue.js",
+		name: "React Hook Form",
 		description:
-			"Vue.js é um framework JavaScript de código-aberto, focado no desenvolvimento de interfaces de usuário e aplicativos de página única.",
-		icon: Vue,
+			"React Hook Form é uma biblioteca para gerenciamento de formulários em React, que melhora a performance e a simplicidade ao utilizar hooks para controlar estados e validações dos formulários.",
+	},
+	{
+		name: "API’s",
+		description:
+			"Uma API (Application Programming Interface) é um conjunto de regras e definições que permite a comunicação entre diferentes sistemas de software, facilitando a integração e o compartilhamento de dados e funcionalidades.",
+	},
+	{
+		name: "AWS",
+		description:
+			"AWS (Amazon Web Services) é uma plataforma de serviços de computação em nuvem da Amazon, que oferece uma ampla gama de serviços como armazenamento, processamento e banco de dados, permitindo escalabilidade e flexibilidade para aplicações de diversas naturezas.",
 	},
 ];
 

@@ -7,17 +7,17 @@
     >
     <div class="flex flex-col flex-1 gap-y-3 pt-4 justify-center">
       <div class="flex flex-col gap-y-1">
-        <h1 class="text-white text-2xl font-montserrat">
+        <h1 class="text-white text-base xl:text-xl font-montserrat">
           {{ name }}
         </h1>
         <span 
-          class="text-white/50 max-h-24 h-full overflow-hidden line-clamp-3 xl:line-clamp-4"
+          class="text-white/50 max-h-24 h-full overflow-hidden line-clamp-3 xl:line-clamp-4 text-sm xl:text-base"
         >
           {{ $t(description) }}
         </span>
       </div>
       <div class="flex flex-col gap-y-1">
-        <h1 class="text-white font-montserrat">Stacks utilizadas</h1>
+        <h1 class="text-white text-base xl:text-xl font-montserrat">Stacks utilizadas</h1>
         <div class="flex items-center gap-1 flex-wrap">
           <span
             v-for="(skill, index) in skills"
@@ -29,33 +29,34 @@
         </div>
       </div>
       <div v-if="figmaAuthor || figmaLink" class="flex flex-col gap-y-1">
-        <h1 class="text-white font-montserrat">Links</h1>
-        <span v-if="figmaAuthor" class="text-white/50 text-sm">
+        <h1 class="text-white font-montserrat text-base xl:text-xl">Links</h1>
+        <span v-if="figmaAuthor" class="text-white/50 text-sm xl:text-base">
           Autor do 
-          <a :href="figmaAuthor" class="text-white underline">
+          <a :href="figmaAuthor" class="text-white underlinetext-sm xl:text-base">
            Figma
           </a>
         </span>
-        <span v-if="figmaLink" class="text-white/50 text-sm">
+        <span v-if="figmaLink" class="text-white/50 text-sm xl:text-base">
           Projeto no 
-          <a :href="figmaLink" class="text-white underline">
+          <a :href="figmaLink" class="text-white underline text-sm xl:text-base">
            Figma
           </a>
         </span>
       </div>
-      <div class="flex flex-col gap-y-1">
+      <div class="flex flex-col gap-y-2">
         <ButtonComponent
           title="Link para redirecionar ao repositório no GitHub"
-          class-name="w-full"
+          class="w-full"
           :href="repo"
         >
           {{ $t('Repositório') }}
         </ButtonComponent>
         <ButtonComponent
           v-if="website" 
-          class-name="w-full"
+          :outline="true"
+          class="w-full"
           :href="website"
-        >
+         >
           {{ $t('Site') }}
         </ButtonComponent>
       </div>

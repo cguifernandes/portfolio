@@ -4,10 +4,10 @@
     <div class="space-x-4">
       <NavLinks size="xl" />
     </div>
-    <p class="text-white">
+    <p class="text-white xl:text-base text-sm">
       {{ $t('Feito por') }}
       <a
-        class="gradient-text"
+        class="gradient-text xl:text-base text-sm"
         href="https://www.linkedin.com/in/guilherme-fernandes-6b1353243/"
       >
         Guilherme Fernandes

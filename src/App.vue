@@ -5,15 +5,13 @@ import AboutSection from "./components/Section/aboutSection.vue";
 import ContactSection from "./components/Section/contactSection.vue";
 import HistorySection from "./components/Section/historySection.vue";
 import ProjectsSection from "./components/Section/projectsSection.vue";
-import SkillsSection from "./components/Section/skillsSection.vue";
 </script>
 
 <template>
   <HeaderBar />
-  <main class="flex flex-col gap-y-24 ">
+  <main class="flex flex-col max-w-[1740px] mx-auto px-4 md:px-6 lg:px-10">
     <AboutSection />
     <HistorySection />
-    <SkillsSection />
     <ProjectsSection />
     <ContactSection />
   </main>

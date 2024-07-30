@@ -5,30 +5,30 @@
   >
     <div class="blur-top-form" />
     <div class="text-white space-y-2">
-      <label for="name">{{ $t("Nome") }}</label>
+      <label class="xl:text-base text-sm" for="name">{{ $t("Nome") }}</label>
       <input
         id="name"
         v-model="name"
-        class="px-4 py-3 w-full glass-effect duration-200 placeholder:text-white/50 rounded-md focus:bg-grey-600"
+        class="px-4 py-3 w-full glass-effect xl:text-base text-sm duration-200 placeholder:text-white/50 rounded-md focus:bg-grey-600"
         :placeholder="$t('Nome')"
         type="text"
       >
     </div>
     <div class="text-white space-y-2">
-      <label for="email">E-mail</label>
+      <label class="xl:text-base text-sm" for="email">E-mail</label>
       <input
         v-model="email"
-        class="px-4 py-3 w-full glass-effect text-white duration-200 placeholder:text-white/50 rounded-md focus:bg-grey-600"
+        class="px-4 py-3 w-full glass-effect xl:text-base text-sm text-white duration-200 placeholder:text-white/50 rounded-md focus:bg-grey-600"
         placeholder="E-mail"
         type="text"
       >
     </div>
     <div class="text-white space-y-2">
-      <label for="message">{{ $t("Mensagem para contato") }}</label>
+      <label class="xl:text-base text-sm" for="message">{{ $t("Mensagem para contato") }}</label>
       <textarea
         id="message"
         v-model="message"
-        class="px-4 py-3 w-full h-32 glass-effect text-white duration-200 placeholder:text-white/50 rounded-md focus:bg-grey-600"
+        class="px-4 py-3 w-full h-32 glass-effect xl:text-base text-sm text-white duration-200 placeholder:text-white/50 rounded-md focus:bg-grey-600"
         :placeholder="$t('Mensagem*')"
       />
     </div>

@@ -1,10 +1,10 @@
 <template>
   <section
     id="about"
-    class="h-screen pt-20 relative flex items-center justify-between bg-grey-900"
+    class="h-screen w-full pt-20 relative flex items-center justify-between bg-grey-900"
   >
     <div class="blur-top-about" />
-    <div class="flex items-center justify-center w-full px-10 z-[5] lg:px-24 lg:justify-between">
+    <div class="flex flex-col lg:flex-row items-center justify-center w-full z-[5] lg:justify-between">
       <div
         v-motion
         :initial="{
@@ -15,7 +15,7 @@
           opacity: 1,
           x: 0,
         }"
-        class="text-white flex flex-col text-center text-xl w-full gap-y-4 lg:text-left lg:w-[700px]"
+        class="text-white flex flex-col text-center text-xl w-full gap-y-4 lg:text-left lg:w-[50%]"
       >
         <p>
           {{ $t('Olá, eu sou,') }} <span class="gradient-text">Guilherme Fernandes</span> {{ $t('e tenho uma paixão por criar sites e explorar novas tecnologias. Quando não estou codando, aproveito o tempo para ler livros, assistir séries e estudar um pouco mais.') }}
@@ -28,16 +28,15 @@
           <Languages :size="22" />
         </ButtonComponent>
       </div>
-      <div
+      <!-- <div
         v-motion-slide-right
-        class="hidden lg:inline lg:w-[460px] xl:w-[520px] 2xl:w-[580px]"
+        class="hidden lg:inline lg:w-[40%] xl:w-[45%] 2xl:w-[50%]"
       >
         <Vue3Lottie
           :animation-data="MainAnimation"
-          :loop="false"
           class="!m-0"
         />
-      </div>
+      </div> -->
     </div>
     <div class="blur-bottom-about" />
     <div class="w-full flex items-center justify-center absolute bottom-6">
@@ -69,3 +68,9 @@ const handlerClick = (): void => {
 	}
 };
 </script>
+
+<style scoped>
+.blur-top-about, .blur-bottom-about {
+  /* Adicione seu estilo de desfoque aqui */
+}
+</style>
