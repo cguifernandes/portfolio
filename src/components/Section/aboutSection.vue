@@ -4,7 +4,7 @@
     class="h-screen w-full pt-20 relative flex items-center justify-between bg-grey-900"
   >
     <div class="blur-top-about" />
-    <div class="flex flex-col lg:flex-row items-center justify-center w-full z-[5] lg:justify-between">
+    <div class="flex flex-col overflow-hidden lg:flex-row items-center justify-center w-full z-[5] lg:justify-between">
       <div
         v-motion
         :initial="{
@@ -28,7 +28,7 @@
           <Languages :size="22" />
         </ButtonComponent>
       </div>
-      <!-- <div
+      <div
         v-motion-slide-right
         class="hidden lg:inline lg:w-[40%] xl:w-[45%] 2xl:w-[50%]"
       >
@@ -36,7 +36,7 @@
           :animation-data="MainAnimation"
           class="!m-0"
         />
-      </div> -->
+      </div>
     </div>
     <div class="blur-bottom-about" />
     <div class="w-full flex items-center justify-center absolute bottom-6">
@@ -68,9 +68,3 @@ const handlerClick = (): void => {
 	}
 };
 </script>
-
-<style scoped>
-.blur-top-about, .blur-bottom-about {
-  /* Adicione seu estilo de desfoque aqui */
-}
-</style>

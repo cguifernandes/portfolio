@@ -18,7 +18,7 @@
         </span>
       </div>
       <div class="flex flex-col gap-y-1">
-        <h1 class="text-white text-base xl:text-lg font-montserrat">Stacks utilizadas</h1>
+        <h1 class="text-white text-base xl:text-lg font-montserrat">{{ $t('Stacks utilizadas') }}</h1>
         <div class="flex items-center gap-1 flex-wrap">
           <span
             v-for="(skill, index) in skills"
@@ -32,13 +32,13 @@
       <div v-if="figmaAuthor || figmaLink" class="flex flex-col gap-y-1">
         <h1 class="text-white font-montserrat text-base xl:text-lg">Links</h1>
         <span v-if="figmaAuthor" class="text-white/50 text-sm xl:text-base">
-          Autor do 
+          {{ $t('Autor do') }} 
           <a :href="figmaAuthor" class="gradient-text text-sm xl:text-base">
            Figma
           </a>
         </span>
         <span v-if="figmaLink" class="text-white/50 text-sm xl:text-base">
-          Projeto no 
+          {{ $t('Projeto no') }}
           <a :href="figmaLink" class="gradient-text text-sm xl:text-base">
            Figma
           </a>
@@ -46,14 +46,12 @@
       </div>
       <div class="flex flex-col gap-y-2">
         <ButtonComponent
-          title="Link para redirecionar ao repositório no GitHub"
           class="w-full"
           :href="repo"
         >
           {{ $t('Repositório') }}
         </ButtonComponent>
         <ButtonComponent
-          title="Link para redirecionar ao site"
           v-if="website" 
           :outline="true"
           class="w-full"

@@ -2,11 +2,14 @@
   <div
     :class="[
       'text-white glass-effect-light duration-200 cursor-default',
-      'flex flex-col rounded-md w-full lg:w-auto py-2 xl:px-4 px-3 xl:py-3 gap-y-px'
+      'flex flex-col rounded-md w-full h-full lg:w-auto py-2 xl:px-4 px-3 xl:py-3 gap-y-px'
     ]"
   >
     <div class="flex items-center gap-x-2">
-      <h1 class="font-montserrat text-base xl:text-lg">
+      <h1 v-if="isTraslate"class="font-montserrat text-base xl:text-lg">
+        {{ $t(name) }}
+      </h1>
+      <h1 v-else class="font-montserrat text-base xl:text-lg">
         {{ name }}
       </h1>
     </div>
@@ -21,7 +24,9 @@ interface SkillsProps {
 	name: string;
 	descripion: string;
 	descriptionClass?: string;
+	isTraslate?: boolean;
 }
 
-const { name, descripion, descriptionClass } = defineProps<SkillsProps>();
+const { name, descripion, descriptionClass, isTraslate } =
+	defineProps<SkillsProps>();
 </script>

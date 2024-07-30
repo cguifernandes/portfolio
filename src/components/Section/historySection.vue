@@ -25,33 +25,33 @@
         <div class="flex flex-col max-w-2xl mx-auto lg:m-0 xl:max-w-4xl gap-y-4 pr-3">
           <div class="flex gap-x-4 items-center justify-center lg:justify-normal">
             <img :src="MyImage" alt="My Image" class="xl:size-12 size-10 object-cover rounded-full" />
-            <h1 class="text-lg xl:text-xl font-montserrat text-white">Quem é <span class="gradient-text">Guilherme Fernandes?</span></h1>
+            <h1 class="text-lg xl:text-xl font-montserrat text-white">{{ $t('Quem é ') }}<span class="gradient-text">Guilherme Fernandes?</span></h1>
           </div>
           <p class="text-white/50 text-center lg:text-left text-sm xl:text-base">
-            Programador há 3 anos. Comecei em uma escola técnica e iniciei minha carreira com automação de sistemas para Telegram usando Node.js. 
-            Após um ano nessa empresa, me tornei freelancer. Atualmente, curso análise e desenvolvimento de sistemas para aprimorar meus conhecimentos. 
-            Já trabalhei em projetos full-time com Next.js, desenvolvi extensões para Google Chrome e bots para Discord e Telegram.
-            Espero que você goste dos meus trabalhos!
+            {{ $t('text-about-me') }}
             <br>
-            Para mais informações: <a class="gradient-text" href="/curriculo.pdf">Currículo</a>
+            {{ $t('Para mais informações:') }} <a class="gradient-text" href="/curriculo.pdf">{{ $t('Currículo') }}</a>
           </p>
         </div>
         <div class="flex flex-col gap-y-2">
-          <h1 class="text-lg xl:text-xl font-montserrat text-white">Serviços</h1>
+          <h1 class="text-lg xl:text-xl font-montserrat text-white">{{ $t('Serviços') }}</h1>
           <div class="flex flex-wrap gap-3 overflow-x-auto min-h-0 max-h-[290px] sm:max-h-[320px] xl:max-h-[290px] custom-scrollbar">
             <SkillsCard
+              :is-traslate="true"
               name="Desenvolvimento de site"
               class="h-full flex-1 min-w-72"
               descripion="Crio websites personalizados que destacam sua presença online, utilizando as mais recentes tecnologias e design responsivo para sites atraentes, rápidos e fáceis de navegar. Transformo suas ideias em experiências digitais únicas para conquistar seus clientes."
               description-class="line-clamp-4 md:line-clamp-5 xl:line-clamp-4"
             /> 
             <SkillsCard
+              :is-traslate="true"
               name="Automação de tarefas"
               class="h-full flex-1 min-w-72"
               descripion="Ofereço soluções de automação de tarefas para otimizar seu tempo e aumentar a produtividade, automatizando processos repetitivos e complexos. Assim, você pode focar nas atividades mais importantes e melhorar a eficiência operacional."
               description-class="line-clamp-4 md:line-clamp-5 xl:line-clamp-4"
             />
             <SkillsCard
+              :is-traslate="true"
               name="Design de sites"
               class="h-full flex-1 min-w-72"
               descripion="Crio designs de sites atraentes e funcionais que refletem sua marca, com foco na experiência do usuário. Desenvolvo layouts intuitivos e impactantes que facilitam a navegação e engajam visitantes, transformando suas ideias em um design que destaca sua presença online."
@@ -61,7 +61,7 @@
         </div>
       </div>
       <div class="lg:gap-y-3 max-h-[calc(100vh_-_200px)] gap-y-2 flex flex-col p-3 border-t-2 lg:border-l-2 border-grey-500 lg:max-w-md xl:max-w-xl w-full">
-        <h1 class="text-lg xl:text-xl font-montserrat text-white">Stacks desenvolvidas</h1>
+        <h1 class="text-lg xl:text-xl font-montserrat text-white">{{ $t('Stacks desenvolvidas') }}</h1>
           <Swiper
           :speed="200"
           :autoplay="true"
@@ -89,7 +89,7 @@
           >
             <SkillsCard
               :name="skill.name"
-              :descripion="skill.description"
+              :descripion="skill.name"
               description-class="line-clamp-3 lg:line-clamp-3"
             />
           </SwiperSlide>
