@@ -40,6 +40,6 @@
 </template>
 
 <script setup lang="ts">
-import HeaderWrapper from "../headerWrapper.vue";
 import NavLinks from "../navLinks.vue";
+import HeaderWrapper from "../headerWrapper.vue";
 </script>
