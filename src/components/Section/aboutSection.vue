@@ -30,11 +30,11 @@
       </div>
       <div
         v-motion-slide-right
-        class="hidden lg:inline lg:w-[40%] xl:w-[45%] 2xl:w-[50%]"
+        class="hidden relative lg:inline left-[62px] size-[620px]"
       >
         <Vue3Lottie
           :animation-data="MainAnimation"
-          class="!m-0"
+          class="!m-0 absolute left-10"
         />
       </div>
     </div>
