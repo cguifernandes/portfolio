@@ -10,7 +10,7 @@
       opacity: 1,
       y: 0,
     }"
-    class="flex flex-col gap-y-6 min-h-screen justify-center items-center"
+    class="flex flex-col gap-y-6 h-screen min-h-[828px] justify-center items-center"
   >
     <div className="flex flex-col items-center justify-center">
       <h1 className="font-montserrat text-xl xl:text-2xl text-white">

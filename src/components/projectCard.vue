@@ -7,7 +7,7 @@
     >
     <div class="flex flex-col flex-1 gap-y-3 pt-4 justify-center">
       <div class="flex flex-col gap-y-1">
-        <h1 class="text-white text-base xl:text-lg font-montserrat">
+        <h1 class="text-white text-lg font-montserrat">
           {{ name }}
         </h1>
         <span 

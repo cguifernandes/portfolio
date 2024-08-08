@@ -1,7 +1,7 @@
 <template>
   <section
     id="about"
-    class="h-screen w-full pt-20 relative flex items-center justify-between bg-grey-900"
+    class="h-screen min-h-[calc(828px_-_80px)] w-full relative flex items-center justify-between bg-grey-900"
   >
     <div class="blur-top-about" />
     <div class="flex flex-col overflow-hidden lg:flex-row items-center justify-center w-full z-[5] lg:justify-between">
@@ -61,10 +61,20 @@ import ButtonComponent from "../buttonComponent.vue";
 import { i18n } from "../utils/i18n";
 
 const handlerClick = (): void => {
-	if (i18n.global.locale === "pt") {
-		i18n.global.locale = "en";
+	const newLocale = i18n.global.locale === "pt" ? "en" : "pt";
+	i18n.global.locale = newLocale;
+
+	localStorage.setItem("locale", newLocale);
+};
+
+const loadLocale = () => {
+	const savedLocale = localStorage.getItem("locale");
+	if (savedLocale) {
+		i18n.global.locale = savedLocale as "pt" | "en";
 	} else {
 		i18n.global.locale = "pt";
 	}
 };
+
+loadLocale();
 </script>

@@ -18,12 +18,9 @@ body::-webkit-scrollbar-thumb {
   border-radius: 8px; 
 }
 
-.custom-scrollbar {
-  padding-right: 12px;
-}
-
 .custom-scrollbar::-webkit-scrollbar {
   width: 4px; 
+  height: 4px;
 }
 
 .custom-scrollbar::-webkit-scrollbar-track {

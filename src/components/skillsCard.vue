@@ -2,7 +2,7 @@
   <div
     :class="[
       'text-white glass-effect-light duration-200 cursor-default',
-      'flex flex-col rounded-md w-full h-full lg:w-auto py-2 xl:px-4 px-3 xl:py-3 gap-y-px'
+      'flex flex-col rounded-md w-full min-w-72 h-full lg:w-auto py-2 xl:px-4 px-3 xl:py-3 gap-y-px'
     ]"
   >
     <div class="flex items-center gap-x-2">
