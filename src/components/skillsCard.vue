@@ -1,7 +1,7 @@
 <template>
   <div
     :class="[
-      'text-white glass-effect-light transition-all duration-200 cursor-default',
+      'text-white glass-effect-light transition-all duration-200 cursor-default min-h-fit',
       'flex flex-col rounded-md w-full min-w-72 h-full lg:w-auto py-2 xl:px-4 px-3 xl:py-3 gap-y-px'
     ]"
   >
