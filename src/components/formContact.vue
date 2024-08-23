@@ -15,7 +15,10 @@
       >
     </div>
     <div class="space-y-2">
-      <label class="xl:text-base text-sm text-neutral-800 transition-all duration-300 dark:text-neutral-200" for="email">E-mail</label>
+      <label class="xl:text-base text-sm text-neutral-800 transition-all flex justify-between duration-300 dark:text-neutral-200" for="email">
+        E-mail 
+        <span class="text-neutral-500">{{ $t("obrigátorio") }}</span>
+      </label>
       <input
         v-model="email"
         class="px-4 py-3 w-full glass-effect xl:text-base text-sm text-neutral-800 transition-all duration-300 dark:text-neutral-200 placeholder:text-neutral-500 rounded-md focus:bg-neutral-100 dark:focus:bg-grey-600"
@@ -25,7 +28,10 @@
       >
     </div>
     <div class="space-y-2">
-      <label class="xl:text-base text-sm text-neutral-800 transition-all duration-300 dark:text-neutral-200" for="message">{{ $t("Mensagem para contato") }}</label>
+      <label class="xl:text-base text-sm text-neutral-800 transition-all flex justify-between duration-300 dark:text-neutral-200" for="email">
+        {{ $t("Mensagem para contato") }}
+        <span class="text-neutral-500">{{ $t("obrigátorio") }}</span>
+      </label>
       <textarea
         id="message"
         v-model="message"
@@ -90,7 +96,7 @@ const handlerSubmitForm = (): void => {
 				message.value = "";
 
 				$toast.default("O e-mail foi enviado com sucesso!", {
-					position: "top",
+					position: "bottom-left",
 				});
 			})
 			.catch((error) => {

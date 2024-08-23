@@ -120,8 +120,13 @@ a {
   @apply dark:bg-[rgba(58,58,58,0.45)] backdrop-blur-[10px] border dark:border-[#333] bg-neutral-100/45 border-neutral-400 transition-all duration-200;
 }
 
-.v-toast__item--default {
-  background-image: linear-gradient(to left, #0c91ac, #07505f) !important;
+.v-toast__item {
+  position: fixed !important;
+  margin: 0px !important;
+  left: 16px !important;
+  bottom: 16px !important;
+  background-color: #09677a !important;
+  opacity: 1 !important;
 }
 
 .border-gradient::before {

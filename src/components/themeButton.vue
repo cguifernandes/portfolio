@@ -1,7 +1,7 @@
 <template>
   <button 
     @click="toggleTheme"
-    class="fixed right-12 bottom-12 rounded-full size-12 flex items-center justify-center glass-effect"
+    class="fixed md:right-12 md:bottom-12 right-4 bottom-4 rounded-full size-12 flex items-center justify-center glass-effect"
   >
     <Moon 
       v-if="!isDarkTheme"
