@@ -4,31 +4,32 @@
     @submit.prevent="handlerSubmitForm"
   >
     <div class="blur-top-form" />
-    <div class="text-white space-y-2">
-      <label class="xl:text-base text-sm" for="name">{{ $t("Nome") }}</label>
+    <div class="space-y-2">
+      <label class="xl:text-base text-sm text-neutral-800 transition-all duration-300 dark:text-neutral-200" for="name">{{ $t("Nome") }}</label>
       <input
         id="name"
         v-model="name"
-        class="px-4 py-3 w-full glass-effect xl:text-base text-sm duration-200 placeholder:text-white/50 rounded-md focus:bg-grey-600"
+        class="px-4 py-3 w-full glass-effect xl:text-base text-sm text-neutral-800 transition-all duration-300 dark:text-neutral-200 placeholder:text-neutral-500 rounded-md focus:bg-neutral-100 dark:focus:bg-grey-600"
         :placeholder="$t('Nome')"
         type="text"
       >
     </div>
-    <div class="text-white space-y-2">
-      <label class="xl:text-base text-sm" for="email">E-mail</label>
+    <div class="space-y-2">
+      <label class="xl:text-base text-sm text-neutral-800 transition-all duration-300 dark:text-neutral-200" for="email">E-mail</label>
       <input
         v-model="email"
-        class="px-4 py-3 w-full glass-effect xl:text-base text-sm text-white duration-200 placeholder:text-white/50 rounded-md focus:bg-grey-600"
+        class="px-4 py-3 w-full glass-effect xl:text-base text-sm text-neutral-800 transition-all duration-300 dark:text-neutral-200 placeholder:text-neutral-500 rounded-md focus:bg-neutral-100 dark:focus:bg-grey-600"
         placeholder="E-mail"
-        type="text"
+        type="email"
+        id="email"
       >
     </div>
-    <div class="text-white space-y-2">
-      <label class="xl:text-base text-sm" for="message">{{ $t("Mensagem para contato") }}</label>
+    <div class="space-y-2">
+      <label class="xl:text-base text-sm text-neutral-800 transition-all duration-300 dark:text-neutral-200" for="message">{{ $t("Mensagem para contato") }}</label>
       <textarea
         id="message"
         v-model="message"
-        class="px-4 py-3 w-full h-32 glass-effect xl:text-base text-sm text-white duration-200 placeholder:text-white/50 rounded-md focus:bg-grey-600"
+        class="px-4 py-3 w-full h-32 glass-effect xl:text-base text-sm text-neutral-800 transition-all duration-300 dark:text-neutral-200 placeholder:text-neutral-500 rounded-md focus:bg-neutral-100 dark:focus:bg-grey-600"
         :placeholder="$t('Mensagem*')"
       />
     </div>

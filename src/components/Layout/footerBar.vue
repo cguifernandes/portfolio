@@ -1,10 +1,10 @@
 
 <template>
-  <footer class="flex items-center justify-evenly h-32 md:px-20 bg-gradient-to-tl from-grey-800 to-grey-900 flex-col md:justify-between md:h-20 md:flex-row">
-    <div class="space-x-4">
+  <footer class="flex items-center justify-evenly h-32 md:px-20 border-t dark:border-[#333] border-neutral-400 flex-col transition-all duration-200 md:justify-between md:h-20 md:flex-row">
+    <div class="space-x-4 flex items-center">
       <NavLinks size="xl" />
     </div>
-    <p class="text-white xl:text-base text-sm">
+    <p class="text-neutral-800 transition-all duration-300 dark:text-neutral-200 xl:text-base text-sm">
       {{ $t('Feito por') }}
       <a
         class="gradient-text xl:text-base text-sm"

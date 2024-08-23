@@ -6,6 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="./public/favicon.ico">
     <title>Portfólio | guifernandes</title>
+    <script>
+      const storageTheme = localStorage.getItem("theme");
+      if (storageTheme === "light") {
+        document.documentElement.classList.add("light");
+        document.documentElement.classList.remove("dark");
+        document.documentElement.style = ""
+        document.documentElement.style.backgroundColor = "#e6e6e6"
+      } else {
+        document.documentElement.classList.add("dark");
+        document.documentElement.classList.remove("light");
+        document.documentElement.style = ""
+        document.documentElement.style.backgroundColor = "#151515"
+      }
+    </script>
   </head>
   <body>
     <div id="app"></div>

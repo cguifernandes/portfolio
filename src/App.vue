@@ -5,6 +5,7 @@ import AboutSection from "./components/Section/aboutSection.vue";
 import ContactSection from "./components/Section/contactSection.vue";
 import HistorySection from "./components/Section/historySection.vue";
 import ProjectsSection from "./components/Section/projectsSection.vue";
+import ThemeButton from "./components/themeButton.vue";
 </script>
 
 <template>
@@ -14,6 +15,7 @@ import ProjectsSection from "./components/Section/projectsSection.vue";
     <HistorySection />
     <ProjectsSection />
     <ContactSection />
+    <ThemeButton />
   </main>
   <FooterBar />
 </template>

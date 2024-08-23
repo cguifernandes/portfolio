@@ -13,10 +13,10 @@
     class="flex flex-col gap-y-6 h-screen min-h-[828px] justify-center items-center"
   >
     <div className="flex flex-col items-center justify-center">
-      <h1 className="font-montserrat text-xl xl:text-2xl text-white">
+      <h1 className="font-montserrat text-xl xl:text-2xl text-neutral-800 dark:text-neutral-200 transition-all duration-200">
         {{ $t("Contato") }}
       </h1>
-      <p className="text-white/50 text-sm xl:text-base">
+      <p className="text-neutral-500 text-sm xl:text-base">
         {{ $t("Entre em contato comigo") }}
       </p>
     </div>

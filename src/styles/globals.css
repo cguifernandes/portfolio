@@ -10,12 +10,12 @@ body::-webkit-scrollbar {
 }
 
 body::-webkit-scrollbar-track {
-  background: #2e2e2e; 
+  border-radius: 8px; 
+  @apply dark:bg-grey-600 bg-neutral-300 transition-all duration-200
 }
 
 body::-webkit-scrollbar-thumb {
-  background: #fff; 
-  border-radius: 8px; 
+  @apply dark:bg-neutral-200 bg-neutral-700 transition-all duration-200 
 }
 
 .custom-scrollbar::-webkit-scrollbar {
@@ -24,21 +24,21 @@ body::-webkit-scrollbar-thumb {
 }
 
 .custom-scrollbar::-webkit-scrollbar-track {
-  background: #2e2e2e; 
+  border-radius: 8px; 
+  @apply dark:bg-grey-600 bg-neutral-300 transition-all duration-200
 }
 
 .custom-scrollbar::-webkit-scrollbar-thumb {
-  background: #fff; 
   border-radius: 8px; 
+  @apply dark:bg-neutral-200 bg-neutral-700 transition-all duration-200
 }
 
 .custom-scrollbar::-webkit-scrollbar-thumb:hover {
-  background: #ccc; 
+  @apply dark:bg-[#ccc] bg-neutral-800 transition-all duration-200
 }
 
 button {
   outline: 0;
-  border: 0;
 }
 
 input, textarea {
@@ -47,7 +47,7 @@ input, textarea {
 }
 
 html {
-  background-color: rgba(21, 21, 21, 1);
+  @apply transition-all duration-200
 }
 
 a {
@@ -77,54 +77,47 @@ a {
 }
 
 .swiper-scrollbar {
-  background-color: #2e2e2e !important;
+  @apply dark:bg-grey-600 bg-neutral-300 transition-all duration-200
 }
 
 .swiper-scrollbar-drag {
-  background-color: #fff !important;
+  @apply dark:bg-neutral-200 bg-neutral-700 transition-all duration-200
 }
 
 .blur-top-about {
-  @apply absolute top-12 w-[900px] right-24 h-12 bg-gradient-to-l hidden from-blue-500 to-blue-300 blur-[150px] z-20 md:inline
+  @apply absolute top-24 w-[900px] right-24 h-20 bg-gradient-to-l hidden from-blue-200 to-blue-400 blur-[100px] z-20 md:inline dark:from-blue-500 dark:to-blue-300
 }
 
 .blur-bottom-about {
-  @apply absolute md:bottom-6 min-w-[200px] max-w-[700px] w-full left-2/4 blur-[150px] -translate-x-2/4 h-12 bg-gradient-to-l from-blue-500 to-blue-300 md:left-12
+  @apply absolute md:bottom-6 min-w-[200px] max-w-[700px] w-full left-2/4 blur-[100px] -translate-x-2/4 h-16 bg-gradient-to-l from-blue-200 to-blue-400 md:left-[360px] dark:from-blue-500 dark:to-blue-300
 }
 
 .blur-bottom-skills {
-  @apply absolute min-w-[300px] bottom-4 max-w-[800px] w-full blur-[150px] right-4 h-24 bg-gradient-to-l from-blue-500 to-blue-300 -z-10
+  @apply absolute min-w-[300px] bottom-4 max-w-[800px] w-full blur-[100px] right-4 h-24 bg-gradient-to-l from-blue-200 to-blue-400 -z-10 dark:from-blue-500 dark:to-blue-300
 }
 
 .blur-top-skills {
-  @apply absolute min-w-[200px] top-4 max-w-[600px] w-full blur-[150px] left-4 h-20 bg-gradient-to-l from-blue-500 to-blue-300 -z-10
+  @apply absolute min-w-[200px] top-4 max-w-[600px] w-full blur-[100px] left-4 h-20 bg-gradient-to-l from-blue-200 to-blue-400 -z-10 dark:from-blue-500 dark:to-blue-300
 }
 
 .blur-top-form {
-  @apply absolute min-w-[200px] max-w-[200px] w-full blur-[100px] h-10 bg-gradient-to-l from-blue-500 to-blue-300 right-0 -z-10
+  @apply absolute min-w-[200px] max-w-[200px] w-full blur-[100px] h-20 bg-gradient-to-l from-blue-200 to-blue-400 right-0 -z-10 dark:from-blue-500 dark:to-blue-300
 }
 
 .blur-bottom-form {
-  @apply absolute bottom-0 min-w-[200px] max-w-[200px] w-full blur-[100px] h-10 bg-gradient-to-l from-blue-500 to-blue-300 left-0 -z-10
+  @apply absolute bottom-0 min-w-[200px] max-w-[200px] w-full blur-[100px] h-20 bg-gradient-to-l from-blue-200 to-blue-400 left-0 -z-10 dark:from-blue-500 dark:to-blue-300
 }
 
 .blur-bottom-projects {
-  @apply absolute min-w-[50px] max-w-[300px] md:min-w-[200px] bottom-24 md:max-w-[600px] w-full blur-[150px] left-4 h-24 bg-gradient-to-l from-blue-500 to-blue-300 -z-10
+  @apply absolute min-w-[50px] max-w-[300px] md:min-w-[200px] bottom-24 md:max-w-[600px] w-full blur-[100px] left-4 h-24 bg-gradient-to-l from-blue-200 to-blue-400 -z-10 dark:from-blue-500 dark:to-blue-300
 }
 
 .glass-effect {
-  background: rgba(36, 36, 36, 0.45);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.25);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border: 2px solid rgb(51, 51, 51);
+  @apply dark:bg-[rgba(36,36,36,0.45)] shadow-lg backdrop-blur-[10px] border dark:border-[#333] transition-all duration-200 bg-neutral-200/45 border-neutral-400;
 }
 
 .glass-effect-light {
-  background: rgba(58, 58, 58, 0.45);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgb(51, 51, 51);
+  @apply dark:bg-[rgba(58,58,58,0.45)] backdrop-blur-[10px] border dark:border-[#333] bg-neutral-100/45 border-neutral-400 transition-all duration-200;
 }
 
 .v-toast__item--default {

@@ -1,37 +1,14 @@
 <template>
   <button
-    v-if="!isNavBarOpen"
-    v-motion="iconAnimation"
     :class="[
-      'items-center justify-center flex flex-col w-[45px] h-[41px] gap-y-[5px]',
-      'cursor-pointer py-2 px-3 hover:bg-grey-700 duration-200 rounded-lg group',
+      'items-center justify-center flex transition-all hover:bg-neutral-300',
+      'dark:hover:bg-grey-700 duration-200 rounded-lg group size-10',
       className
     ]"
     @click="toggleNavBar"
   >
-    <div
-      class="w-5 h-[2px] bg-grey-100 duration-200 group-hover:bg-blue-500"
-    />
-    <div
-      class="w-5 h-[2px] bg-grey-100 duration-200 group-hover:bg-blue-500"
-    />
-    <div
-      class="w-5 h-[2px] bg-grey-100 duration-200 group-hover:bg-blue-500"
-    />
-  </button>
-  <button
-    v-else
-    v-motion="iconAnimation"
-    :class="[
-      'items-center justify-center flex flex-col w-[45px] h-[41px] gap-y-[5px]',
-      'cursor-pointer py-2 px-3 hover:bg-grey-700 duration-200 rounded-lg group',
-      className
-    ]"
-    @click="toggleNavBar"
-  >
-    <span
-      class="text-grey-100 text-xl duration-200 group-hover:text-blue-500"
-    >X</span>
+    <Menu v-if="!isNavBarOpen" class="text-neutral-800 dark:text-grey-100 group-hover:text-blue-500 transition-all duration-200" />
+    <X v-else class="text-neutral-800 dark:text-grey-100 duration-200 group-hover:text-blue-500 transition-all" />
   </button>
   <transition
     @leave="(_el, done) => motions['navBarAnimation'].leave(done)"
@@ -39,18 +16,18 @@
     <aside
       v-if="isNavBarOpen"
       v-motion="`navBarAnimation`"
-      :initial="{ x: 640, transition: { type: 'keyframes', duration: 500 } }"
-      :enter="{ x: 0, transition: { type: 'keyframes', duration: 500 } }"
-      :leave="{ x: 640, transition: { type: 'keyframes', duration: 500 } }"
+      :initial="{ x: 640, transition: { type: 'tween', duration: 500 } }"
+      :enter="{ x: 0, transition: { type: 'tween', duration: 500 } }"
+      :leave="{ x: 640, transition: { type: 'tween', duration: 500 } }"
       :class="[
-        'w-full bg-grey-900/60 backdrop-blur-md absolute h-[calc(100vh_-_80px)] z-50',
-        'top-20 right-0 md:hidden text-white flex justify-around flex-col sm:w-72'
+        'w-full dark:bg-grey-900/60 backdrop-blur-md absolute h-[calc(100vh_-_80px)] z-50',
+        'top-20 right-0 md:hidden border-l dark:border-[#333] border-neutral-400 text-white flex justify-around flex-col sm:w-72'
       ]"
     >
       <ul className="flex flex-col justify-between items-center h-3/5">
         <li>
           <a
-            class="py-2 px-3 duration-200 hover:bg-grey-700 rounded-lg text-grey-100 hover:text-blue-500 text-lg"
+            class="py-2 px-3 duration-200 dark:hover:bg-grey-700 rounded-lg cursor-pointer text-neutral-800 dark:text-grey-100 hover:text-blue-500 text-lg"
             href="#history"
           >
             {{ $t('Sobre mim') }}
@@ -58,7 +35,7 @@
         </li>
         <li>
           <a
-            class="py-2 px-3 duration-200 hover:bg-grey-700 rounded-lg text-grey-100 hover:text-blue-500 text-lg"
+            class="py-2 px-3 duration-200 dark:hover:bg-grey-700 rounded-lg cursor-pointer text-neutral-800 dark:text-grey-100 hover:text-blue-500 text-lg"
             href="#projects"
           >
             {{ $t('Projetos') }}
@@ -66,7 +43,7 @@
         </li>
         <li>
           <a
-            class="py-2 px-3 duration-200 hover:bg-grey-700 rounded-lg text-grey-100 hover:text-blue-500 text-lg"
+            class="py-2 px-3 duration-200 dark:hover:bg-grey-700 rounded-lg cursor-pointer text-neutral-800 dark:text-grey-100 hover:text-blue-500 text-lg"
             href="#contact"
           >
             {{ $t('Contato') }}
@@ -85,6 +62,7 @@ import { ref } from "vue";
 import { defineProps } from "vue";
 import { useMotions } from "@vueuse/motion";
 import navLinks from "./navLinks.vue";
+import { Menu, X } from "lucide-vue-next";
 
 const { className } = defineProps({
 	className: { type: String, default: null },
@@ -95,20 +73,5 @@ const motions = useMotions();
 
 const toggleNavBar = (): void => {
 	isNavBarOpen.value = !isNavBarOpen.value;
-};
-
-const iconAnimation = {
-	initial: {
-		opacity: 0,
-		transition: {
-			duration: 200,
-		},
-	},
-	enter: {
-		opacity: 1,
-		transition: {
-			duration: 200,
-		},
-	},
 };
 </script>
