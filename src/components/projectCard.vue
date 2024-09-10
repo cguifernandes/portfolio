@@ -46,6 +46,7 @@
       </div>
       <div class="flex flex-col gap-y-2">
         <ButtonComponent
+          v-if="repo" 
           class="w-full"
           :href="repo"
         >
