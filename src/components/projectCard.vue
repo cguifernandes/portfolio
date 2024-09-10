@@ -46,6 +46,14 @@
       </div>
       <div class="flex flex-col gap-y-2">
         <ButtonComponent
+          v-if="additionalLink" 
+          :outline="true"
+          class="w-full"
+          :href="repo"
+        >
+          {{ $t('Link adicional') }}
+        </ButtonComponent>
+        <ButtonComponent
           v-if="repo" 
           class="w-full"
           :href="repo"
@@ -77,6 +85,7 @@ interface ProjectProps {
 	repo?: string;
 	figmaAuthor?: string;
 	figmaLink?: string;
+	additionalLink?: string;
 }
 
 const {
@@ -86,6 +95,7 @@ const {
 	repo,
 	skills,
 	website,
+	additionalLink,
 	figmaAuthor,
 	figmaLink,
 } = defineProps<ProjectProps>();

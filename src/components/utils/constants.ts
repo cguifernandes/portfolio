@@ -7,6 +7,7 @@ export type ProjectsProps = {
 	website?: string;
 	figmaLink?: string;
 	figmaAuthor?: string;
+	additionalLink?: string;
 };
 
 export type SkillsProps = {
@@ -163,6 +164,7 @@ export const projects: ProjectsProps[] = [
 		],
 		website:
 			"https://chromewebstore.google.com/detail/future-online/foookgcpbageggmhagkollgcdebifnal?hl=pt-BR&authuser=0",
+		additionalLink: "https://futureonline.com.br/",
 		skills: ["Node.js", "Tailwind CSS", "Next.js", "Server Actions"],
 	},
 ];
