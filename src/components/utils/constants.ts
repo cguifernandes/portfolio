@@ -2,7 +2,7 @@ export type ProjectsProps = {
 	description: string;
 	name: string;
 	image: string[] | string;
-	repo: string;
+	repo?: string;
 	skills: string[];
 	website?: string;
 	figmaLink?: string;
@@ -153,5 +153,16 @@ export const projects: ProjectsProps[] = [
 		figmaAuthor: "https://www.figma.com/@irawan",
 		figmaLink:
 			"https://www.figma.com/file/dKRjB9bKCYlkFbDQ367g12/Nike-Website-Redesign-(Community)?type=design&node-id=1-2&t=UekFqrZ5uwHNfMMO-0",
+	},
+	{
+		description:
+			"Projeto desenvolvido com o objetivo de ser um painel de licenças para uso da extensão. O site foi criado em conjunto com o desenvolvimento da própria extensão.",
+		name: "Future Online",
+		image: [
+			"https://github.com/user-attachments/assets/be742bd1-e28a-4edf-ac15-7c8c9cf03f23",
+		],
+		website:
+			"https://chromewebstore.google.com/detail/future-online/foookgcpbageggmhagkollgcdebifnal?hl=pt-BR&authuser=0",
+		skills: ["Node.js", "Tailwind CSS", "Next.js", "Server Actions"],
 	},
 ];
