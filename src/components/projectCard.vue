@@ -73,7 +73,7 @@ interface ProjectProps {
 	image: string | string[];
 	name: string;
 	skills: string[];
-	repo: string;
+	repo?: string;
 	figmaAuthor?: string;
 	figmaLink?: string;
 }
