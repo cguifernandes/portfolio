@@ -162,9 +162,9 @@ export const projects: ProjectsProps[] = [
 		image: [
 			"https://github.com/user-attachments/assets/be742bd1-e28a-4edf-ac15-7c8c9cf03f23",
 		],
-		website:
+		additionalLink:
 			"https://chromewebstore.google.com/detail/future-online/foookgcpbageggmhagkollgcdebifnal?hl=pt-BR&authuser=0",
-		additionalLink: "https://futureonline.com.br/",
-		skills: ["Node.js", "Tailwind CSS", "Next.js", "Server Actions"],
+		website: "https://futureonline.com.br/",
+		skills: ["Node.js", "Tailwind CSS", "Next.js", "Server Actions", "S3/AWS"],
 	},
 ];

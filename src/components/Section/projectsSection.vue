@@ -47,6 +47,7 @@
             :repo="project.repo"
             :figmaAuthor="project.figmaAuthor"
             :figmaLink="project.figmaLink"
+            :additionalLink="project.additionalLink"
           />
         </SwiperSlide>
       </Swiper>

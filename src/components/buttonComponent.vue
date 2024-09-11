@@ -43,7 +43,7 @@
   </button>
   <button
     v-else
-    :class="['bg-gradient-to-t from-blue-500 to-blue-700 text-white relative h-12 px-4 py-3 rounded-md duration-200', className]"
+    :class="['bg-gradient-to-l from-blue-500 to-blue-700 text-white relative h-12 px-4 py-3 rounded-md duration-200', className]"
     @click="click"
   >
     <slot />

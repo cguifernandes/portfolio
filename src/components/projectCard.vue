@@ -47,9 +47,8 @@
       <div class="flex flex-col gap-y-2">
         <ButtonComponent
           v-if="additionalLink" 
-          :outline="true"
           class="w-full"
-          :href="repo"
+          :href="additionalLink"
         >
           {{ $t('Link adicional') }}
         </ButtonComponent>
