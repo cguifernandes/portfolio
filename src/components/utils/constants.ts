@@ -66,6 +66,31 @@ export const skills: SkillsProps[] = [
 export const projects: ProjectsProps[] = [
 	{
 		description:
+			"Projeto desenvolvido com o objetivo de ser um painel de licenças para uso da extensão. O site foi criado em conjunto com o desenvolvimento da própria extensão.",
+		name: "Future Online",
+		image: [
+			"https://github.com/user-attachments/assets/be742bd1-e28a-4edf-ac15-7c8c9cf03f23",
+		],
+		additionalLink:
+			"https://chromewebstore.google.com/detail/future-online/foookgcpbageggmhagkollgcdebifnal?hl=pt-BR&authuser=0",
+		website: "https://futureonline.com.br/",
+		skills: ["Node.js", "Tailwind CSS", "Next.js", "Server Actions", "S3/AWS"],
+	},
+	{
+		description:
+			"Landing page simplificada inspirada no site da Nike, projetada para testar e aprimorar habilidades com a biblioteca Framer Motion, explorando técnicas avançadas de animação e transições para uma experiência visual dinâmica.",
+		name: "Nike",
+		image: [
+			"https://github.com/user-attachments/assets/754bd2f3-f854-4c88-a540-b197e2a9cd26",
+		],
+		repo: "https://github.com/cguifernandes/nike",
+		skills: ["React.js", "Tailwind CSS", "Framer motion"],
+		figmaAuthor: "https://www.figma.com/@irawan",
+		figmaLink:
+			"https://www.figma.com/file/dKRjB9bKCYlkFbDQ367g12/Nike-Website-Redesign-(Community)?type=design&node-id=1-2&t=UekFqrZ5uwHNfMMO-0",
+	},
+	{
+		description:
 			"O Paquetá é um projeto de front-end que busca apresentar uma interface elegante e intuitiva para uma loja virtual de calçados.",
 		name: "Paquetá",
 		image: [
@@ -78,55 +103,6 @@ export const projects: ProjectsProps[] = [
 		website: "https://paqueta-three.vercel.app/",
 		figmaLink:
 			"https://www.figma.com/design/df5XIaBPlnvzkMNUxhLFpq/Paqueta---BrChallenges?node-id=0-1&t=8R2K3vIoThD0Hric-0",
-	},
-	{
-		description:
-			"All Nade é um site projetado para ajudar você a descobrir filmes e facilitar a organização dos seus favoritos.",
-		name: "All Nade",
-		image: [
-			"https://github.com/cguifernandes/All-Nade/assets/88489337/7fbf0e5c-35c6-44dc-bdc7-197ec4c90667",
-			"https://github.com/user-attachments/assets/c913943c-64b4-4306-a08d-3cf6834ec139",
-			"https://github.com/user-attachments/assets/7701e90c-567e-45d2-aef3-6e862c2d7a86",
-		],
-		repo: "https://github.com/cguifernandes/All-Nade",
-		skills: ["Next.js", "Styled Components", "Typescript"],
-		website: "https://all-nade.vercel.app/",
-	},
-	{
-		description:
-			"Minha primeira experiência como freelancer. Neste site, você pode acessar produtos de limpeza de pele, verificar o valor e entrar em contato com a vendedora.",
-		name: "Bylou",
-		image: [
-			"https://github.com/cguifernandes/Bylou/assets/88489337/80e2960a-c29b-4caa-b89c-94f2c5556f8d",
-			"https://github.com/user-attachments/assets/f2f32d23-603f-49e0-93ff-30a6c9537ec7",
-			"https://github.com/user-attachments/assets/f2f32d23-603f-49e0-93ff-30a6c9537ec7",
-		],
-		skills: ["React.js", "Styled Components", "Typescript"],
-		repo: "https://github.com/cguifernandes/Bylou",
-		website: "https://bylou.vercel.app/",
-	},
-	{
-		description:
-			"Este projeto foi desenvolvido com o objetivo de praticar a criação de API'S juntamente com o consumo da API em um site em React.js.",
-		name: "Wiki Demon Slayer",
-		image: [
-			"https://github.com/cguifernandes/Wiki-Kimetsu-No-Yaiba/assets/88489337/ca10dbd4-ab79-4d86-a463-6e1a1e78ecb7",
-			"https://github.com/user-attachments/assets/b2ef3089-dd37-404a-b79d-a1fea96b0d36",
-		],
-		repo: "https://github.com/cguifernandes/Wiki-Kimetsu-No-Yaiba",
-		skills: ["React.js", "CSS", "Javascript"],
-		website: "https://wiki-kimetsu-no-yaiba.vercel.app/",
-	},
-	{
-		description:
-			"Este aplicativo surgiu da necessidade de oferecer maior dinamismo e interatividade para as aulas de Química, no formato on-line durante o período de pandemia. Neste contexto surgiu TITULOMED.",
-		name: "TituloMED",
-		image: [
-			"https://github.com/cguifernandes/TituloMED/assets/88489337/fd369ea3-b705-43e7-8ee1-7053fe39d883",
-		],
-		repo: "https://github.com/cguifernandes/TituloMED",
-		skills: ["HTML", "CSS", "Javascript"],
-		website: "https://cguifernandes.github.io/TituloMED/",
 	},
 	{
 		description:
@@ -144,27 +120,51 @@ export const projects: ProjectsProps[] = [
 	},
 	{
 		description:
-			"Landing page simplificada inspirada no site da Nike, projetada para testar e aprimorar habilidades com a biblioteca Framer Motion, explorando técnicas avançadas de animação e transições para uma experiência visual dinâmica.",
-		name: "Nike",
+			"Minha primeira experiência como freelancer. Neste site, você pode acessar produtos de limpeza de pele, verificar o valor e entrar em contato com a vendedora.",
+		name: "Bylou",
 		image: [
-			"https://github.com/user-attachments/assets/754bd2f3-f854-4c88-a540-b197e2a9cd26",
+			"https://github.com/cguifernandes/Bylou/assets/88489337/80e2960a-c29b-4caa-b89c-94f2c5556f8d",
+			"https://github.com/user-attachments/assets/f2f32d23-603f-49e0-93ff-30a6c9537ec7",
+			"https://github.com/user-attachments/assets/f2f32d23-603f-49e0-93ff-30a6c9537ec7",
 		],
-		repo: "https://github.com/cguifernandes/nike",
-		skills: ["React.js", "Tailwind CSS", "Framer motion"],
-		figmaAuthor: "https://www.figma.com/@irawan",
-		figmaLink:
-			"https://www.figma.com/file/dKRjB9bKCYlkFbDQ367g12/Nike-Website-Redesign-(Community)?type=design&node-id=1-2&t=UekFqrZ5uwHNfMMO-0",
+		skills: ["React.js", "Styled Components", "Typescript"],
+		repo: "https://github.com/cguifernandes/Bylou",
+		website: "https://bylou.vercel.app/",
 	},
 	{
 		description:
-			"Projeto desenvolvido com o objetivo de ser um painel de licenças para uso da extensão. O site foi criado em conjunto com o desenvolvimento da própria extensão.",
-		name: "Future Online",
+			"All Nade é um site projetado para ajudar você a descobrir filmes e facilitar a organização dos seus favoritos.",
+		name: "All Nade",
 		image: [
-			"https://github.com/user-attachments/assets/be742bd1-e28a-4edf-ac15-7c8c9cf03f23",
+			"https://github.com/cguifernandes/All-Nade/assets/88489337/7fbf0e5c-35c6-44dc-bdc7-197ec4c90667",
+			"https://github.com/user-attachments/assets/c913943c-64b4-4306-a08d-3cf6834ec139",
+			"https://github.com/user-attachments/assets/7701e90c-567e-45d2-aef3-6e862c2d7a86",
 		],
-		additionalLink:
-			"https://chromewebstore.google.com/detail/future-online/foookgcpbageggmhagkollgcdebifnal?hl=pt-BR&authuser=0",
-		website: "https://futureonline.com.br/",
-		skills: ["Node.js", "Tailwind CSS", "Next.js", "Server Actions", "S3/AWS"],
+		repo: "https://github.com/cguifernandes/All-Nade",
+		skills: ["Next.js", "Styled Components", "Typescript"],
+		website: "https://all-nade.vercel.app/",
+	},
+	{
+		description:
+			"Este aplicativo surgiu da necessidade de oferecer maior dinamismo e interatividade para as aulas de Química, no formato on-line durante o período de pandemia. Neste contexto surgiu TITULOMED.",
+		name: "TituloMED",
+		image: [
+			"https://github.com/cguifernandes/TituloMED/assets/88489337/fd369ea3-b705-43e7-8ee1-7053fe39d883",
+		],
+		repo: "https://github.com/cguifernandes/TituloMED",
+		skills: ["HTML", "CSS", "Javascript"],
+		website: "https://cguifernandes.github.io/TituloMED/",
+	},
+	{
+		description:
+			"Este projeto foi desenvolvido com o objetivo de praticar a criação de API'S juntamente com o consumo da API em um site em React.js.",
+		name: "Wiki Demon Slayer",
+		image: [
+			"https://github.com/cguifernandes/Wiki-Kimetsu-No-Yaiba/assets/88489337/ca10dbd4-ab79-4d86-a463-6e1a1e78ecb7",
+			"https://github.com/user-attachments/assets/b2ef3089-dd37-404a-b79d-a1fea96b0d36",
+		],
+		repo: "https://github.com/cguifernandes/Wiki-Kimetsu-No-Yaiba",
+		skills: ["React.js", "CSS", "Javascript"],
+		website: "https://wiki-kimetsu-no-yaiba.vercel.app/",
 	},
 ];
