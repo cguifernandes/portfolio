@@ -10,7 +10,7 @@ import "./styles/globals.css";
 import { register } from "swiper/element/bundle";
 import { i18n } from "./components/utils/i18n";
 import ToastPlugin from "vue-toast-notification";
-import VueGtag, { config } from "vue-gtag";
+import VueGtag from "vue-gtag";
 
 const app = createApp(App);
 library.add(fab, fas);
