@@ -44,6 +44,9 @@ importers:
       vue:
         specifier: ^3.3.4
         version: 3.4.27(typescript@5.4.5)
+      vue-gtag:
+        specifier: ^2.0.1
+        version: 2.0.1(vue@3.4.27(typescript@5.4.5))
       vue-i18n:
         specifier: ^9.5.0
         version: 9.13.1(vue@3.4.27(typescript@5.4.5))
@@ -2295,6 +2298,11 @@ packages:
     engines: {node: ^14.17.0 || >=16.0.0}
     peerDependencies:
       eslint: '>=6.0.0'
+
+  vue-gtag@2.0.1:
+    resolution: {integrity: sha512-aM4A58FVL0wV2ptYi+xzAjeg+pQVRyUcfBc5UkXAwQrR4t3WBhor50Izp2I+3Oo7+l+vWJ7u78DGcNzReb8S/A==}
+    peerDependencies:
+      vue: ^3.0.0
 
   vue-i18n@9.13.1:
     resolution: {integrity: sha512-mh0GIxx0wPtPlcB1q4k277y0iKgo25xmDPWioVVYanjPufDBpvu5ySTjP5wOrSvlYQ2m1xI+CFhGdauv/61uQg==}
@@ -4949,6 +4957,10 @@ snapshots:
       semver: 7.6.2
     transitivePeerDependencies:
       - supports-color
+
+  vue-gtag@2.0.1(vue@3.4.27(typescript@5.4.5)):
+    dependencies:
+      vue: 3.4.27(typescript@5.4.5)
 
   vue-i18n@9.13.1(vue@3.4.27(typescript@5.4.5)):
     dependencies:
