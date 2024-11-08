@@ -78,6 +78,16 @@ export const projects: ProjectsProps[] = [
 	},
 	{
 		description:
+			"Permita que as estrelas guiem seus passos hoje, trazendo harmonia e clareza para seus relacionamentos.",
+		name: "Amor Celestial",
+		image: [
+			"https://github.com/user-attachments/assets/3291adef-a6c0-4756-bf7b-e549e5a4adc8",
+		],
+		website: "http://amorcelestial.net/",
+		skills: ["Node.js", "Tailwind CSS", "Next.js", "Server Actions", "OpenIA"],
+	},
+	{
+		description:
 			"Landing page simplificada inspirada no site da Nike, projetada para testar e aprimorar habilidades com a biblioteca Framer Motion, explorando técnicas avançadas de animação e transições para uma experiência visual dinâmica.",
 		name: "Nike",
 		image: [
