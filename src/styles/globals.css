@@ -165,18 +165,17 @@ a {
   height: 100%;
   background: linear-gradient(90deg, #09677a, #3da7bd, #07505f);
   background-size: 300% 300%;
-  background-position: 0% 50%; /* Gradiente começa da esquerda */
+  background-position: 0% 50%;
   transition: background-position 0.3s ease;
-  z-index: -1; /* Coloca o gradiente atrás do texto */
+  z-index: -1; 
   border-radius: 8px;
 }
 
-/* Hover: animação do gradiente */
 .btn-outline:hover {
-  color: white; /* Cor do texto no hover */
-  border-color: #2563eb; /* Borda azul no hover */
+  color: white; 
+  border-color: #2563eb;
 }
 
 .btn-outline:hover::before {
-  background-position: 100% 50%; /* O gradiente se move para a direita */
+  background-position: 100% 50%;
 }
