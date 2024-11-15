@@ -145,3 +145,38 @@ a {
   -webkit-mask-composite: xor;
   mask-composite: exclude;
 }
+
+.animated-gradient {
+  background: linear-gradient(90deg, #09677a, #3da7bd, #07505f); 
+  background-size: 300% 300%;
+  background-position: 0% 50%; 
+}
+
+.animated-gradient:hover {
+  background-position: 100% 50%; 
+}
+
+.btn-outline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, #09677a, #3da7bd, #07505f);
+  background-size: 300% 300%;
+  background-position: 0% 50%; /* Gradiente começa da esquerda */
+  transition: background-position 0.3s ease;
+  z-index: -1; /* Coloca o gradiente atrás do texto */
+  border-radius: 8px;
+}
+
+/* Hover: animação do gradiente */
+.btn-outline:hover {
+  color: white; /* Cor do texto no hover */
+  border-color: #2563eb; /* Borda azul no hover */
+}
+
+.btn-outline:hover::before {
+  background-position: 100% 50%; /* O gradiente se move para a direita */
+}

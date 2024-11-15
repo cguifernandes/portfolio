@@ -25,7 +25,7 @@
         </div>
         <ButtonComponent
           :click="handlerClick"
-          class-name="w-72 m-auto lg:m-0 flex justify-between items-center hover:w-80"
+          class-name="w-72 m-auto lg:m-0 flex justify-between items-center"
         >
           <span class="text-lg">{{ $t('Inglês') }}</span>
           <Languages :size="22" />

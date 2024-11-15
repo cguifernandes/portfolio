@@ -45,7 +45,7 @@
     >{{ $t(`${errorMessage}`) }}</span>
     <ButtonComponent
       :disabled="loading"
-      class-name="w-8/12 m-auto hover:w-9/12"
+      class-name="w-8/12 justify-center mx-auto"
     >
       <template v-if="loading">
         <loadingComponent class-name="w-6 h-6 m-auto" />

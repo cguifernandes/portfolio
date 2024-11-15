@@ -3,6 +3,9 @@ export default {
 	content: ["./src/**/*.vue"],
 	theme: {
 		extend: {
+			boxShadow: {
+				"soft-light": "0 4px 6px rgba(255, 255, 255, 0.1)",
+			},
 			animation: {
 				blink: "blink 1s infinite",
 			},

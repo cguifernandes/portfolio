@@ -5,8 +5,6 @@ export type ProjectsProps = {
 	repo?: string;
 	skills: string[];
 	website?: string;
-	figmaLink?: string;
-	figmaAuthor?: string;
 	additionalLink?: string;
 };
 
@@ -95,9 +93,6 @@ export const projects: ProjectsProps[] = [
 		],
 		repo: "https://github.com/cguifernandes/nike",
 		skills: ["React.js", "Tailwind CSS", "Framer motion"],
-		figmaAuthor: "https://www.figma.com/@irawan",
-		figmaLink:
-			"https://www.figma.com/file/dKRjB9bKCYlkFbDQ367g12/Nike-Website-Redesign-(Community)?type=design&node-id=1-2&t=UekFqrZ5uwHNfMMO-0",
 	},
 	{
 		description:
@@ -111,8 +106,6 @@ export const projects: ProjectsProps[] = [
 		repo: "https://github.com/cguifernandes/Paqueta",
 		skills: ["Next.js", "Tailwind CSS"],
 		website: "https://paqueta-three.vercel.app/",
-		figmaLink:
-			"https://www.figma.com/design/df5XIaBPlnvzkMNUxhLFpq/Paqueta---BrChallenges?node-id=0-1&t=8R2K3vIoThD0Hric-0",
 	},
 	{
 		description:

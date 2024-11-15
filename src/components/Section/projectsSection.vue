@@ -26,11 +26,13 @@
         :autoplay="true"
         :slides-per-view="1"
         :space-between="20"
-        :scrollbar="true"
         :breakpoints="{
           768: {
             slidesPerView: 2,
           },
+          1280: {
+            slidesPerView: 3,
+          }
         }"
         class="!pb-6"
       >
@@ -45,8 +47,6 @@
             :name="project.name"
             :skills="project.skills"
             :repo="project.repo"
-            :figmaAuthor="project.figmaAuthor"
-            :figmaLink="project.figmaLink"
             :additionalLink="project.additionalLink"
           />
         </SwiperSlide>
