@@ -1,8 +1,13 @@
+import Header from "./components/Layout/header";
+
 const App = () => {
 	return (
-		<main>
-			<p>oi</p>
-		</main>
+		<>
+			<Header />
+			<main>
+				<p>oi</p>
+			</main>
+		</>
 	);
 };
 

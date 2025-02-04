@@ -5,7 +5,6 @@
 	box-sizing: border-box;
 	margin: 0px;
 	font-family: "Poppins", serif;
-	font-weight: 500;
 }
 
 input,
@@ -20,13 +19,16 @@ textarea::placeholder {
 
 a {
 	text-decoration: none;
-	color: inherit;
 }
 
 #root {
 	display: flex;
 	flex-direction: column;
 	min-height: 100vh;
+}
+
+body {
+	@apply bg-neutral-950;
 }
 
 :root {
@@ -40,4 +42,17 @@ a {
 	--primary-700: #09677A;
 	--primary-800: #07505F;
 	--primary-900: #053D48;
+}
+
+@theme {
+	--color-primary-50: #E7F4F7;
+	--color-primary-100: #B4DDE5;
+	--color-primary-200: #8FCCD9;
+	--color-primary-300: #5CB5C7;
+	--color-primary-400: #3DA7BD;
+	--color-primary-500: #0C91AC;
+	--color-primary-600: #0B849D;
+	--color-primary-700: #09677A;
+	--color-primary-800: #07505F;
+	--color-primary-900: #053D48;
 }
