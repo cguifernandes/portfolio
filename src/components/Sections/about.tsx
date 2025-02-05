@@ -4,7 +4,6 @@ import { animated } from "@react-spring/web";
 import { Icon } from "@iconify/react";
 import CardStarBorder from "../card-star-border";
 import ButtonStarBorder from "../button-star-border";
-
 const About = () => {
 	return (
 		<section className="flex items-center py-20 max-w-7xl justify-center flex-col gap-y-8">

@@ -80,4 +80,29 @@ export const skills: SkillsProps[] = [
 		description:
 			"WordPress é um sistema livre e aberto de gestão de conteúdo para internet (do inglês: Content Management System - CMS), baseado em PHP com banco de dados MySQL e MariaDB.",
 	},
+	{
+		name: "PostgreSQL",
+		description:
+			"PostgreSQL é um sistema gerenciador de banco de dados objeto relacional (SGBD), desenvolvido como projeto de código aberto.",
+	},
+	{
+		name: "MongoDB",
+		description:
+			"MongoDB é um banco de dados não relacional (NDBMS) de código aberto, desenvolvido como projeto de código aberto e baseado em JSON.",
+	},
+	{
+		name: "Vue.js",
+		description:
+			"Vue.js é um framework JavaScript progressivo usado para criar interfaces de usuário (UI) e aplicações web SPA (Single Page Applications). Ele se destaca por sua curva de aprendizado suave, ideal para iniciantes, e sua flexibilidade",
+	},
+	{
+		name: "Discord.js",
+		description:
+			"Discord.js é uma bibloteca em Node.js poderosa que permite que você interaja com a API do Discord muito facilmente. Ela adota uma abordagem muito mais orientada a objetos do que a maioria das outras bibliotecas JS do Discord, tornando o código do seu bot significativamente mais organizado e fácil de compreender.",
+	},
+	{
+		name: "Laravel",
+		description:
+			"Laravel é um framework PHP livre e open-source criado por Taylor B. Otwell para o desenvolvimento de sistemas web que utilizam o padrão MVC (model, view, controller).",
+	},
 ];
