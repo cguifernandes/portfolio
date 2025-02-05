@@ -42,19 +42,19 @@ body {
 }
 
 .bg-gradient-outline {
-  background: linear-gradient(to bottom, #0A0A0A 0%, #171717 100%);
+  background: linear-gradient(to bottom, #0A0A0A 20%, #171717 100%);
   background-size: 100% 200%;
   background-position: 100% 100%; 
 }
 
 .bg-gradient-outline-black {
-	background: linear-gradient(to bottom, #050505 0%, #161616 100%);
+	background: linear-gradient(to bottom, #050505 0%, #1d1d1d 100%);
   background-size: 100% 200%;
   background-position: 100% 100%;
 }
 
 .button-gradient-outline {
-  background: linear-gradient(to bottom, #0A0A0A 0%, #171717 100%);
+	background: linear-gradient(to bottom, #0A0A0A 20%, #171717 100%);
   background-size: 100% 200%;
   background-position: 100% 100%; 
 }

@@ -1,6 +1,6 @@
 import { useSpring } from "@react-spring/web";
 import { easings } from "@react-spring/web";
-import { SkillsProps } from "../types/type";
+import { ProjectsProps, SkillsProps } from "../types/type";
 
 export const blurAnimation = {
 	from: {
@@ -104,5 +104,87 @@ export const skills: SkillsProps[] = [
 		name: "Laravel",
 		description:
 			"Laravel é um framework PHP livre e open-source criado por Taylor B. Otwell para o desenvolvimento de sistemas web que utilizam o padrão MVC (model, view, controller).",
+	},
+];
+
+export const projects: ProjectsProps[] = [
+	{
+		description:
+			"Projeto free-lancer desenvolvido para servir como um painel de gerenciamento de licenças para a extensão, garantindo controle e acessibilidade aos usuários. O site foi criado em paralelo ao desenvolvimento da própria extensão, proporcionando uma integração eficiente e uma experiência fluida.",
+		name: "Future Online",
+		image:
+			"https://github.com/user-attachments/assets/be742bd1-e28a-4edf-ac15-7c8c9cf03f23",
+		additionalLink:
+			"https://chromewebstore.google.com/detail/future-online/foookgcpbageggmhagkollgcdebifnal?hl=pt-BR&authuser=0",
+		website: "https://futureonline.com.br/",
+		skills: ["Node.js", "Tailwind CSS", "Next.js", "Server Actions", "S3/AWS"],
+	},
+	{
+		description:
+			"Projeto freelance desenvolvido para conectar almas gêmeas por meio da inteligência artificial da OpenAI. Utilizando tecnologias modernas como Next.js, TailwindCSS e a API da OpenAI, a plataforma analisa perfis e afinidades para proporcionar conexões significativas de forma inovadora e personalizada.",
+		name: "Amor Celestial",
+		image:
+			"https://github.com/user-attachments/assets/3291adef-a6c0-4756-bf7b-e549e5a4adc8",
+		website: "http://amorcelestial.net/",
+		skills: ["Node.js", "Tailwind CSS", "Next.js", "Server Actions", "OpenIA"],
+	},
+	{
+		description:
+			"Landing page minimalista inspirada no design do site da Nike, criada para testar e aprimorar habilidades com a biblioteca Framer Motion. O projeto explora técnicas avançadas de animação e transições, proporcionando uma experiência visual fluida, envolvente e dinâmica.",
+		name: "Nike",
+		image:
+			"https://github.com/user-attachments/assets/754bd2f3-f854-4c88-a540-b197e2a9cd26",
+		repo: "https://github.com/cguifernandes/nike",
+		skills: ["React.js", "Tailwind CSS", "Framer motion"],
+	},
+	{
+		description:
+			"O Paquetá é um projeto de front-end desenvolvido para oferecer uma interface elegante, intuitiva e responsiva para uma loja virtual de calçados. Com um design moderno e navegação fluida, a plataforma proporciona uma experiência envolvente para os usuários, facilitando a descoberta e compra de produtos.",
+		name: "Paquetá",
+		image:
+			"https://github.com/cguifernandes/Paqueta/assets/88489337/35b893bd-218b-41f6-ba92-f8fd3174761d",
+		repo: "https://github.com/cguifernandes/Paqueta",
+		skills: ["Next.js", "Tailwind CSS"],
+		website: "https://paqueta-three.vercel.app/",
+	},
+	{
+		description:
+			"Este projeto foi criado para conectar pessoas a Desks, espaços interativos para discussões em diversas áreas. Seja para trocar conhecimentos, compartilhar ideias ou receber feedback sobre um projeto, o Hub Desk oferece um ambiente colaborativo ideal. Por exemplo, se você é um desenvolvedor iniciante em busca de insights valiosos, aqui você encontra uma comunidade pronta para ajudar!",
+		name: "Hub Desk",
+		image:
+			"https://github.com/user-attachments/assets/df44c778-f982-48b4-a552-47119dd95bbd",
+		repo: "https://github.com/cguifernandes/hub-desk",
+		skills: ["Next.js", "Tailwind CSS", "Typescript"],
+		website: "https://hub-desk.vercel.app",
+	},
+	{
+		description:
+			"O All Nade é um site desenvolvido para simplificar a descoberta de novos filmes e facilitar a organização dos seus favoritos. Com uma interface intuitiva e recursos práticos, a plataforma permite que você explore, salve e gerencie suas listas de filmes de forma rápida e eficiente.",
+		name: "All Nade",
+		image:
+			"https://github.com/cguifernandes/All-Nade/assets/88489337/7fbf0e5c-35c6-44dc-bdc7-197ec4c90667",
+		repo: "https://github.com/cguifernandes/All-Nade",
+		skills: ["Next.js", "Styled Components", "Typescript"],
+		website: "https://all-nade.vercel.app/",
+	},
+	{
+		description:
+			"O TITULOMED é um aplicativo desenvolvido para atender à crescente demanda por maior dinamismo e interatividade nas aulas de Química, especialmente no contexto de ensino on-line durante a pandemia. Com ferramentas inovadoras e recursos interativos, o aplicativo foi criado para tornar o aprendizado de Química mais envolvente e acessível, promovendo uma experiência educativa mais rica e colaborativa para os alunos.",
+		name: "TituloMED",
+		image:
+			"https://github.com/cguifernandes/TituloMED/assets/88489337/fd369ea3-b705-43e7-8ee1-7053fe39d883",
+		repo: "https://github.com/cguifernandes/TituloMED",
+		skills: ["HTML", "CSS", "Javascript"],
+		website: "https://cguifernandes.github.io/TituloMED/",
+	},
+	{
+		description:
+			"Este projeto foi desenvolvido com o objetivo de praticar a criação de APIs e integrar o consumo dessas APIs em um site construído com React.js. Através dessa experiência, foram explorados aspectos de desenvolvimento back-end e front-end, permitindo uma interação fluida entre o servidor e o usuário final.",
+		name: "Wiki Demon Slayer",
+		image:
+			"https://github.com/cguifernandes/Wiki-Kimetsu-No-Yaiba/assets/88489337/ca10dbd4-ab79-4d86-a463-6e1a1e78ecb7",
+		repo: "https://github.com/cguifernandes/Wiki-Kimetsu-No-Yaiba",
+		skills: ["React.js", "CSS", "Javascript"],
+		website: "https://wiki-kimetsu-no-yaiba.vercel.app/",
 	},
 ];

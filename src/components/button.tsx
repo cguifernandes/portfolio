@@ -2,7 +2,7 @@ import React from "react";
 import { tv, VariantProps } from "tailwind-variants";
 
 const button = tv({
-	base: "rounded-lg px-3 py-2 text-white cursor-pointer duration-300 ease-in-out",
+	base: "rounded-lg px-3 py-2 text-sm text-white cursor-pointer duration-300 ease-in-out",
 	variants: {
 		theme: {
 			primary: "bg-gradient-primary",
@@ -16,22 +16,20 @@ const button = tv({
 
 type Props = React.ButtonHTMLAttributes<HTMLButtonElement> &
 	VariantProps<typeof button> & {
-		icon?: React.ReactNode;
 		children: React.ReactNode;
+		href?: string;
 	};
 
-const Button = ({ theme, icon, className, children }: Props) => {
-	return (
-		<button
-			className={button({
-				theme,
-				className,
-			})}
-		>
-			{icon}
-			{children}
-		</button>
-	);
+const Button = ({ theme, className, children, href }: Props) => {
+	if (href) {
+		return (
+			<a href={href} className={button({ theme, className })}>
+				{children}
+			</a>
+		);
+	}
+
+	return <button className={button({ theme, className })}>{children}</button>;
 };
 
 export default Button;

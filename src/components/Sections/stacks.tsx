@@ -5,7 +5,7 @@ import { animated } from "@react-spring/web";
 const Stacks = () => {
 	return (
 		<section className="py-20 flex justify-center w-full bg-neutral-900">
-			<div className="flex flex-col gap-y-2 max-w-7xl">
+			<div className="flex flex-col gap-y-10 max-w-7xl">
 				<animated.h1
 					style={useDefaultAnimation(300)}
 					className="text-white text-center text-xl"
@@ -17,6 +17,7 @@ const Stacks = () => {
 						.sort((a, b) => a.name.localeCompare(b.name))
 						.map((skill, index) => (
 							<CardStarBorder
+								theme="black"
 								className="w-full"
 								key={`${skill.name}${index}`}
 								subtitle={skill.description}
