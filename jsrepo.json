@@ -1,0 +1,10 @@
+{
+	"$schema": "https://unpkg.com/jsrepo@1.31.0/schemas/project-config.json",
+	"repos": [],
+	"includeTests": false,
+	"watermark": true,
+	"formatter": "biome",
+	"paths": {
+		"*": "./src/components/react-bits"
+	}
+}
