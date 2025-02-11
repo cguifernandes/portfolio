@@ -28,11 +28,11 @@ type Props = React.ComponentPropsWithoutRef<"div"> &
 	};
 
 const CardStarBorder = ({ title, delay, theme, subtitle, ...props }: Props) => {
-	const spring = useDefaultAnimation(delay);
+	const { animation, ref } = useDefaultAnimation(delay);
 
 	if (delay) {
 		return (
-			<animated.div style={spring}>
+			<animated.div ref={ref} style={animation}>
 				<StarBorder {...props} as="div">
 					<div
 						className={card({
@@ -40,7 +40,10 @@ const CardStarBorder = ({ title, delay, theme, subtitle, ...props }: Props) => {
 						})}
 					>
 						<h2 className="text-white z-10 select-none">{title}</h2>
-						<p className="text-neutral-400 line-clamp-3 z-10 select-none text-sm">
+						<p
+							title={subtitle}
+							className="text-neutral-400 line-clamp-3 z-10 select-none text-sm"
+						>
 							{subtitle}
 						</p>
 					</div>
@@ -57,7 +60,12 @@ const CardStarBorder = ({ title, delay, theme, subtitle, ...props }: Props) => {
 				})}
 			>
 				<h2 className="text-white z-10 select-none">{title}</h2>
-				<p className="text-neutral-400 z-10 select-none text-sm">{subtitle}</p>
+				<p
+					title={subtitle}
+					className="text-neutral-400 line-clamp-3 z-10 select-none text-sm"
+				>
+					{subtitle}
+				</p>
 			</div>
 		</StarBorder>
 	);

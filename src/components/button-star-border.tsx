@@ -12,11 +12,11 @@ type Props = React.ComponentPropsWithoutRef<"button"> & {
 };
 
 const ButtonStarBorder = ({ children, delay, className, ...props }: Props) => {
-	const spring = useDefaultAnimation(delay);
+	const { animation, ref } = useDefaultAnimation(delay);
 
 	if (delay) {
 		return (
-			<animated.div className={className} style={spring}>
+			<animated.div className={className} ref={ref} style={animation}>
 				<StarBorder {...props} as="button">
 					<Button className="w-96 relative z-1" theme="primary">
 						{children}

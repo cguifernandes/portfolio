@@ -6,17 +6,29 @@ import CardStarBorder from "../card-star-border";
 import Button from "../button";
 
 const About = () => {
+	const { animation: animationStyle, ref: refStyle } = useDefaultAnimation(50);
+	const { animation: animationStyle2, ref: refStyle2 } =
+		useDefaultAnimation(100);
+	const { animation: animationStyle3, ref: refStyle3 } =
+		useDefaultAnimation(150);
+	const { animation: animationStyle4, ref: refStyle4 } =
+		useDefaultAnimation(200);
+
 	return (
-		<section className="flex items-center py-20 max-w-7xl justify-center flex-col gap-y-8">
+		<section
+			id="about"
+			className="flex scroll-mt-8 items-center py-48 max-w-7xl justify-center flex-col gap-y-8"
+		>
 			<BlurText
 				text="Guilherme Fernandes"
-				delay={150}
+				delay={50}
 				animateBy="words"
 				direction="top"
 				className="text-5xl text-white font-bold text-center"
 			/>
 			<animated.p
-				style={useDefaultAnimation(300)}
+				ref={refStyle}
+				style={animationStyle}
 				className="text-neutral-400 text-center w-full"
 			>
 				Tenho uma grande paixão por criar sites e explorar novas tecnologias,
@@ -26,12 +38,12 @@ const About = () => {
 				meus conhecimentos.
 			</animated.p>
 
-			<Button delay={300} theme="primary" className="w-96">
+			<Button delay={50} theme="primary" className="w-96">
 				Currículo
 			</Button>
 
 			<ul className="flex items-center gap-x-6">
-				<animated.li style={useDefaultAnimation(300)}>
+				<animated.li ref={refStyle} style={animationStyle}>
 					<a
 						href="#"
 						className="rounded-lg cursor-pointer flex duration-300 ease-in-out group"
@@ -44,7 +56,7 @@ const About = () => {
 					</a>
 				</animated.li>
 
-				<animated.li style={useDefaultAnimation(350)}>
+				<animated.li ref={refStyle2} style={animationStyle2}>
 					<a
 						href="#"
 						className="rounded-lg cursor-pointer flex duration-300 ease-in-out group"
@@ -57,7 +69,7 @@ const About = () => {
 					</a>
 				</animated.li>
 
-				<animated.li style={useDefaultAnimation(400)}>
+				<animated.li ref={refStyle3} style={animationStyle3}>
 					<a
 						href="#"
 						className="rounded-lg cursor-pointer flex duration-300 ease-in-out group"
@@ -70,7 +82,7 @@ const About = () => {
 					</a>
 				</animated.li>
 
-				<animated.li style={useDefaultAnimation(450)}>
+				<animated.li ref={refStyle4} style={animationStyle4}>
 					<a
 						href="#"
 						className="rounded-lg cursor-pointer flex duration-300 ease-in-out group"
@@ -87,22 +99,22 @@ const About = () => {
 			<div className="grid grid-cols-2 gap-x-4 gap-y-2 grid-rows-2">
 				<CardStarBorder
 					title="Design de interfaces"
-					delay={300}
+					delay={50}
 					subtitle="Crio interfaces visuais modernas e intuitivas para sites, garantindo uma ótima experiência para os usuários. Meu objetivo é transformar ideias em layouts atraentes e funcionais, sempre focando em usabilidade e identidade visual."
 				/>
 				<CardStarBorder
 					title="Desenvolvimento web"
-					delay={350}
+					delay={100}
 					subtitle="Desenvolvo sites e aplicações completas, cuidando tanto da parte visual quanto da lógica por trás do funcionamento. Utilizo tecnologias modernas para criar sites rápidos, seguros e escaláveis."
 				/>
 				<CardStarBorder
 					title="Otimização e manutenção de sites"
-					delay={400}
+					delay={150}
 					subtitle="Garanto que seu site esteja sempre rápido, seguro e atualizado. Faço otimizações de desempenho, melhorias em SEO para evitar problemas e garantir a melhor experiência para os visitantes."
 				/>
 				<CardStarBorder
 					title="Criação de sites com WordPress"
-					delay={450}
+					delay={200}
 					subtitle="Construo sites profissionais e personalizados utilizando WordPress. Desde blogs até sites empresariais, entrego soluções flexíveis, responsivas e fáceis de gerenciar, garantindo que seu projeto tenha um ótimo desempenho online."
 				/>
 			</div>

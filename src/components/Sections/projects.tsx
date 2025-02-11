@@ -3,11 +3,17 @@ import { animated } from "@react-spring/web";
 import ProjectCard from "../project-card";
 
 const Projects = () => {
+	const { animation, ref } = useDefaultAnimation(50);
+
 	return (
-		<section className="py-20 flex justify-center w-full">
+		<section
+			id="projects"
+			className="py-20 scroll-mt-8 flex justify-center w-full"
+		>
 			<div className="flex flex-col gap-y-10 max-w-7xl">
 				<animated.h1
-					style={useDefaultAnimation(300)}
+					ref={ref}
+					style={animation}
 					className="text-white text-center text-xl"
 				>
 					Projetos

@@ -1,5 +1,7 @@
 import clsx from "clsx";
 import { forwardRef } from "react";
+import { useDefaultAnimation } from "../utils/utils";
+import { animated } from "@react-spring/web";
 
 type Props = React.TextareaHTMLAttributes<HTMLTextAreaElement> & {
 	label?: string;
@@ -7,29 +9,54 @@ type Props = React.TextareaHTMLAttributes<HTMLTextAreaElement> & {
 	patternClassName?: string;
 	mandatory?: boolean;
 	id: string;
+	isSubmitted?: boolean;
 };
 
 const Textarea = forwardRef<HTMLTextAreaElement, Props>(
 	(
-		{ id, label, error, patternClassName, mandatory, className, ...props },
+		{
+			id,
+			label,
+			error,
+			isSubmitted,
+			patternClassName,
+			mandatory,
+			className,
+			...props
+		},
 		ref,
 	) => {
+		const { animation: animationStyle, ref: refStyle } =
+			useDefaultAnimation(50);
+
 		return (
 			<div className={clsx("flex flex-col relative gap-y-1", patternClassName)}>
 				<div className="flex justify-between items-center w-full">
 					{label && (
-						<label htmlFor={id} className="text-sm text-white">
+						<animated.label
+							ref={refStyle}
+							style={isSubmitted ? {} : animationStyle}
+							htmlFor={id}
+							className="text-sm text-white"
+						>
 							{label}
-						</label>
+						</animated.label>
 					)}
 					{mandatory && (
-						<span className="text-xs text-neutral-500">Obrigatório</span>
+						<animated.span
+							ref={refStyle}
+							style={isSubmitted ? {} : animationStyle}
+							className="text-xs text-neutral-500"
+						>
+							Obrigatório
+						</animated.span>
 					)}
 				</div>
-				<textarea
+				<animated.textarea
 					ref={ref}
+					style={isSubmitted ? {} : animationStyle}
 					className={clsx(
-						"text-sm text-white px-3 py-2 resize-none rounded-md h-32 ring-offset-neutral-900 placeholder:text-neutral-400 focus-visible:outline-none focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 bg-neutral-800 border border-neutral-700 focus-visible:ring-2 focus-visible:ring-neutral-300",
+						"text-sm text-white px-3 py-2 resize-none rounded-md h-32 ring-offset-neutral-900 placeholder:text-neutral-400 focus-visible:outline-none focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 border border-neutral-700 focus-visible:ring-2 focus-visible:ring-neutral-300",
 						className,
 					)}
 					id={id}

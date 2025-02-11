@@ -24,24 +24,33 @@ type Props = React.ButtonHTMLAttributes<HTMLButtonElement> &
 		delay?: number;
 		icon?: React.ReactNode;
 		isLoading?: boolean;
+		isSubmitted?: boolean;
 	};
 
 const Button = ({
 	theme,
 	className,
 	isLoading,
+	isSubmitted,
 	children,
 	icon,
 	delay,
 	href,
 }: Props) => {
-	const spring = useDefaultAnimation(delay);
+	const { animation, ref } = useDefaultAnimation(delay);
 
 	if (href) {
 		if (delay) {
 			return (
-				<animated.div style={spring}>
-					<a href={href} className={button({ theme, className })}>
+				<animated.a
+					className="w-full"
+					ref={ref}
+					style={isSubmitted ? {} : animation}
+					href={href}
+				>
+					<button
+						className={button({ theme, className: `w-full h-10 ${className}` })}
+					>
 						{isLoading ? (
 							<Spinner />
 						) : (
@@ -49,13 +58,13 @@ const Button = ({
 								{icon} {children}
 							</>
 						)}
-					</a>
-				</animated.div>
+					</button>
+				</animated.a>
 			);
 		}
 
 		return (
-			<animated.a className="w-full" style={spring} href={href}>
+			<a className="w-full" href={href}>
 				<button
 					className={button({ theme, className: `w-full h-10 ${className}` })}
 				>
@@ -67,13 +76,13 @@ const Button = ({
 						</>
 					)}
 				</button>
-			</animated.a>
+			</a>
 		);
 	}
 
 	if (delay) {
 		return (
-			<animated.div style={spring}>
+			<animated.div ref={ref} style={isSubmitted ? {} : animation}>
 				<button className={button({ theme, className })}>
 					{isLoading ? (
 						<Spinner />

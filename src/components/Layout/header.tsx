@@ -1,4 +1,3 @@
-import { Languages, Sun } from "lucide-react";
 import Logo from "../../assets/reduceLogo.svg";
 
 const Header = () => {
@@ -10,7 +9,7 @@ const Header = () => {
 					<ul className="flex items-center gap-2">
 						<li className="hover:bg-neutral-800 rounded-lg flex duration-300 ease-in-out">
 							<a
-								href="#"
+								href="#about"
 								className="text-white px-3 py-1.5 text-sm duration-300 ease-in-out"
 							>
 								Sobre mim
@@ -18,7 +17,7 @@ const Header = () => {
 						</li>
 						<li className="hover:bg-neutral-800 rounded-lg flex duration-300 ease-in-out">
 							<a
-								href="#"
+								href="#stacks"
 								className="text-white px-3 py-1.5 text-sm duration-300 ease-in-out"
 							>
 								Stacks
@@ -26,7 +25,7 @@ const Header = () => {
 						</li>
 						<li className="hover:bg-neutral-800 rounded-lg flex duration-300 ease-in-out">
 							<a
-								href="#"
+								href="#projects"
 								className="text-white px-3 py-1.5 text-sm duration-300 ease-in-out"
 							>
 								Projetos
@@ -34,7 +33,7 @@ const Header = () => {
 						</li>
 						<li className="hover:bg-neutral-800 rounded-lg flex duration-300 ease-in-out">
 							<a
-								href="#"
+								href="#contact"
 								className="text-white px-3 py-1.5 text-sm duration-300 ease-in-out"
 							>
 								Contato

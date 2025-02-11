@@ -27,7 +27,10 @@ const schema = z.object({
 });
 
 const Contact = () => {
+	const { animation, ref } = useDefaultAnimation(50);
+	const [isSubmitted, setIsSubmitted] = useState(false);
 	const [isLoading, setIsLoading] = useState(false);
+
 	const {
 		register,
 		handleSubmit,
@@ -67,20 +70,27 @@ const Contact = () => {
 			})
 			.finally(() => {
 				setIsLoading(false);
+				setIsSubmitted(true);
 			});
 	};
 
 	return (
-		<section className="py-20 flex justify-center w-full bg-neutral-900">
+		<section
+			id="contact"
+			className="py-20 scroll-mt-8 flex justify-center w-full bg-neutral-900"
+		>
 			<div className="flex flex-col gap-y-10">
 				<animated.h1
-					style={useDefaultAnimation(300)}
+					ref={ref}
+					style={isSubmitted ? {} : animation}
 					className="text-white text-center text-xl"
 				>
 					Contato
 				</animated.h1>
 				<form
-					onSubmit={handleSubmit(handlerSubmitMessage)}
+					onSubmit={handleSubmit(handlerSubmitMessage, () => {
+						setIsSubmitted(true);
+					})}
 					className="flex w-3xl flex-col gap-y-4"
 				>
 					<Input
@@ -89,6 +99,7 @@ const Contact = () => {
 						label="Nome"
 						{...register("name")}
 						patternClassName="w-full"
+						isSubmitted={isSubmitted}
 						placeholder="João Silva"
 						error={errors.name?.message}
 						disabled={isLoading}
@@ -96,6 +107,7 @@ const Contact = () => {
 					<Input
 						id="email"
 						mandatory
+						isSubmitted={isSubmitted}
 						{...register("email")}
 						label="E-mail"
 						maxLength={50}
@@ -107,6 +119,7 @@ const Contact = () => {
 					<Textarea
 						id="message"
 						mandatory
+						isSubmitted={isSubmitted}
 						{...register("message")}
 						maxLength={400}
 						label="Mensagem"
@@ -116,7 +129,9 @@ const Contact = () => {
 						error={errors.message?.message}
 					/>
 					<Button
-						className="flex justify-center items-center"
+						delay={50}
+						isSubmitted={isSubmitted}
+						className="flex w-full justify-center items-center"
 						isLoading={isLoading}
 						type="submit"
 					>
