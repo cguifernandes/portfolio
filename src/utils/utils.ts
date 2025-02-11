@@ -112,8 +112,7 @@ export const projects: ProjectsProps[] = [
 		description:
 			"Projeto freelancer desenvolvido para o Dr. Leonardo, no qual fui responsável pela criação de um site profissional utilizando WordPress. O projeto envolveu a personalização do design, otimização de desempenho e implementação de funcionalidades específicas para atender às necessidades do cliente.",
 		name: "Plástica de Face",
-		image:
-			"https://github-production-user-asset-6210df.s3.amazonaws.com/88489337/411983642-1414f08f-7fed-4868-8938-84c229a59c62.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20250211%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250211T130928Z&X-Amz-Expires=300&X-Amz-Signature=b3faa6c321988c7d8e43cb04d5f24cd515371f32ff1368098953d0767e711efd&X-Amz-SignedHeaders=host",
+		image: "https://i.ibb.co/Qw6XVvf/Screenshot-2025-02-11-095651.png",
 		skills: ["WordPress", "SEO", "Otimização de desempenho"],
 		website: "https://plasticadeface.med.br/",
 	},
