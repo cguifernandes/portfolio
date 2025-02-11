@@ -1,5 +1,6 @@
 import Header from "./components/Layout/header";
 import About from "./components/Sections/about";
+import Contact from "./components/Sections/contact";
 import Projects from "./components/Sections/projects";
 import Stacks from "./components/Sections/stacks";
 
@@ -11,6 +12,7 @@ const App = () => {
 				<About />
 				<Stacks />
 				<Projects />
+				<Contact />
 			</main>
 		</>
 	);

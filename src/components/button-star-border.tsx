@@ -18,7 +18,7 @@ const ButtonStarBorder = ({ children, delay, className, ...props }: Props) => {
 		return (
 			<animated.div className={className} style={spring}>
 				<StarBorder {...props} as="button">
-					<Button className="w-96 relative z-1" theme="outline">
+					<Button className="w-96 relative z-1" theme="primary">
 						{children}
 					</Button>
 				</StarBorder>
@@ -28,7 +28,7 @@ const ButtonStarBorder = ({ children, delay, className, ...props }: Props) => {
 
 	return (
 		<StarBorder {...props} as="button">
-			<Button className="w-96 relative z-1" theme="outline">
+			<Button className="w-96 relative z-1" theme="primary">
 				{children}
 			</Button>
 		</StarBorder>

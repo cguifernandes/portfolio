@@ -3,7 +3,8 @@ import BlurText from "../blur-text";
 import { animated } from "@react-spring/web";
 import { Icon } from "@iconify/react";
 import CardStarBorder from "../card-star-border";
-import ButtonStarBorder from "../button-star-border";
+import Button from "../button";
+
 const About = () => {
 	return (
 		<section className="flex items-center py-20 max-w-7xl justify-center flex-col gap-y-8">
@@ -25,7 +26,9 @@ const About = () => {
 				meus conhecimentos.
 			</animated.p>
 
-			<ButtonStarBorder delay={300}>Currículo</ButtonStarBorder>
+			<Button delay={300} theme="primary" className="w-96">
+				Currículo
+			</Button>
 
 			<ul className="flex items-center gap-x-6">
 				<animated.li style={useDefaultAnimation(300)}>
@@ -89,17 +92,17 @@ const About = () => {
 				/>
 				<CardStarBorder
 					title="Desenvolvimento web"
-					delay={300}
+					delay={350}
 					subtitle="Desenvolvo sites e aplicações completas, cuidando tanto da parte visual quanto da lógica por trás do funcionamento. Utilizo tecnologias modernas para criar sites rápidos, seguros e escaláveis."
 				/>
 				<CardStarBorder
 					title="Otimização e manutenção de sites"
-					delay={300}
+					delay={400}
 					subtitle="Garanto que seu site esteja sempre rápido, seguro e atualizado. Faço otimizações de desempenho, melhorias em SEO para evitar problemas e garantir a melhor experiência para os visitantes."
 				/>
 				<CardStarBorder
 					title="Criação de sites com WordPress"
-					delay={300}
+					delay={450}
 					subtitle="Construo sites profissionais e personalizados utilizando WordPress. Desde blogs até sites empresariais, entrego soluções flexíveis, responsivas e fáceis de gerenciar, garantindo que seu projeto tenha um ótimo desempenho online."
 				/>
 			</div>

@@ -1,8 +1,6 @@
 import clsx from "clsx";
 import { ProjectsProps } from "../types/type";
 import Button from "./button";
-import { useState } from "react";
-import { motion } from "framer-motion";
 import { ExternalLink } from "lucide-react";
 
 type Props = ProjectsProps & {
@@ -19,8 +17,6 @@ const ProjectCard = ({
 	website,
 	reverse,
 }: Props) => {
-	const [isHoverImage, setIsHoverImage] = useState(false);
-
 	return (
 		<div
 			className={clsx(
@@ -28,35 +24,11 @@ const ProjectCard = ({
 				reverse && "flex-row-reverse",
 			)}
 		>
-			<div
-				onMouseEnter={() => setIsHoverImage(true)}
-				onMouseLeave={() => setIsHoverImage(false)}
-				className="relative border-2 border-neutral-800 h-full rounded-lg"
-			>
-				<motion.img
-					className="min-w-[570px] h-full object-cover rounded-lg"
-					src={image}
-					alt="Imagem do projeto"
-					initial={{ opacity: 1 }}
-					animate={{
-						opacity: isHoverImage ? 0.5 : 1,
-					}}
-					transition={{ duration: 0.2 }}
-				/>
-				<motion.a
-					initial={{ opacity: 0 }}
-					animate={{
-						opacity: isHoverImage ? 1 : 0,
-						display: isHoverImage ? "inline" : "none",
-					}}
-					href={website || repo}
-					target="_blank"
-					rel="noreferrer"
-					className="absolute left-1/2 top-1/2 p-3 border rounded-full border-neutral-800 bg-neutral-900/40 backdrop-blur-md -translate-x-1/2 -translate-y-1/2"
-				>
-					<ExternalLink strokeWidth={1.5} color="#fff" size={28} />
-				</motion.a>
-			</div>
+			<img
+				className="min-w-[570px] h-full relative border-2 border-neutral-800 object-cover rounded-lg hover:opacity-70 duration-300 ease-in-out"
+				src={image}
+				alt="Imagem do projeto"
+			/>
 			<div className="flex flex-col gap-y-5">
 				<div className="flex items-center flex-col gap-y-1">
 					<h1 className="text-lg text-white">{name}</h1>
@@ -75,8 +47,9 @@ const ProjectCard = ({
 				<div className="flex gap-x-3">
 					{website && (
 						<Button
+							icon={<ExternalLink size={16} color="#fff" />}
 							href={website}
-							className="flex-1 text-center"
+							className="flex-1 flex justify-center gap-x-2 items-center text-center"
 							theme="primary"
 						>
 							Visitar projeto
@@ -84,15 +57,21 @@ const ProjectCard = ({
 					)}
 					{additionalLink && (
 						<Button
+							icon={<ExternalLink size={16} color="#fff" />}
 							href={additionalLink}
-							className="flex-1 text-center"
+							className="flex-1 flex justify-center gap-x-2 items-center text-center"
 							theme="outline"
 						>
 							Link adicional
 						</Button>
 					)}
 					{repo && (
-						<Button href={repo} className="flex-1 text-center" theme="outline">
+						<Button
+							icon={<ExternalLink size={16} color="#fff" />}
+							href={repo}
+							className="flex-1 flex justify-center gap-x-2 items-center text-center"
+							theme="outline"
+						>
 							Repósitorio
 						</Button>
 					)}

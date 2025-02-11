@@ -1,5 +1,7 @@
 import React from "react";
 import { tv, VariantProps } from "tailwind-variants";
+import { animated } from "@react-spring/web";
+import { useDefaultAnimation } from "../utils/utils";
 
 const button = tv({
 	base: "rounded-lg px-3 py-2 text-sm text-white cursor-pointer duration-300 ease-in-out",
@@ -18,18 +20,54 @@ type Props = React.ButtonHTMLAttributes<HTMLButtonElement> &
 	VariantProps<typeof button> & {
 		children: React.ReactNode;
 		href?: string;
+		delay?: number;
+		icon?: React.ReactNode;
 	};
 
-const Button = ({ theme, className, children, href }: Props) => {
+const Button = ({ theme, className, children, icon, delay, href }: Props) => {
+	const spring = useDefaultAnimation(delay);
+
 	if (href) {
+		if (delay) {
+			return (
+				<animated.div style={spring}>
+					<a href={href} className={button({ theme, className })}>
+						{icon}
+						{children}
+					</a>
+				</animated.div>
+			);
+		}
+
 		return (
-			<a href={href} className={button({ theme, className })}>
-				{children}
-			</a>
+			<animated.a className="w-full" style={spring} href={href}>
+				<button
+					className={button({ theme, className: `w-full h-full ${className}` })}
+				>
+					{icon}
+					{children}
+				</button>
+			</animated.a>
 		);
 	}
 
-	return <button className={button({ theme, className })}>{children}</button>;
+	if (delay) {
+		return (
+			<animated.div style={spring}>
+				<button className={button({ theme, className })}>
+					{icon}
+					{children}
+				</button>
+			</animated.div>
+		);
+	}
+
+	return (
+		<button className={button({ theme, className })}>
+			{icon}
+			{children}
+		</button>
+	);
 };
 
 export default Button;

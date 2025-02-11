@@ -2,7 +2,7 @@ import { skills, useDefaultAnimation } from "../../utils/utils";
 import CardStarBorder from "../card-star-border";
 import { animated } from "@react-spring/web";
 
-const Stacks = () => {
+const Contact = () => {
 	return (
 		<section className="py-20 flex justify-center w-full bg-neutral-900">
 			<div className="flex flex-col gap-y-10 max-w-7xl">
@@ -10,7 +10,7 @@ const Stacks = () => {
 					style={useDefaultAnimation(300)}
 					className="text-white text-center text-xl"
 				>
-					Stacks
+					Contato
 				</animated.h1>
 				<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-2">
 					{skills
@@ -22,7 +22,7 @@ const Stacks = () => {
 								key={`${skill.name}${index}`}
 								subtitle={skill.description}
 								title={skill.name}
-								delay={(index + 1) * 50}
+								delay={300}
 							/>
 						))}
 				</div>
@@ -31,4 +31,4 @@ const Stacks = () => {
 	);
 };
 
-export default Stacks;
+export default Contact;
