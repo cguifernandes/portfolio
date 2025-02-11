@@ -37,18 +37,10 @@ const Header = () => {
 								href="#"
 								className="text-white px-3 py-1.5 text-sm duration-300 ease-in-out"
 							>
-								Certificados
-							</a>
-						</li>
-						<li className="hover:bg-neutral-800 rounded-lg flex duration-300 ease-in-out">
-							<a
-								href="#"
-								className="text-white px-3 py-1.5 text-sm duration-300 ease-in-out"
-							>
 								Contato
 							</a>
 						</li>
-						<li className="hover:bg-neutral-800 rounded-lg flex duration-300 ease-in-out">
+						{/* <li className="hover:bg-neutral-800 rounded-lg flex duration-300 ease-in-out">
 							<button type="button" className="p-2 cursor-pointer">
 								<Sun
 									className="text-white duration-300 ease-in-out"
@@ -63,7 +55,7 @@ const Header = () => {
 									size={16}
 								/>
 							</button>
-						</li>
+						</li> */}
 					</ul>
 				</nav>
 			</div>
