@@ -71,9 +71,22 @@ const BlurText = ({
 		return () => observer.disconnect();
 	}, [threshold, rootMargin]);
 
+	interface SpringProps {
+		from: { filter: string; opacity: number; transform?: string };
+		to: (
+			next: (props: {
+				filter: string;
+				opacity: number;
+				transform?: string;
+				config: { easing: string };
+			}) => Promise<void>,
+		) => Promise<void>;
+		delay: number;
+	}
+
 	const springs = useSprings(
 		elements.length,
-		elements.map((_, i) => ({
+		elements.map<SpringProps>((_, i) => ({
 			from: animationFrom || defaultFrom,
 			to: async (next) => {
 				if (!inView) return;
