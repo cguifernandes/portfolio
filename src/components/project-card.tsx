@@ -40,22 +40,22 @@ const ProjectCard = ({
 		<div
 			ref={ref}
 			className={clsx(
-				"flex items-center gap-x-12 h-[320px]",
-				reverse && "flex-row-reverse",
+				"flex items-center flex-col gap-y-4 gap-x-12 lg:h-[320px]",
+				reverse ? "lg:flex-row-reverse" : "lg:flex-row",
 			)}
 		>
 			<animated.img
-				className="min-w-[570px] h-full relative border-2 border-neutral-800 object-cover rounded-lg"
+				className="lg:w-1/2 max-w-2xl w-full h-full relative border-2 border-neutral-800 object-cover rounded-lg"
 				src={image}
 				alt="Imagem do projeto"
 				style={animation}
 			/>
-			<div className="flex flex-col gap-y-5">
+			<div className="flex max-w-2xl w-full lg:w-1/2 flex-col gap-y-5">
 				<div className="flex items-center flex-col gap-y-1">
 					<animated.h1 className="text-lg text-white" style={animation}>
 						{name}
 					</animated.h1>
-					<div className="flex gap-x-1">
+					<div className="flex flex-wrap justify-center gap-1">
 						{skills.map((skill, index) => (
 							<animated.span
 								className="text-white bg-neutral-900 border border-neutral-800 rounded-md text-xs px-2 py-0.5"
@@ -68,12 +68,13 @@ const ProjectCard = ({
 					</div>
 				</div>
 				<animated.p
-					className="text-neutral-400 text-center text-sm"
+					title={description}
+					className="text-neutral-400 line-clamp-6 text-center text-sm"
 					style={animation}
 				>
 					{description}
 				</animated.p>
-				<div className="flex gap-x-3">
+				<div className="flex flex-col sm:flex-row gap-3">
 					{website && (
 						<animated.a
 							className="w-full"

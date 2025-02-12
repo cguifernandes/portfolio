@@ -77,9 +77,9 @@ const Contact = () => {
 	return (
 		<section
 			id="contact"
-			className="py-20 scroll-mt-8 flex justify-center w-full bg-neutral-900"
+			className="py-20 scroll-mt-8 px-6 lg:px-4 flex justify-center w-full bg-neutral-900"
 		>
-			<div className="flex flex-col gap-y-10">
+			<div className="flex w-full items-center flex-col gap-y-10">
 				<animated.h1
 					ref={ref}
 					style={isSubmitted ? {} : animation}
@@ -91,7 +91,7 @@ const Contact = () => {
 					onSubmit={handleSubmit(handlerSubmitMessage, () => {
 						setIsSubmitted(true);
 					})}
-					className="flex w-3xl flex-col gap-y-4"
+					className="flex w-full max-w-3xl flex-col gap-y-4"
 				>
 					<Input
 						id="name"

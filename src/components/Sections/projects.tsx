@@ -8,7 +8,7 @@ const Projects = () => {
 	return (
 		<section
 			id="projects"
-			className="py-20 scroll-mt-8 flex justify-center w-full"
+			className="py-20 px-6 lg:px-12 scroll-mt-8 flex justify-center w-full"
 		>
 			<div className="flex flex-col gap-y-10 max-w-7xl">
 				<animated.h1

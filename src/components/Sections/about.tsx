@@ -17,19 +17,19 @@ const About = () => {
 	return (
 		<section
 			id="about"
-			className="flex scroll-mt-8 items-center py-48 max-w-7xl justify-center flex-col gap-y-8"
+			className="py-24 lg:py-48 flex-col max-w-7xl gap-y-8 items-center scroll-mt-8 px-6 lg:px-4 flex justify-center w-full"
 		>
 			<BlurText
 				text="Guilherme Fernandes"
 				delay={50}
 				animateBy="words"
 				direction="top"
-				className="text-5xl text-white font-bold text-center"
+				className="md:text-5xl text-3xl sm:text-4xl text-white font-bold text-center"
 			/>
 			<animated.p
 				ref={refStyle}
 				style={animationStyle}
-				className="text-neutral-400 text-center w-full"
+				className="text-neutral-400 text-sm md:text-base text-center w-full"
 			>
 				Tenho uma grande paixão por criar sites e explorar novas tecnologias,
 				sempre buscando novas maneiras de inovar e aprimorar minhas habilidades.
@@ -38,14 +38,21 @@ const About = () => {
 				meus conhecimentos.
 			</animated.p>
 
-			<Button delay={50} theme="primary" className="w-96">
+			<Button
+				patternClassName="w-full flex justify-center"
+				delay={50}
+				theme="primary"
+				href="/curriculo.pdf"
+				target="_blank"
+				className="w-full lg:w-96"
+			>
 				Currículo
 			</Button>
 
 			<ul className="flex items-center gap-x-6">
 				<animated.li ref={refStyle} style={animationStyle}>
 					<a
-						href="#"
+						href="mailto:gui.adfer@gmail.com"
 						className="rounded-lg cursor-pointer flex duration-300 ease-in-out group"
 					>
 						<Icon
@@ -58,7 +65,7 @@ const About = () => {
 
 				<animated.li ref={refStyle2} style={animationStyle2}>
 					<a
-						href="#"
+						href="https://www.instagram.com/_.guiii/"
 						className="rounded-lg cursor-pointer flex duration-300 ease-in-out group"
 					>
 						<Icon
@@ -71,7 +78,7 @@ const About = () => {
 
 				<animated.li ref={refStyle3} style={animationStyle3}>
 					<a
-						href="#"
+						href="https://www.linkedin.com/in/guilherme-fernandes-6b1353243/"
 						className="rounded-lg cursor-pointer flex duration-300 ease-in-out group"
 					>
 						<Icon
@@ -96,7 +103,7 @@ const About = () => {
 				</animated.li>
 			</ul>
 
-			<div className="grid grid-cols-2 gap-x-4 gap-y-2 grid-rows-2">
+			<div className="grid grid-cols-1 md:grid-cols-2 gap-x-4 gap-y-2 grid-rows-2">
 				<CardStarBorder
 					title="Design de interfaces"
 					delay={50}

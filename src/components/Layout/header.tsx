@@ -1,11 +1,13 @@
 import Logo from "../../assets/reduceLogo.svg";
+import SideBar from "./sidebar";
 
 const Header = () => {
 	return (
-		<header className="flex justify-center h-16 py-3 z-50 px-6 border-b border-neutral-800 bg-neutral-900/60 backdrop-blur-md fixed top-0 left-0 w-full">
+		<header className="flex justify-center h-16 py-3 z-50 px-6 border-b-2 border-neutral-800 bg-neutral-900 md:bg-neutral-900/60 md:backdrop-blur-md fixed top-0 left-0 w-full">
 			<div className="flex justify-between w-full max-w-7xl items-center">
 				<img src={Logo} alt="Logo" className="w-12 h-fit" />
-				<nav className="flex items-center">
+				<SideBar />
+				<nav className="hidden md:flex items-center">
 					<ul className="flex items-center gap-2">
 						<li className="hover:bg-neutral-800 rounded-lg flex duration-300 ease-in-out">
 							<a

@@ -2,6 +2,7 @@ import { useInView } from "react-intersection-observer";
 import { blurAnimation, skills, useDefaultAnimation } from "../../utils/utils";
 import CardStarBorder from "../card-star-border";
 import { animated, easings, useSpring } from "@react-spring/web";
+import clsx from "clsx";
 
 const Stacks = () => {
 	const { animation: animationStyle, ref: refStyle } = useDefaultAnimation(50);
@@ -14,7 +15,7 @@ const Stacks = () => {
 	return (
 		<section
 			id="stacks"
-			className="py-20 scroll-mt-8 flex justify-center w-full bg-neutral-900"
+			className="py-20 scroll-mt-8 px-6 lg:px-4 flex justify-center w-full bg-neutral-900"
 		>
 			<div className="flex flex-col gap-y-10 max-w-7xl">
 				<animated.h1
@@ -42,7 +43,14 @@ const Stacks = () => {
 							});
 
 							return (
-								<animated.div key={`${skill.name}${index}`} style={animation}>
+								<animated.div
+									className={clsx(
+										index === skills.length - 1 &&
+											"col-span-1 sm:col-span-2 lg:col-span-1",
+									)}
+									key={`${skill.name}${index}`}
+									style={animation}
+								>
 									<CardStarBorder
 										theme="black"
 										className="w-full"
