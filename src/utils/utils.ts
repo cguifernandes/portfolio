@@ -117,6 +117,15 @@ export const skills: SkillsProps[] = [
 export const projects: ProjectsProps[] = [
 	{
 		description:
+			"Extensão para atendimento no WhatsApp Web, desenvolvida com o objetivo de aprimorar a experiência do cliente e aumentar a eficiência e produtividade da equipe de suporte.",
+		name: "Revzap",
+		image: "https://i.ibb.co/N6KB6Cm5/Captura-de-tela-2025-04-23-143013.png",
+		skills: ["React.js", "Tailwind CSS", "Node.js", "PostgreSQL"],
+		website:
+			"https://chromewebstore.google.com/detail/revzap/iadbakknogblchdohbbnnchfpojbcbll",
+	},
+	{
+		description:
 			"Projeto freelancer desenvolvido para o Dr. Leonardo, no qual fui responsável pela criação de um site profissional utilizando WordPress. O projeto envolveu a personalização do design, otimização de desempenho e implementação de funcionalidades específicas para atender às necessidades do cliente.",
 		name: "Plástica de Face",
 		image: "https://i.ibb.co/Qw6XVvf/Screenshot-2025-02-11-095651.png",

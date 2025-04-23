@@ -45,7 +45,7 @@ const ProjectCard = ({
 			)}
 		>
 			<animated.img
-				className="lg:w-1/2 max-w-2xl w-full h-full relative border-2 border-neutral-800 object-cover rounded-lg"
+				className="max-w-xl w-full h-full relative border-2 border-neutral-800 object-cover rounded-lg"
 				src={image}
 				alt="Imagem do projeto"
 				style={animation}
