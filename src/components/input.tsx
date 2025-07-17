@@ -1,73 +1,46 @@
 import clsx from "clsx";
 import { forwardRef } from "react";
-import { animated } from "@react-spring/web";
-import { useDefaultAnimation } from "../utils/utils";
 
 type Props = React.InputHTMLAttributes<HTMLInputElement> & {
-	label?: string;
-	error?: string | undefined;
-	patternClassName?: string;
-	mandatory?: boolean;
-	id: string;
-	isSubmitted?: boolean;
+  label?: string;
+  error?: string | undefined;
+  patternClassName?: string;
+  mandatory?: boolean;
+  id: string;
 };
 
 const Input = forwardRef<HTMLInputElement, Props>(
-	(
-		{
-			id,
-			label,
-			error,
-			isSubmitted,
-			patternClassName,
-			mandatory,
-			className,
-			...props
-		},
-		ref,
-	) => {
-		const { animation: animationStyle, ref: refStyle } =
-			useDefaultAnimation(50);
-
-		return (
-			<div className={clsx("flex flex-col relative gap-y-1", patternClassName)}>
-				<div className="flex justify-between items-center w-full">
-					{label && (
-						<animated.label
-							ref={refStyle}
-							style={isSubmitted ? {} : animationStyle}
-							htmlFor={id}
-							className="text-sm text-white"
-						>
-							{label}
-						</animated.label>
-					)}
-					{mandatory && (
-						<animated.span
-							ref={refStyle}
-							style={isSubmitted ? {} : animationStyle}
-							className="text-xs text-neutral-500"
-						>
-							Obrigatório
-						</animated.span>
-					)}
-				</div>
-				<animated.input
-					style={isSubmitted ? {} : animationStyle}
-					ref={ref}
-					className={clsx(
-						"text-sm text-white px-3 py-2 rounded-md h-10 ring-offset-neutral-900 placeholder:text-neutral-400 focus-visible:outline-none focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 border border-neutral-700 focus-visible:ring-2 focus-visible:ring-neutral-300",
-						className,
-					)}
-					id={id}
-					{...props}
-				/>
-				{error && (
-					<span className="text-xs font-montserrat text-red-500">{error}</span>
-				)}
-			</div>
-		);
-	},
+  (
+    { id, label, error, patternClassName, mandatory, className, ...props },
+    ref
+  ) => {
+    return (
+      <div className={clsx("flex flex-col relative gap-y-1", patternClassName)}>
+        <div className="flex justify-between items-center w-full">
+          {label && (
+            <label htmlFor={id} className="text-sm text-white">
+              {label}
+            </label>
+          )}
+          {mandatory && (
+            <span className="text-xs text-neutral-500">Obrigatório</span>
+          )}
+        </div>
+        <input
+          ref={ref}
+          className={clsx(
+            "text-sm text-white px-3 py-2 rounded-md h-10 ring-offset-neutral-900 placeholder:text-neutral-400 focus-visible:outline-none focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 border border-neutral-700 focus-visible:ring-2 focus-visible:ring-neutral-300",
+            className
+          )}
+          id={id}
+          {...props}
+        />
+        {error && (
+          <span className="text-xs font-montserrat text-red-500">{error}</span>
+        )}
+      </div>
+    );
+  }
 );
 
 export default Input;

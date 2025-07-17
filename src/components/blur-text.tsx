@@ -1,126 +1,122 @@
 import { useRef, useEffect, useState } from "react";
-import { useSprings, animated } from "@react-spring/web";
 
 type Props = {
-	text?: string;
-	delay?: number;
-	className?: string;
-	animateBy?: "words" | "letters";
-	direction?: "top" | "bottom";
-	threshold?: number;
-	rootMargin?: string;
-	animationFrom?: { filter: string; opacity: number; transform: string };
-	animationTo?: Array<{ filter: string; opacity: number; transform: string }>;
-	onAnimationComplete?: () => void;
+  text?: string;
+  delay?: number;
+  className?: string;
+  animateBy?: "words" | "letters";
+  direction?: "top" | "bottom";
+  threshold?: number;
+  rootMargin?: string;
+  animationFrom?: { filter: string; opacity: number; transform: string };
+  animationTo?: Array<{ filter: string; opacity: number; transform: string }>;
+  onAnimationComplete?: () => void;
 };
 
 const BlurText = ({
-	text = "",
-	delay = 200,
-	className = "",
-	animateBy = "words",
-	direction = "top",
-	threshold = 0.1,
-	rootMargin = "0px",
-	animationFrom,
-	animationTo,
-	onAnimationComplete,
+  text = "",
+  delay = 200,
+  className = "",
+  animateBy = "words",
+  direction = "top",
+  threshold = 0.1,
+  rootMargin = "0px",
+  animationFrom,
+  animationTo,
+  onAnimationComplete,
 }: Props) => {
-	const elements = animateBy === "words" ? text.split(" ") : text.split("");
-	const easing = "easeOutCubic";
-	const [inView, setInView] = useState(false);
-	const ref = useRef<HTMLParagraphElement | null>(null);
-	const animatedCount = useRef(0);
+  const elements = animateBy === "words" ? text.split(" ") : text.split("");
+  const easing = "easeOutCubic";
+  const [inView, setInView] = useState(false);
+  const ref = useRef<HTMLParagraphElement | null>(null);
+  const animatedCount = useRef(0);
 
-	const defaultFrom =
-		direction === "top"
-			? {
-					filter: "blur(10px)",
-					opacity: 0,
-				}
-			: {
-					filter: "blur(10px)",
-					opacity: 0,
-				};
+  const defaultFrom =
+    direction === "top"
+      ? {
+          filter: "blur(10px)",
+          opacity: 0,
+        }
+      : {
+          filter: "blur(10px)",
+          opacity: 0,
+        };
 
-	const defaultTo = [
-		{
-			filter: "blur(5px)",
-			opacity: 0.5,
-		},
-		{ filter: "blur(0px)", opacity: 1 },
-	];
+  const defaultTo = [
+    {
+      filter: "blur(5px)",
+      opacity: 0.5,
+    },
+    { filter: "blur(0px)", opacity: 1 },
+  ];
 
-	useEffect(() => {
-		const observer = new IntersectionObserver(
-			([entry]) => {
-				if (entry.isIntersecting) {
-					setInView(true);
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setInView(true);
 
-					if (!ref.current) return;
+          if (!ref.current) return;
 
-					observer.unobserve(ref.current);
-				}
-			},
-			{ threshold, rootMargin },
-		);
+          observer.unobserve(ref.current);
+        }
+      },
+      { threshold, rootMargin }
+    );
 
-		if (!ref.current) return;
-		observer.observe(ref.current);
+    if (!ref.current) return;
+    observer.observe(ref.current);
 
-		return () => observer.disconnect();
-	}, [threshold, rootMargin]);
+    return () => observer.disconnect();
+  }, [threshold, rootMargin]);
 
-	interface SpringProps {
-		from: { filter: string; opacity: number; transform?: string };
-		to: (
-			next: (props: {
-				filter: string;
-				opacity: number;
-				transform?: string;
-				config: { easing: string };
-			}) => Promise<void>,
-		) => Promise<void>;
-		delay: number;
-	}
+  interface SpringProps {
+    from: { filter: string; opacity: number; transform?: string };
+    to: (
+      next: (props: {
+        filter: string;
+        opacity: number;
+        transform?: string;
+        config: { easing: string };
+      }) => Promise<void>
+    ) => Promise<void>;
+    delay: number;
+  }
 
-	const springs = useSprings(
-		elements.length,
-		elements.map<SpringProps>((_, i) => ({
-			from: animationFrom || defaultFrom,
-			to: async (next) => {
-				if (!inView) return;
+  const springs = elements.map<SpringProps>((_, i) => ({
+    from: animationFrom || defaultFrom,
+    to: async (next) => {
+      if (!inView) return;
 
-				for (const step of animationTo || defaultTo) {
-					await next({ ...step, config: { easing } });
-				}
+      for (const step of animationTo || defaultTo) {
+        await next({ ...step, config: { easing } });
+      }
 
-				animatedCount.current += 1;
-				if (animatedCount.current === elements.length && onAnimationComplete) {
-					onAnimationComplete();
-				}
-			},
-			delay: i * delay,
-		})),
-	);
+      animatedCount.current += 1;
+      if (animatedCount.current === elements.length && onAnimationComplete) {
+        onAnimationComplete();
+      }
+    },
+    delay: i * delay,
+  }));
 
-	return (
-		<p ref={ref} className={className}>
-			{springs.map((props, index) => (
-				<animated.span
-					key={index}
-					style={{
-						...props,
-						display: "inline-block",
-						willChange: "transform, filter, opacity",
-					}}
-				>
-					{elements[index] === " " ? "\u00A0" : elements[index]}
-					{animateBy === "words" && index < elements.length - 1 && "\u00A0"}
-				</animated.span>
-			))}
-		</p>
-	);
+  return (
+    <p ref={ref} className={className}>
+      {springs.map((props, index) => (
+        <span
+          key={index}
+          style={{
+            ...props,
+            display: "inline-block",
+            willChange: "transform, filter, opacity",
+          }}
+        >
+          {elements[index] === " " ? "\u00A0" : elements[index]}
+          {animateBy === "words" && index < elements.length - 1 && "\u00A0"}
+        </span>
+      ))}
+    </p>
+  );
 };
 
 export default BlurText;

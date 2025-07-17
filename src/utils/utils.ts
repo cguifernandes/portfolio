@@ -1,40 +1,4 @@
-import { easings, useSpring } from "@react-spring/web";
 import { ProjectsProps, SkillsProps } from "../types/type";
-import { useInView } from "react-intersection-observer";
-
-export const blurAnimation = {
-  from: {
-    filter: "blur(10px)",
-    opacity: 0,
-  },
-  to: [
-    {
-      filter: "blur(5px)",
-      opacity: 0.5,
-    },
-    { filter: "blur(0px)", opacity: 1 },
-  ],
-};
-
-export const useDefaultAnimation = (delay?: number) => {
-  const { ref, inView } = useInView({
-    triggerOnce: true,
-    threshold: 0.1,
-    delay: 100,
-  });
-
-  const animation = useSpring({
-    from: blurAnimation.from,
-    to: inView ? blurAnimation.to : blurAnimation.from,
-    config: {
-      easing: easings.easeOutCubic,
-    },
-    delay,
-    reset: true,
-  });
-
-  return { ref, animation };
-};
 
 export const skills: SkillsProps[] = [
   {

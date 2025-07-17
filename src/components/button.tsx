@@ -1,7 +1,5 @@
 import React from "react";
 import { tv, VariantProps } from "tailwind-variants";
-import { animated } from "@react-spring/web";
-import { useDefaultAnimation } from "../utils/utils";
 import Spinner from "./spinner";
 import clsx from "clsx";
 
@@ -25,7 +23,6 @@ type Props = React.ButtonHTMLAttributes<HTMLButtonElement> &
     delay?: number;
     icon?: React.ReactNode;
     isLoading?: boolean;
-    isSubmitted?: boolean;
     patternClassName?: string;
     target?: string;
   };
@@ -34,7 +31,6 @@ const Button = ({
   theme,
   className,
   isLoading,
-  isSubmitted,
   children,
   icon,
   patternClassName,
@@ -42,16 +38,12 @@ const Button = ({
   href,
   target,
 }: Props) => {
-  const { animation, ref } = useDefaultAnimation(delay);
-
   if (href) {
     if (delay) {
       return (
-        <animated.a
+        <a
           target={target}
           className={clsx("w-full", patternClassName)}
-          ref={ref}
-          style={isSubmitted ? {} : animation}
           href={href}
         >
           <button
@@ -65,7 +57,7 @@ const Button = ({
               </>
             )}
           </button>
-        </animated.a>
+        </a>
       );
     }
 
@@ -88,11 +80,7 @@ const Button = ({
 
   if (delay) {
     return (
-      <animated.div
-        className={patternClassName}
-        ref={ref}
-        style={isSubmitted ? {} : animation}
-      >
+      <div className={patternClassName}>
         <button className={button({ theme, className })}>
           {isLoading ? (
             <Spinner />
@@ -102,7 +90,7 @@ const Button = ({
             </>
           )}
         </button>
-      </animated.div>
+      </div>
     );
   }
 
