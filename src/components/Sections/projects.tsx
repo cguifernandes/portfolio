@@ -5,7 +5,7 @@ const Projects = () => {
   return (
     <section
       id="projects"
-      className="py-20 px-6 lg:px-12 scroll-mt-8 flex justify-center w-full bg-neutral-900"
+      className="py-20 px-6 lg:px-12 scroll-mt-8 flex justify-center w-full"
     >
       <div className="flex flex-col gap-y-10 max-w-7xl">
         <h1 className="text-white text-center text-xl">Projetos</h1>
