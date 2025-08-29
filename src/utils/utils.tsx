@@ -1,4 +1,10 @@
-import { ProjectsProps, SkillsProps } from "../types/type";
+import { CompaniesProps, ProjectsProps, SkillsProps } from "../types/type";
+import revzap from "../../public/companies/revzap.png";
+import futureOnline from "../../public/companies/future-online.png";
+import prime from "../../public/companies/prime.jpg";
+import ecomplus from "../../public/companies/ecomplus.png";
+import desweb from "../../public/companies/desweb.png";
+import celiware from "../../public/companies/celiware.png";
 
 export const skills: SkillsProps[] = [
   {
@@ -190,5 +196,32 @@ export const projects: ProjectsProps[] = [
     repo: "https://github.com/cguifernandes/Wiki-Kimetsu-No-Yaiba",
     skills: ["React.js", "CSS", "Javascript"],
     website: "https://wiki-kimetsu-no-yaiba.vercel.app/",
+  },
+];
+
+export const companies: CompaniesProps[] = [
+  {
+    name: "Revzap",
+    image: <img src={revzap} alt="Revzap" />,
+  },
+  {
+    name: "Future Online",
+    image: <img src={futureOnline} alt="Future Online" />,
+  },
+  {
+    name: "Prime",
+    image: <img src={prime} alt="Prime" />,
+  },
+  {
+    name: "Ecomplus",
+    image: <img src={ecomplus} alt="Ecomplus" />,
+  },
+  {
+    name: "Desweb",
+    image: <img src={desweb} alt="Desweb" />,
+  },
+  {
+    name: "Celiware",
+    image: <img src={celiware} alt="Celiware" />,
   },
 ];
