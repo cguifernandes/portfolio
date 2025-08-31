@@ -2,108 +2,108 @@
 @import "tailwindcss";
 
 * {
-	box-sizing: border-box;
-	margin: 0px;
-	font-family: "Poppins", serif;
-	scroll-behavior: smooth;
+  box-sizing: border-box;
+  margin: 0px;
+  font-family: "Poppins", serif;
+  scroll-behavior: smooth;
 }
 
 input,
 textarea {
-	outline: 0 none;
+  outline: 0 none;
 }
 
 a {
-	text-decoration: none;
+  text-decoration: none;
 }
 
 #root {
-	display: flex;
-	flex-direction: column;
-	min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 body {
-	@apply bg-neutral-950;
+  @apply bg-neutral-950;
 }
 
 .bg-gradient-primary {
-	background: linear-gradient(
-		to left,
-		var(--primary-800),
-		var(--primary-500),
-		var(--primary-800)
-	);
-	background-size: 300% 300%;
-	background-position: 0% 50%;
+  background: linear-gradient(
+    to left,
+    var(--primary-800),
+    var(--primary-500),
+    var(--primary-800)
+  );
+  background-size: 300% 300%;
+  background-position: 0% 50%;
 }
 
 .bg-gradient-primary:hover {
-	background-position: 100% 50%;
+  background-position: 100% 50%;
 }
 
 .button-gradient-outline {
-	background: linear-gradient(to bottom, #0a0a0a 20%, #252525 100%);
-	background-size: 100% 200%;
-	background-position: 100% 100%;
+  background: linear-gradient(to bottom, #0a0a0a 20%, #252525 100%);
+  background-size: 100% 200%;
+  background-position: 100% 100%;
 }
 
 .button-gradient-outline:hover {
-	background-position: 0% 0%;
+  background-position: 0% 0%;
 }
 
 .star-movement-bottom {
-	animation: star-movement-bottom linear infinite alternate;
+  animation: star-movement-bottom linear infinite alternate;
 }
 
 .star-movement-top {
-	animation: star-movement-top linear infinite alternate;
+  animation: star-movement-top linear infinite alternate;
 }
 
 @keyframes star-movement-bottom {
-	0% {
-		transform: translate(0%, 0%);
-		opacity: 1;
-	}
-	100% {
-		transform: translate(-100%, 0%);
-		opacity: 0;
-	}
+  0% {
+    transform: translate(0%, 0%);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-100%, 0%);
+    opacity: 0;
+  }
 }
 
 @keyframes star-movement-top {
-	0% {
-		transform: translate(0%, 0%);
-		opacity: 1;
-	}
-	100% {
-		transform: translate(100%, 0%);
-		opacity: 0;
-	}
+  0% {
+    transform: translate(0%, 0%);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(100%, 0%);
+    opacity: 0;
+  }
 }
 
 :root {
-	--primary-50: #e7f4f7;
-	--primary-100: #b4dde5;
-	--primary-200: #8fccd9;
-	--primary-300: #5cb5c7;
-	--primary-400: #3da7bd;
-	--primary-500: #0c91ac;
-	--primary-600: #0b849d;
-	--primary-700: #09677a;
-	--primary-800: #07505f;
-	--primary-900: #053d48;
+  --primary-50: #e7f4f7;
+  --primary-100: #b4dde5;
+  --primary-200: #8fccd9;
+  --primary-300: #5cb5c7;
+  --primary-400: #3da7bd;
+  --primary-500: #0c91ac;
+  --primary-600: #0b849d;
+  --primary-700: #09677a;
+  --primary-800: #07505f;
+  --primary-900: #053d48;
 }
 
 @theme {
-	--color-primary-50: #e7f4f7;
-	--color-primary-100: #b4dde5;
-	--color-primary-200: #8fccd9;
-	--color-primary-300: #5cb5c7;
-	--color-primary-400: #3da7bd;
-	--color-primary-500: #0c91ac;
-	--color-primary-600: #0b849d;
-	--color-primary-700: #09677a;
-	--color-primary-800: #07505f;
-	--color-primary-900: #053d48;
+  --color-primary-50: #e7f4f7;
+  --color-primary-100: #b4dde5;
+  --color-primary-200: #8fccd9;
+  --color-primary-300: #5cb5c7;
+  --color-primary-400: #3da7bd;
+  --color-primary-500: #0c91ac;
+  --color-primary-600: #0b849d;
+  --color-primary-700: #09677a;
+  --color-primary-800: #07505f;
+  --color-primary-900: #053d48;
 }

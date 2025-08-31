@@ -1,4 +1,4 @@
-import React from "react";
+import { ReactNode } from "react";
 
 export type SkillsProps = {
   name: string;
@@ -17,5 +17,5 @@ export type ProjectsProps = {
 
 export type CompaniesProps = {
   name: string;
-  image: React.ReactNode;
+  image: ReactNode;
 };
