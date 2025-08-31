@@ -1,5 +1,3 @@
-import { ReactNode } from "react";
-
 export type SkillsProps = {
   name: string;
   description: string;
@@ -17,5 +15,5 @@ export type ProjectsProps = {
 
 export type CompaniesProps = {
   name: string;
-  image: ReactNode;
+  image: React.ReactNode;
 };
