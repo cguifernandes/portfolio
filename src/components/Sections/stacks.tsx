@@ -1,6 +1,7 @@
+import clsx from "clsx";
+import { motion } from "framer-motion";
 import { skills } from "../../utils/utils";
 import CardStarBorder from "../card-star-border";
-import clsx from "clsx";
 
 const Stacks = () => {
   return (
@@ -9,7 +10,15 @@ const Stacks = () => {
       className="py-20 scroll-mt-8 px-6 lg:px-4 flex justify-center w-full bg-neutral-900"
     >
       <div className="flex flex-col gap-y-10 max-w-7xl">
-        <h1 className="text-white text-center text-xl">Stacks</h1>
+        <motion.h1
+          initial={{ opacity: 0, filter: "blur(4px)", y: -5 }}
+          whileInView={{ opacity: 1, filter: "blur(0px)", y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, ease: "easeOut" }}
+          className="text-white text-center text-xl"
+        >
+          Stacks
+        </motion.h1>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-2">
           {skills
             .sort((a, b) => a.name.localeCompare(b.name))
@@ -22,6 +31,7 @@ const Stacks = () => {
                 key={`${skill.name}${index}`}
               >
                 <CardStarBorder
+                  animated
                   theme="black"
                   className="w-full"
                   subtitle={skill.description}

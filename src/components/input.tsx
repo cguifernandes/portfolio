@@ -1,4 +1,5 @@
 import clsx from "clsx";
+import { Easing, motion } from "framer-motion";
 import { forwardRef } from "react";
 
 type Props = React.InputHTMLAttributes<HTMLInputElement> & {
@@ -7,15 +8,36 @@ type Props = React.InputHTMLAttributes<HTMLInputElement> & {
   patternClassName?: string;
   mandatory?: boolean;
   id: string;
+  animated?: boolean;
 };
 
 const Input = forwardRef<HTMLInputElement, Props>(
   (
-    { id, label, error, patternClassName, mandatory, className, ...props },
+    {
+      id,
+      label,
+      error,
+      patternClassName,
+      mandatory,
+      className,
+      animated,
+      ...props
+    },
     ref
   ) => {
+    const motionProps = animated
+      ? {
+          initial: { opacity: 0, filter: "blur(4px)", y: -5 },
+          whileInView: { opacity: 1, filter: "blur(0px)", y: 0 },
+          viewport: { once: true },
+          transition: { duration: 0.5, ease: "easeOut" as Easing },
+        }
+      : null;
     return (
-      <div className={clsx("flex flex-col relative gap-y-1", patternClassName)}>
+      <motion.div
+        {...motionProps}
+        className={clsx("flex flex-col relative gap-y-1", patternClassName)}
+      >
         <div className="flex justify-between items-center w-full">
           {label && (
             <label htmlFor={id} className="text-sm text-white">
@@ -38,7 +60,7 @@ const Input = forwardRef<HTMLInputElement, Props>(
         {error && (
           <span className="text-xs font-montserrat text-red-500">{error}</span>
         )}
-      </div>
+      </motion.div>
     );
   }
 );

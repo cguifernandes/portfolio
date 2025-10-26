@@ -1,7 +1,8 @@
+import clsx from "clsx";
+import { Easing, motion } from "framer-motion";
 import React from "react";
 import { tv, VariantProps } from "tailwind-variants";
 import Spinner from "./spinner";
-import clsx from "clsx";
 
 const button = tv({
   base: "rounded-lg px-3 h-10 py-2 text-sm text-white cursor-pointer duration-300 ease-in-out",
@@ -20,11 +21,11 @@ type Props = React.ButtonHTMLAttributes<HTMLButtonElement> &
   VariantProps<typeof button> & {
     children: React.ReactNode;
     href?: string;
-    delay?: number;
     icon?: React.ReactNode;
     isLoading?: boolean;
     patternClassName?: string;
     target?: string;
+    animated?: boolean;
   };
 
 const Button = ({
@@ -34,14 +35,39 @@ const Button = ({
   children,
   icon,
   patternClassName,
-  delay,
   href,
   target,
+  animated = false,
 }: Props) => {
+  const buttonContent = (
+    <>
+      {isLoading ? (
+        <Spinner />
+      ) : (
+        <>
+          {icon} {children}
+        </>
+      )}
+    </>
+  );
+
+  const motionProps = animated
+    ? {
+        initial: { y: -5, opacity: 0, filter: "blur(4px)" },
+        whileInView: { y: 0, opacity: 1, filter: "blur(0px)" },
+        viewport: { once: true },
+        transition: {
+          duration: 0.5,
+          ease: "easeOut" as Easing,
+        },
+      }
+    : null;
+
   if (href) {
-    if (delay) {
+    if (animated) {
       return (
-        <a
+        <motion.a
+          {...motionProps}
           target={target}
           className={clsx("w-full", patternClassName)}
           href={href}
@@ -49,15 +75,9 @@ const Button = ({
           <button
             className={button({ theme, className: `w-full h-10 ${className}` })}
           >
-            {isLoading ? (
-              <Spinner />
-            ) : (
-              <>
-                {icon} {children}
-              </>
-            )}
+            {buttonContent}
           </button>
-        </a>
+        </motion.a>
       );
     }
 
@@ -66,44 +86,24 @@ const Button = ({
         <button
           className={button({ theme, className: `w-full h-10 ${className}` })}
         >
-          {isLoading ? (
-            <Spinner />
-          ) : (
-            <>
-              {icon} {children}
-            </>
-          )}
+          {buttonContent}
         </button>
       </a>
     );
   }
 
-  if (delay) {
+  if (animated) {
     return (
-      <div className={patternClassName}>
+      <motion.div {...motionProps} className={patternClassName}>
         <button className={button({ theme, className })}>
-          {isLoading ? (
-            <Spinner />
-          ) : (
-            <>
-              {icon} {children}
-            </>
-          )}
+          {buttonContent}
         </button>
-      </div>
+      </motion.div>
     );
   }
 
   return (
-    <button className={button({ theme, className })}>
-      {isLoading ? (
-        <Spinner />
-      ) : (
-        <>
-          {icon} {children}
-        </>
-      )}
-    </button>
+    <button className={button({ theme, className })}>{buttonContent}</button>
   );
 };
 

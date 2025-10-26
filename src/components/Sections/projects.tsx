@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import { companies, projects } from "../../utils/utils";
 import CompanyCard from "../company-card";
 import InfiniteScroll from "../infinite-scroll";
@@ -10,12 +11,29 @@ const Projects = () => {
       className="py-20 scroll-mt-8 flex justify-center w-full"
     >
       <div className="flex flex-col overflow-hidden gap-y-10 max-w-7xl">
-        <h1 className="text-white text-center text-xl">Projetos</h1>
-        <h2 className="text-white text-center text-lg">Empresas Atendidas</h2>
+        <motion.h1
+          initial={{ opacity: 0, filter: "blur(4px)", y: -5 }}
+          whileInView={{ opacity: 1, filter: "blur(0px)", y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, ease: "easeOut" }}
+          className="text-white text-center text-xl"
+        >
+          Projetos
+        </motion.h1>
+        <motion.h2
+          initial={{ opacity: 0, filter: "blur(4px)", y: -5 }}
+          whileInView={{ opacity: 1, filter: "blur(0px)", y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, ease: "easeOut" }}
+          className="text-white text-center text-lg"
+        >
+          Empresas Atendidas
+        </motion.h2>
         <InfiniteScroll>
           {[...companies, ...companies, ...companies].map((company, index) => (
             <CompanyCard
               name={company.name}
+              index={index}
               image={company.image}
               key={index}
             />

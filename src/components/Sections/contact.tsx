@@ -1,12 +1,13 @@
+import emailjs from "@emailjs/browser";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { motion } from "framer-motion";
+import { useState } from "react";
 import { useForm } from "react-hook-form";
+import toast from "react-hot-toast";
+import { z } from "zod";
+import Button from "../button";
 import Input from "../input";
 import Textarea from "../textarea";
-import Button from "../button";
-import { z } from "zod";
-import emailjs from "@emailjs/browser";
-import { useState } from "react";
-import toast from "react-hot-toast";
 
 const schema = z.object({
   name: z
@@ -75,7 +76,15 @@ const Contact = () => {
       className="py-20 scroll-mt-8 px-6 lg:px-4 flex justify-center w-full bg-neutral-900"
     >
       <div className="flex w-full items-center flex-col gap-y-10">
-        <h1 className="text-white text-center text-xl">Contato</h1>
+        <motion.h1
+          initial={{ opacity: 0, filter: "blur(4px)", y: -5 }}
+          whileInView={{ opacity: 1, filter: "blur(0px)", y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, ease: "easeOut" }}
+          className="text-white text-center text-xl"
+        >
+          Contato
+        </motion.h1>
         <form
           onSubmit={handleSubmit(handlerSubmitMessage)}
           className="flex w-full max-w-3xl flex-col gap-y-4"
@@ -89,6 +98,7 @@ const Contact = () => {
             placeholder="João Silva"
             error={errors.name?.message}
             disabled={isLoading}
+            animated
           />
           <Input
             id="email"
@@ -100,6 +110,7 @@ const Contact = () => {
             placeholder="joao.silva@example.com"
             error={errors.email?.message}
             disabled={isLoading}
+            animated
           />
           <Textarea
             id="message"
@@ -111,12 +122,13 @@ const Contact = () => {
             placeholder="Mensagem de contato"
             disabled={isLoading}
             error={errors.message?.message}
+            animated
           />
           <Button
-            delay={50}
             className="flex w-full justify-center items-center"
             isLoading={isLoading}
             type="submit"
+            animated
           >
             Enviar
           </Button>

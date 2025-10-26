@@ -1,10 +1,10 @@
+import celiware from "../assets/companies/celiware.png";
+import desweb from "../assets/companies/desweb.png";
+import ecomplus from "../assets/companies/ecomplus.png";
+import futureOnline from "../assets/companies/future-online.png";
+import prime from "../assets/companies/prime.jpg";
+import revzap from "../assets/companies/revzap.png";
 import { CompaniesProps, ProjectsProps, SkillsProps } from "../types/type";
-import revzap from "../../public/companies/revzap.png";
-import futureOnline from "../../public/companies/future-online.png";
-import prime from "../../public/companies/prime.jpg";
-import ecomplus from "../../public/companies/ecomplus.png";
-import desweb from "../../public/companies/desweb.png";
-import celiware from "../../public/companies/celiware.png";
 
 export const skills: SkillsProps[] = [
   {

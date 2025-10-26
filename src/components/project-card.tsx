@@ -1,8 +1,9 @@
 import clsx from "clsx";
-import { ProjectsProps } from "../types/type";
-import Button from "./button";
+import { motion } from "framer-motion";
 import { ExternalLink } from "lucide-react";
 import { useState } from "react";
+import { ProjectsProps } from "../types/type";
+import Button from "./button";
 
 type Props = ProjectsProps & {
   reverse?: boolean;
@@ -27,9 +28,13 @@ const ProjectCard = ({
         reverse ? "lg:flex-row-reverse" : "lg:flex-row"
       )}
     >
-      <div
+      <motion.div
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
+        initial={{ opacity: 0, filter: "blur(4px)", y: -5 }}
+        whileInView={{ opacity: 1, filter: "blur(0px)", y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5, ease: "easeOut" }}
         className="relative max-w-xl h-full w-full border-2 border-neutral-800 rounded-lg"
       >
         <img
@@ -54,31 +59,52 @@ const ProjectCard = ({
             </div>
           </a>
         </div>
-      </div>
+      </motion.div>
       <div className="flex max-w-2xl w-full lg:w-1/2 flex-col gap-y-5">
         <div className="flex items-center flex-col gap-y-1">
-          <h1 className="text-lg text-white">{name}</h1>
+          <motion.h1
+            initial={{ opacity: 0, filter: "blur(4px)", y: -5 }}
+            whileInView={{ opacity: 1, filter: "blur(0px)", y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, ease: "easeOut" }}
+            className="text-lg text-white"
+          >
+            {name}
+          </motion.h1>
           <div className="flex flex-wrap justify-center gap-1">
             {skills.map((skill, index) => (
-              <span
+              <motion.span
+                initial={{ opacity: 0, filter: "blur(4px)", y: -5 }}
+                whileInView={{ opacity: 1, filter: "blur(0px)", y: 0 }}
+                viewport={{ once: true }}
+                transition={{
+                  duration: 0.5,
+                  ease: "easeOut",
+                  delay: index * 0.05,
+                }}
                 className="text-white bg-neutral-900 border border-neutral-800 rounded-md text-xs px-2 py-0.5"
                 key={`${skill}${index}`}
               >
                 {skill}
-              </span>
+              </motion.span>
             ))}
           </div>
         </div>
-        <p
+        <motion.p
+          initial={{ opacity: 0, filter: "blur(4px)", y: -5 }}
+          whileInView={{ opacity: 1, filter: "blur(0px)", y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, ease: "easeOut" }}
           title={description}
           className="text-neutral-400 line-clamp-6 text-center text-sm"
         >
           {description}
-        </p>
+        </motion.p>
         <div className="flex flex-col sm:flex-row gap-3">
           {website && (
             <a className="w-full" href={website} target="_blank">
               <Button
+                animated
                 icon={<ExternalLink size={16} color="#fff" />}
                 className="flex-1 w-full flex justify-center gap-x-2 items-center text-center"
                 theme="primary"
@@ -90,6 +116,7 @@ const ProjectCard = ({
           {additionalLink && (
             <a className="w-full" href={additionalLink} target="_blank">
               <Button
+                animated
                 icon={<ExternalLink size={16} color="#fff" />}
                 className="flex-1 w-full flex justify-center gap-x-2 items-center text-center"
                 theme="outline"
@@ -101,6 +128,7 @@ const ProjectCard = ({
           {repo && (
             <a className="w-full" href={repo} target="_blank">
               <Button
+                animated
                 icon={<ExternalLink size={16} color="#fff" />}
                 className="flex-1 w-full flex justify-center gap-x-2 items-center text-center"
                 theme="outline"

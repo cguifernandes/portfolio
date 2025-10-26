@@ -1,8 +1,8 @@
-import StarBorder from "../components/react-bits/Animations/StarBorder/StarBorder";
 import { tv, VariantProps } from "tailwind-variants";
+import StarBorder from "../components/react-bits/Animations/StarBorder/StarBorder";
 
 const card = tv({
-  base: "rounded-lg px-3 py-2 duration-300 ease-in-out border border-neutral-800 relative",
+  base: "rounded-lg flex flex-col gap-y-2 p-5 duration-300 ease-in-out border border-neutral-800 relative",
   variants: {
     theme: {
       primary: "bg-neutral-950",
@@ -22,47 +22,34 @@ type Props = React.ComponentPropsWithoutRef<"div"> &
     speed?: React.CSSProperties["animationDuration"];
     title: string;
     subtitle: string;
-    delay?: number;
+    animated?: boolean;
+    icon?: React.ReactNode;
   };
 
 const CardStarBorder = ({
   title,
-  delay,
+  animated,
   theme,
   subtitle,
   className,
+  icon,
   ...props
 }: Props) => {
-  if (delay) {
-    return (
-      <div>
-        <StarBorder {...props} as="div">
-          <div
-            className={card({
-              theme,
-            })}
-          >
-            <h2 className="text-white z-10 select-none">{title}</h2>
-            <p
-              title={subtitle}
-              className="text-neutral-400 line-clamp-3 z-10 select-none text-sm"
-            >
-              {subtitle}
-            </p>
-          </div>
-        </StarBorder>
-      </div>
-    );
-  }
-
   return (
-    <StarBorder {...props} as="div" className={className}>
+    <StarBorder {...props} as="div" className={className} animated={animated}>
       <div
         className={card({
           theme,
         })}
       >
-        <h2 className="text-white z-10 select-none">{title}</h2>
+        {icon && (
+          <div className="flex items-center p-3 w-fit h-fit bg-primary-800 rounded-lg text-white justify-center">
+            {icon}
+          </div>
+        )}
+        <h2 className="text-white z-10 select-none text-xl font-medium">
+          {title}
+        </h2>
         <p
           title={subtitle}
           className="text-neutral-400 line-clamp-3 z-10 select-none text-sm"
