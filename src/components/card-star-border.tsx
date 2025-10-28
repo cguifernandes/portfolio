@@ -2,7 +2,7 @@ import { tv, VariantProps } from "tailwind-variants";
 import StarBorder from "../components/react-bits/Animations/StarBorder/StarBorder";
 
 const card = tv({
-  base: "rounded-lg flex flex-col gap-y-2 p-5 duration-300 ease-in-out border border-neutral-800 relative",
+  base: "rounded-lg flex flex-col gap-y-6 p-5 duration-300 ease-in-out border border-neutral-800 relative",
   variants: {
     theme: {
       primary: "bg-neutral-950",

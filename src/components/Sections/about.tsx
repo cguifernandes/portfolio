@@ -108,7 +108,7 @@ const About = () => {
           </a>
         </motion.li>
       </ul>
-
+      
       <Button
         patternClassName="w-full flex justify-center"
         theme="primary"
@@ -121,7 +121,7 @@ const About = () => {
       </Button>
 
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-x-4 gap-y-6 grid-rows-2">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-x-4 gap-y-2 grid-rows-2">
         <CardStarBorder
           icon={<BoxesIcon size={28} />}
           animated
