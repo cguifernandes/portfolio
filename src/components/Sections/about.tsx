@@ -36,17 +36,6 @@ const About = () => {
         meus conhecimentos.
       </motion.p>
 
-      <Button
-        patternClassName="w-full flex justify-center"
-        theme="primary"
-        href="/curriculo.pdf"
-        target="_blank"
-        className="w-full lg:w-96"
-        animated
-      >
-        Currículo
-      </Button>
-
       <ul className="flex items-center gap-x-6">
         <motion.li
           initial={{ opacity: 0, y: -5 }}
@@ -119,6 +108,18 @@ const About = () => {
           </a>
         </motion.li>
       </ul>
+      
+      <Button
+        patternClassName="w-full flex justify-center"
+        theme="primary"
+        href="/curriculo.pdf"
+        target="_blank"
+        className="w-full lg:w-96"
+        animated
+      >
+        Currículo
+      </Button>
+
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-x-4 gap-y-2 grid-rows-2">
         <CardStarBorder

@@ -47,7 +47,7 @@ const CardStarBorder = ({
             {icon}
           </div>
         )}
-        <h2 className="text-white z-10 select-none text-xl font-medium">
+        <h2 className="text-white leading-none z-10 select-none text-xl font-medium">
           {title}
         </h2>
         <p
