@@ -52,7 +52,7 @@ const CardStarBorder = ({
         </h2>
         <p
           title={subtitle}
-          className="text-neutral-400 line-clamp-3 z-10 select-none text-sm"
+          className="text-neutral-400 leading-none line-clamp-3 z-10 select-none text-sm"
         >
           {subtitle}
         </p>
