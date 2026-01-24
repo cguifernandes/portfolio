@@ -1,11 +1,11 @@
 "use client";
 
 import type { Transition } from "motion/react";
+import { motion, useAnimation } from "motion/react";
 import type { HTMLAttributes } from "react";
 import { forwardRef, useCallback, useImperativeHandle, useRef } from "react";
-import { motion, useAnimation } from "motion/react";
 
-import { cn } from "@/lib/utils";
+import { cn } from "../../lib/utils";
 
 export interface ChevronRightIconHandle {
   startAnimation: () => void;
@@ -75,6 +75,9 @@ const ChevronRightIcon = forwardRef<
         strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
+        aria-label="Chevron Right"
+        aria-hidden="true"
+        style={{ overflow: "visible" }}
       >
         <motion.path
           variants={{
