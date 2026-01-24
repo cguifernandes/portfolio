@@ -17,3 +17,13 @@ export type CompaniesProps = {
   name: string;
   image: React.ReactNode;
 };
+
+export type CareerProps = {
+  company: string;
+  position: string;
+  startDate: string;
+  endDate?: string;
+  isCurrent: boolean;
+  stacks: string[];
+  description?: string;
+};

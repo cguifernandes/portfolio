@@ -83,7 +83,7 @@ const TimerIcon = forwardRef<TimerIconHandle, TimerIconProps>(
           onMouseEnter?.(e);
         }
       },
-      [controls, onMouseEnter]
+      [controls, onMouseEnter],
     );
 
     // 🔹 mouse leave: garante que volte para normal
@@ -95,7 +95,7 @@ const TimerIcon = forwardRef<TimerIconHandle, TimerIconProps>(
           onMouseLeave?.(e);
         }
       },
-      [controls, onMouseLeave]
+      [controls, onMouseLeave],
     );
 
     return (
@@ -137,7 +137,7 @@ const TimerIcon = forwardRef<TimerIconHandle, TimerIconProps>(
         </svg>
       </div>
     );
-  }
+  },
 );
 
 TimerIcon.displayName = "TimerIcon";

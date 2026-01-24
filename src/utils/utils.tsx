@@ -4,7 +4,12 @@ import ecomplus from "../assets/companies/ecomplus.png";
 import futureOnline from "../assets/companies/future-online.png";
 import prime from "../assets/companies/prime.jpg";
 import revzap from "../assets/companies/revzap.png";
-import { CompaniesProps, ProjectsProps, SkillsProps } from "../types/type";
+import type {
+  CareerProps,
+  CompaniesProps,
+  ProjectsProps,
+  SkillsProps,
+} from "../types/type";
 
 export const skills: SkillsProps[] = [
   {
@@ -225,3 +230,51 @@ export const companies: CompaniesProps[] = [
     image: <img src={celiware} alt="Celiware" />,
   },
 ];
+
+export const career: CareerProps[] = [
+  {
+    company: "Satellitus Tecnologia",
+    position: "Desenvolvedor Full-stack",
+    startDate: "2026-01-02",
+    isCurrent: true,
+    stacks: ["PHP", "JavaScript", "HTML", "CSS", "SQL", "Python"],
+    description:
+      "Participo de ações para desenvolvimento e manutenção de sistemas legados, atuando em novas funcionalidades, correções e evolução das aplicações, além de colaborar no dia a dia com a equipe em melhorias contínuas.",
+  },
+  {
+    company: "RAMI Indústria Gráfica",
+    position: "Estagiário de TI",
+    startDate: "2025-05-02",
+    endDate: "2025-12-31",
+    isCurrent: false,
+    stacks: ["TI", "Suporte Técnico", "PHP", "MySQL"],
+    description:
+      "Atuei como estagiário de TI na RAMI Indústria Gráfica, realizando suporte técnico aos usuários, desenvolvimento de sistemas internos e manutenção de infraestrutura de TI.",
+  },
+  {
+    company: "Free-lancer",
+    position: "Desenvolvedor Full Stack",
+    startDate: "2024-01-02",
+    isCurrent: true,
+    stacks: [
+      "Next.js",
+      "React.js",
+      "Node.js",
+      "TypeScript",
+      "PostgreSQL",
+      "Tailwind CSS",
+    ],
+    description:
+      "Desenvolvimento de sites e aplicações web sob demanda para diversos clientes, desde o desenho da solução até o deploy em produção.",
+  },
+];
+
+export const formatDate = (dateString: string): string => {
+  const date = new Date(dateString);
+  return date.toLocaleDateString("pt-BR", { month: "short", year: "numeric" });
+};
+
+export const formatFullDate = (dateString: string): string => {
+  const date = new Date(dateString);
+  return date.toLocaleDateString("pt-BR", { month: "long", year: "numeric" });
+};

@@ -73,7 +73,7 @@ const Contact = () => {
   return (
     <section
       id="contact"
-      className="py-20 scroll-mt-8 px-6 lg:px-4 flex justify-center w-full bg-neutral-900"
+      className="py-20 scroll-mt-8 px-6 lg:px-4 flex justify-center w-full"
     >
       <div className="flex w-full items-center flex-col gap-y-10">
         <motion.h1

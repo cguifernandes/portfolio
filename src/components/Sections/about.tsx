@@ -2,20 +2,42 @@ import { motion } from "framer-motion";
 import BlurText from "../blur-text";
 import Button from "../button";
 import CardStarBorder from "../card-star-border";
-import { BoxesIcon } from "../ui/boxes";
-import { CoffeeIcon } from "../ui/coffee";
-import { EarthIcon } from "../ui/earth";
+import { BoxesIcon, BoxesIconHandle } from "../ui/boxes";
+import { CoffeeIcon, CoffeeIconHandle } from "../ui/coffee";
+import { EarthIcon, EarthIconHandle } from "../ui/earth";
 import { GithubIcon } from "../ui/github";
 import { LinkedinIcon } from "../ui/linkedin";
 import { MailCheckIcon } from "../ui/mail-check";
 import { PhoneIcon } from "../ui/phone";
-import { TimerIcon } from "../ui/timer";
+import { TimerIcon, TimerIconHandle } from "../ui/timer";
+import { useRef, useCallback } from "react";
 
 const About = () => {
+  const earthIconRef = useRef<EarthIconHandle>(null);
+  const boxesIconRef = useRef<BoxesIconHandle>(null);
+  const coffeeIconRef = useRef<CoffeeIconHandle>(null);
+  const timerIconRef = useRef<TimerIconHandle>(null);
+
+  const handleBoxesViewportEnter = useCallback(() => {
+    boxesIconRef.current?.startAnimation();
+  }, []);
+
+  const handleCoffeeViewportEnter = useCallback(() => {
+    coffeeIconRef.current?.startAnimation();
+  }, []);
+
+  const handleTimerViewportEnter = useCallback(() => {
+    timerIconRef.current?.startAnimation();
+  }, []);
+
+  const handleEarthViewportEnter = useCallback(() => {
+    earthIconRef.current?.startAnimation();
+  }, []);
+
   return (
     <section
       id="about"
-      className="min-h-screen pt-12 md:pb-16 flex-col max-w-7xl gap-y-8 items-center scroll-mt-8 px-6 lg:px-4 flex justify-center w-full"
+      className="py-16 flex-col max-w-7xl gap-y-8 items-center scroll-mt-8 px-6 lg:px-4 flex justify-center w-full"
     >
       <BlurText
         text="Guilherme Fernandes"
@@ -108,7 +130,7 @@ const About = () => {
           </a>
         </motion.li>
       </ul>
-      
+
       <Button
         patternClassName="w-full flex justify-center"
         theme="primary"
@@ -120,32 +142,66 @@ const About = () => {
         Currículo
       </Button>
 
-
       <div className="grid grid-cols-1 md:grid-cols-2 gap-x-4 gap-y-2 grid-rows-2">
-        <CardStarBorder
-          icon={<BoxesIcon size={28} />}
-          animated
-          title="Design de interfaces"
-          subtitle="Crio interfaces visuais modernas e intuitivas para sites, garantindo uma ótima experiência para os usuários. Meu objetivo é transformar ideias em layouts atraentes e funcionais, sempre focando em usabilidade e identidade visual."
-        />
-        <CardStarBorder
-          icon={<CoffeeIcon size={28} />}
-          animated
-          title="Desenvolvimento web"
-          subtitle="Desenvolvo sites e aplicações completas, cuidando tanto da parte visual quanto da lógica por trás do funcionamento. Utilizo tecnologias modernas para criar sites rápidos, seguros e escaláveis."
-        />
-        <CardStarBorder
-          icon={<TimerIcon size={28} />}
-          animated
-          title="Otimização e manutenção de sites"
-          subtitle="Garanto que seu site esteja sempre rápido, seguro e atualizado. Faço otimizações de desempenho, melhorias em SEO para evitar problemas e garantir a melhor experiência para os visitantes."
-        />
-        <CardStarBorder
-          icon={<EarthIcon size={28} />}
-          animated
-          title="Criação de sites com WordPress"
-          subtitle="Construo sites profissionais e personalizados utilizando WordPress. Desde blogs até sites empresariais, entrego soluções flexíveis, responsivas e fáceis de gerenciar, garantindo que seu projeto tenha um ótimo desempenho online."
-        />
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          onViewportEnter={handleBoxesViewportEnter}
+        >
+          <CardStarBorder
+            icon={<BoxesIcon ref={boxesIconRef} size={22} />}
+            animated
+            title="Design de interfaces"
+            subtitle="Crio interfaces visuais modernas e intuitivas para sites, garantindo uma ótima experiência para os usuários. Meu objetivo é transformar ideias em layouts atraentes e funcionais, sempre focando em usabilidade e identidade visual."
+            onMouseEnter={() => boxesIconRef.current?.startAnimation()}
+          />
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          onViewportEnter={handleCoffeeViewportEnter}
+        >
+          <CardStarBorder
+            icon={<CoffeeIcon ref={coffeeIconRef} size={22} />}
+            animated
+            title="Desenvolvimento web"
+            subtitle="Desenvolvo sites e aplicações completas, cuidando tanto da parte visual quanto da lógica por trás do funcionamento. Utilizo tecnologias modernas para criar sites rápidos, seguros e escaláveis."
+            onMouseEnter={() => coffeeIconRef.current?.startAnimation()}
+          />
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          onViewportEnter={handleTimerViewportEnter}
+        >
+          <CardStarBorder
+            icon={<TimerIcon ref={timerIconRef} size={22} />}
+            animated
+            title="Otimização e manutenção de sites"
+            subtitle="Garanto que seu site esteja sempre rápido, seguro e atualizado. Faço otimizações de desempenho, melhorias em SEO para evitar problemas e garantir a melhor experiência para os visitantes."
+            onMouseEnter={() => timerIconRef.current?.startAnimation()}
+          />
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          onViewportEnter={handleEarthViewportEnter}
+        >
+          <CardStarBorder
+            icon={<EarthIcon ref={earthIconRef} size={22} />}
+            animated
+            title="Criação de sites com WordPress"
+            subtitle="Construo sites profissionais e personalizados utilizando WordPress. Desde blogs até sites empresariais, entrego soluções flexíveis, responsivas e fáceis de gerenciar, garantindo que seu projeto tenha um ótimo desempenho online."
+            onMouseEnter={() => earthIconRef.current?.startAnimation()}
+          />
+        </motion.div>
       </div>
     </section>
   );

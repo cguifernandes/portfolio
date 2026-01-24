@@ -104,7 +104,7 @@ const GithubIcon = forwardRef<GithubIconHandle, GithubIconProps>(
           onMouseEnter?.(e);
         }
       },
-      [bodyControls, tailControls, onMouseEnter]
+      [bodyControls, tailControls, onMouseEnter],
     );
 
     const handleMouseLeave = useCallback(
@@ -116,7 +116,7 @@ const GithubIcon = forwardRef<GithubIconHandle, GithubIconProps>(
           onMouseLeave?.(e);
         }
       },
-      [bodyControls, tailControls, onMouseLeave]
+      [bodyControls, tailControls, onMouseLeave],
     );
 
     return (
@@ -152,7 +152,7 @@ const GithubIcon = forwardRef<GithubIconHandle, GithubIconProps>(
         </svg>
       </div>
     );
-  }
+  },
 );
 
 GithubIcon.displayName = "GithubIcon";

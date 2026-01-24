@@ -23,7 +23,7 @@ const Input = forwardRef<HTMLInputElement, Props>(
       animated,
       ...props
     },
-    ref
+    ref,
   ) => {
     const motionProps = animated
       ? {
@@ -52,7 +52,7 @@ const Input = forwardRef<HTMLInputElement, Props>(
           ref={ref}
           className={clsx(
             "text-sm text-white px-3 py-2 rounded-md h-10 ring-offset-neutral-900 placeholder:text-neutral-400 focus-visible:outline-none focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 border border-neutral-700 focus-visible:ring-2 focus-visible:ring-neutral-300",
-            className
+            className,
           )}
           id={id}
           {...props}
@@ -62,7 +62,7 @@ const Input = forwardRef<HTMLInputElement, Props>(
         )}
       </motion.div>
     );
-  }
+  },
 );
 
 export default Input;

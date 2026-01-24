@@ -7,12 +7,12 @@ import { Toaster } from "react-hot-toast";
 const root = document.getElementById("root");
 
 if (!root) {
-	console.error("Elemento root não foi encontrado.");
+  console.error("Elemento root não foi encontrado.");
 } else {
-	createRoot(root).render(
-		<StrictMode>
-			<Toaster />
-			<App />
-		</StrictMode>,
-	);
+  createRoot(root).render(
+    <StrictMode>
+      <Toaster />
+      <App />
+    </StrictMode>,
+  );
 }

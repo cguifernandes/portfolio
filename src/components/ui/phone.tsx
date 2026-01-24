@@ -65,7 +65,7 @@ const PhoneIcon = forwardRef<PhoneIconHandle, PhoneIconProps>(
           onMouseEnter?.(e);
         }
       },
-      [pathControls, onMouseEnter]
+      [pathControls, onMouseEnter],
     );
 
     // Mouse leave: garante que volte para normal
@@ -77,7 +77,7 @@ const PhoneIcon = forwardRef<PhoneIconHandle, PhoneIconProps>(
           onMouseLeave?.(e);
         }
       },
-      [pathControls, onMouseLeave]
+      [pathControls, onMouseLeave],
     );
 
     return (
@@ -108,7 +108,7 @@ const PhoneIcon = forwardRef<PhoneIconHandle, PhoneIconProps>(
         </svg>
       </div>
     );
-  }
+  },
 );
 
 PhoneIcon.displayName = "PhoneIcon";

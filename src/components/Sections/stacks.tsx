@@ -26,7 +26,7 @@ const Stacks = () => {
               <div
                 className={clsx(
                   index === skills.length - 1 &&
-                    "col-span-1 sm:col-span-2 lg:col-span-1"
+                    "col-span-1 sm:col-span-2 lg:col-span-1",
                 )}
                 key={`${skill.name}${index}`}
               >

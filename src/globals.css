@@ -41,6 +41,21 @@ body {
   background-position: 0% 50%;
 }
 
+.text-gradient-primary {
+  background: linear-gradient(
+    to left,
+    var(--primary-800),
+    var(--primary-500),
+    var(--primary-800)
+  );
+  background-size: 300% 300%;
+  background-position: 0% 50%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
 .bg-gradient-primary:hover {
   background-position: 100% 50%;
 }
@@ -220,6 +235,6 @@ body {
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground overflow-x-hidden;
   }
 }

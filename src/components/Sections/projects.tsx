@@ -8,7 +8,7 @@ const Projects = () => {
   return (
     <section
       id="projects"
-      className="py-20 scroll-mt-8 flex justify-center w-full"
+      className="py-20 scroll-mt-8 flex justify-center w-full bg-neutral-900"
     >
       <div className="flex flex-col overflow-hidden gap-y-10 max-w-7xl">
         <motion.h1

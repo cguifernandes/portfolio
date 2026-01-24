@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { ExternalLink } from "lucide-react";
 import { useState } from "react";
 import { ProjectsProps } from "../types/type";
+import Badge from "./badge";
 import Button from "./button";
 
 type Props = ProjectsProps & {
@@ -25,7 +26,7 @@ const ProjectCard = ({
     <div
       className={clsx(
         "flex items-center flex-col gap-y-4 gap-x-12 lg:h-[320px]",
-        reverse ? "lg:flex-row-reverse" : "lg:flex-row"
+        reverse ? "lg:flex-row-reverse" : "lg:flex-row",
       )}
     >
       <motion.div
@@ -35,7 +36,7 @@ const ProjectCard = ({
         whileInView={{ opacity: 1, filter: "blur(0px)", y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.5, ease: "easeOut" }}
-        className="relative max-w-xl h-full w-full border-2 border-neutral-800 rounded-lg"
+        className="relative max-w-xl max-h-80 h-full w-full border-2 border-neutral-800 rounded-lg"
       >
         <img
           className="w-full h-full object-cover rounded-lg"
@@ -47,7 +48,7 @@ const ProjectCard = ({
             opacity: isHovered ? 1 : 0,
             transition: "opacity 0.2s ease-in-out",
           }}
-          className="absolute inset-0 bg-black/50 flex items-center justify-center"
+          className="absolute inset-0 bg-black/50 rounded-lg flex items-center justify-center"
         >
           <a
             href={website ?? repo}
@@ -73,20 +74,7 @@ const ProjectCard = ({
           </motion.h1>
           <div className="flex flex-wrap justify-center gap-1">
             {skills.map((skill, index) => (
-              <motion.span
-                initial={{ opacity: 0, filter: "blur(4px)", y: -5 }}
-                whileInView={{ opacity: 1, filter: "blur(0px)", y: 0 }}
-                viewport={{ once: true }}
-                transition={{
-                  duration: 0.5,
-                  ease: "easeOut",
-                  delay: index * 0.05,
-                }}
-                className="text-white bg-neutral-900 border border-neutral-800 rounded-md text-xs px-2 py-0.5"
-                key={`${skill}${index}`}
-              >
-                {skill}
-              </motion.span>
+              <Badge key={`${skill}${index}`} skill={skill} index={index} />
             ))}
           </div>
         </div>

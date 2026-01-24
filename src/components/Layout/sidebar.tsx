@@ -60,6 +60,15 @@ const SideBar = () => {
             </li>
             <li className="hover:bg-neutral-800 rounded-lg flex duration-300 ease-in-out">
               <a
+                href="#career"
+                className="text-white px-3 py-1.5 duration-300 ease-in-out"
+                onClick={toggleSidebar}
+              >
+                Carreira
+              </a>
+            </li>
+            <li className="hover:bg-neutral-800 rounded-lg flex duration-300 ease-in-out">
+              <a
                 href="#projects"
                 className="text-white px-3 py-1.5 duration-300 ease-in-out"
                 onClick={toggleSidebar}

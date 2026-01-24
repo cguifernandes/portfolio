@@ -72,7 +72,7 @@ const CoffeeIcon = forwardRef<CoffeeIconHandle, CoffeeIconProps>(
           onMouseEnter?.(e);
         }
       },
-      [controls, onMouseEnter]
+      [controls, onMouseEnter],
     );
 
     // 🔹 mouse leave: garante que volte para normal
@@ -84,7 +84,7 @@ const CoffeeIcon = forwardRef<CoffeeIconHandle, CoffeeIconProps>(
           onMouseLeave?.(e);
         }
       },
-      [controls, onMouseLeave]
+      [controls, onMouseLeave],
     );
 
     return (
@@ -128,7 +128,7 @@ const CoffeeIcon = forwardRef<CoffeeIconHandle, CoffeeIconProps>(
         </svg>
       </div>
     );
-  }
+  },
 );
 
 CoffeeIcon.displayName = "CoffeeIcon";

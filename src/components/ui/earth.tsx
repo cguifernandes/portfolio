@@ -68,7 +68,7 @@ const EarthIcon = forwardRef<EarthIconHandle, EarthIconProps>(
           onMouseEnter?.(e);
         }
       },
-      [controls, onMouseEnter]
+      [controls, onMouseEnter],
     );
 
     const handleMouseLeave = useCallback(
@@ -79,7 +79,7 @@ const EarthIcon = forwardRef<EarthIconHandle, EarthIconProps>(
           onMouseLeave?.(e);
         }
       },
-      [controls, onMouseLeave]
+      [controls, onMouseLeave],
     );
 
     return (
@@ -150,7 +150,7 @@ const EarthIcon = forwardRef<EarthIconHandle, EarthIconProps>(
         </svg>
       </div>
     );
-  }
+  },
 );
 
 EarthIcon.displayName = "EarthIcon";

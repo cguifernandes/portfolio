@@ -141,7 +141,7 @@ const LinkedinIcon = forwardRef<LinkedinIconHandle, LinkedinIconProps>(
           onMouseEnter?.(e);
         }
       },
-      [pathControls, rectControls, circleControls, onMouseEnter]
+      [pathControls, rectControls, circleControls, onMouseEnter],
     );
 
     // 🔹 mouse leave: garante que volte para normal
@@ -155,7 +155,7 @@ const LinkedinIcon = forwardRef<LinkedinIconHandle, LinkedinIconProps>(
           onMouseLeave?.(e);
         }
       },
-      [pathControls, rectControls, circleControls, onMouseLeave]
+      [pathControls, rectControls, circleControls, onMouseLeave],
     );
 
     return (
@@ -202,7 +202,7 @@ const LinkedinIcon = forwardRef<LinkedinIconHandle, LinkedinIconProps>(
         </svg>
       </div>
     );
-  }
+  },
 );
 
 LinkedinIcon.displayName = "LinkedinIcon";
