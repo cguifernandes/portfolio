@@ -33,14 +33,14 @@ export const skills: SkillsProps[] = [
       "Tailwind CSS é uma estrutura CSS de código aberto. Ela não fornece uma série de classes predefinidas para elementos como botões ou tabelas.",
   },
   {
-    name: "TypeORM",
+    name: "NestJS",
     description:
-      "TypeORM é um ORM (Object-Relational Mapper) para TypeScript e JavaScript, que facilita a interação com bancos de dados ao permitir que desenvolvedores trabalhem com objetos em vez de escrever queries SQL diretamente.",
+      "O NestJS é um framework para construção de aplicações back-end em Node.js, usando TypeScript como linguagem principal.",
   },
   {
-    name: "Styled Components",
+    name: "Elysia",
     description:
-      "Styled Components permite que você escreva estilos CSS em seus componentes React usando uma sintaxe semelhante ao CSS.",
+      "Elysia é um framework web para Node.js, focado em alta performance e simplicidade, especialmente para quem busca uma alternativa mais leve e eficiente ao Express.js.",
   },
   {
     name: "React Hook Form",
