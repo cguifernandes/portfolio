@@ -2,7 +2,7 @@ import clsx from "clsx";
 import { motion } from "framer-motion";
 import { ExternalLink } from "lucide-react";
 import { useState } from "react";
-import { ProjectsProps } from "../types/type";
+import type { ProjectsProps } from "../types/type";
 import Badge from "./badge";
 import Button from "./button";
 
@@ -74,7 +74,7 @@ const ProjectCard = ({
           </motion.h1>
           <div className="flex flex-wrap justify-center gap-1">
             {skills.map((skill, index) => (
-              <Badge key={`${skill}${index}`} skill={skill} index={index} />
+              <Badge key={skill} skill={skill} index={index} />
             ))}
           </div>
         </div>

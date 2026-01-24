@@ -1,4 +1,5 @@
-import { tv, VariantProps } from "tailwind-variants";
+import type { VariantProps } from "tailwind-variants";
+import { tv } from "tailwind-variants";
 import StarBorder from "../components/react-bits/Animations/StarBorder/StarBorder";
 
 const card = tv({
