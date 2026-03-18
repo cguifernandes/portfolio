@@ -1,5 +1,7 @@
 {
   "header": {
+    "changeLanguage": "Alterar idioma",
+    "pageTitle": "Portfólio | cguifernandes",
     "nav": {
       "about": "Sobre mim",
       "stacks": "Stacks",
@@ -50,6 +52,9 @@
       "discord": "Discord.js é uma biblioteca em Node.js que facilita a interação com a API do Discord, permitindo criar bots organizados e poderosos para servidores.",
       "laravel": "Laravel é um framework PHP open-source para desenvolvimento de aplicações web seguindo o padrão MVC, com foco em produtividade e elegância de código.",
       "englishB2": "Tenho inglês em nível B2 (intermediário avançado), consigo me comunicar bem em contextos profissionais, participar de reuniões, ler documentação técnica e escrever textos com boa clareza."
+    },
+    "titles": {
+      "englishB2": "Inglês B2"
     },
     "experience": {
       "next": "4 anos exp",

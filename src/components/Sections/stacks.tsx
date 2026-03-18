@@ -6,6 +6,7 @@ import CardStarBorder from "../card-star-border";
 import {
   STACK_DESCRIPTION_KEYS,
   STACK_EXPERIENCE_KEYS,
+  STACK_TITLE_KEYS,
 } from "../stack-icon-map";
 import { StackIcon } from "../stack-icons";
 
@@ -45,7 +46,7 @@ const Stacks = () => {
                   icon={<StackIcon name={skill.name} />}
                   badge={t(STACK_EXPERIENCE_KEYS[skill.name])}
                   subtitle={t(STACK_DESCRIPTION_KEYS[skill.name])}
-                  title={skill.name}
+                  title={STACK_TITLE_KEYS[skill.name] ? t(STACK_TITLE_KEYS[skill.name]) : skill.name}
                 />
               </div>
             ))}

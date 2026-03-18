@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { useI18n } from "../i18n/useI18n";
 import { Tooltip, TooltipContent, TooltipTrigger } from "./tooltip";
 
 type Language = "pt" | "en";
@@ -33,6 +34,7 @@ interface LanguageSwitcherProps {
 }
 
 const LanguageSwitcher = ({ className }: LanguageSwitcherProps) => {
+  const { t } = useI18n();
   const [language, setLanguage] = useState<Language>("pt");
 
   useEffect(() => {
@@ -76,7 +78,7 @@ const LanguageSwitcher = ({ className }: LanguageSwitcherProps) => {
         </div>
       </TooltipTrigger>
 
-      <TooltipContent side="bottom">Alterar idioma</TooltipContent>
+      <TooltipContent side="bottom">{t("header.changeLanguage")}</TooltipContent>
     </Tooltip>
   );
 };

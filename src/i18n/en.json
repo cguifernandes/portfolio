@@ -1,5 +1,7 @@
 {
   "header": {
+    "changeLanguage": "Change language",
+    "pageTitle": "Portfolio | cguifernandes",
     "nav": {
       "about": "About",
       "stacks": "Stacks",
@@ -50,6 +52,9 @@
       "discord": "Discord.js is a powerful Node.js library that makes it easy to interact with the Discord API and build organized, feature-rich bots.",
       "laravel": "Laravel is an open-source PHP framework for building web applications following the MVC pattern, focused on developer productivity and elegant code.",
       "englishB2": "I have B2-level English (upper-intermediate), which allows me to communicate clearly in professional contexts, join meetings, read technical documentation, and write with good clarity."
+    },
+    "titles": {
+      "englishB2": "English B2"
     },
     "experience": {
       "next": "4 years exp",

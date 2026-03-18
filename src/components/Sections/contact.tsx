@@ -17,10 +17,7 @@ const Contact = () => {
   const schema = useMemo(
     () =>
       z.object({
-        name: z
-          .string()
-          .max(50, t("contact.validation.name.max"))
-          .optional(),
+        name: z.string().max(50, t("contact.validation.name.max")).optional(),
         email: z
           .string()
           .min(1, t("contact.validation.email.required"))

@@ -55,6 +55,10 @@ export const STACK_DESCRIPTION_KEYS: Record<string, string> = {
   "Inglês B2": "stacks.items.englishB2",
 };
 
+export const STACK_TITLE_KEYS: Record<string, string> = {
+  "Inglês B2": "stacks.titles.englishB2",
+};
+
 export const STACK_EXPERIENCE_KEYS: Record<string, string> = {
   "Next.js": "stacks.experience.next",
   "React.js": "stacks.experience.react",
