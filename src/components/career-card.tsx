@@ -2,9 +2,9 @@ import type { MotionProps } from "framer-motion";
 import { motion } from "framer-motion";
 import { cn } from "../lib/utils";
 import type { CareerProps } from "../types/type";
-import { formatDate, formatFullDate } from "../utils/utils";
 import Badge from "./badge";
 import CardStarBorder from "./card-star-border";
+import { useI18n } from "../i18n/useI18n";
 
 type CareerCardProps = {
   item: CareerProps;
@@ -12,6 +12,7 @@ type CareerCardProps = {
 };
 
 const CareerCard = ({ item, isLeft }: CareerCardProps) => {
+  const { t, language } = useI18n();
   const motionProps: MotionProps = {
     initial: { y: -5, opacity: 0, filter: "blur(4px)" },
     whileInView: { y: 0, opacity: 1, filter: "blur(0px)" },
@@ -36,7 +37,7 @@ const CareerCard = ({ item, isLeft }: CareerCardProps) => {
             theme="black"
             cardClassName="gap-y-2"
             className="w-full gap-y-2"
-            title={item.position}
+            title={t(`career.items.${item.id}.position`)}
             subtitle={
               <div className="flex flex-col gap-y-2">
                 <p
@@ -44,7 +45,7 @@ const CareerCard = ({ item, isLeft }: CareerCardProps) => {
                     "text-primary-600 leading-0 font-semibold text-base",
                   )}
                 >
-                  {item.company}
+                  {t(`career.items.${item.id}.company`)}
                 </p>
 
                 {item.description && (
@@ -52,7 +53,7 @@ const CareerCard = ({ item, isLeft }: CareerCardProps) => {
                     title={item.description}
                     className={cn("text-neutral-400 text-sm")}
                   >
-                    {item.description}
+                    {t(`career.items.${item.id}.description`)}
                   </p>
                 )}
 
@@ -101,14 +102,20 @@ const CareerCard = ({ item, isLeft }: CareerCardProps) => {
             "text-white leading-none text-nowrap font-medium text-xl",
           )}
         >
-          {formatFullDate(item.startDate)}
+          {new Date(item.startDate).toLocaleDateString(
+            language === "pt" ? "pt-BR" : "en-US",
+            { month: "long", year: "numeric" },
+          )}
         </h2>
         <p className={cn("text-neutral-400 font-medium")}>
           {item.isCurrent
-            ? "Presente"
+            ? t("career.current")
             : item.endDate
-              ? formatDate(item.endDate)
-              : "?"}
+              ? new Date(item.endDate).toLocaleDateString(
+                  language === "pt" ? "pt-BR" : "en-US",
+                  { month: "short", year: "numeric" },
+                )
+              : t("career.unknownEnd")}
         </p>
       </motion.div>
     </div>

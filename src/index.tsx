@@ -1,8 +1,9 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import "./globals.css";
-import App from "./app";
 import { Toaster } from "react-hot-toast";
+import App from "./app";
+import { TooltipProvider } from "./components/tooltip";
 
 const root = document.getElementById("root");
 
@@ -11,8 +12,10 @@ if (!root) {
 } else {
   createRoot(root).render(
     <StrictMode>
-      <Toaster />
-      <App />
+      <TooltipProvider>
+        <Toaster />
+        <App />
+      </TooltipProvider>
     </StrictMode>,
   );
 }

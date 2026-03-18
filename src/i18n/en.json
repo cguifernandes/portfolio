@@ -1,0 +1,203 @@
+{
+  "header": {
+    "nav": {
+      "about": "About",
+      "stacks": "Stacks",
+      "career": "Career",
+      "projects": "Projects",
+      "contact": "Contact"
+    }
+  },
+  "about": {
+    "title": "Guilherme Fernandes",
+    "description": "I have a strong passion for creating websites and exploring new technologies, always looking for new ways to innovate and improve my skills. When I am not coding, I enjoy reading books, watching engaging series, and dedicating time to studying and expanding my knowledge.",
+    "cta": "Resume",
+    "cards": {
+      "interfaces": {
+        "title": "Interface design",
+        "subtitle": "I create modern and intuitive visual interfaces for websites, ensuring a great experience for users. My goal is to transform ideas into attractive and functional layouts, always focusing on usability and visual identity."
+      },
+      "web": {
+        "title": "Web development",
+        "subtitle": "I develop complete websites and applications, taking care of both the visual side and the logic behind how everything works. I use modern technologies to build fast, secure, and scalable sites."
+      },
+      "optimization": {
+        "title": "Website optimization and maintenance",
+        "subtitle": "I ensure your website is always fast, secure, and up to date. I work on performance optimizations and SEO improvements to avoid issues and guarantee the best possible experience for visitors."
+      },
+      "wordpress": {
+        "title": "Website creation with WordPress",
+        "subtitle": "I build professional and customized websites using WordPress. From blogs to business sites, I deliver flexible, responsive, and easy-to-manage solutions, ensuring your project has great online performance."
+      }
+    }
+  },
+  "stacks": {
+    "title": "Stacks",
+    "items": {
+      "next": "Next.js is a front-end web framework that enables features like server-side rendering and static site generation for modern React applications.",
+      "react": "React is an open-source JavaScript library focused on building user interfaces for the web in a component-based way.",
+      "typescript": "TypeScript is a superset of JavaScript that adds optional static typing, increasing safety and predictability and helping catch errors earlier in development.",
+      "tailwind": "Tailwind CSS is a utility-first CSS framework that provides low-level classes so you can build fully custom components directly in your markup.",
+      "nest": "NestJS is a back-end framework for Node.js using TypeScript, with a modular architecture inspired by Angular and focused on scalable server-side applications.",
+      "elysia": "Elysia is a web framework for Node.js focused on high performance and simplicity, ideal for building fast and lightweight APIs as an alternative to Express.js.",
+      "reactHookForm": "React Hook Form is a library for managing forms in React using hooks, improving performance and simplifying state and validation handling.",
+      "apis": "APIs (Application Programming Interfaces) are sets of rules and definitions that enable communication between different systems, making integration and data sharing easier.",
+      "aws": "AWS (Amazon Web Services) is Amazon's cloud computing platform, offering infrastructure, databases, storage, and many other services for scalable applications.",
+      "wordpress": "WordPress is a PHP-based content management system (CMS) widely used to create blogs and professional websites with a high level of customization.",
+      "postgresql": "PostgreSQL is an open-source relational database management system known for its robustness, extensibility, and strong standards compliance.",
+      "mongodb": "MongoDB is a non-relational, document-oriented database that stores data in a JSON-like format, offering flexible schemas.",
+      "vue": "Vue.js is a progressive JavaScript framework for building user interfaces and SPAs, with a gentle learning curve and great flexibility.",
+      "discord": "Discord.js is a powerful Node.js library that makes it easy to interact with the Discord API and build organized, feature-rich bots.",
+      "laravel": "Laravel is an open-source PHP framework for building web applications following the MVC pattern, focused on developer productivity and elegant code.",
+      "englishB2": "I have B2-level English (upper-intermediate), which allows me to communicate clearly in professional contexts, join meetings, read technical documentation, and write with good clarity."
+    },
+    "experience": {
+      "next": "4 years exp",
+      "react": "5 years exp",
+      "typescript": "4 years exp",
+      "tailwind": "3 years exp",
+      "nest": "1 year exp",
+      "elysia": "Studies and POCs",
+      "reactHookForm": "3 years exp",
+      "aws": "2 years exp",
+      "wordpress": "2 years exp",
+      "postgresql": "3 years exp",
+      "mongodb": "3 years exp",
+      "vue": "2 years exp",
+      "discord": "2 years exp",
+      "laravel": "1 year exp",
+      "englishB2": "6 years exp"
+    }
+  },
+  "career": {
+    "title": "Career",
+    "current": "Present",
+    "unknownEnd": "?",
+    "items": {
+      "satellitus": {
+        "company": "Satellitus Tecnologia",
+        "position": "Full-stack Developer",
+        "description": "I work on the development and maintenance of legacy systems, implementing new features, fixes, and improvements, while collaborating daily with the team on continuous enhancements."
+      },
+      "rami": {
+        "company": "RAMI Indústria Gráfica",
+        "position": "IT Intern",
+        "description": "I worked as an IT intern at RAMI Indústria Gráfica, providing technical support to users, developing internal systems, and maintaining the IT infrastructure."
+      },
+      "freelancer": {
+        "company": "Freelancer",
+        "position": "Full Stack Developer",
+        "description": "Development of websites and web applications on demand for different clients, from solution design to production deployment."
+      }
+    }
+  },
+  "projects": {
+    "title": "Projects",
+    "companiesTitle": "Companies served",
+    "buttons": {
+      "visit": "Visit project",
+      "additionalLink": "Additional link",
+      "repository": "Repository"
+    },
+    "items": {
+      "granaEmDia": {
+        "name": "Grana em Dia",
+        "description": "Personal finance control website where you can register expenses and income, create transaction categories, and access a dynamic dashboard with month and year filters.",
+        "imageAlt": "Screenshot of the Grana em Dia project"
+      },
+      "tectrain": {
+        "name": "Tectrain | Consulting Management",
+        "description": "Management system for a technology consulting company, with interactive activities, dynamic dashboards, AI chatbots, and relational tables management.",
+        "imageAlt": "Screenshot of the Tectrain consulting management project"
+      },
+      "revzap": {
+        "name": "Revzap",
+        "description": "WhatsApp Web support extension built to improve customer experience and increase the efficiency and productivity of the support team.",
+        "imageAlt": "Screenshot of the Revzap project"
+      },
+      "plasticaDeFace": {
+        "name": "Plástica de Face",
+        "description": "Professional WordPress website for Dr. Leonardo, with custom design, performance optimization, and specific features tailored to the client's needs.",
+        "imageAlt": "Screenshot of the Plástica de Face website"
+      },
+      "futureOnline": {
+        "name": "Future Online",
+        "description": "License management panel for a browser extension, created alongside the extension itself to provide seamless control and access for users.",
+        "imageAlt": "Screenshot of the Future Online panel"
+      },
+      "amorCelestial": {
+        "name": "Amor Celestial",
+        "description": "Platform that connects soulmates using OpenAI's artificial intelligence, analyzing profiles and affinities with Next.js, Tailwind CSS, and the OpenAI API.",
+        "imageAlt": "Screenshot of the Amor Celestial platform"
+      },
+      "nike": {
+        "name": "Nike",
+        "description": "Minimalist landing page inspired by Nike's website, built to practice Framer Motion and explore advanced animations and transitions.",
+        "imageAlt": "Screenshot of the Nike landing page project"
+      },
+      "paqueta": {
+        "name": "Paquetá",
+        "description": "Front-end project for a shoe e-commerce store, with a modern, intuitive, and responsive interface focused on providing a smooth shopping experience.",
+        "imageAlt": "Screenshot of the Paquetá project"
+      },
+      "hubDesk": {
+        "name": "Hub Desk",
+        "description": "Platform created to connect people to Desks, interactive spaces for discussions in different areas, ideal for knowledge sharing, feedback, and networking.",
+        "imageAlt": "Screenshot of the Hub Desk project"
+      },
+      "allNade": {
+        "name": "All Nade",
+        "description": "Website developed to simplify the discovery of new movies and organize favorites, allowing users to explore, save, and manage lists quickly and efficiently.",
+        "imageAlt": "Screenshot of the All Nade project"
+      },
+      "tituloMed": {
+        "name": "TituloMED",
+        "description": "Application created to make Chemistry classes more dynamic and interactive, with tools that enhance online teaching and provide a more engaging experience for students.",
+        "imageAlt": "Screenshot of the TituloMED project"
+      },
+      "wikiDemonSlayer": {
+        "name": "Wiki Demon Slayer",
+        "description": "Web application built to practice creating and consuming APIs in a React.js website, exploring back-end and front-end integration with a focus on a smooth user experience.",
+        "imageAlt": "Screenshot of the Wiki Demon Slayer project"
+      }
+    }
+  },
+  "contact": {
+    "title": "Contact",
+    "toast": {
+      "success": "Message sent successfully.",
+      "error": "Error sending message. Please try again."
+    },
+    "form": {
+      "name": {
+        "label": "Name",
+        "placeholder": "John Doe"
+      },
+      "email": {
+        "label": "E-mail",
+        "placeholder": "john.doe@example.com"
+      },
+      "message": {
+        "label": "Message",
+        "placeholder": "Contact message"
+      },
+      "submit": "Send",
+      "required": "Required"
+    },
+    "validation": {
+      "name": {
+        "max": "This field must have a maximum of 50 characters"
+      },
+      "email": {
+        "required": "This field is required",
+        "invalid": "Invalid e-mail, please enter a valid e-mail address",
+        "max": "This field must have a maximum of 50 characters"
+      },
+      "message": {
+        "required": "This field is required",
+        "max": "This field must have a maximum of 400 characters"
+      }
+    }
+  }
+}
+

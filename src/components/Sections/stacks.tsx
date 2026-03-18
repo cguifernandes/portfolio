@@ -1,9 +1,17 @@
 import clsx from "clsx";
 import { motion } from "framer-motion";
+import { useI18n } from "../../i18n/useI18n";
 import { skills } from "../../utils/utils";
 import CardStarBorder from "../card-star-border";
+import {
+  STACK_DESCRIPTION_KEYS,
+  STACK_EXPERIENCE_KEYS,
+} from "../stack-icon-map";
+import { StackIcon } from "../stack-icons";
 
 const Stacks = () => {
+  const { t } = useI18n();
+
   return (
     <section
       id="stacks"
@@ -17,7 +25,7 @@ const Stacks = () => {
           transition={{ duration: 0.5, ease: "easeOut" }}
           className="text-white text-center text-xl"
         >
-          Stacks
+          {t("stacks.title")}
         </motion.h1>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-2">
           {skills
@@ -34,7 +42,9 @@ const Stacks = () => {
                   animated
                   theme="black"
                   className="w-full"
-                  subtitle={skill.description}
+                  icon={<StackIcon name={skill.name} />}
+                  badge={t(STACK_EXPERIENCE_KEYS[skill.name])}
+                  subtitle={t(STACK_DESCRIPTION_KEYS[skill.name])}
                   title={skill.name}
                 />
               </div>

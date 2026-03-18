@@ -16,7 +16,7 @@ const Badge = ({ skill, index }: BadgeProps) => {
         ease: "easeOut",
         delay: index * 0.05,
       }}
-      className="text-white bg-neutral-900 border border-neutral-800 rounded-md text-xs px-2 py-0.5"
+      className="text-neutral-400 bg-neutral-900 border border-neutral-800 rounded-md text-xs px-2 py-0.5"
     >
       {skill}
     </motion.span>

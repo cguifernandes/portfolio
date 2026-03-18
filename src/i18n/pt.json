@@ -1,0 +1,202 @@
+{
+  "header": {
+    "nav": {
+      "about": "Sobre mim",
+      "stacks": "Stacks",
+      "career": "Carreira",
+      "projects": "Projetos",
+      "contact": "Contato"
+    }
+  },
+  "about": {
+    "title": "Guilherme Fernandes",
+    "description": "Tenho uma grande paixão por criar sites e explorar novas tecnologias, sempre buscando novas maneiras de inovar e aprimorar minhas habilidades. Quando não estou codando, gosto de mergulhar na leitura de livros, assistir séries envolventes e dedicar um tempo para estudar e expandir meus conhecimentos.",
+    "cta": "Currículo",
+    "cards": {
+      "interfaces": {
+        "title": "Design de interfaces",
+        "subtitle": "Crio interfaces visuais modernas e intuitivas para sites, garantindo uma ótima experiência para os usuários. Meu objetivo é transformar ideias em layouts atraentes e funcionais, sempre focando em usabilidade e identidade visual."
+      },
+      "web": {
+        "title": "Desenvolvimento web",
+        "subtitle": "Desenvolvo sites e aplicações completas, cuidando tanto da parte visual quanto da lógica por trás do funcionamento. Utilizo tecnologias modernas para criar sites rápidos, seguros e escaláveis."
+      },
+      "optimization": {
+        "title": "Otimização e manutenção de sites",
+        "subtitle": "Garanto que seu site esteja sempre rápido, seguro e atualizado. Faço otimizações de desempenho, melhorias em SEO para evitar problemas e garantir a melhor experiência para os visitantes."
+      },
+      "wordpress": {
+        "title": "Criação de sites com WordPress",
+        "subtitle": "Construo sites profissionais e personalizados utilizando WordPress. Desde blogs até sites empresariais, entrego soluções flexíveis, responsivas e fáceis de gerenciar, garantindo que seu projeto tenha um ótimo desempenho online."
+      }
+    }
+  },
+  "stacks": {
+    "title": "Stacks",
+    "items": {
+      "next": "Next.js é uma estrutura web de desenvolvimento front-end que permite funcionalidades como renderização do lado do servidor e geração de sites estáticos.",
+      "react": "O React é uma biblioteca JavaScript de código aberto focada em criar interfaces de usuário em páginas web.",
+      "typescript": "TypeScript é uma extensão de JavaScript que adiciona tipagem estática opcional, aumentando a segurança e previsibilidade do código e ajudando a encontrar erros mais cedo no desenvolvimento.",
+      "tailwind": "Tailwind CSS é um framework CSS utilitário que fornece classes de baixo nível para você construir componentes totalmente customizados sem sair do seu HTML.",
+      "nest": "NestJS é um framework para construção de aplicações back-end em Node.js usando TypeScript, com uma arquitetura modular inspirada em conceitos do Angular.",
+      "elysia": "Elysia é um framework web para Node.js focado em alta performance e simplicidade, ideal para APIs rápidas e enxutas como alternativa ao Express.js.",
+      "reactHookForm": "React Hook Form é uma biblioteca para gerenciamento de formulários em React, que usa hooks para controlar estados e validações com alta performance.",
+      "apis": "APIs (Application Programming Interfaces) são conjuntos de regras e definições que permitem a comunicação entre diferentes sistemas, facilitando a integração e o compartilhamento de dados.",
+      "aws": "AWS (Amazon Web Services) é a plataforma de computação em nuvem da Amazon, oferecendo serviços de infraestrutura, banco de dados, armazenamento e muito mais para aplicações escaláveis.",
+      "wordpress": "WordPress é um sistema de gestão de conteúdo (CMS) em PHP, ideal para criação de blogs e sites profissionais com alto grau de personalização.",
+      "postgresql": "PostgreSQL é um sistema gerenciador de banco de dados relacional de código aberto, conhecido por sua robustez, extensibilidade e aderência a padrões SQL.",
+      "mongodb": "MongoDB é um banco de dados não relacional orientado a documentos, que armazena dados em formato similar a JSON, oferecendo flexibilidade de schema.",
+      "vue": "Vue.js é um framework JavaScript progressivo para criação de interfaces de usuário e aplicações SPA, com curva de aprendizado suave e grande flexibilidade.",
+      "discord": "Discord.js é uma biblioteca em Node.js que facilita a interação com a API do Discord, permitindo criar bots organizados e poderosos para servidores.",
+      "laravel": "Laravel é um framework PHP open-source para desenvolvimento de aplicações web seguindo o padrão MVC, com foco em produtividade e elegância de código.",
+      "englishB2": "Tenho inglês em nível B2 (intermediário avançado), consigo me comunicar bem em contextos profissionais, participar de reuniões, ler documentação técnica e escrever textos com boa clareza."
+    },
+    "experience": {
+      "next": "4 anos exp",
+      "react": "5 anos exp",
+      "typescript": "4 anos exp",
+      "tailwind": "3 anos exp",
+      "nest": "1 ano exp",
+      "elysia": "Estudos e POCs",
+      "reactHookForm": "3 anos exp",
+      "aws": "2 anos exp",
+      "wordpress": "2 anos exp",
+      "postgresql": "3 anos exp",
+      "mongodb": "3 anos exp",
+      "vue": "2 anos exp",
+      "discord": "2 anos exp",
+      "laravel": "1 ano exp",
+      "englishB2": "6 anos exp"
+    }
+  },
+  "career": {
+    "title": "Carreira",
+    "current": "Presente",
+    "unknownEnd": "?",
+    "items": {
+      "satellitus": {
+        "company": "Satellitus Tecnologia",
+        "position": "Desenvolvedor Full-stack",
+        "description": "Participo de ações para desenvolvimento e manutenção de sistemas legados, atuando em novas funcionalidades, correções e evolução das aplicações, além de colaborar no dia a dia com a equipe em melhorias contínuas."
+      },
+      "rami": {
+        "company": "RAMI Indústria Gráfica",
+        "position": "Estagiário de TI",
+        "description": "Atuei como estagiário de TI na RAMI Indústria Gráfica, realizando suporte técnico aos usuários, desenvolvimento de sistemas internos e manutenção de infraestrutura de TI."
+      },
+      "freelancer": {
+        "company": "Free-lancer",
+        "position": "Desenvolvedor Full Stack",
+        "description": "Desenvolvimento de sites e aplicações web sob demanda para diversos clientes, desde o desenho da solução até o deploy em produção."
+      }
+    }
+  },
+  "projects": {
+    "title": "Projetos",
+    "companiesTitle": "Empresas atendidas",
+    "buttons": {
+      "visit": "Visitar projeto",
+      "additionalLink": "Link adicional",
+      "repository": "Repositório"
+    },
+    "items": {
+      "granaEmDia": {
+        "name": "Grana em Dia",
+        "description": "Site para controle financeiro pessoal. Nele é possível cadastrar despesas e receitas, criar categorias para transações e acessar um dashboard dinâmico com filtros por mês e ano.",
+        "imageAlt": "Imagem do projeto Grana em Dia"
+      },
+      "tectrain": {
+        "name": "Tectrain | Gestão de Consultório",
+        "description": "Sistema para gestão de consultorias de uma empresa de tecnologia, com atividades interativas, dashboards dinâmicos, chatbots com IA e gerenciamento de tabelas relacionais.",
+        "imageAlt": "Imagem do projeto Tectrain Gestão de Consultório"
+      },
+      "revzap": {
+        "name": "Revzap",
+        "description": "Extensão para atendimento no WhatsApp Web, criada para aprimorar a experiência do cliente e aumentar a eficiência e produtividade da equipe de suporte.",
+        "imageAlt": "Imagem do projeto Revzap"
+      },
+      "plasticaDeFace": {
+        "name": "Plástica de Face",
+        "description": "Site profissional desenvolvido em WordPress para o Dr. Leonardo, com design personalizado, otimização de desempenho e funcionalidades específicas para a necessidade do cliente.",
+        "imageAlt": "Imagem do site Plástica de Face"
+      },
+      "futureOnline": {
+        "name": "Future Online",
+        "description": "Painel para gerenciamento de licenças de extensão, criado em paralelo ao desenvolvimento da própria extensão para garantir controle e acessibilidade aos usuários.",
+        "imageAlt": "Imagem do painel Future Online"
+      },
+      "amorCelestial": {
+        "name": "Amor Celestial",
+        "description": "Plataforma que conecta almas gêmeas utilizando inteligência artificial da OpenAI, analisando perfis e afinidades com Next.js, Tailwind CSS e API da OpenAI.",
+        "imageAlt": "Imagem da plataforma Amor Celestial"
+      },
+      "nike": {
+        "name": "Nike",
+        "description": "Landing page minimalista inspirada no site da Nike, criada para aprimorar habilidades com Framer Motion e explorar animações e transições avançadas.",
+        "imageAlt": "Imagem da landing page Nike"
+      },
+      "paqueta": {
+        "name": "Paquetá",
+        "description": "Projeto de front-end para uma loja virtual de calçados, com interface moderna, intuitiva e responsiva, focada em oferecer uma experiência de compra fluida.",
+        "imageAlt": "Imagem do projeto Paquetá"
+      },
+      "hubDesk": {
+        "name": "Hub Desk",
+        "description": "Plataforma criada para conectar pessoas a Desks, espaços interativos para discussões em diversas áreas, ideal para troca de conhecimentos, feedbacks e networking.",
+        "imageAlt": "Imagem do projeto Hub Desk"
+      },
+      "allNade": {
+        "name": "All Nade",
+        "description": "Site desenvolvido para simplificar a descoberta de novos filmes e organizar favoritos, permitindo criar e gerenciar listas de maneira rápida e intuitiva.",
+        "imageAlt": "Imagem do projeto All Nade"
+      },
+      "tituloMed": {
+        "name": "TituloMED",
+        "description": "Aplicativo criado para tornar aulas de Química mais dinâmicas e interativas, com recursos que facilitam o ensino on-line e promovem uma experiência mais envolvente para os alunos.",
+        "imageAlt": "Imagem do projeto TituloMED"
+      },
+      "wikiDemonSlayer": {
+        "name": "Wiki Demon Slayer",
+        "description": "Aplicação web criada para praticar a construção e o consumo de APIs em um site em React.js, explorando integrações entre back-end e front-end com foco em uma experiência fluida para o usuário.",
+        "imageAlt": "Imagem do projeto Wiki Demon Slayer"
+      }
+    }
+  },
+  "contact": {
+    "title": "Contato",
+    "toast": {
+      "success": "Mensagem enviada com sucesso.",
+      "error": "Erro ao enviar mensagem. Tente novamente."
+    },
+    "form": {
+      "name": {
+        "label": "Nome",
+        "placeholder": "João Silva"
+      },
+      "email": {
+        "label": "E-mail",
+        "placeholder": "joao.silva@example.com"
+      },
+      "message": {
+        "label": "Mensagem",
+        "placeholder": "Mensagem de contato"
+      },
+      "submit": "Enviar",
+      "required": "Obrigatório"
+    },
+    "validation": {
+      "name": {
+        "max": "Este campo deve ter no máximo 50 caracteres"
+      },
+      "email": {
+        "required": "Este campo é obrigatório",
+        "invalid": "E-mail inválido, por favor digite um e-mail válido",
+        "max": "Este campo deve ter no máximo 50 caracteres"
+      },
+      "message": {
+        "required": "Este campo é obrigatório",
+        "max": "Este campo deve ter no máximo 400 caracteres"
+      }
+    }
+  }
+}

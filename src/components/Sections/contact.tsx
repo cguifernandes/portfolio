@@ -1,32 +1,38 @@
 import emailjs from "@emailjs/browser";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { motion } from "framer-motion";
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import { useForm } from "react-hook-form";
 import toast from "react-hot-toast";
 import { z } from "zod";
+import { useI18n } from "../../i18n/useI18n";
 import Button from "../button";
 import Input from "../input";
 import Textarea from "../textarea";
 
-const schema = z.object({
-  name: z
-    .string()
-    .max(50, "Este campo deve ter no máximo 50 caracteres")
-    .optional(),
-  email: z
-    .string()
-    .min(1, "Este campo é obrigatório")
-    .email("E-mail inválido, por favor digite um e-mail válido")
-    .max(50, "Este campo deve ter no máximo 50 caracteres"),
-  message: z
-    .string()
-    .min(1, "Este campo é obrigatório")
-    .max(400, "Este campo deve ter no máximo 400 caracteres"),
-});
-
 const Contact = () => {
+  const { t } = useI18n();
   const [isLoading, setIsLoading] = useState(false);
+
+  const schema = useMemo(
+    () =>
+      z.object({
+        name: z
+          .string()
+          .max(50, t("contact.validation.name.max"))
+          .optional(),
+        email: z
+          .string()
+          .min(1, t("contact.validation.email.required"))
+          .email(t("contact.validation.email.invalid"))
+          .max(50, t("contact.validation.email.max")),
+        message: z
+          .string()
+          .min(1, t("contact.validation.message.required"))
+          .max(400, t("contact.validation.message.max")),
+      }),
+    [t],
+  );
 
   const {
     register,
@@ -48,7 +54,7 @@ const Contact = () => {
     emailjs
       .send(serviceID, templateID, formData, publicKey)
       .then(() => {
-        toast.success("Mensagem enviada com sucesso", {
+        toast.success(t("contact.toast.success"), {
           className:
             "!bg-neutral-900/60 !backdrop-blur-md !border !border-neutral-800 !text-white",
           position: "bottom-right",
@@ -58,7 +64,7 @@ const Contact = () => {
       })
       .catch((error) => {
         console.error("Erro ao enviar mensagem:", error);
-        toast.error("Erro ao enviar mensagem. Tente novamente.", {
+        toast.error(t("contact.toast.error"), {
           className:
             "!bg-neutral-900/60 !backdrop-blur-md !border !border-neutral-800 !text-white",
           position: "bottom-right",
@@ -83,7 +89,7 @@ const Contact = () => {
           transition={{ duration: 0.5, ease: "easeOut" }}
           className="text-white text-center text-xl"
         >
-          Contato
+          {t("contact.title")}
         </motion.h1>
         <form
           onSubmit={handleSubmit(handlerSubmitMessage)}
@@ -92,10 +98,10 @@ const Contact = () => {
           <Input
             id="name"
             maxLength={50}
-            label="Nome"
+            label={t("contact.form.name.label")}
             {...register("name")}
             patternClassName="w-full"
-            placeholder="João Silva"
+            placeholder={t("contact.form.name.placeholder")}
             error={errors.name?.message}
             disabled={isLoading}
             animated
@@ -104,10 +110,10 @@ const Contact = () => {
             id="email"
             mandatory
             {...register("email")}
-            label="E-mail"
+            label={t("contact.form.email.label")}
             maxLength={50}
             patternClassName="w-full"
-            placeholder="joao.silva@example.com"
+            placeholder={t("contact.form.email.placeholder")}
             error={errors.email?.message}
             disabled={isLoading}
             animated
@@ -117,9 +123,9 @@ const Contact = () => {
             mandatory
             {...register("message")}
             maxLength={400}
-            label="Mensagem"
+            label={t("contact.form.message.label")}
             patternClassName="w-full"
-            placeholder="Mensagem de contato"
+            placeholder={t("contact.form.message.placeholder")}
             disabled={isLoading}
             error={errors.message?.message}
             animated
@@ -130,7 +136,7 @@ const Contact = () => {
             type="submit"
             animated
           >
-            Enviar
+            {t("contact.form.submit")}
           </Button>
         </form>
       </div>

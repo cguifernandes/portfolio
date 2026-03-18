@@ -1,10 +1,12 @@
 import { motion } from "framer-motion";
 import { companies, projects } from "../../utils/utils";
+import { useI18n } from "../../i18n/useI18n";
 import CompanyCard from "../company-card";
 import InfiniteScroll from "../infinite-scroll";
 import ProjectCard from "../project-card";
 
 const Projects = () => {
+  const { t } = useI18n();
   return (
     <section
       id="projects"
@@ -18,7 +20,7 @@ const Projects = () => {
           transition={{ duration: 0.5, ease: "easeOut" }}
           className="text-white text-center text-xl"
         >
-          Projetos
+          {t("projects.title")}
         </motion.h1>
         <motion.h2
           initial={{ opacity: 0, filter: "blur(4px)", y: -5 }}
@@ -27,7 +29,7 @@ const Projects = () => {
           transition={{ duration: 0.5, ease: "easeOut" }}
           className="text-white text-center text-lg"
         >
-          Empresas Atendidas
+          {t("projects.companiesTitle")}
         </motion.h2>
         <InfiniteScroll>
           {[...companies, ...companies, ...companies].map((company, index) => (
@@ -35,13 +37,14 @@ const Projects = () => {
               name={company.name}
               index={index}
               image={company.image}
-              key={index}
+              key={`${company.name}-${index}`}
             />
           ))}
         </InfiniteScroll>
         <div className="flex px-6 lg:px-12 flex-col gap-y-20">
           {projects.map((skill, index) => (
             <ProjectCard
+              id={skill.id}
               description={skill.description}
               image={skill.image}
               name={skill.name}
@@ -50,7 +53,7 @@ const Projects = () => {
               repo={skill.repo}
               website={skill.website}
               reverse={index % 2 === 0}
-              key={index}
+              key={skill.id}
             />
           ))}
         </div>

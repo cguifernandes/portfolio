@@ -1,9 +1,11 @@
 import { motion } from "framer-motion";
 import { career } from "../../utils/utils";
+import { useI18n } from "../../i18n/useI18n";
 import BlurText from "../blur-text";
 import CareerCard from "../career-card";
 
 const Career = () => {
+  const { t } = useI18n();
   const sortedCareer = [...career].sort((a, b) => {
     const dateA = new Date(a.startDate).getTime();
     const dateB = new Date(b.startDate).getTime();
@@ -24,7 +26,7 @@ const Career = () => {
           className="text-white text-center text-xl"
         >
           <BlurText
-            text="Carreira"
+            text={t("career.title")}
             delay={50}
             className="text-white text-center text-xl"
           />

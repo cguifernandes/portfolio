@@ -1,6 +1,8 @@
 import clsx from "clsx";
-import { Easing, motion } from "framer-motion";
+import type { Easing } from "framer-motion";
+import { motion } from "framer-motion";
 import { forwardRef } from "react";
+import { useI18n } from "../i18n/useI18n";
 
 type Props = React.InputHTMLAttributes<HTMLInputElement> & {
   label?: string;
@@ -25,6 +27,7 @@ const Input = forwardRef<HTMLInputElement, Props>(
     },
     ref,
   ) => {
+    const { t } = useI18n();
     const motionProps = animated
       ? {
           initial: { opacity: 0, filter: "blur(4px)", y: -5 },
@@ -45,7 +48,9 @@ const Input = forwardRef<HTMLInputElement, Props>(
             </label>
           )}
           {mandatory && (
-            <span className="text-xs text-neutral-500">Obrigatório</span>
+            <span className="text-xs text-neutral-500">
+              {t("contact.form.required")}
+            </span>
           )}
         </div>
         <input

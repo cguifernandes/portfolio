@@ -1,9 +1,11 @@
 export type SkillsProps = {
   name: string;
   description: string;
+  experience: string;
 };
 
 export type ProjectsProps = {
+  id: string;
   description: string;
   name: string;
   image: string;
@@ -19,6 +21,7 @@ export type CompaniesProps = {
 };
 
 export type CareerProps = {
+  id: string;
   company: string;
   position: string;
   startDate: string;

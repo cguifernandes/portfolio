@@ -1,0 +1,75 @@
+import type { IconType } from "react-icons";
+import { FaAws } from "react-icons/fa6";
+import {
+  SiDiscord,
+  SiLaravel,
+  SiMongodb,
+  SiNestjs,
+  SiNextdotjs,
+  SiNodedotjs,
+  SiOpenapiinitiative,
+  SiPostgresql,
+  SiReact,
+  SiTailwindcss,
+  SiTypescript,
+  SiVuedotjs,
+  SiWordpress,
+} from "react-icons/si";
+import { PiBooksBold } from "react-icons/pi";
+
+export const ICON_BY_STACK_NAME: Record<string, IconType> = {
+  "Next.js": SiNextdotjs,
+  "React.js": SiReact,
+  Typescript: SiTypescript,
+  "Tailwind CSS": SiTailwindcss,
+  NestJS: SiNestjs,
+  Elysia: SiNodedotjs,
+  "React Hook Form": SiReact,
+  "API’s": SiOpenapiinitiative,
+  AWS: FaAws,
+  WordPress: SiWordpress,
+  PostgreSQL: SiPostgresql,
+  MongoDB: SiMongodb,
+  "Vue.js": SiVuedotjs,
+  "Discord.js": SiDiscord,
+  Laravel: SiLaravel,
+  "Inglês B2": PiBooksBold,
+};
+
+export const STACK_DESCRIPTION_KEYS: Record<string, string> = {
+  "Next.js": "stacks.items.next",
+  "React.js": "stacks.items.react",
+  Typescript: "stacks.items.typescript",
+  "Tailwind CSS": "stacks.items.tailwind",
+  NestJS: "stacks.items.nest",
+  Elysia: "stacks.items.elysia",
+  "React Hook Form": "stacks.items.reactHookForm",
+  "API’s": "stacks.items.apis",
+  AWS: "stacks.items.aws",
+  WordPress: "stacks.items.wordpress",
+  PostgreSQL: "stacks.items.postgresql",
+  MongoDB: "stacks.items.mongodb",
+  "Vue.js": "stacks.items.vue",
+  "Discord.js": "stacks.items.discord",
+  Laravel: "stacks.items.laravel",
+  "Inglês B2": "stacks.items.englishB2",
+};
+
+export const STACK_EXPERIENCE_KEYS: Record<string, string> = {
+  "Next.js": "stacks.experience.next",
+  "React.js": "stacks.experience.react",
+  Typescript: "stacks.experience.typescript",
+  "Tailwind CSS": "stacks.experience.tailwind",
+  NestJS: "stacks.experience.nest",
+  Elysia: "stacks.experience.elysia",
+  "React Hook Form": "stacks.experience.reactHookForm",
+  "API’s": "stacks.experience.apis",
+  AWS: "stacks.experience.aws",
+  WordPress: "stacks.experience.wordpress",
+  PostgreSQL: "stacks.experience.postgresql",
+  MongoDB: "stacks.experience.mongodb",
+  "Vue.js": "stacks.experience.vue",
+  "Discord.js": "stacks.experience.discord",
+  Laravel: "stacks.experience.laravel",
+  "Inglês B2": "stacks.experience.englishB2",
+};

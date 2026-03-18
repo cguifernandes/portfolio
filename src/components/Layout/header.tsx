@@ -1,74 +1,63 @@
 import Logo from "../../assets/reduceLogo.svg";
+import { useI18n } from "../../i18n/useI18n";
+import LanguageSwitcher from "../language-switcher";
 import SideBar from "./sidebar";
 
 const Header = () => {
+  const { t } = useI18n();
+
   return (
-    <header className="flex justify-center h-16 py-3 z-[100] px-6 border-b-2 border-neutral-800 bg-neutral-900 md:bg-neutral-900/60 md:backdrop-blur-md fixed top-0 left-0 w-full">
-      <div className="flex justify-between w-full max-w-7xl items-center">
-        <img src={Logo} alt="Logo" className="w-12 h-fit" />
+    <div className="fixed top-4 left-1/2 -translate-x-1/2 max-w-7xl z-100 w-full flex px-10 justify-center">
+      <header className="h-14 w-full flex justify-between items-center py-3 px-6 rounded-full border border-neutral-800 bg-neutral-900 md:bg-neutral-900/60 backdrop-blur-md">
+        <img src={Logo} alt="Logo" className="w-10 h-fit" />
         <SideBar />
         <nav className="hidden md:flex items-center">
-          <ul className="flex items-center gap-2">
+          <ul className="flex items-center text-sm gap-2">
             <li className="hover:bg-neutral-800 rounded-lg flex duration-300 ease-in-out">
               <a
                 href="#about"
-                className="text-white px-3 py-1.5 text-sm duration-300 ease-in-out"
+                className="text-white px-3 py-1.5 duration-300 ease-in-out"
               >
-                Sobre mim
+                {t("header.nav.about")}
               </a>
             </li>
             <li className="hover:bg-neutral-800 rounded-lg flex duration-300 ease-in-out">
               <a
                 href="#stacks"
-                className="text-white px-3 py-1.5 text-sm duration-300 ease-in-out"
+                className="text-white px-3 py-1.5 duration-300 ease-in-out"
               >
-                Stacks
+                {t("header.nav.stacks")}
               </a>
             </li>
             <li className="hover:bg-neutral-800 rounded-lg flex duration-300 ease-in-out">
               <a
                 href="#career"
-                className="text-white px-3 py-1.5 text-sm duration-300 ease-in-out"
+                className="text-white px-3 py-1.5 duration-300 ease-in-out"
               >
-                Carreira
+                {t("header.nav.career")}
               </a>
             </li>
             <li className="hover:bg-neutral-800 rounded-lg flex duration-300 ease-in-out">
               <a
                 href="#projects"
-                className="text-white px-3 py-1.5 text-sm duration-300 ease-in-out"
+                className="text-white px-3 py-1.5 duration-300 ease-in-out"
               >
-                Projetos
+                {t("header.nav.projects")}
               </a>
             </li>
             <li className="hover:bg-neutral-800 rounded-lg flex duration-300 ease-in-out">
               <a
                 href="#contact"
-                className="text-white px-3 py-1.5 text-sm duration-300 ease-in-out"
+                className="text-white px-3 py-1.5 duration-300 ease-in-out"
               >
-                Contato
+                {t("header.nav.contact")}
               </a>
             </li>
-            {/* <li className="hover:bg-neutral-800 rounded-lg flex duration-300 ease-in-out">
-							<button type="button" className="p-2 cursor-pointer">
-								<Sun
-									className="text-white duration-300 ease-in-out"
-									size={16}
-								/>
-							</button>
-						</li>
-						<li className="hover:bg-neutral-800 rounded-lg flex duration-300 ease-in-out">
-							<button type="button" className="p-2 cursor-pointer">
-								<Languages
-									className="text-white duration-300 ease-in-out"
-									size={16}
-								/>
-							</button>
-						</li> */}
           </ul>
         </nav>
-      </div>
-    </header>
+        <LanguageSwitcher className="hidden md:flex" />
+      </header>
+    </div>
   );
 };
 

@@ -2,6 +2,7 @@ import clsx from "clsx";
 import { motion } from "framer-motion";
 import { ExternalLink } from "lucide-react";
 import { useState } from "react";
+import { useI18n } from "../i18n/useI18n";
 import type { ProjectsProps } from "../types/type";
 import Badge from "./badge";
 import Button from "./button";
@@ -10,17 +11,9 @@ type Props = ProjectsProps & {
   reverse?: boolean;
 };
 
-const ProjectCard = ({
-  description,
-  image,
-  name,
-  skills,
-  additionalLink,
-  repo,
-  website,
-  reverse,
-}: Props) => {
+const ProjectCard = ({ id, image, skills, additionalLink, repo, website, reverse }: Props) => {
   const [isHovered, setIsHovered] = useState(false);
+  const { t } = useI18n();
 
   return (
     <div
@@ -41,7 +34,7 @@ const ProjectCard = ({
         <img
           className="w-full h-full object-cover rounded-lg"
           src={image}
-          alt="Imagem do projeto"
+          alt={t(`projects.items.${id}.imageAlt`)}
         />
         <div
           style={{
@@ -70,7 +63,7 @@ const ProjectCard = ({
             transition={{ duration: 0.5, ease: "easeOut" }}
             className="text-lg text-white"
           >
-            {name}
+            {t(`projects.items.${id}.name`)}
           </motion.h1>
           <div className="flex flex-wrap justify-center gap-1">
             {skills.map((skill, index) => (
@@ -83,10 +76,10 @@ const ProjectCard = ({
           whileInView={{ opacity: 1, filter: "blur(0px)", y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, ease: "easeOut" }}
-          title={description}
+          title={t(`projects.items.${id}.description`)}
           className="text-neutral-400 line-clamp-6 text-center text-sm"
-        >
-          {description}
+          >
+            {t(`projects.items.${id}.description`)}
         </motion.p>
         <div className="flex flex-col sm:flex-row gap-3">
           {website && (
@@ -97,7 +90,7 @@ const ProjectCard = ({
                 className="flex-1 w-full flex justify-center gap-x-2 items-center text-center"
                 theme="primary"
               >
-                Visitar projeto
+                {t("projects.buttons.visit")}
               </Button>
             </a>
           )}
@@ -109,7 +102,7 @@ const ProjectCard = ({
                 className="flex-1 w-full flex justify-center gap-x-2 items-center text-center"
                 theme="outline"
               >
-                Link adicional
+                {t("projects.buttons.additionalLink")}
               </Button>
             </a>
           )}
@@ -121,7 +114,7 @@ const ProjectCard = ({
                 className="flex-1 w-full flex justify-center gap-x-2 items-center text-center"
                 theme="outline"
               >
-                Repósitorio
+                {t("projects.buttons.repository")}
               </Button>
             </a>
           )}
