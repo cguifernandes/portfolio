@@ -14,7 +14,8 @@ import { PhoneIcon } from "../ui/phone";
 import { TimerIcon, TimerIconHandle } from "../ui/timer";
 
 const About = () => {
-  const { t } = useI18n();
+  const { t, language } = useI18n();
+  const isPortuguese = language === "pt";
   const earthIconRef = useRef<EarthIconHandle>(null);
   const boxesIconRef = useRef<BoxesIconHandle>(null);
   const coffeeIconRef = useRef<CoffeeIconHandle>(null);
@@ -39,7 +40,7 @@ const About = () => {
   return (
     <section
       id="about"
-      className="py-16 flex-col max-w-7xl gap-y-8 items-center scroll-mt-8 px-6 lg:px-4 flex justify-center w-full"
+      className="py-20 flex-col max-w-7xl gap-y-8 items-center scroll-mt-8 px-6 lg:px-4 flex justify-center w-full"
     >
       <div className="flex items-center flex-col pb-10 gap-y-4">
         <BlurText
@@ -136,7 +137,7 @@ const About = () => {
         <Button
           patternClassName="w-full flex justify-center"
           theme="primary"
-          href="/curriculo.pdf"
+          href={isPortuguese ? "/curriculo.pdf" : "/resume.pdf"}
           target="_blank"
           className="w-full lg:w-96"
           animated

@@ -17,7 +17,7 @@ const App = () => {
   return (
     <>
       <Header />
-      <main className="flex flex-col items-center !mt-16">
+      <main className="flex flex-col items-center mt-[72px]!">
         <About />
         <Stacks />
         <Career />
