@@ -42,21 +42,23 @@ const About = () => {
       id="about"
       className="py-20 flex-col max-w-7xl gap-y-8 items-center scroll-mt-8 px-6 lg:px-4 flex justify-center w-full"
     >
-      <div className="flex items-center flex-col pb-10 gap-y-4">
-        <BlurText
-          text={t("about.title")}
-          delay={50}
-          className="md:text-5xl text-3xl sm:text-4xl text-white font-bold text-center"
-        />
-        <motion.p
-          initial={{ opacity: 0, filter: "blur(4px)", y: -5 }}
-          whileInView={{ opacity: 1, filter: "blur(0px)", y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, ease: "easeOut" }}
-          className="text-neutral-400 text-sm md:text-base text-center w-full"
-        >
-          {t("about.description")}
-        </motion.p>
+      <div className="flex items-center flex-col pb-10 gap-y-8">
+        <div className="flex flex-col gap-y-3">
+          <BlurText
+            text={t("about.title")}
+            delay={50}
+            className="md:text-5xl text-3xl sm:text-4xl text-white font-bold text-center"
+          />
+          <motion.p
+            initial={{ opacity: 0, filter: "blur(4px)", y: -5 }}
+            whileInView={{ opacity: 1, filter: "blur(0px)", y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, ease: "easeOut" }}
+            className="text-neutral-400 max-w-4xl text-sm md:text-base text-center w-full"
+          >
+            {t("about.description")}
+          </motion.p>
+        </div>
 
         <ul className="flex items-center gap-x-6">
           <motion.li
