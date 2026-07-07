@@ -106,6 +106,22 @@ export const skills: SkillsProps[] = [
 
 export const projects: ProjectsProps[] = [
   {
+    id: "gateon",
+    description:
+      "Gateon é uma plataforma SaaS desenvolvida inteiramente por mim para automatizar o gerenciamento de comunidades no Telegram. A plataforma permite controlar grupos, sincronizar assinaturas, gerenciar membros automaticamente, integrar gateways de pagamento e administrar toda a comunidade por meio de um painel moderno e intuitivo.",
+    name: "Grana em Dia",
+    image: "https://i.ibb.co/ks4yc2n3/Captura-de-tela-2026-07-07-202233.png",
+    skills: [
+      "Next.js",
+      "Nest.js",
+      "Server Actions",
+      "Tailwind CSS",
+      "Shadcn UI",
+      "CI/CD",
+    ],
+    website: "https://gateon.app",
+  },
+  {
     id: "granaEmDia",
     description:
       "Site para controle financeiro pessoal. Nele é possível cadastrar despesas e receitas, criar categorias para transações, acessar um dashboard dinâmico com filtros por mês e ano.",

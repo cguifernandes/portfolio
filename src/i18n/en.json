@@ -105,6 +105,11 @@
       "repository": "Repository"
     },
     "items": {
+      "gateon": {
+        "name": "Gateon",
+        "description": "Gateon is a SaaS platform fully developed by me to automate Telegram community management. It allows creators to manage groups, synchronize subscriptions, automate member access, integrate payment gateways, and control their entire community through a modern and intuitive dashboard.",
+        "imageAlt": "Screenshot of the Gaton project"
+      },
       "granaEmDia": {
         "name": "Grana em Dia",
         "description": "Personal finance control website where you can register expenses and income, create transaction categories, and access a dynamic dashboard with month and year filters.",
@@ -205,4 +210,3 @@
     }
   }
 }
-
