@@ -8,7 +8,8 @@ export type ProjectsProps = {
   id: string;
   description: string;
   name: string;
-  image: string;
+  /** sem screenshot ainda: o card mostra o placeholder hachurado */
+  image?: string;
   repo?: string;
   skills: string[];
   website?: string;
@@ -17,7 +18,7 @@ export type ProjectsProps = {
 
 export type CompaniesProps = {
   name: string;
-  image: React.ReactNode;
+  image: string;
 };
 
 export type CareerProps = {

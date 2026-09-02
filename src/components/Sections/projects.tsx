@@ -1,64 +1,76 @@
 import { motion } from "framer-motion";
-import { companies, projects } from "../../utils/utils";
 import { useI18n } from "../../i18n/useI18n";
+import { companies, projects } from "../../utils/utils";
+import { GridBackdrop } from "../backdrops";
 import CompanyCard from "../company-card";
-import InfiniteScroll from "../infinite-scroll";
+import Container from "../container";
 import ProjectCard from "../project-card";
 
 const Projects = () => {
   const { t } = useI18n();
+
   return (
-    <section
+    <Container
+      backdrop={<GridBackdrop />}
       id="projects"
-      className="py-20 scroll-mt-8 flex justify-center w-full bg-neutral-900"
+      sectionClassName="px-0"
+      className="overflow-hidden"
     >
-      <div className="flex flex-col overflow-hidden gap-y-10 max-w-7xl">
-        <motion.h1
-          initial={{ opacity: 0, filter: "blur(4px)", y: -5 }}
-          whileInView={{ opacity: 1, filter: "blur(0px)", y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, ease: "easeOut" }}
-          className="text-white text-center text-xl"
-        >
+      <motion.div
+        initial={{ opacity: 0, filter: "blur(4px)", y: -5 }}
+        whileInView={{ opacity: 1, filter: "blur(0px)", y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5, ease: "easeOut" }}
+        className="flex flex-wrap items-baseline justify-between gap-5 px-6 lg:px-12"
+      >
+        <span className="text-primary-500 text-xs uppercase tracking-[0.13em]">
+          {t("projects.label")}
+        </span>
+        <h1 className="text-2xl text-white leading-[1.4] tracking-[-0.02em]">
           {t("projects.title")}
-        </motion.h1>
-        <motion.h2
+        </h1>
+      </motion.div>
+
+      <div className="grid grid-cols-1 gap-5 px-6 md:grid-cols-2 lg:grid-cols-3 lg:px-10">
+        {projects.map((project, index) => (
+          <ProjectCard
+            key={project.id}
+            index={index}
+            id={project.id}
+            description={project.description}
+            image={project.image}
+            name={project.name}
+            skills={project.skills}
+            additionalLink={project.additionalLink}
+            repo={project.repo}
+            website={project.website}
+          />
+        ))}
+      </div>
+
+      <div className="flex flex-col gap-y-5 px-6 pt-6 lg:px-10">
+        <motion.span
           initial={{ opacity: 0, filter: "blur(4px)", y: -5 }}
           whileInView={{ opacity: 1, filter: "blur(0px)", y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, ease: "easeOut" }}
-          className="text-white text-center text-lg"
+          className="text-neutral-500 text-xs uppercase tracking-[0.07em]"
         >
           {t("projects.companiesTitle")}
-        </motion.h2>
-        <InfiniteScroll>
-          {[...companies, ...companies, ...companies].map((company, index) => (
+        </motion.span>
+
+        <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
+          {companies.map((company, index) => (
             <CompanyCard
-              name={company.name}
+              key={company.name}
               index={index}
+              name={company.name}
               image={company.image}
-              key={`${company.name}-${index}`}
-            />
-          ))}
-        </InfiniteScroll>
-        <div className="flex px-6 lg:px-12 flex-col gap-y-20">
-          {projects.map((skill, index) => (
-            <ProjectCard
-              id={skill.id}
-              description={skill.description}
-              image={skill.image}
-              name={skill.name}
-              skills={skill.skills}
-              additionalLink={skill.additionalLink}
-              repo={skill.repo}
-              website={skill.website}
-              reverse={index % 2 === 0}
-              key={skill.id}
             />
           ))}
         </div>
       </div>
-    </section>
+    </Container>
   );
 };
 

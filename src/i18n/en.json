@@ -10,31 +10,85 @@
       "contact": "Contact"
     }
   },
-  "about": {
+  "hero": {
     "title": "Guilherme Fernandes",
-    "description": "I have a strong passion for creating websites and exploring new technologies, always looking for new ways to innovate and improve my skills. When I am not coding, I enjoy reading books, watching engaging series, and dedicating time to studying and expanding my knowledge.",
-    "cta": "Resume",
+    "description": "Full-stack developer focused on React, Next.js and TypeScript on the front end, and Node with PostgreSQL on the back end. I work from solution design through production deployment, on management systems, e-commerce platforms and internal dashboards.",
+    "ctaContact": "Get in touch",
+    "ctaProjects": "View projects",
+    "code": {
+      "file": "dev.ts",
+      "lines": {
+        "name": {
+          "key": "name",
+          "value": "Guilherme Fernandes"
+        },
+        "role": {
+          "key": "role",
+          "value": "full-stack"
+        },
+        "projects": {
+          "key": "projects"
+        },
+        "based": {
+          "key": "based",
+          "value": "Brazil · remote"
+        },
+        "focus": {
+          "key": "focus",
+          "value": "product, performance"
+        },
+        "stack": {
+          "key": "stack",
+          "value": "React, Next.js, TypeScript, Node"
+        },
+        "database": {
+          "key": "database",
+          "value": "PostgreSQL, MongoDB"
+        },
+        "education": {
+          "key": "education",
+          "value": "CS degree + SE postgrad in AI"
+        },
+        "github": {
+          "key": "github"
+        },
+        "linkedin": {
+          "key": "linkedin"
+        },
+        "email": {
+          "key": "email"
+        }
+      }
+    }
+  },
+  "about": {
+    "label": "01 — About",
+    "lead": "I'm a full-stack developer. I work where the interface meets the database.",
+    "body": "I hold a degree in Systems Analysis and Development and I'm currently taking a postgraduate course in Software Engineering with AI. What interests me most is usually the part nobody screenshots: performance, accessibility, and code the next person can read without having to ask me anything.",
+    "portraitAlt": "Guilherme Fernandes",
+    "portraitPlaceholder": "portrait / photo",
     "cards": {
-      "interfaces": {
-        "title": "Interface design",
-        "subtitle": "I create modern and intuitive visual interfaces for websites, ensuring a great experience for users. My goal is to transform ideas into attractive and functional layouts, always focusing on usability and visual identity."
+      "stack": {
+        "label": "Stack",
+        "value": "React · Next.js · TypeScript · Node"
       },
-      "web": {
-        "title": "Web development",
-        "subtitle": "I develop complete websites and applications, taking care of both the visual side and the logic behind how everything works. I use modern technologies to build fast, secure, and scalable sites."
+      "education": {
+        "label": "Education",
+        "value": "Systems Analysis and Development"
       },
-      "optimization": {
-        "title": "Website optimization and maintenance",
-        "subtitle": "I ensure your website is always fast, secure, and up to date. I work on performance optimizations and SEO improvements to avoid issues and guarantee the best possible experience for visitors."
+      "languages": {
+        "label": "Languages",
+        "value": "Portuguese · English"
       },
-      "wordpress": {
-        "title": "Website creation with WordPress",
-        "subtitle": "I build professional and customized websites using WordPress. From blogs to business sites, I deliver flexible, responsive, and easy-to-manage solutions, ensuring your project has great online performance."
+      "postgrad": {
+        "label": "Postgraduate",
+        "value": "Software Engineering with AI"
       }
     }
   },
   "stacks": {
-    "title": "Stacks",
+    "label": "02 / Stacks",
+    "title": "Everyday tools",
     "items": {
       "next": "Next.js is a front-end web framework that enables features like server-side rendering and static site generation for modern React applications.",
       "react": "React is an open-source JavaScript library focused on building user interfaces for the web in a component-based way.",
@@ -54,7 +108,8 @@
       "englishB2": "I have B2-level English (upper-intermediate), which allows me to communicate clearly in professional contexts, join meetings, read technical documentation, and write with good clarity."
     },
     "titles": {
-      "englishB2": "English B2"
+      "englishB2": "English B2",
+      "apis": "API's"
     },
     "experience": {
       "next": "4 years exp",
@@ -71,11 +126,13 @@
       "vue": "2 years exp",
       "discord": "2 years exp",
       "laravel": "1 year exp",
-      "englishB2": "6 years exp"
+      "englishB2": "6 years exp",
+      "apis": "3 years exp"
     }
   },
   "career": {
-    "title": "Career",
+    "label": "03 / Career",
+    "title": "Where I've been",
     "current": "Present",
     "unknownEnd": "?",
     "items": {
@@ -97,7 +154,8 @@
     }
   },
   "projects": {
-    "title": "Projects",
+    "label": "04 / Projects",
+    "title": "Selected work",
     "companiesTitle": "Companies served",
     "buttons": {
       "visit": "Visit project",
@@ -109,6 +167,21 @@
         "name": "Gateon",
         "description": "Gateon is a SaaS platform fully developed by me to automate Telegram community management. It allows creators to manage groups, synchronize subscriptions, automate member access, integrate payment gateways, and control their entire community through a modern and intuitive dashboard.",
         "imageAlt": "Screenshot of the Gaton project"
+      },
+      "angelfly": {
+        "name": "AngelFly",
+        "description": "Corporate site for AngelFly, a Boston agency specializing in restaurant branding and growth. Built on WordPress with Elementor.",
+        "imageAlt": "AngelFly project image"
+      },
+      "garlicLemons": {
+        "name": "Garlic'n Lemons",
+        "description": "Site for the halal Mediterranean restaurant in Allston, Boston. Full menu, integration with the ordering and catering platforms on their own subdomains, gift card sales through Square and an embedded map.",
+        "imageAlt": "Garlic'n Lemons project image"
+      },
+      "ernestosPizza": {
+        "name": "Ernesto's Pizza",
+        "description": "Site for the Boston-area pizza chain. Acts as a hub routing customers to the storefront of their chosen location, with search-optimised category pages and per-location online ordering.",
+        "imageAlt": "Ernesto's Pizza project image"
       },
       "granaEmDia": {
         "name": "Grana em Dia",
@@ -173,7 +246,13 @@
     }
   },
   "contact": {
-    "title": "Contact",
+    "label": "05 / Contact",
+    "title": "Open to new projects and opportunities.",
+    "channels": {
+      "email": "E-mail",
+      "linkedin": "LinkedIn",
+      "github": "GitHub"
+    },
     "toast": {
       "success": "Message sent successfully.",
       "error": "Error sending message. Please try again."
@@ -208,5 +287,8 @@
         "max": "This field must have a maximum of 400 characters"
       }
     }
+  },
+  "footer": {
+    "resume": "Resume"
   }
 }
