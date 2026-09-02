@@ -78,7 +78,9 @@ const LanguageSwitcher = ({ className }: LanguageSwitcherProps) => {
         </div>
       </TooltipTrigger>
 
-      <TooltipContent side="bottom">{t("header.changeLanguage")}</TooltipContent>
+      <TooltipContent side="bottom">
+        {t("header.changeLanguage")}
+      </TooltipContent>
     </Tooltip>
   );
 };

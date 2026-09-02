@@ -16,10 +16,6 @@ textarea {
   outline: 0 none;
 }
 
-a {
-  text-decoration: none;
-}
-
 #root {
   display: flex;
   flex-direction: column;
@@ -233,6 +229,11 @@ body {
 @layer base {
   * {
     @apply border-border outline-ring/50;
+  }
+  /* precisa estar em @layer: fora de camada esta regra venceria qualquer
+     utilitario de underline do Tailwind, que vive em @layer utilities */
+  a {
+    text-decoration: none;
   }
   body {
     @apply bg-background text-foreground overflow-x-hidden;

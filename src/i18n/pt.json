@@ -10,31 +10,85 @@
       "contact": "Contato"
     }
   },
-  "about": {
+  "hero": {
     "title": "Guilherme Fernandes",
-    "description": "Tenho uma grande paixão por criar sites e explorar novas tecnologias, sempre buscando novas maneiras de inovar e aprimorar minhas habilidades. Quando não estou codando, gosto de mergulhar na leitura de livros, assistir séries envolventes e dedicar um tempo para estudar e expandir meus conhecimentos.",
-    "cta": "Currículo",
+    "description": "Desenvolvedor full-stack com foco em React, Next.js e TypeScript no front-end, e Node com PostgreSQL no back-end. Atuo da concepção da solução ao deploy em produção, em sistemas de gestão, e-commerces e painéis internos.",
+    "ctaContact": "Fale comigo",
+    "ctaProjects": "Ver projetos",
+    "code": {
+      "file": "dev.ts",
+      "lines": {
+        "name": {
+          "key": "nome",
+          "value": "Guilherme Fernandes"
+        },
+        "role": {
+          "key": "papel",
+          "value": "full-stack"
+        },
+        "projects": {
+          "key": "projetos"
+        },
+        "based": {
+          "key": "base",
+          "value": "Brasil · remoto"
+        },
+        "focus": {
+          "key": "foco",
+          "value": "produto, performance"
+        },
+        "stack": {
+          "key": "stack",
+          "value": "React, Next.js, TypeScript, Node"
+        },
+        "database": {
+          "key": "banco",
+          "value": "PostgreSQL, MongoDB"
+        },
+        "education": {
+          "key": "formacao",
+          "value": "ADS + pós em Eng. de Software com IA"
+        },
+        "github": {
+          "key": "github"
+        },
+        "linkedin": {
+          "key": "linkedin"
+        },
+        "email": {
+          "key": "email"
+        }
+      }
+    }
+  },
+  "about": {
+    "label": "01 — Sobre",
+    "lead": "Sou programador full-stack. Trabalho no ponto onde a interface encontra o banco de dados.",
+    "body": "Sou formado em Análise e Desenvolvimento de Sistemas e hoje curso uma pós-graduação em Engenharia de Software com IA. O que mais me interessa costuma ser a parte que ninguém mostra em print: performance, acessibilidade e código que a próxima pessoa consiga ler sem precisar me perguntar nada.",
+    "portraitAlt": "Guilherme Fernandes",
+    "portraitPlaceholder": "retrato / foto",
     "cards": {
-      "interfaces": {
-        "title": "Design de interfaces",
-        "subtitle": "Crio interfaces visuais modernas e intuitivas para sites, garantindo uma ótima experiência para os usuários. Meu objetivo é transformar ideias em layouts atraentes e funcionais, sempre focando em usabilidade e identidade visual."
+      "stack": {
+        "label": "Stack",
+        "value": "React · Next.js · TypeScript · Node"
       },
-      "web": {
-        "title": "Desenvolvimento web",
-        "subtitle": "Desenvolvo sites e aplicações completas, cuidando tanto da parte visual quanto da lógica por trás do funcionamento. Utilizo tecnologias modernas para criar sites rápidos, seguros e escaláveis."
+      "education": {
+        "label": "Formação",
+        "value": "Análise e Desenvolvimento de Sistemas"
       },
-      "optimization": {
-        "title": "Otimização e manutenção de sites",
-        "subtitle": "Garanto que seu site esteja sempre rápido, seguro e atualizado. Faço otimizações de desempenho, melhorias em SEO para evitar problemas e garantir a melhor experiência para os visitantes."
+      "languages": {
+        "label": "Idiomas",
+        "value": "Português · Inglês"
       },
-      "wordpress": {
-        "title": "Criação de sites com WordPress",
-        "subtitle": "Construo sites profissionais e personalizados utilizando WordPress. Desde blogs até sites empresariais, entrego soluções flexíveis, responsivas e fáceis de gerenciar, garantindo que seu projeto tenha um ótimo desempenho online."
+      "postgrad": {
+        "label": "Pós-graduação",
+        "value": "Engenharia de Software com IA"
       }
     }
   },
   "stacks": {
-    "title": "Stacks",
+    "label": "02 / Stacks",
+    "title": "Ferramentas do dia a dia",
     "items": {
       "next": "Next.js é uma estrutura web de desenvolvimento front-end que permite funcionalidades como renderização do lado do servidor e geração de sites estáticos.",
       "react": "O React é uma biblioteca JavaScript de código aberto focada em criar interfaces de usuário em páginas web.",
@@ -54,7 +108,8 @@
       "englishB2": "Tenho inglês em nível B2 (intermediário avançado), consigo me comunicar bem em contextos profissionais, participar de reuniões, ler documentação técnica e escrever textos com boa clareza."
     },
     "titles": {
-      "englishB2": "Inglês B2"
+      "englishB2": "Inglês B2",
+      "apis": "API's"
     },
     "experience": {
       "next": "4 anos exp",
@@ -71,11 +126,13 @@
       "vue": "2 anos exp",
       "discord": "2 anos exp",
       "laravel": "1 ano exp",
-      "englishB2": "6 anos exp"
+      "englishB2": "6 anos exp",
+      "apis": "3 anos exp"
     }
   },
   "career": {
-    "title": "Carreira",
+    "label": "03 / Carreira",
+    "title": "Onde eu passei",
     "current": "Presente",
     "unknownEnd": "?",
     "items": {
@@ -97,7 +154,8 @@
     }
   },
   "projects": {
-    "title": "Projetos",
+    "label": "04 / Projetos",
+    "title": "Trabalho selecionado",
     "companiesTitle": "Empresas atendidas",
     "buttons": {
       "visit": "Visitar projeto",
@@ -109,6 +167,21 @@
         "name": "Gateon",
         "description": "Gateon é uma plataforma SaaS desenvolvida inteiramente por mim para automatizar o gerenciamento de comunidades no Telegram. A plataforma permite controlar grupos, sincronizar assinaturas, gerenciar membros automaticamente, integrar gateways de pagamento e administrar toda a comunidade por meio de um painel moderno e intuitivo.",
         "imageAlt": "Imagem do projeto Gateon"
+      },
+      "angelfly": {
+        "name": "AngelFly",
+        "description": "Site institucional da AngelFly, agência de Boston especializada em branding e crescimento para restaurantes. Desenvolvido em WordPress com Elementor.",
+        "imageAlt": "Imagem do projeto AngelFly"
+      },
+      "garlicLemons": {
+        "name": "Garlic'n Lemons",
+        "description": "Site do restaurante mediterrâneo halal em Allston, Boston. Cardápio completo, integração com as plataformas de pedido e catering em subdomínios próprios, venda de gift cards via Square e localização em mapa.",
+        "imageAlt": "Imagem do projeto Garlic'n Lemons"
+      },
+      "ernestosPizza": {
+        "name": "Ernesto's Pizza",
+        "description": "Site da rede de pizzarias na região de Boston. Funciona como hub que direciona o cliente para a loja da unidade escolhida, com páginas de categoria otimizadas para busca e pedido online por unidade.",
+        "imageAlt": "Imagem do projeto Ernesto's Pizza"
       },
       "granaEmDia": {
         "name": "Grana em Dia",
@@ -173,7 +246,13 @@
     }
   },
   "contact": {
-    "title": "Contato",
+    "label": "05 / Contato",
+    "title": "Aberto a novos projetos e oportunidades.",
+    "channels": {
+      "email": "E-mail",
+      "linkedin": "LinkedIn",
+      "github": "GitHub"
+    },
     "toast": {
       "success": "Mensagem enviada com sucesso.",
       "error": "Erro ao enviar mensagem. Tente novamente."
@@ -208,5 +287,8 @@
         "max": "Este campo deve ter no máximo 400 caracteres"
       }
     }
+  },
+  "footer": {
+    "resume": "Currículo"
   }
 }

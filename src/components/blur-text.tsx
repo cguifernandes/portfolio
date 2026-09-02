@@ -4,11 +4,17 @@ type Props = {
   text?: string;
   delay?: number;
   className?: string;
+  as?: "p" | "span" | "div" | "h1";
 };
 
-const BlurText = ({ text = "", delay = 0, className = "" }: Props) => {
+const BlurText = ({
+  text = "",
+  delay = 0,
+  className = "",
+  as: Tag = "p",
+}: Props) => {
   return (
-    <p className={className}>
+    <Tag className={className}>
       {text.split("").map((letter, index) => (
         <motion.span
           key={index}
@@ -23,7 +29,7 @@ const BlurText = ({ text = "", delay = 0, className = "" }: Props) => {
           {letter}
         </motion.span>
       ))}
-    </p>
+    </Tag>
   );
 };
 

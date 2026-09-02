@@ -1,126 +1,118 @@
-import clsx from "clsx";
 import { motion } from "framer-motion";
-import { ExternalLink } from "lucide-react";
-import { useState } from "react";
 import { useI18n } from "../i18n/useI18n";
 import type { ProjectsProps } from "../types/type";
 import Badge from "./badge";
 import Button from "./button";
 
+// mesma hachura usada no placeholder de retrato da secao Sobre
+const HATCH_BACKGROUND =
+  "repeating-linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0 2px, transparent 2px 10px)";
+
 type Props = ProjectsProps & {
-  reverse?: boolean;
+  index: number;
 };
 
-const ProjectCard = ({ id, image, skills, additionalLink, repo, website, reverse }: Props) => {
-  const [isHovered, setIsHovered] = useState(false);
+const ProjectCard = ({
+  id,
+  image,
+  skills,
+  additionalLink,
+  repo,
+  website,
+  index,
+}: Props) => {
   const { t } = useI18n();
+  const description = t(`projects.items.${id}.description`);
 
   return (
-    <div
-      className={clsx(
-        "flex items-center flex-col gap-y-4 gap-x-12 lg:h-[320px]",
-        reverse ? "lg:flex-row-reverse" : "lg:flex-row",
-      )}
+    <motion.div
+      initial={{ opacity: 0, filter: "blur(4px)", y: -5 }}
+      whileInView={{ opacity: 1, filter: "blur(0px)", y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.5, ease: "easeOut" }}
+      className="relative flex h-full flex-col overflow-hidden rounded-lg border border-neutral-800 bg-neutral-950 transition duration-300 ease-in-out hover:z-10 hover:scale-[1.02] hover:shadow-2xl hover:shadow-black/60"
     >
-      <motion.div
-        onMouseEnter={() => setIsHovered(true)}
-        onMouseLeave={() => setIsHovered(false)}
-        initial={{ opacity: 0, filter: "blur(4px)", y: -5 }}
-        whileInView={{ opacity: 1, filter: "blur(0px)", y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.5, ease: "easeOut" }}
-        className="relative max-w-xl max-h-80 h-full w-full border-2 border-neutral-800 rounded-lg"
-      >
-        <img
-          className="w-full h-full object-cover rounded-lg"
-          src={image}
-          alt={t(`projects.items.${id}.imageAlt`)}
-        />
-        <div
-          style={{
-            opacity: isHovered ? 1 : 0,
-            transition: "opacity 0.2s ease-in-out",
-          }}
-          className="absolute inset-0 bg-black/50 rounded-lg flex items-center justify-center"
-        >
-          <a
-            href={website ?? repo}
-            target="_blank"
-            className="cursor-pointer w-full h-full flex items-center justify-center"
+      <div className="relative border-neutral-800 border-b">
+        {image ? (
+          <img
+            src={image}
+            alt={t(`projects.items.${id}.imageAlt`)}
+            loading="lazy"
+            className="aspect-16/10 w-full object-cover object-top"
+          />
+        ) : (
+          <div
+            className="flex aspect-16/10 w-full items-end p-4"
+            style={{ backgroundImage: HATCH_BACKGROUND }}
           >
-            <div className="p-3 rounded-full bg-neutral-700/80 backdrop-blur-sm border-neutral-800">
-              <ExternalLink size={20} color="#fff" />
-            </div>
-          </a>
-        </div>
-      </motion.div>
-      <div className="flex max-w-2xl w-full lg:w-1/2 flex-col gap-y-5">
-        <div className="flex items-center flex-col gap-y-1">
-          <motion.h1
-            initial={{ opacity: 0, filter: "blur(4px)", y: -5 }}
-            whileInView={{ opacity: 1, filter: "blur(0px)", y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, ease: "easeOut" }}
-            className="text-lg text-white"
-          >
-            {t(`projects.items.${id}.name`)}
-          </motion.h1>
-          <div className="flex flex-wrap justify-center gap-1">
-            {skills.map((skill, index) => (
-              <Badge key={skill} skill={skill} index={index} />
-            ))}
+            <span className="font-mono text-[10px] text-neutral-500 tracking-[0.08em]">
+              {t(`projects.items.${id}.name`)}
+            </span>
           </div>
+        )}
+        <span className="absolute top-3 left-3 rounded-md bg-neutral-950/70 px-2 py-1 font-mono text-[10px] text-neutral-400 tracking-[0.08em] backdrop-blur-sm">
+          {String(index + 1).padStart(2, "0")}
+        </span>
+      </div>
+
+      <div className="flex flex-1 flex-col gap-y-4 p-5">
+        <h2 className="text-lg text-white">{t(`projects.items.${id}.name`)}</h2>
+
+        <p
+          title={description}
+          className="line-clamp-4 flex-1 text-neutral-400 text-sm"
+        >
+          {description}
+        </p>
+
+        <div className="flex flex-wrap gap-1.5">
+          {skills.map((skill, skillIndex) => (
+            <Badge key={skill} skill={skill} index={skillIndex} />
+          ))}
         </div>
-        <motion.p
-          initial={{ opacity: 0, filter: "blur(4px)", y: -5 }}
-          whileInView={{ opacity: 1, filter: "blur(0px)", y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, ease: "easeOut" }}
-          title={t(`projects.items.${id}.description`)}
-          className="text-neutral-400 line-clamp-6 text-center text-sm"
-          >
-            {t(`projects.items.${id}.description`)}
-        </motion.p>
-        <div className="flex flex-col sm:flex-row gap-3">
+
+        <div className="flex flex-col gap-2 sm:flex-row">
           {website && (
-            <a className="w-full" href={website} target="_blank">
-              <Button
-                animated
-                icon={<ExternalLink size={16} color="#fff" />}
-                className="flex-1 w-full flex justify-center gap-x-2 items-center text-center"
-                theme="primary"
-              >
-                {t("projects.buttons.visit")}
-              </Button>
-            </a>
+            <Button
+              animated
+              theme="primary"
+              href={website}
+              target="_blank"
+              patternClassName="flex-1 flex"
+              className="w-full justify-center"
+            >
+              {t("projects.buttons.visit")}
+            </Button>
           )}
-          {additionalLink && (
-            <a className="w-full" href={additionalLink} target="_blank">
-              <Button
-                animated
-                icon={<ExternalLink size={16} color="#fff" />}
-                className="flex-1 w-full flex justify-center gap-x-2 items-center text-center"
-                theme="outline"
-              >
-                {t("projects.buttons.additionalLink")}
-              </Button>
-            </a>
-          )}
+
           {repo && (
-            <a className="w-full" href={repo} target="_blank">
-              <Button
-                animated
-                icon={<ExternalLink size={16} color="#fff" />}
-                className="flex-1 w-full flex justify-center gap-x-2 items-center text-center"
-                theme="outline"
-              >
-                {t("projects.buttons.repository")}
-              </Button>
-            </a>
+            <Button
+              animated
+              theme="outline"
+              href={repo}
+              target="_blank"
+              patternClassName="flex-1 flex"
+              className="w-full justify-center"
+            >
+              {t("projects.buttons.repository")}
+            </Button>
+          )}
+
+          {additionalLink && (
+            <Button
+              animated
+              theme="outline"
+              href={additionalLink}
+              target="_blank"
+              patternClassName="flex-1 flex"
+              className="w-full justify-center"
+            >
+              {t("projects.buttons.additionalLink")}
+            </Button>
           )}
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

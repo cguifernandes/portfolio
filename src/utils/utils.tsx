@@ -1,15 +1,38 @@
-import celiware from "../assets/companies/celiware.png";
-import desweb from "../assets/companies/desweb.png";
-import ecomplus from "../assets/companies/ecomplus.png";
-import futureOnline from "../assets/companies/future-online.png";
-import prime from "../assets/companies/prime.jpg";
-import revzap from "../assets/companies/revzap.png";
+import angelfly from "../assets/companies/angelfly.webp";
+import bag from "../assets/companies/bag.webp";
+import celiware from "../assets/companies/celiware.webp";
+import desweb from "../assets/companies/desweb.webp";
+import ecomplus from "../assets/companies/ecomplus.webp";
+import futureOnline from "../assets/companies/future-online.webp";
+import prime from "../assets/companies/prime.webp";
+import revzap from "../assets/companies/revzap.webp";
+import allNadeShot from "../assets/projects/allNade.webp";
+import amorCelestialShot from "../assets/projects/amorCelestial.webp";
+import angelflyShot from "../assets/projects/angelfly.webp";
+import ernestoShot from "../assets/projects/ernesto.webp";
+import futureOnlineShot from "../assets/projects/futureOnline.webp";
+import garlicShot from "../assets/projects/garlic.webp";
+import gateonShot from "../assets/projects/gateon.webp";
+import granaEmDiaShot from "../assets/projects/granaEmDia.webp";
+import hubDeskShot from "../assets/projects/hubDesk.webp";
+import nikeShot from "../assets/projects/nike.webp";
+import paquetaShot from "../assets/projects/paqueta.webp";
+import plasticaDeFaceShot from "../assets/projects/plasticaDeFace.webp";
+import revzapShot from "../assets/projects/revzap.webp";
+import tectrainShot from "../assets/projects/tectrain.webp";
+import tituloMedShot from "../assets/projects/tituloMed.webp";
+import wikiDemonSlayerShot from "../assets/projects/wikiDemonSlayer.webp";
 import type {
   CareerProps,
   CompaniesProps,
   ProjectsProps,
   SkillsProps,
 } from "../types/type";
+
+export const CONTACT_EMAIL = "gui.adfer@gmail.com";
+export const GITHUB_URL = "https://github.com/cguifernandes";
+export const LINKEDIN_URL =
+  "https://www.linkedin.com/in/guilherme-fernandes-6b1353243/";
 
 export const skills: SkillsProps[] = [
   {
@@ -109,8 +132,8 @@ export const projects: ProjectsProps[] = [
     id: "gateon",
     description:
       "Gateon é uma plataforma SaaS desenvolvida inteiramente por mim para automatizar o gerenciamento de comunidades no Telegram. A plataforma permite controlar grupos, sincronizar assinaturas, gerenciar membros automaticamente, integrar gateways de pagamento e administrar toda a comunidade por meio de um painel moderno e intuitivo.",
-    name: "Grana em Dia",
-    image: "https://i.ibb.co/ks4yc2n3/Captura-de-tela-2026-07-07-202233.png",
+    name: "Gateon",
+    image: gateonShot,
     skills: [
       "Next.js",
       "Nest.js",
@@ -122,11 +145,37 @@ export const projects: ProjectsProps[] = [
     website: "https://gateon.app",
   },
   {
+    id: "angelfly",
+    description:
+      "Site institucional da AngelFly, agencia de Boston especializada em branding e crescimento para restaurantes.",
+    name: "AngelFly",
+    image: angelflyShot,
+    skills: ["WordPress", "Elementor", "PHP", "Cloudflare"],
+    website: "https://angelfly.io/",
+  },
+  {
+    id: "garlicLemons",
+    description:
+      "Site do restaurante mediterraneo Garlic'n Lemons, em Allston, Boston.",
+    name: "Garlic'n Lemons",
+    image: garlicShot,
+    skills: ["PHP", "MySQL", "Framer", "Square", "SEO"],
+    website: "https://garliclemons.com/",
+  },
+  {
+    id: "ernestosPizza",
+    description: "Site da rede de pizzarias Ernesto's Pizza, em Boston.",
+    name: "Ernesto's Pizza",
+    image: ernestoShot,
+    skills: ["WordPress", "PHP", "SEO"],
+    website: "https://ernestospizza.com/",
+  },
+  {
     id: "granaEmDia",
     description:
       "Site para controle financeiro pessoal. Nele é possível cadastrar despesas e receitas, criar categorias para transações, acessar um dashboard dinâmico com filtros por mês e ano.",
     name: "Grana em Dia",
-    image: "https://i.ibb.co/mCjRXzs7/Screenshot-1.png",
+    image: granaEmDiaShot,
     skills: ["React.js", "Laravel", "PostgreSQL", "Tailwind CSS", "Shadcn UI"],
     repo: "https://github.com/cguifernandes/grana-em-dia",
   },
@@ -135,7 +184,7 @@ export const projects: ProjectsProps[] = [
     description:
       "Site para gestão de consultorias de uma empresa de tecnologia. Nele é possível realizar atividades interativas, criar dashboards dinâmicos, utilizar chatbots com IA e gerenciar tabelas relacionais.",
     name: "Tectrain | Gestão de Consultório",
-    image: "https://i.ibb.co/DPJwQHct/gc-6.png",
+    image: tectrainShot,
     skills: ["Vue.js", "Bootstrap", "C#"],
     website: "https://gc-app.tectrain.com.br/",
   },
@@ -144,7 +193,7 @@ export const projects: ProjectsProps[] = [
     description:
       "Extensão para atendimento no WhatsApp Web, desenvolvida com o objetivo de aprimorar a experiência do cliente e aumentar a eficiência e produtividade da equipe de suporte.",
     name: "Revzap",
-    image: "https://i.ibb.co/N6KB6Cm5/Captura-de-tela-2025-04-23-143013.png",
+    image: revzapShot,
     skills: ["React.js", "Tailwind CSS", "Node.js", "PostgreSQL"],
     website:
       "https://chromewebstore.google.com/detail/revzap/iadbakknogblchdohbbnnchfpojbcbll",
@@ -154,7 +203,7 @@ export const projects: ProjectsProps[] = [
     description:
       "Projeto freelancer desenvolvido para o Dr. Leonardo, no qual fui responsável pela criação de um site profissional utilizando WordPress. O projeto envolveu a personalização do design, otimização de desempenho e implementação de funcionalidades específicas para atender às necessidades do cliente.",
     name: "Plástica de Face",
-    image: "https://i.ibb.co/Qw6XVvf/Screenshot-2025-02-11-095651.png",
+    image: plasticaDeFaceShot,
     skills: ["WordPress", "SEO"],
     website: "https://plasticadeface.med.br/",
   },
@@ -163,8 +212,7 @@ export const projects: ProjectsProps[] = [
     description:
       "Projeto free-lancer desenvolvido para servir como um painel de gerenciamento de licenças para a extensão, garantindo controle e acessibilidade aos usuários. O site foi criado em paralelo ao desenvolvimento da própria extensão, proporcionando uma integração eficiente e uma experiência fluida.",
     name: "Future Online",
-    image:
-      "https://i.ibb.co/yn5Jf3hy/365851919-be742bd1-e28a-4edf-ac15-7c8c9cf03f23.png",
+    image: futureOnlineShot,
     additionalLink:
       "https://chromewebstore.google.com/detail/future-online/foookgcpbageggmhagkollgcdebifnal?hl=pt-BR&authuser=0",
     website: "https://futureonline.com.br/",
@@ -175,8 +223,7 @@ export const projects: ProjectsProps[] = [
     description:
       "Projeto freelance desenvolvido para conectar almas gêmeas por meio da inteligência artificial da OpenAI. Utilizando tecnologias modernas como Next.js, TailwindCSS e a API da OpenAI, a plataforma analisa perfis e afinidades para proporcionar conexões significativas de forma inovadora e personalizada.",
     name: "Amor Celestial",
-    image:
-      "https://i.ibb.co/bjKCkrDf/384411038-3291adef-a6c0-4756-bf7b-e549e5a4adc8.png",
+    image: amorCelestialShot,
     website: "http://amorcelestial.net/",
     skills: ["Node.js", "Tailwind CSS", "Next.js", "Server Actions", "OpenIA"],
   },
@@ -185,8 +232,7 @@ export const projects: ProjectsProps[] = [
     description:
       "Landing page minimalista inspirada no design do site da Nike, criada para testar e aprimorar habilidades com a biblioteca Framer Motion. O projeto explora técnicas avançadas de animação e transições, proporcionando uma experiência visual fluida, envolvente e dinâmica.",
     name: "Nike",
-    image:
-      "https://i.ibb.co/1fY9KWH8/350497753-754bd2f3-f854-4c88-a540-b197e2a9cd26.png",
+    image: nikeShot,
     repo: "https://github.com/cguifernandes/nike",
     skills: ["React.js", "Tailwind CSS", "Framer motion"],
   },
@@ -195,8 +241,7 @@ export const projects: ProjectsProps[] = [
     description:
       "O Paquetá é um projeto de front-end desenvolvido para oferecer uma interface elegante, intuitiva e responsiva para uma loja virtual de calçados. Com um design moderno e navegação fluida, a plataforma proporciona uma experiência envolvente para os usuários, facilitando a descoberta e compra de produtos.",
     name: "Paquetá",
-    image:
-      "https://i.ibb.co/Swh5xfCr/251443815-35b893bd-218b-41f6-ba92-f8fd3174761d.png",
+    image: paquetaShot,
     repo: "https://github.com/cguifernandes/Paqueta",
     skills: ["Next.js", "Tailwind CSS"],
     website: "https://paqueta-three.vercel.app/",
@@ -206,8 +251,7 @@ export const projects: ProjectsProps[] = [
     description:
       "Este projeto foi criado para conectar pessoas a Desks, espaços interativos para discussões em diversas áreas. Seja para trocar conhecimentos, compartilhar ideias ou receber feedback sobre um projeto, o Hub Desk oferece um ambiente colaborativo ideal. Por exemplo, se você é um desenvolvedor iniciante em busca de insights valiosos, aqui você encontra uma comunidade pronta para ajudar!",
     name: "Hub Desk",
-    image:
-      "https://i.ibb.co/VcWGXPfR/351426235-df44c778-f982-48b4-a552-47119dd95bbd.png",
+    image: hubDeskShot,
     repo: "https://github.com/cguifernandes/hub-desk",
     skills: ["Next.js", "Tailwind CSS", "Typescript"],
     website: "https://hub-desk.vercel.app",
@@ -217,8 +261,7 @@ export const projects: ProjectsProps[] = [
     description:
       "O All Nade é um site desenvolvido para simplificar a descoberta de novos filmes e facilitar a organização dos seus favoritos. Com uma interface intuitiva e recursos práticos, a plataforma permite que você explore, salve e gerencie suas listas de filmes de forma rápida e eficiente.",
     name: "All Nade",
-    image:
-      "https://i.ibb.co/BV9mvJ6r/251448830-7fbf0e5c-35c6-44dc-bdc7-197ec4c90667.png",
+    image: allNadeShot,
     repo: "https://github.com/cguifernandes/All-Nade",
     skills: ["Next.js", "Styled Components", "Typescript"],
     website: "https://all-nade.vercel.app/",
@@ -228,8 +271,7 @@ export const projects: ProjectsProps[] = [
     description:
       "O TITULOMED é um aplicativo desenvolvido para atender à crescente demanda por maior dinamismo e interatividade nas aulas de Química, especialmente no contexto de ensino on-line durante a pandemia. Com ferramentas inovadoras e recursos interativos, o aplicativo foi criado para tornar o aprendizado de Química mais envolvente e acessível, promovendo uma experiência educativa mais rica e colaborativa para os alunos.",
     name: "TituloMED",
-    image:
-      "https://i.ibb.co/Ng3KXc9m/251451433-fd369ea3-b705-43e7-8ee1-7053fe39d883.png",
+    image: tituloMedShot,
     repo: "https://github.com/cguifernandes/TituloMED",
     skills: ["HTML", "CSS", "Javascript"],
     website: "https://cguifernandes.github.io/TituloMED/",
@@ -239,8 +281,7 @@ export const projects: ProjectsProps[] = [
     description:
       "Este projeto foi desenvolvido com o objetivo de praticar a criação de APIs e integrar o consumo dessas APIs em um site construído com React.js. Através dessa experiência, foram explorados aspectos de desenvolvimento back-end e front-end, permitindo uma interação fluida entre o servidor e o usuário final.",
     name: "Wiki Demon Slayer",
-    image:
-      "https://i.ibb.co/R4S0K7P9/251451080-ca10dbd4-ab79-4d86-a463-6e1a1e78ecb7.png",
+    image: wikiDemonSlayerShot,
     repo: "https://github.com/cguifernandes/Wiki-Kimetsu-No-Yaiba",
     skills: ["React.js", "CSS", "Javascript"],
     website: "https://wiki-kimetsu-no-yaiba.vercel.app/",
@@ -248,30 +289,14 @@ export const projects: ProjectsProps[] = [
 ];
 
 export const companies: CompaniesProps[] = [
-  {
-    name: "Revzap",
-    image: <img src={revzap} alt="Revzap" />,
-  },
-  {
-    name: "Future Online",
-    image: <img src={futureOnline} alt="Future Online" />,
-  },
-  {
-    name: "Prime",
-    image: <img src={prime} alt="Prime" />,
-  },
-  {
-    name: "Ecomplus",
-    image: <img src={ecomplus} alt="Ecomplus" />,
-  },
-  {
-    name: "Desweb",
-    image: <img src={desweb} alt="Desweb" />,
-  },
-  {
-    name: "Celiware",
-    image: <img src={celiware} alt="Celiware" />,
-  },
+  { name: "Angelfly", image: angelfly },
+  { name: "BAG", image: bag },
+  { name: "Revzap", image: revzap },
+  { name: "Future Online", image: futureOnline },
+  { name: "Prime", image: prime },
+  { name: "Ecomplus", image: ecomplus },
+  { name: "Desweb", image: desweb },
+  { name: "Celiware", image: celiware },
 ];
 
 export const career: CareerProps[] = [

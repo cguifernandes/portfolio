@@ -6,9 +6,18 @@ import { useForm } from "react-hook-form";
 import toast from "react-hot-toast";
 import { z } from "zod";
 import { useI18n } from "../../i18n/useI18n";
+import { CONTACT_EMAIL, GITHUB_URL, LINKEDIN_URL } from "../../utils/utils";
+import { GlowBackdrop } from "../backdrops";
 import Button from "../button";
+import Container from "../container";
 import Input from "../input";
 import Textarea from "../textarea";
+
+const CHANNELS = [
+  { id: "email", value: CONTACT_EMAIL, href: `mailto:${CONTACT_EMAIL}` },
+  { id: "linkedin", value: "/guilherme-fernandes", href: LINKEDIN_URL },
+  { id: "github", value: "/cguifernandes", href: GITHUB_URL },
+];
 
 const Contact = () => {
   const { t } = useI18n();
@@ -74,23 +83,60 @@ const Contact = () => {
   };
 
   return (
-    <section
-      id="contact"
-      className="py-20 scroll-mt-8 px-6 lg:px-4 flex justify-center w-full"
-    >
-      <div className="flex w-full items-center flex-col gap-y-10">
-        <motion.h1
-          initial={{ opacity: 0, filter: "blur(4px)", y: -5 }}
-          whileInView={{ opacity: 1, filter: "blur(0px)", y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, ease: "easeOut" }}
-          className="text-white text-center text-xl"
-        >
-          {t("contact.title")}
-        </motion.h1>
+    <Container backdrop={<GlowBackdrop position="bottom-right" />} id="contact">
+      <div className="grid grid-cols-1 items-stretch gap-16 lg:grid-cols-2">
+        <div className="relative flex h-full flex-col gap-y-6">
+          {/* a partir de lg o label sai do fluxo para nao roubar altura, e o
+              bloco abaixo passa a centralizar na coluna inteira */}
+          <motion.span
+            initial={{ opacity: 0, filter: "blur(4px)", y: -5 }}
+            whileInView={{ opacity: 1, filter: "blur(0px)", y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, ease: "easeOut" }}
+            className="text-primary-500 text-xs uppercase tracking-[0.13em] lg:absolute lg:top-0 lg:left-0"
+          >
+            {t("contact.label")}
+          </motion.span>
+
+          <div className="flex flex-1 flex-col justify-center gap-y-6">
+            <motion.h1
+              initial={{ opacity: 0, filter: "blur(4px)", y: -5 }}
+              whileInView={{ opacity: 1, filter: "blur(0px)", y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, ease: "easeOut" }}
+              className="max-w-[20ch] text-3xl text-white leading-[1.4] tracking-[-0.02em]"
+            >
+              {t("contact.title")}
+            </motion.h1>
+
+            <motion.div
+              initial={{ opacity: 0, filter: "blur(4px)", y: -5 }}
+              whileInView={{ opacity: 1, filter: "blur(0px)", y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, ease: "easeOut", delay: 0.2 }}
+              className="flex flex-col gap-px overflow-hidden rounded-lg border border-neutral-800 bg-neutral-800"
+            >
+              {CHANNELS.map(({ id, value, href }) => (
+                <a
+                  key={id}
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-between gap-x-4 bg-neutral-950 px-5 py-4 text-white duration-300 ease-in-out hover:bg-neutral-900 hover:text-primary-500"
+                >
+                  <span className="text-neutral-500 text-xs uppercase tracking-[0.1em]">
+                    {t(`contact.channels.${id}`)}
+                  </span>
+                  <span className="truncate text-sm">{value}</span>
+                </a>
+              ))}
+            </motion.div>
+          </div>
+        </div>
+
         <form
           onSubmit={handleSubmit(handlerSubmitMessage)}
-          className="flex w-full max-w-3xl flex-col gap-y-4"
+          className="flex w-full flex-col gap-y-4 rounded-xl border border-neutral-800 bg-neutral-950 p-7"
         >
           <Input
             id="name"
@@ -128,7 +174,7 @@ const Contact = () => {
             animated
           />
           <Button
-            className="flex w-full justify-center items-center"
+            className="flex w-full items-center justify-center"
             isLoading={isLoading}
             type="submit"
             animated
@@ -137,7 +183,7 @@ const Contact = () => {
           </Button>
         </form>
       </div>
-    </section>
+    </Container>
   );
 };
 

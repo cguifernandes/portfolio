@@ -1,17 +1,20 @@
-/** biome-ignore-all lint/a11y/useValidAnchor: <explanation> */
 import { animated, easings, useSpring } from "@react-spring/web";
+import clsx from "clsx";
 import { Menu } from "lucide-react";
 import { useState } from "react";
+import { useActiveSection } from "../../hooks/use-active-section";
 import { useI18n } from "../../i18n/useI18n";
 import LanguageSwitcher from "../language-switcher";
 import { GithubIcon } from "../ui/github";
 import { LinkedinIcon } from "../ui/linkedin";
 import { MailCheckIcon } from "../ui/mail-check";
 import { PhoneIcon } from "../ui/phone";
+import { NAV_IDS, NAV_ITEMS } from "./nav-items";
 
 const SideBar = () => {
   const { t } = useI18n();
   const [isOpen, setIsOpen] = useState(false);
+  const active = useActiveSection(NAV_IDS);
 
   const toggleSidebar = () => {
     setIsOpen(!isOpen);
@@ -42,56 +45,33 @@ const SideBar = () => {
       </button>
 
       <animated.div
-        style={{ ...opacitySpring, ...transformSpring, pointerEvents: isOpen ? "auto" : "none" }}
+        style={{
+          ...opacitySpring,
+          ...transformSpring,
+          pointerEvents: isOpen ? "auto" : "none",
+        }}
         className="fixed left-0 right-0 max-w-7xl w-full gap-y-8 inset-x-4 top-16 rounded-2xl border border-neutral-800 z-20 pb-6 p-4 justify-between bg-neutral-900/60 backdrop-blur-md flex flex-col md:hidden"
       >
         <nav className="flex-1 flex flex-col h-full">
           <ul className="flex h-full flex-1 items-center flex-col gap-8">
-            <li className="hover:bg-neutral-800 rounded-lg flex duration-300 ease-in-out">
-              <a
-                href="#about"
-                className="text-white px-3 py-1.5 duration-300 ease-in-out"
-                onClick={toggleSidebar}
+            {NAV_ITEMS.map(({ id, labelKey }) => (
+              <li
+                key={id}
+                className={clsx(
+                  "hover:bg-neutral-800 rounded-lg flex duration-300 ease-in-out",
+                  active === id && "bg-neutral-800",
+                )}
               >
-                {t("header.nav.about")}
-              </a>
-            </li>
-            <li className="hover:bg-neutral-800 rounded-lg flex duration-300 ease-in-out">
-              <a
-                href="#stacks"
-                className="text-white px-3 py-1.5 duration-300 ease-in-out"
-                onClick={toggleSidebar}
-              >
-                {t("header.nav.stacks")}
-              </a>
-            </li>
-            <li className="hover:bg-neutral-800 rounded-lg flex duration-300 ease-in-out">
-              <a
-                href="#career"
-                className="text-white px-3 py-1.5 duration-300 ease-in-out"
-                onClick={toggleSidebar}
-              >
-                {t("header.nav.career")}
-              </a>
-            </li>
-            <li className="hover:bg-neutral-800 rounded-lg flex duration-300 ease-in-out">
-              <a
-                href="#projects"
-                className="text-white px-3 py-1.5 duration-300 ease-in-out"
-                onClick={toggleSidebar}
-              >
-                {t("header.nav.projects")}
-              </a>
-            </li>
-            <li className="hover:bg-neutral-800 rounded-lg flex duration-300 ease-in-out">
-              <a
-                href="#contact"
-                className="text-white px-3 py-1.5 duration-300 ease-in-out"
-                onClick={toggleSidebar}
-              >
-                {t("header.nav.contact")}
-              </a>
-            </li>
+                <a
+                  href={`#${id}`}
+                  aria-current={active === id ? "true" : undefined}
+                  className="text-white px-3 py-1.5 duration-300 ease-in-out"
+                  onClick={toggleSidebar}
+                >
+                  {t(labelKey)}
+                </a>
+              </li>
+            ))}
           </ul>
         </nav>
 
