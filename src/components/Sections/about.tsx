@@ -30,12 +30,14 @@ const About = () => {
       </motion.span>
 
       <div className="flex flex-col lg:flex-row items-center gap-16 w-full">
+        {/* min-w so a partir de sm: em telas de 320-375px os 320px fixos somados
+            ao padding lateral passavam da largura do viewport */}
         <motion.div
           initial={{ opacity: 0, filter: "blur(4px)", y: -5 }}
           whileInView={{ opacity: 1, filter: "blur(0px)", y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, ease: "easeOut" }}
-          className="max-w-sm min-w-80 lg:max-w-none lg:h-max"
+          className="w-full max-w-sm sm:min-w-80 lg:w-auto lg:max-w-none lg:h-max"
         >
           {PORTRAIT ? (
             <img

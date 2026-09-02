@@ -10,18 +10,13 @@ const Projects = () => {
   const { t } = useI18n();
 
   return (
-    <Container
-      backdrop={<GridBackdrop />}
-      id="projects"
-      sectionClassName="px-0"
-      className="overflow-hidden"
-    >
+    <Container backdrop={<GridBackdrop />} id="projects">
       <motion.div
         initial={{ opacity: 0, filter: "blur(4px)", y: -5 }}
         whileInView={{ opacity: 1, filter: "blur(0px)", y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.5, ease: "easeOut" }}
-        className="flex flex-wrap items-baseline justify-between gap-5 px-6 lg:px-12"
+        className="flex flex-wrap items-baseline justify-between gap-5"
       >
         <span className="text-primary-500 text-xs uppercase tracking-[0.13em]">
           {t("projects.label")}
@@ -31,7 +26,7 @@ const Projects = () => {
         </h1>
       </motion.div>
 
-      <div className="grid grid-cols-1 gap-5 px-6 md:grid-cols-2 lg:grid-cols-3 lg:px-10">
+      <div className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
         {projects.map((project, index) => (
           <ProjectCard
             key={project.id}
@@ -48,7 +43,7 @@ const Projects = () => {
         ))}
       </div>
 
-      <div className="flex flex-col gap-y-5 px-6 pt-6 lg:px-10">
+      <div className="flex flex-col gap-y-5 pt-6">
         <motion.span
           initial={{ opacity: 0, filter: "blur(4px)", y: -5 }}
           whileInView={{ opacity: 1, filter: "blur(0px)", y: 0 }}

@@ -26,7 +26,7 @@ const Container = ({
   <section
     id={id}
     className={twMerge(
-      "relative py-20 scroll-mt-8 px-10 flex justify-center w-full",
+      "relative py-20 scroll-mt-8 px-6 md:px-10 flex justify-center w-full",
       sectionClassName,
     )}
   >

@@ -55,8 +55,14 @@ const Hero = () => {
     return { key, kind, value: raw };
   });
 
+  // overflow-hidden na section: o brilho de 620px abaixo passa da borda da
+  // tela no mobile e, sem o corte, a pagina inteira ganha scroll lateral
   return (
-    <Container id="hero" sectionClassName="py-32" backdrop={<GridBackdrop />}>
+    <Container
+      id="hero"
+      sectionClassName="py-20 md:py-32 overflow-hidden"
+      backdrop={<GridBackdrop />}
+    >
       <div className="relative flex w-full flex-col items-center lg:items-start">
         <div
           aria-hidden="true"

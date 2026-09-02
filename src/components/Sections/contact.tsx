@@ -84,16 +84,14 @@ const Contact = () => {
 
   return (
     <Container backdrop={<GlowBackdrop position="bottom-right" />} id="contact">
-      <div className="grid grid-cols-1 items-stretch gap-16 lg:grid-cols-2">
+      <div className="grid grid-cols-1 items-stretch gap-10 md:gap-16 lg:grid-cols-2">
         <div className="relative flex h-full flex-col gap-y-6">
-          {/* a partir de lg o label sai do fluxo para nao roubar altura, e o
-              bloco abaixo passa a centralizar na coluna inteira */}
           <motion.span
             initial={{ opacity: 0, filter: "blur(4px)", y: -5 }}
             whileInView={{ opacity: 1, filter: "blur(0px)", y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, ease: "easeOut" }}
-            className="text-primary-500 text-xs uppercase tracking-[0.13em] lg:absolute lg:top-0 lg:left-0"
+            className="text-primary-500 text-xs uppercase tracking-[0.13em] text-center md:text-left lg:absolute lg:top-0 lg:left-0"
           >
             {t("contact.label")}
           </motion.span>
@@ -104,7 +102,7 @@ const Contact = () => {
               whileInView={{ opacity: 1, filter: "blur(0px)", y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, ease: "easeOut" }}
-              className="max-w-[20ch] text-3xl text-white leading-[1.4] tracking-[-0.02em]"
+              className="md:max-w-[20ch] text-3xl text-white leading-[1.4] tracking-[-0.02em] text-center md:text-left"
             >
               {t("contact.title")}
             </motion.h1>
