@@ -3,6 +3,7 @@ import { useI18n } from "../i18n/useI18n";
 import type { ProjectsProps } from "../types/type";
 import Badge from "./badge";
 import Button from "./button";
+import { Tooltip, TooltipContent, TooltipTrigger } from "./tooltip";
 
 // mesma hachura usada no placeholder de retrato da secao Sobre
 const HATCH_BACKGROUND =
@@ -28,9 +29,14 @@ const ProjectCard = ({
     <motion.div
       initial={{ opacity: 0, filter: "blur(4px)", y: -5 }}
       whileInView={{ opacity: 1, filter: "blur(0px)", y: 0 }}
+      whileHover={{
+        scale: 1.02,
+        zIndex: 10,
+        transition: { duration: 0.3, ease: "easeOut" },
+      }}
       viewport={{ once: true }}
       transition={{ duration: 0.5, ease: "easeOut" }}
-      className="relative flex h-full flex-col overflow-hidden rounded-lg border border-neutral-800 bg-neutral-950 transition duration-300 ease-in-out hover:z-10 hover:scale-[1.02] hover:shadow-2xl hover:shadow-black/60"
+      className="relative flex h-full flex-col overflow-hidden rounded-lg border border-neutral-800 bg-neutral-950 shadow-black/60 transition-shadow duration-300 ease-in-out hover:shadow-2xl"
     >
       <div className="relative border-neutral-800 border-b">
         {image ? (
@@ -56,20 +62,26 @@ const ProjectCard = ({
       </div>
 
       <div className="flex flex-1 flex-col gap-y-4 p-5">
-        <h2 className="text-lg text-white">{t(`projects.items.${id}.name`)}</h2>
+        <div className="flex flex-col gap-y-1">
+          <h2 className="text-lg text-white">
+            {t(`projects.items.${id}.name`)}
+          </h2>
 
-        <p
-          title={description}
-          className="line-clamp-4 flex-1 text-neutral-400 text-sm"
-        >
-          {description}
-        </p>
-
-        <div className="flex flex-wrap gap-1.5">
-          {skills.map((skill, skillIndex) => (
-            <Badge key={skill} skill={skill} index={skillIndex} />
-          ))}
+          <div className="flex flex-wrap gap-1.5">
+            {skills.map((skill, skillIndex) => (
+              <Badge key={skill} skill={skill} index={skillIndex} />
+            ))}
+          </div>
         </div>
+
+        <Tooltip>
+          <TooltipTrigger asChild>
+            <p className="line-clamp-4 flex-1 text-neutral-400 text-sm">
+              {description}
+            </p>
+          </TooltipTrigger>
+          <TooltipContent>{description}</TooltipContent>
+        </Tooltip>
 
         <div className="flex flex-col gap-2 sm:flex-row">
           {website && (

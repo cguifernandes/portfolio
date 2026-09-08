@@ -2,6 +2,7 @@ import type { VariantProps } from "tailwind-variants";
 import { tv } from "tailwind-variants";
 import StarBorder from "../components/react-bits/Animations/StarBorder/StarBorder";
 import Badge from "./badge";
+import { Tooltip, TooltipContent, TooltipTrigger } from "./tooltip";
 
 const card = tv({
   base: "rounded-lg flex flex-col gap-y-4 p-5 duration-300 ease-in-out border border-neutral-800 relative",
@@ -73,12 +74,14 @@ const CardStarBorder = ({
 
         {subtitle &&
           (typeof subtitle === "string" ? (
-            <p
-              title={subtitle}
-              className="text-neutral-400 line-clamp-3 z-10 select-none text-sm"
-            >
-              {subtitle}
-            </p>
+            <Tooltip>
+              <TooltipTrigger asChild>
+                <p className="text-neutral-400 line-clamp-3 z-10 select-none text-sm">
+                  {subtitle}
+                </p>
+              </TooltipTrigger>
+              <TooltipContent>{subtitle}</TooltipContent>
+            </Tooltip>
           ) : (
             <div className="text-neutral-400 z-10 select-none text-sm">
               {subtitle}

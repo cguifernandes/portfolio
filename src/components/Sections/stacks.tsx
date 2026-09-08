@@ -2,7 +2,6 @@ import clsx from "clsx";
 import { motion } from "framer-motion";
 import { useI18n } from "../../i18n/useI18n";
 import { skills } from "../../utils/utils";
-import { GlowBackdrop } from "../backdrops";
 import CardStarBorder from "../card-star-border";
 import Container from "../container";
 import {
@@ -17,7 +16,7 @@ const Stacks = () => {
   const sortedSkills = [...skills].sort((a, b) => a.name.localeCompare(b.name));
 
   return (
-    <Container backdrop={<GlowBackdrop position="top-left" />} id="stacks">
+    <Container id="stacks">
       <motion.div
         initial={{ opacity: 0, filter: "blur(4px)", y: -5 }}
         whileInView={{ opacity: 1, filter: "blur(0px)", y: 0 }}

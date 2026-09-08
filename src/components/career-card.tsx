@@ -5,6 +5,7 @@ import type { CareerProps } from "../types/type";
 import Badge from "./badge";
 import CardStarBorder from "./card-star-border";
 import { useI18n } from "../i18n/useI18n";
+import { Tooltip, TooltipContent, TooltipTrigger } from "./tooltip";
 
 type CareerCardProps = {
   item: CareerProps;
@@ -49,12 +50,14 @@ const CareerCard = ({ item, isLeft }: CareerCardProps) => {
                 </p>
 
                 {item.description && (
-                  <p
-                    title={item.description}
-                    className={cn("text-neutral-400 text-sm")}
-                  >
-                    {t(`career.items.${item.id}.description`)}
-                  </p>
+                  <Tooltip>
+                    <TooltipTrigger asChild>
+                      <p className={cn("text-neutral-400 text-sm")}>
+                        {t(`career.items.${item.id}.description`)}
+                      </p>
+                    </TooltipTrigger>
+                    <TooltipContent>{item.description}</TooltipContent>
+                  </Tooltip>
                 )}
 
                 {item.stacks?.length > 0 && (

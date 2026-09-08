@@ -6,7 +6,7 @@ import clsx from "clsx";
 // a pagina parecer um sistema e nao um efeito diferente por secao.
 
 const GRID_LINES =
-  "linear-gradient(rgba(255, 255, 255, 0.028) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.028) 1px, transparent 1px)";
+  "linear-gradient(rgba(255, 255, 255, 0.07) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.07) 1px, transparent 1px)";
 
 const GRID_MASKS = {
   top: "radial-gradient(ellipse 80% 70% at 50% 20%, #000, transparent)",
@@ -38,7 +38,7 @@ export const DotsBackdrop = () => (
     className="pointer-events-none absolute inset-0"
     style={{
       backgroundImage:
-        "radial-gradient(rgba(255, 255, 255, 0.055) 1px, transparent 1px)",
+        "radial-gradient(rgba(255, 255, 255, 0.22) 1.5px, transparent 1.5px)",
       backgroundSize: "26px 26px",
       maskImage: DOTS_MASK,
       WebkitMaskImage: DOTS_MASK,
@@ -48,7 +48,7 @@ export const DotsBackdrop = () => (
 
 // rgba do --primary-500 (#0c91ac) do sistema
 const GLOW =
-  "radial-gradient(ellipse at center, rgba(12, 145, 172, 0.13), transparent 66%)";
+  "radial-gradient(ellipse at center, rgba(12, 145, 172, 0.28), transparent 66%)";
 
 const GLOW_POSITIONS = {
   "top-left": "-top-40 -left-40",

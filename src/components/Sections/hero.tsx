@@ -12,6 +12,7 @@ import Button from "../button";
 import type { CodeLine } from "../code-window";
 import CodeWindow from "../code-window";
 import Container from "../container";
+import TiltCard from "../tilt-card";
 
 const TITLE_DELAY = 50;
 
@@ -121,7 +122,9 @@ const Hero = () => {
             transition={{ duration: 0.5, ease: "easeOut", delay: 0.2 }}
             className="w-full max-w-md shrink-0"
           >
-            <CodeWindow fileName={t("hero.code.file")} lines={codeLines} />
+            <TiltCard>
+              <CodeWindow fileName={t("hero.code.file")} lines={codeLines} />
+            </TiltCard>
           </motion.div>
         </div>
       </div>

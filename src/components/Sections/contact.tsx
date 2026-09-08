@@ -12,6 +12,7 @@ import Button from "../button";
 import Container from "../container";
 import Input from "../input";
 import Textarea from "../textarea";
+import { Tooltip, TooltipContent, TooltipTrigger } from "../tooltip";
 
 const CHANNELS = [
   { id: "email", value: CONTACT_EMAIL, href: `mailto:${CONTACT_EMAIL}` },
@@ -125,7 +126,12 @@ const Contact = () => {
                   <span className="text-neutral-500 text-xs uppercase tracking-[0.1em]">
                     {t(`contact.channels.${id}`)}
                   </span>
-                  <span className="truncate text-sm">{value}</span>
+                  <Tooltip>
+                    <TooltipTrigger asChild>
+                      <span className="truncate text-sm">{value}</span>
+                    </TooltipTrigger>
+                    <TooltipContent>{value}</TooltipContent>
+                  </Tooltip>
                 </a>
               ))}
             </motion.div>

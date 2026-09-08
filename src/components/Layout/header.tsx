@@ -11,10 +11,23 @@ const Header = () => {
   const active = useActiveSection(NAV_IDS);
 
   return (
-    <div className="fixed top-4 left-1/2 -translate-x-1/2 max-w-7xl z-100 w-full flex px-10 justify-center">
-      <header className="h-14 w-full flex justify-between items-center py-3 px-6 rounded-full border border-neutral-800 bg-neutral-900 md:bg-neutral-900/60 backdrop-blur-md">
-        <img src={Logo} alt="Logo" className="w-10 h-fit" />
+    <div className="fixed inset-x-0 top-4 z-100 flex w-full justify-center px-6 md:px-10">
+      <header className="flex h-14 w-full max-w-7xl items-center justify-between gap-x-4 rounded-full border border-neutral-800 bg-neutral-900 px-4 py-2 md:bg-neutral-900/60 backdrop-blur-md">
+        <a
+          href="#hero"
+          aria-label="cguifernandes"
+          className="group flex shrink-0 items-center gap-x-2.5"
+        >
+          <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border bg-neutral-950 duration-300 ease-in-out border-primary-500/50">
+            <img src={Logo} alt="" className="h-4 w-auto" />
+          </span>
+          <span className="hidden font-semibold text-sm tracking-tight duration-300 ease-in-out text-primary-400 lg:inline">
+            cguifernandes
+          </span>
+        </a>
+
         <SideBar />
+
         <nav className="hidden md:flex items-center">
           <ul className="flex items-center text-sm gap-2">
             {NAV_ITEMS.map(({ id, labelKey }) => (
@@ -28,7 +41,7 @@ const Header = () => {
                 <a
                   href={`#${id}`}
                   aria-current={active === id ? "true" : undefined}
-                  className="text-white px-3 py-1.5 duration-300 ease-in-out"
+                  className="whitespace-nowrap text-white px-3 py-1.5 duration-300 ease-in-out"
                 >
                   {t(labelKey)}
                 </a>
@@ -36,6 +49,7 @@ const Header = () => {
             ))}
           </ul>
         </nav>
+
         <LanguageSwitcher className="hidden md:flex" />
       </header>
     </div>
