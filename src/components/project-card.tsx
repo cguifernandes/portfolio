@@ -91,7 +91,7 @@ const ProjectCard = ({
         <div className="flex flex-col gap-2 sm:flex-row">
           {website && (
             <Button
-              animated
+              animated={false}
               theme="primary"
               href={website}
               target="_blank"
@@ -104,7 +104,7 @@ const ProjectCard = ({
 
           {repo && (
             <Button
-              animated
+              animated={false}
               theme="outline"
               href={repo}
               target="_blank"
@@ -117,7 +117,7 @@ const ProjectCard = ({
 
           {additionalLink && (
             <Button
-              animated
+              animated={false}
               theme="outline"
               href={additionalLink}
               target="_blank"

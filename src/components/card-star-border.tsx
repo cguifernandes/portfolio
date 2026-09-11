@@ -63,7 +63,7 @@ const CardStarBorder = ({
             </div>
             {badge && (
               <div className="flex items-center gap-x-2">
-                <Badge index={0} skill={badge} />
+                <Badge animate={false} index={0} skill={badge} />
               </div>
             )}
           </div>

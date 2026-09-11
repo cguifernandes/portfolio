@@ -1,10 +1,10 @@
 import type { MotionProps } from "framer-motion";
 import { motion } from "framer-motion";
+import { useI18n } from "../i18n/useI18n";
 import { cn } from "../lib/utils";
 import type { CareerProps } from "../types/type";
 import Badge from "./badge";
 import CardStarBorder from "./card-star-border";
-import { useI18n } from "../i18n/useI18n";
 import { Tooltip, TooltipContent, TooltipTrigger } from "./tooltip";
 
 type CareerCardProps = {
@@ -63,7 +63,12 @@ const CareerCard = ({ item, isLeft }: CareerCardProps) => {
                 {item.stacks?.length > 0 && (
                   <div className={cn("flex flex-wrap gap-2 justify-start")}>
                     {item.stacks.map((stack, i) => (
-                      <Badge key={stack} skill={stack} index={i} />
+                      <Badge
+                        animate={false}
+                        key={stack}
+                        skill={stack}
+                        index={i}
+                      />
                     ))}
                   </div>
                 )}

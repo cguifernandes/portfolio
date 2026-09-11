@@ -181,7 +181,7 @@ const Contact = () => {
             className="flex w-full items-center justify-center"
             isLoading={isLoading}
             type="submit"
-            animated
+            animated={false}
           >
             {t("contact.form.submit")}
           </Button>
