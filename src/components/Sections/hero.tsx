@@ -98,7 +98,7 @@ const Hero = () => {
                 theme="primary"
                 href={`mailto:${CONTACT_EMAIL}`}
                 className="sm:w-fit! sm:min-w-52"
-                animated={false}
+                animated
               >
                 {t("hero.ctaContact")}
               </Button>
@@ -108,7 +108,7 @@ const Hero = () => {
                 theme="outline"
                 href="#projects"
                 className="sm:w-fit! sm:min-w-52"
-                animated={false}
+                animated
               >
                 {t("hero.ctaProjects")}
               </Button>
