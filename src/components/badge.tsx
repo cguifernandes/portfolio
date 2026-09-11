@@ -3,13 +3,16 @@ import { motion } from "framer-motion";
 type BadgeProps = {
   skill: string;
   index: number;
+  animate?: boolean;
 };
 
-const Badge = ({ skill, index }: BadgeProps) => {
+const Badge = ({ skill, index, animate = true }: BadgeProps) => {
   return (
     <motion.span
-      initial={{ opacity: 0, filter: "blur(4px)", y: -5 }}
-      whileInView={{ opacity: 1, filter: "blur(0px)", y: 0 }}
+      initial={animate ? { opacity: 0, filter: "blur(4px)", y: -5 } : false}
+      whileInView={
+        animate ? { opacity: 1, filter: "blur(0px)", y: 0 } : undefined
+      }
       viewport={{ once: true }}
       transition={{
         duration: 0.5,

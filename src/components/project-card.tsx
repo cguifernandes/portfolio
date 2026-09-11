@@ -69,7 +69,12 @@ const ProjectCard = ({
 
           <div className="flex flex-wrap gap-1.5">
             {skills.map((skill, skillIndex) => (
-              <Badge key={skill} skill={skill} index={skillIndex} />
+              <Badge
+                animate={false}
+                key={skill}
+                skill={skill}
+                index={skillIndex}
+              />
             ))}
           </div>
         </div>
