@@ -12,6 +12,7 @@ import angelflyShot from "../assets/projects/angelfly.webp";
 import ernestoShot from "../assets/projects/ernesto.webp";
 import futureOnlineShot from "../assets/projects/futureOnline.webp";
 import garlicShot from "../assets/projects/garlic.webp";
+import garlicLemonsMobileShot from "../assets/projects/garlicLemonsMobile.webp";
 import gateonShot from "../assets/projects/gateon.webp";
 import granaEmDiaShot from "../assets/projects/granaEmDia.webp";
 import hubDeskShot from "../assets/projects/hubDesk.webp";
@@ -128,6 +129,25 @@ export const skills: SkillsProps[] = [
 ];
 
 export const projects: ProjectsProps[] = [
+  {
+    id: "garlicLemonsMobile",
+    description:
+      "Aplicativo mobile de extensão do site do Garlic'n Lemons, onde o usuário pode fazer pedidos de comida, acompanhar pedidos, ganhar pratos com pontos, configurar a conta e mais.",
+    name: "Garlic'n Lemons Mobile",
+    image: garlicLemonsMobileShot,
+    skills: ["React Native", "PHP", "Firebase", "MySQL"],
+    links: [
+      {
+        label: "Play Store",
+        href: "https://play.google.com/store/apps/details?id=com.garliclemons.app",
+        theme: "primary",
+      },
+      {
+        label: "App Store",
+        href: "https://apps.apple.com/us/app/garlicn-lemons/id6808767051",
+      },
+    ],
+  },
   {
     id: "gateon",
     description:

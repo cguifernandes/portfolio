@@ -14,6 +14,8 @@ export type ProjectsProps = {
   skills: string[];
   website?: string;
   additionalLink?: string;
+  /** botoes extras com texto proprio (ex: lojas de app) */
+  links?: { label: string; href: string; theme?: "primary" | "outline" }[];
 };
 
 export type CompaniesProps = {

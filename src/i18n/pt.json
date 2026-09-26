@@ -163,6 +163,11 @@
       "repository": "Repositório"
     },
     "items": {
+      "garlicLemonsMobile": {
+        "name": "Garlic'n Lemons Mobile",
+        "description": "Aplicativo mobile de extensão do site do Garlic'n Lemons, onde o usuário pode fazer pedidos de comida, acompanhar pedidos, ganhar pratos com pontos, configurar a conta e mais.",
+        "imageAlt": "Imagem do projeto Garlic'n Lemons Mobile"
+      },
       "gateon": {
         "name": "Gateon",
         "description": "Gateon é uma plataforma SaaS desenvolvida inteiramente por mim para automatizar o gerenciamento de comunidades no Telegram. A plataforma permite controlar grupos, sincronizar assinaturas, gerenciar membros automaticamente, integrar gateways de pagamento e administrar toda a comunidade por meio de um painel moderno e intuitivo.",

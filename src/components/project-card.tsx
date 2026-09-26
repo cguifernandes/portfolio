@@ -18,6 +18,7 @@ const ProjectCard = ({
   image,
   skills,
   additionalLink,
+  links,
   repo,
   website,
   index,
@@ -127,6 +128,20 @@ const ProjectCard = ({
               {t("projects.buttons.additionalLink")}
             </Button>
           )}
+
+          {links?.map((link) => (
+            <Button
+              key={link.href}
+              animated={false}
+              theme={link.theme ?? "outline"}
+              href={link.href}
+              target="_blank"
+              patternClassName="flex-1 flex"
+              className="w-full justify-center"
+            >
+              {link.label}
+            </Button>
+          ))}
         </div>
       </div>
     </motion.div>
