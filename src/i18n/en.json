@@ -163,6 +163,11 @@
       "repository": "Repository"
     },
     "items": {
+      "Aknewme": {
+        "name": "Aknewme",
+        "description": "Daily anime guessing game where players identify the anime three ways: from a sequence of emojis, from a short clip of its opening, or from clues like year, studio and genre. There's a new challenge every day, with lives, attempts and scoring.",
+        "imageAlt": "aknewme project image"
+      },
       "garlicLemonsMobile": {
         "name": "Garlic'n Lemons Mobile",
         "description": "Mobile app that extends the Garlic'n Lemons website, where users can order food, track their orders, earn free dishes with points, manage their account and more.",

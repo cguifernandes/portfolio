@@ -6,6 +6,7 @@ import ecomplus from "../assets/companies/ecomplus.webp";
 import futureOnline from "../assets/companies/future-online.webp";
 import prime from "../assets/companies/prime.webp";
 import revzap from "../assets/companies/revzap.webp";
+import aknewmeShot from "../assets/projects/aknewme.webp";
 import allNadeShot from "../assets/projects/allNade.webp";
 import amorCelestialShot from "../assets/projects/amorCelestial.webp";
 import angelflyShot from "../assets/projects/angelfly.webp";
@@ -129,6 +130,15 @@ export const skills: SkillsProps[] = [
 ];
 
 export const projects: ProjectsProps[] = [
+  {
+    id: "Aknewme",
+    description:
+      "Jogo diário de anime em que o desafio é adivinhar o anime de três formas: por uma sequência de emojis, por um trecho da opening ou por pistas como ano, estúdio e gênero. Todo dia tem um desafio novo, com vidas, tentativas e pontuação.",
+    name: "Aknewme",
+    image: aknewmeShot,
+    skills: ["Next.js", "Node.js", "Redis", "Vercel"],
+    website: "https://www.aknewme.com/",
+  },
   {
     id: "garlicLemonsMobile",
     description:

@@ -163,6 +163,11 @@
       "repository": "Repositório"
     },
     "items": {
+      "Aknewme": {
+        "name": "Aknewme",
+        "description": "Jogo diário de anime em que o desafio é adivinhar o anime de três formas: por uma sequência de emojis, por um trecho da opening ou por pistas como ano, estúdio e gênero. Todo dia tem um desafio novo, com vidas, tentativas e pontuação.",
+        "imageAlt": "Imagem do projeto aknewme"
+      },
       "garlicLemonsMobile": {
         "name": "Garlic'n Lemons Mobile",
         "description": "Aplicativo mobile de extensão do site do Garlic'n Lemons, onde o usuário pode fazer pedidos de comida, acompanhar pedidos, ganhar pratos com pontos, configurar a conta e mais.",
